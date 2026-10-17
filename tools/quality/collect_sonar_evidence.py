@@ -57,7 +57,7 @@ def annotations(check_id, count, token):
     return pages
 
 
-def collect(commit, pull_request, output, github_only=False):
+def collect(commit, pull_request, output, github_only=False, inspect_access=False):
     output.mkdir(parents=True, exist_ok=True)
     github_token = os.environ.get("GITHUB_TOKEN")
     sonar_token = os.environ.get("SONAR_TOKEN")
@@ -78,6 +78,13 @@ def collect(commit, pull_request, output, github_only=False):
         "sonar-quality-gate.json": ("qualitygates/project_status", {"projectKey": PROJECT,
                                                                      "pullRequest": pull_request}),
     }
+    if inspect_access:
+        # This endpoint returns a validity boolean, not a token or user profile.
+        # Read access to a public project does not imply issue-management access.
+        queries["sonar-authentication.json"] = ("authentication/validate", {})
+        queries["sonar-issue-api.json"] = ("webservices/show", {"controller": "api/issues"})
+        for rule in ("S2083", "S8701", "S8705", "S8707"):
+            queries[f"sonar-rule-{rule}.json"] = ("rules/show", {"key": "pythonsecurity:" + rule})
     sonar_statuses = {}
     for filename, (endpoint, parameters) in queries.items():
         if github_only:
@@ -99,6 +106,8 @@ def collect(commit, pull_request, output, github_only=False):
                                  and sum(len(page["payload"]) for page in pages)
                                  == check["output"]["annotations_count"]),
         "sonar_api_statuses": sonar_statuses,
+        "sonar_token_supplied": bool(sonar_token),
+        "sonar_access_inspection_requested": inspect_access,
         "sonar_evidence_scope": "live_pr_unpinned",
         "sonar_associated_commit_verified": False,
         "meaning": "Archived server evidence; collecting a failed check never changes its conclusion.",
@@ -113,11 +122,13 @@ def main():
     parser.add_argument("--pull-request", type=int, default=1)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--github-only", action="store_true", help="preserve GitHub evidence while SonarCloud is inaccessible")
+    parser.add_argument("--inspect-access", action="store_true",
+                        help="archive authentication validity, issue API metadata and reported rule definitions")
     args = parser.parse_args()
     if not re.fullmatch(r"[0-9a-f]{40}", args.commit) or args.pull_request < 1:
         parser.error("use a full lowercase commit SHA and a positive pull-request number")
     output = args.output or ROOT / "docs/research/assets/sonarcloud" / args.commit
-    result = collect(args.commit, args.pull_request, output, args.github_only)
+    result = collect(args.commit, args.pull_request, output, args.github_only, args.inspect_access)
     print(json.dumps({"commit": result["commit"], "quality_gate_conclusion": result["quality_gate_conclusion"],
                       "annotations_complete": result["annotations_complete"], "output": str(output)}))
 

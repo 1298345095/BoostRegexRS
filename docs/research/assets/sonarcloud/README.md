@@ -1,6 +1,11 @@
 # SonarCloud gate investigation, 2026-10-17
 
-The latest observed check for PR #1, commit
+This is the initial investigation of the `b71b31e` check. A later
+[Actions observation](actions-39031917149/README.md) obtained complete Sonar API
+responses with HTTP 200, including 18 security findings. The initial HTTP 403
+observations and raw check evidence below are preserved as history.
+
+The initially observed check for PR #1, commit
 `b71b31e1345d4453273ba529574eea348c654613`, is
 [check 117383130668](https://github.com/1298345095/BoostRegexRS/runs/117383130668).
 Its sole reported failed condition is **Security Rating on New Code E, required

@@ -35,6 +35,7 @@ jobs:
         run: |
           python3 -B tools/quality/collect_sonar_evidence.py \
             --commit "$TARGET_COMMIT" --pull-request 1 \
+            --inspect-access \
             --output docs/research/assets/sonarcloud/actions-observation
       - name: Preserve collected server evidence
         if: always()

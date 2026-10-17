@@ -78,26 +78,32 @@ script and digest tracked alongside it. Preserve earlier target evidence in plac
 
 ## Current external issue
 
-SonarCloud check 117383130668 failed New Code Security Rating (E versus A).
-Eight annotations report CLI-controlled file/argv operations; review each actual
-trust boundary. Do not impose unusable path restrictions or suppress genuine
-findings to pass. SonarCloud HTTP API and the project/PR UI currently return
-CloudFront 403; opening the UI and one refresh both failed before authentication.
-GitHub check evidence remains readable. Record this as unresolved external access,
-not a passing gate. Continue independent implementation.
+SonarCloud checks 117383130668 and 117391738137 failed New Code Security Rating
+(E versus A). The read-only collector is published in `023fb664`.
+[Actions run 39031917149](https://github.com/1298345095/BoostRegexRS/actions/runs/39031917149)
+obtained HTTP 200 from both Sonar APIs and preserved all 89 open issues, including
+18 security findings with their complete flows. Raw artifact and extracted JSON
+are under `docs/research/assets/sonarcloud/actions-39031917149/`.
 
-The newer check 117391738137 on `ecca4f8d` also failed the same security-rating
-condition. The user reports installing SonarQube; the current callable-tool
-registry exposes no Sonar operation, and plugin searches for SonarQube and
-Sonar/SonarCloud returned no available connection. Do not ask for a repeat
-installation or invent a connection. A separate read-only Actions collector is
-being added to obtain full issue data from GitHub's runner network. Optional
-SONAR_TOKEN is sent only to SonarCloud, never included in evidence or logs.
+Earlier workspace/browser CloudFront 403 responses remain historical observations;
+read access from Actions now works. Two S2083 flows taint JSON *contents* and
+incorrectly identify `Path.write_text` as path traversal. Other reported sources
+are same-permission developer CLI paths/compiler/Cargo arguments. Review every
+actual flow and the server's rule definitions before applying individual issue
+dispositions. No issue has been suppressed, accepted or changed yet; the gate
+still fails. A read-only access inspection will record credential presence as a
+boolean, authentication validity and API/rule definitions. Public read access
+does not establish permission to change issues.
+
+The user reports installing SonarQube; the current callable-tool registry exposes
+no Sonar operation, and plugin searches returned no available connection. Do not
+ask for a repeat installation or invent a connection. Optional SONAR_TOKEN is
+sent only to SonarCloud, never included in evidence or logs.
 
 ## Next actions
 
-1. Publish and execute the read-only Sonar collector workflow; retain actual gate
-   status and diagnose concrete source-to-sink findings.
+1. Finish source-to-sink Sonar review using the successful Actions evidence and
+   actual rule definitions; inspect issue-management access without changing gates.
 2. Complete locale/type/settings export and faithful ICU77 settings/iterator
    implementation, followed by complete-key acceptance.
 3. Complete the byte parser/VM state mechanisms from the pinned upstream source;
@@ -105,3 +111,9 @@ SONAR_TOKEN is sent only to SonarCloud, never included in evidence or logs.
    field. Keep remaining grammar, API and trait rows open until implemented.
 4. Configure six native targets and fixed performance/memory workloads, retaining
    unverified status until actual results exist.
+
+The root byte oracle is authored under `tools/regex-oracle/`. Its unchanged-source
+upstream collector compiled and emitted 2,382 source cases / 6,258 operation rows;
+the fixed-seed generator emitted another 13,954 rows. These are input counts,
+not passes. Native-reference assertion validation, strict complete-result schema
+checking and the runner are being completed before differential acceptance.

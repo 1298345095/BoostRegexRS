@@ -29,6 +29,12 @@ allows a public API attempt. The workflow uploads the complete responses; retain
 those artifacts in this repository before their stated 14-day expiry. A successful
 collection job does not override a failed `SonarCloud Code Analysis` gate.
 
+`--inspect-access` also preserves the server's authentication-validity boolean,
+issue API description and the definitions of the four reported security rules.
+The summary records only whether `SONAR_TOKEN` was supplied. Neither a successful
+public read nor a valid authentication response is treated as proof of permission
+to change issue status. This inspection does not submit issue transitions.
+
 Run the developer CLI boundary regressions with:
 
 ```sh
