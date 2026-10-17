@@ -13,6 +13,7 @@ on:
       - work/root-primary-cloud
     paths:
       - .github/workflows/sonar-evidence.yml
+      - tools/quality/collect_sonar_evidence.py
 
 permissions:
   contents: read
@@ -33,7 +34,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           TARGET_COMMIT: ${{ inputs.commit || 'ecca4f8d007f7dc0eb71c19316a67542f25a6653' }}
         run: |
-          python3 -B tools/quality/collect_sonar_evidence.py \
+          timeout --signal=TERM --kill-after=10s 240s \
+            python3 -B tools/quality/collect_sonar_evidence.py \
             --commit "$TARGET_COMMIT" --pull-request 1 \
             --inspect-access \
             --output docs/research/assets/sonarcloud/actions-observation

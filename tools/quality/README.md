@@ -21,7 +21,10 @@ are explicitly marked `live_pr_unpinned` and `associated_commit_verified: false`
 they must not be attributed to the historical commit named by the directory.
 
 The `Collect Sonar quality evidence` Actions workflow runs the same read-only
-collector from GitHub's runner network. Select an existing analyzed commit with
+collector from GitHub's runner network when its workflow or collector changes.
+The collection command has a 240-second deadline within the five-minute job;
+partial responses are uploaded even when collection fails or times out.
+Select an existing analyzed commit with
 its `commit` dispatch input. Its automatic development-branch run uses the
 recorded IDENTICAL source commit. It uses only read permissions, with an optional
 repository `SONAR_TOKEN` sent exclusively to SonarCloud. An absent token still
@@ -30,7 +33,9 @@ those artifacts in this repository before their stated 14-day expiry. A successf
 collection job does not override a failed `SonarCloud Code Analysis` gate.
 
 `--inspect-access` also preserves the server's authentication-validity boolean,
-issue API description and the definitions of the four reported security rules.
+web API descriptions and the definitions of the four reported security rules.
+Rule requests include the observed organization key `1298345095`;
+API metadata comes from `webservices/list`.
 The summary records only whether `SONAR_TOKEN` was supplied. Neither a successful
 public read nor a valid authentication response is treated as proof of permission
 to change issue status. This inspection does not submit issue transitions.
