@@ -14,9 +14,9 @@ import tarfile
 from compare import sha256
 
 
-def verify(directory):
+def verify(directory, archive_override=None):
     document = json.loads((directory / "manifest.json").read_text())
-    archive = directory / document["archive"]["path"]
+    archive = archive_override or directory / document["archive"]["path"]
     if sha256(archive) != document["archive"]["sha256"]:
         raise ValueError("Archive digest differs from the recorded identity")
     expected = {item["path"]: item for item in document["files"]}
@@ -85,12 +85,15 @@ def main():
     parser.add_argument("--output", type=Path)
     parser.add_argument("--compression", choices=("xz", "gz"), default="xz")
     parser.add_argument("--verify", type=Path, metavar="DIRECTORY")
+    parser.add_argument("--archive", type=Path, help="Reassembled archive to verify against --verify DIRECTORY")
     args = parser.parse_args()
     if args.verify:
         if args.source or args.output:
             parser.error("--verify is used without --source or --output")
-        result = verify(args.verify)
+        result = verify(args.verify, args.archive)
     else:
+        if args.archive:
+            parser.error("--archive requires --verify")
         if not args.source or not args.output:
             parser.error("archive creation requires --source and --output")
         result = archive(args.source, args.output, args.compression)
