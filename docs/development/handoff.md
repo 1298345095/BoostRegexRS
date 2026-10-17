@@ -2,40 +2,17 @@
 
 Updated: 2026-10-17. Tracking: [issue #2](https://github.com/1298345095/BoostRegexRS/issues/2).
 
-## Current activity: implementation paused by the user
+## Current activity: implementation resumed
 
-The latest user instruction on 2026-10-17 is to **pause the current development
-task and use the `to-tickets` skill to write all remaining work as tickets**.
-This supersedes the earlier automatic-continuation instruction for the present
-activity. All implementation agents stopped. Do not resume implementation,
-experiments or long validation merely because ticket authoring is complete.
+The user resumed all ticket implementation on 2026-10-18 (Asia/Shanghai), requested removal of duplicate ticket documents, small English commits, visible commands and bounded execution times.
 
-The durable backlog is [index issue #148](https://github.com/1298345095/BoostRegexRS/issues/148)
-and `docs/development/tickets/`. It contains 145 remaining-work tickets (#3–#147),
-with 794 explicit dependency links, ownership of all 406 existing capability rows
-and one full-file owner for each of 73 upstream test files. All tickets reach
-final acceptance [#147](https://github.com/1298345095/BoostRegexRS/issues/147).
-Eight tickets are unblocked but remain paused: P01 #3, P02 #4, U01 #5, U05 #6,
-U15 #7, V01 #8, V02 #9 and V38 #10. `ready-for-agent` is not execution permission
-during this pause. Every published body/title/label/state was independently
-reread; see `tickets/publication-verification.json`.
+Use [GitHub issue #148](https://github.com/1298345095/BoostRegexRS/issues/148) for live task specifications and dependencies, and [coverage](tickets/coverage.md) for capability ownership. Do not maintain a second local task tracker.
 
-The checkpoint archive preserves 629 changed/untracked source, tool, test and locale-data files over
-commit `1b0149efb649bcec7b5d6c4c0be2f7e403189cea`; it is a source preservation
-checkpoint, not a validated implementation commit. Separate archives preserve
-433 selected evidence files and all 21,677 files of the failed locale run,
-including its successful groups. The latter is transported as seven binary
-parts with exact reassembly and verification commands in `tickets/checkpoint/README.md`.
-Original working-tree sources and raw outputs remain in place. The parent issue
-was reread and remains open with its title, body and labels unchanged.
+Current work: simplify ticket storage; complete U01 (#5) FCD cursor repair and P01 (#3) Sonar access investigation. V01 (#8) reference reproduction follows. Implementation acceptance remains open.
 
-Reproduce the ticket audit without running implementation tests:
+The [checkpoint](tickets/checkpoint/README.md) preserves paused sources and original evidence. Keep it intact and commit validated mechanisms separately from this historical archive.
 
-```sh
-python3 -B tools/dev/assemble_ticket_backlog.py
-python3 -B tools/dev/ticket_backlog.py check
-python3 -B tools/dev/ticket_backlog.py render
-```
+The following observations describe the preserved pause boundary, not validation of subsequent changes.
 
 At the pause boundary:
 
@@ -70,7 +47,7 @@ At the pause boundary:
 
 ## Active authorization and completion condition
 
-When the user resumes development, continue to the complete standalone pure Rust Boost.Regex 1.89.0 library under
+Continue to the complete standalone pure Rust Boost.Regex 1.89.0 library under
 ADR-0001 through ADR-0005. The user explicitly expanded the former PRIMARY-only
 stage on 2026-10-17. After each verified scoped commit, select the next ready
 capability and continue. Only complete capability, six-target, performance,
@@ -167,11 +144,11 @@ plugin searches returned no available connection; they are historical observatio
 ask for a repeat installation or invent a connection. Optional SONAR_TOKEN is
 sent only to SonarCloud, never included in evidence or logs.
 
-## Next implementation actions after the user resumes
+## Historical implementation context at the pause boundary
 
 Use the dependency-ordered ticket index and its current GitHub issue states.
 The following older implementation notes supply context, not a competing task
-order or an instruction to resume now. Sonar follow-up is P01/V37/V39; the known
+order. Sonar follow-up is P01/V37/V39; the known
 FCD repair is U01. Do not use the old prose to bypass their acceptance criteria.
 
 1. Finish source-to-sink Sonar review using the successful Actions evidence and
