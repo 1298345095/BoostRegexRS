@@ -13,7 +13,6 @@ import os
 from pathlib import Path
 import platform
 import subprocess
-import sys
 import tarfile
 import tomllib
 
@@ -75,19 +74,20 @@ def prepare_rust(cache):
     # Explicit local loader paths also work in restricted cloud process
     # environments whose Cargo children cannot resolve the tarball's $ORIGIN.
     # The verified compiler binaries themselves are not patched.
+    # Launcher source is versioned beside this module. Only downloaded tools
+    # and build products live in the cache; no executable source is generated.
+    launchers = Path(__file__).resolve().parent
     for name in ("rustc", "rustdoc"):
-        wrapper = directory / f"{name}-local.py"
-        # Shell wrappers can discard Cargo's CARGO_BIN_EXE_<hyphenated-name>
-        # entries. execve preserves the entire original process environment.
-        arguments = ["/lib64/ld-linux-x86-64.so.2", "--library-path", str(prefix / "lib"), str(prefix / "bin" / name)]
-        wrapper.write_text(f"#!{sys.executable}\nimport os, sys\nargs = {arguments!r}\nos.execve(args[0], args + sys.argv[1:], os.environ)\n", encoding="utf-8")
-        wrapper.chmod(0o755)
+        launcher = launchers / f"{name}-local.py"
+        # Some workspace materializers omit executable mode on new files.
+        launcher.chmod(launcher.stat().st_mode | 0o111)
     env = dict(os.environ)
     temporary = cache / "build/tmp"
     temporary.mkdir(parents=True, exist_ok=True)
     env.update({"PATH": str(prefix / "bin") + os.pathsep + env["PATH"],
-                "CARGO_HOME": str(cache / "cargo-home"), "RUSTC": str(directory / "rustc-local.py"),
-                "RUSTDOC": str(directory / "rustdoc-local.py"),
+                "CARGO_HOME": str(cache / "cargo-home"), "RUSTC": str(launchers / "rustc-local.py"),
+                "RUSTDOC": str(launchers / "rustdoc-local.py"),
+                "BOOSTREGEXRS_RUST_PREFIX": str(prefix),
                 "TMPDIR": str(temporary),
                 "RUSTFLAGS": "-C link-arg=-fuse-ld=bfd"})
     versions = {}
