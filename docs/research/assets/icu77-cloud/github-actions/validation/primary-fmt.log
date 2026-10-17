@@ -1,0 +1,1 @@
+["cargo", "fmt", "--manifest-path", "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust/Cargo.toml", "--", "--check"]

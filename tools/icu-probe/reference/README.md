@@ -1,5 +1,88 @@
 # Boost / ICU reference probe
 
+## Linux cloud reference
+
+From a clean checkout on Linux with Python 3.12+, `curl`, GCC or Clang, and GNU
+Make available:
+
+```sh
+python3 tools/icu-probe/cloud/prepare.py --jobs 6
+python3 tools/icu-probe/cloud/reference.py
+```
+
+Both commands accept `--cache DIRECTORY`; the default is the project-local
+`target/research/icu77-cloud`. `reference.py` also accepts `--output DIRECTORY`.
+The preparation command downloads the **official complete source archives** for
+Boost 1.89.0 and ICU4C 77.1, verifies the archive against both the published
+checksum manifest and the digest pinned in the script, and extracts them to
+`deps/boost_1_89_0` and `deps/icu`. ICU is built in `build/icu` and installed to
+`install/icu`, with shared/static libraries and the full, unfiltered release data.
+Boost.Regex's ICU traits are used from the verified external headers; no Boost
+binary library is necessary for this probe.
+
+The official checksum sources are:
+
+- <https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2.json>
+- <https://github.com/unicode-org/icu/releases/download/release-77-1/SHASUM512.txt>
+
+The actual compiler, OS, libc, source/archive digests, complete-data identity,
+build arguments and installed library digests are written to
+`environment-manifest.json`. Build logs are under `logs/`. No system install,
+persistent environment modification, historical drive path, or cached Windows
+binary is required. `TMPDIR` is local to the cache. Native executions use only
+the local ICU library directory and remove `ICU_DATA` overrides; `ldd` output is
+checked and saved to establish which ICU libraries actually loaded. The locale
+environment is inherited and recorded, so `getloc()` continues to query the
+actual process default as required by ADR-0005.
+
+The reference runner builds all three existing probes and writes fresh outputs:
+
+| Path below `target/research/icu77-cloud/reference/` | Content |
+| --- | --- |
+| `baseline/` | The submitted 24-case corpus, full keys, rebuilt `codepoints.bin`, locale/name evidence and runtime metadata |
+| `non-fcd/` | The separate submitted 13-case non-FCD corpus and full original reference keys |
+| `empty-diagnostics.json` | Original empty-input calls in separate processes, including actual signal/exit status |
+| `empty-keys/` | Valid-pointer empty-key expectations for ADR-0005 and constructed-collator normalization settings |
+| `manifest.json` | Per-file identities, runtime versions, reference result/error counts, and build/source provenance |
+
+On Linux, **every original Boost transform runs in a child process**. Signals
+are recorded as `ERROR:SIGNAL_<number>` (for example `ERROR:SIGNAL_11` for the
+observed SIGSEGV); nonzero child exits and C++ exceptions have separate `ERROR:`
+markers. Core dumps are disabled for those child processes. The parent continues
+collecting evidence without resuming a damaged process or inventing a key.
+Windows retains the existing MSVC SEH handler and its
+`ERROR:ACCESS_VIOLATION` marker. `reference.py` exits successfully when evidence
+collection succeeds even if that evidence contains original-reference errors;
+the comparison runner reports such rows as `reference_error`, separately from
+Rust differences and missing coverage.
+
+Once the locked ICU4X candidate is built at
+`target/research/icu77-cloud/build/candidate/release/icu4x-compat-probe`, replay it
+and compare the new original reference with the preserved Windows evidence:
+
+```sh
+python3 -B tools/icu-probe/cloud/replay.py
+```
+
+This writes `replay/baseline`, `replay/non-fcd`, and
+`replay/cross-platform-summary.json` under the cache. Its expected exit code is
+**1** for the recorded run: the existing ICU4X candidate still has 145 IDENTICAL
+ordering differences, and the baseline still has 230 pairs affected by the
+original empty-input reference failure. This command separately reports valid
+full-reference-key equality between platforms, error categories, codepoint file
+identity, and the default-locale query behavior. Add
+`--snapshot docs/research/assets/icu77-cloud` only when intentionally refreshing
+the separate cloud evidence snapshot. Large reproducible binaries/data remain
+under `target/` and are represented by size and digest in the manifests.
+
+All cloud results are separate from the historical Windows evidence in
+`docs/research/assets/icu-probe`. The archived Windows paths/hashes identify that
+past run and are not dependencies of these commands. The native tools and
+dependencies are exclusively development references/data generators; they are
+never linked to the pure Rust sorting-key prototype.
+
+## Windows reference
+
 Run from PowerShell 7 on Windows x64 with MSVC tools and GitHub CLI available:
 
 ```powershell

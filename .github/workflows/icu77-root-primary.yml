@@ -1,0 +1,72 @@
+name: ICU77 root PRIMARY
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - work/root-primary-cloud
+    paths:
+      - .github/workflows/icu77-root-primary.yml
+      - Cargo.toml
+      - Cargo.lock
+      - src/**
+      - tools/icu-probe/**
+      - tools/quality/**
+      - docs/adr/**
+      - docs/research/assets/icu-probe/**
+  pull_request:
+    paths:
+      - .github/workflows/icu77-root-primary.yml
+      - Cargo.toml
+      - Cargo.lock
+      - src/**
+      - tools/icu-probe/**
+      - tools/quality/**
+      - docs/adr/**
+      - docs/research/assets/icu-probe/**
+
+permissions:
+  contents: read
+
+jobs:
+  root-primary:
+    name: Ubuntu 24.04 x86-64 full reference and PRIMARY validation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Check developer CLI process boundaries
+        run: python3 -B -m unittest discover -s tools/quality -p 'test_*.py'
+
+      - name: Install native build prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends \
+            build-essential ca-certificates curl git python3 xz-utils zlib1g-dev
+
+      - name: Reproduce full cloud stage
+        run: |
+          python3 -B tools/icu-probe/cloud/run.py --jobs 3 \
+            --snapshot target/research/icu77-cloud/ci-snapshot
+
+      - name: Upload reference, candidate, and validation evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: icu77-root-primary-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: warn
+          retention-days: 14
+          compression-level: 6
+          path: |
+            target/research/icu77-cloud/reference/
+            target/research/icu77-cloud/replay/
+            target/research/icu77-cloud/primary/
+            target/research/icu77-cloud/validation/
+            target/research/icu77-cloud/logs/
+            target/research/icu77-cloud/*manifest*.json
+            target/research/icu77-cloud/cloud-summary.json
+            target/research/icu77-cloud/ci-snapshot/

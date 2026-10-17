@@ -1,0 +1,383 @@
+{
+  "schema": "boostregexrs.root-identical.v1",
+  "scope": "root IDENTICAL with original normalization-OFF CE iteration and NFD/BOCSU final level",
+  "started_utc": "2026-10-17T11:40:06.419116+00:00",
+  "completed_utc": "2026-10-17T11:41:21.348776+00:00",
+  "status": "passed_for_recorded_inputs",
+  "coverage_profile": "full_recorded_suite",
+  "totals": {
+    "passed": 1159652,
+    "mismatched": 0,
+    "unsupported": 0,
+    "reference_error": 0,
+    "rejected_as_expected": 11,
+    "approved_exception_passed": 696
+  },
+  "original_empty_reference": {
+    "utf8": {
+      "schema": "boostregexrs.primary-reference-process.v1",
+      "status": "completed",
+      "command": [
+        "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/identical/oracle",
+        "--input-format",
+        "utf8",
+        "--strength",
+        "identical"
+      ],
+      "cwd": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS",
+      "source": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/utf8-input.tsv",
+      "output": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/utf8-reference.tsv",
+      "metadata_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/utf8-reference.reference-process.json",
+      "input_rows": 1,
+      "output_rows": 1,
+      "subprocess_runs": 1,
+      "successful_batches": 0,
+      "signal_failures": 1,
+      "reference_error_count": 1,
+      "reference_error_free": false,
+      "unresolved_signal_ranges": [],
+      "isolation_used": true,
+      "range_convention": "zero-based input rows; end is exclusive; header is excluded",
+      "attempts": [
+        {
+          "attempt": 0,
+          "begin": 0,
+          "end": 1,
+          "input": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/utf8-input.tsv",
+          "stdout": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/utf8-reference.tsv.reference-attempts-_ljdbqhm/attempt-000000.stdout.tsv",
+          "stderr": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/utf8-reference.tsv.reference-attempts-_ljdbqhm/attempt-000000.stderr.log",
+          "returncode": -11,
+          "signal_number": 11,
+          "signal_name": "SIGSEGV",
+          "isolated_input_id": "original-empty",
+          "reference_error_row": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/utf8-reference.tsv.reference-attempts-_ljdbqhm/row-000000000.signal.tsv"
+        }
+      ],
+      "evidence_directory": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/utf8-reference.tsv.reference-attempts-_ljdbqhm"
+    },
+    "u16": {
+      "schema": "boostregexrs.primary-reference-process.v1",
+      "status": "completed",
+      "command": [
+        "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/identical/oracle",
+        "--input-format",
+        "u16",
+        "--strength",
+        "identical"
+      ],
+      "cwd": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS",
+      "source": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u16-input.tsv",
+      "output": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u16-reference.tsv",
+      "metadata_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u16-reference.reference-process.json",
+      "input_rows": 1,
+      "output_rows": 1,
+      "subprocess_runs": 1,
+      "successful_batches": 0,
+      "signal_failures": 1,
+      "reference_error_count": 1,
+      "reference_error_free": false,
+      "unresolved_signal_ranges": [],
+      "isolation_used": true,
+      "range_convention": "zero-based input rows; end is exclusive; header is excluded",
+      "attempts": [
+        {
+          "attempt": 0,
+          "begin": 0,
+          "end": 1,
+          "input": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u16-input.tsv",
+          "stdout": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u16-reference.tsv.reference-attempts-kkommf4a/attempt-000000.stdout.tsv",
+          "stderr": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u16-reference.tsv.reference-attempts-kkommf4a/attempt-000000.stderr.log",
+          "returncode": -11,
+          "signal_number": 11,
+          "signal_name": "SIGSEGV",
+          "isolated_input_id": "original-empty",
+          "reference_error_row": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u16-reference.tsv.reference-attempts-kkommf4a/row-000000000.signal.tsv"
+        }
+      ],
+      "evidence_directory": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u16-reference.tsv.reference-attempts-kkommf4a"
+    },
+    "u32": {
+      "schema": "boostregexrs.primary-reference-process.v1",
+      "status": "completed",
+      "command": [
+        "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/identical/oracle",
+        "--input-format",
+        "u32",
+        "--strength",
+        "identical"
+      ],
+      "cwd": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS",
+      "source": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u32-input.tsv",
+      "output": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u32-reference.tsv",
+      "metadata_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u32-reference.reference-process.json",
+      "input_rows": 1,
+      "output_rows": 1,
+      "subprocess_runs": 1,
+      "successful_batches": 0,
+      "signal_failures": 1,
+      "reference_error_count": 1,
+      "reference_error_free": false,
+      "unresolved_signal_ranges": [],
+      "isolation_used": true,
+      "range_convention": "zero-based input rows; end is exclusive; header is excluded",
+      "attempts": [
+        {
+          "attempt": 0,
+          "begin": 0,
+          "end": 1,
+          "input": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u32-input.tsv",
+          "stdout": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u32-reference.tsv.reference-attempts-09gpdsko/attempt-000000.stdout.tsv",
+          "stderr": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u32-reference.tsv.reference-attempts-09gpdsko/attempt-000000.stderr.log",
+          "returncode": -11,
+          "signal_number": 11,
+          "signal_name": "SIGSEGV",
+          "isolated_input_id": "original-empty",
+          "reference_error_row": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u32-reference.tsv.reference-attempts-09gpdsko/row-000000000.signal.tsv"
+        }
+      ],
+      "evidence_directory": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/original-empty/u32-reference.tsv.reference-attempts-09gpdsko"
+    }
+  },
+  "original_empty_reference_error_count": 3,
+  "approved_exception_policy": "ADR-0005 valid-pointer empty expectation only; separately counted from original Boost compatibility",
+  "generation": {
+    "algorithm": "SplitMix64",
+    "seed": "0x0042494355373701",
+    "generated_count": 20000,
+    "host_unicode_database_used": false
+  },
+  "groups": {
+    "directed": {
+      "summary": "directed/summary.json",
+      "case_count": 12229,
+      "totals": {
+        "passed": 12222,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 0,
+        "approved_exception_passed": 7
+      }
+    },
+    "generated": {
+      "summary": "generated/summary.json",
+      "case_count": 20000,
+      "totals": {
+        "passed": 19313,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 0,
+        "approved_exception_passed": 687
+      }
+    },
+    "contexts": {
+      "summary": "contexts/summary.json",
+      "case_count": 16046,
+      "totals": {
+        "passed": 16046,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 0,
+        "approved_exception_passed": 0
+      }
+    },
+    "u32": {
+      "summary": "u32/summary.json",
+      "case_count": 10,
+      "totals": {
+        "passed": 3,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 6,
+        "approved_exception_passed": 1
+      }
+    },
+    "u16": {
+      "summary": "u16/summary.json",
+      "case_count": 10,
+      "totals": {
+        "passed": 4,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 5,
+        "approved_exception_passed": 1
+      }
+    },
+    "all-scalars": {
+      "summary": "all-scalars/summary.json",
+      "case_count": 1112064,
+      "totals": {
+        "passed": 1112064,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 0,
+        "approved_exception_passed": 0
+      }
+    }
+  },
+  "groups_not_run": [],
+  "identity": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "candidate": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/identical/release/icu77-root-primary",
+      "bytes": 1618944,
+      "sha256": "ba5fb0517733dda68628ec8902101feae0c16b9f6443ecaa22d532d88553d64d"
+    },
+    "oracle": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/identical/oracle",
+      "bytes": 71640,
+      "sha256": "6ba31c2517220b02bcd6b0f745f1cdd40814e81be28a3d383a81595f30fa32c6"
+    },
+    "data": [
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/data/root-icu77.bin",
+        "bytes": 751804,
+        "sha256": "7aefc773d90fc2006c236720cd4e9220720efb33c7b8274ffeb24b494de3034e"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/data/root-icu77-nfd.bin",
+        "bytes": 255286,
+        "sha256": "45c59eca6b851ea843c8088343742f1ac706ca4bb657c807a981e1c708a337de"
+      }
+    ],
+    "sources": [
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/compare.py",
+        "bytes": 10958,
+        "sha256": "7b211f509c7c8bff86c66db380871537842d73792ba61f694bc70030301bada0"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/export/compare_ce_traces.py",
+        "bytes": 6258,
+        "sha256": "1eea010270cbe7a539c7d881cc17b205bba6d2e7dc99545c7bc727b1f17a62e6"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/export/data_format.py",
+        "bytes": 5744,
+        "sha256": "0c858da2bf173517bc4c66b3e3e76ab21905867a55aa8ec6557eb8430408368a"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/export/export-nfd.cpp",
+        "bytes": 5360,
+        "sha256": "84312dabe499ed2f529df4b8c620e6e79d7608e52e1016387852227398cc912f"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/export/export-root.cpp",
+        "bytes": 14288,
+        "sha256": "bcbddeb196e6961014fe1dbcdad70ea167884f374b32321005a5f12bdbe14151"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/export/generate.py",
+        "bytes": 9870,
+        "sha256": "38a32fd6e97b7397f8d1eb8cf9e7bb656e3f564489b216759135748131ce283a"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/export/generate_nfd.py",
+        "bytes": 4420,
+        "sha256": "911cb3bd1e2456af82afc1c03d9d3ec11395ecca77b8f4007862a56673ce515f"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/export/trace-root.cpp",
+        "bytes": 6868,
+        "sha256": "2e00930f4e30ff2c92358a1fc0e566d8bf68c06ea9975ebbca828d29897a7b6a"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/generate_cases.py",
+        "bytes": 11748,
+        "sha256": "6983c3f924a8d067aa9ac52daef8f81dd51186a153a149f9e9d00f5b0bc2f92e"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/oracle.cpp",
+        "bytes": 10211,
+        "sha256": "a62404562da80c1f572024bd0ed70ffcb20d9384d0f33fe44a3e262e09075faf"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/reference_process.py",
+        "bytes": 13088,
+        "sha256": "941e98a0f67b43828313639627a4eae79c29a22d2ae660cb70330db488ad2be9"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/run.py",
+        "bytes": 8126,
+        "sha256": "5a1fdc2a314ae4455a6d26cf64cb5edf44bee0cc1b349b29dfbbb7f43cd652d6"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/run_identical.py",
+        "bytes": 10205,
+        "sha256": "baf9bfa31f4af3a4b5461313a3ebfb89b63bdddc75a27092e3d5fd1d23a0c905"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/Cargo.lock",
+        "bytes": 162,
+        "sha256": "e21bdbc98bc403eb3326b84b5ef6dcfabe94e4ee4f1eaf32944204691219e235"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/Cargo.toml",
+        "bytes": 289,
+        "sha256": "fbae44ece308fd0ee5829e5578c5e8842c1ae69e590cfc5c04da0f77b97bed0d"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/src/bocsu77.rs",
+        "bytes": 3301,
+        "sha256": "a7d8d4b08a7bde13f7177fa5b816219a3f38051a704719ba2a6ee15ecca1568a"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/src/ce77.rs",
+        "bytes": 17756,
+        "sha256": "7c561dab25a87020b6c49b897be3184cea8eb8544a5fb6a9d525884a8498b41f"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/src/data77.rs",
+        "bytes": 10644,
+        "sha256": "d8a7802eb26081aca87027ccae2c811e231eacb4a171aea59a83d535bea16a78"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/src/key77.rs",
+        "bytes": 6043,
+        "sha256": "17b51fac7e1192d7dce277ec366003ba3cf16293de039eb10a4716a31738f6ea"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/src/lib.rs",
+        "bytes": 8463,
+        "sha256": "b08d42a9c8da1f04bec520ac8abc9285c6c757419b31a1b9b7964240c604450b"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/src/main.rs",
+        "bytes": 11514,
+        "sha256": "077516b43b6ab47ae349f3c03feb5ac14204f2246e0fc10681eaed7a13200c7a"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/src/nfd77.rs",
+        "bytes": 4342,
+        "sha256": "76a65d76508117ca5e6add10c09edeb8a14546631aad52ff5d593b107ac302e3"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/tests/cli.rs",
+        "bytes": 2400,
+        "sha256": "3adf8fe1e43118aed4c4e15aa8edfe6ae8deb6851751c7527e82b6aa01201d3b"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/tests/root_primary.rs",
+        "bytes": 6465,
+        "sha256": "5f09139409f4d539caf96565a1622be939b0400661aba5f5fb7df13cd5d1bd55"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/test_compare.py",
+        "bytes": 5746,
+        "sha256": "571c5fd0f47154b0918fa081da520f88e2ba790aa2a9c126f20a622694a77867"
+      },
+      {
+        "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/test_reference_process.py",
+        "bytes": 7634,
+        "sha256": "3d74cb836a64b6f3a97a72c7bd6a292d8e262200a337d86db3e8bdc339c49cee"
+      }
+    ]
+  },
+  "primary_historical_evidence_modified": false
+}

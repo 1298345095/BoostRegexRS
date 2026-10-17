@@ -1,0 +1,58 @@
+{
+  "evidence_kind": "captured_tool_transcript",
+  "description": "Verbatim command output copied from the execution tool after the completed root IDENTICAL validation. These commands were not redirected to log files at execution time. This file is a transcript, not a native process log or a later rerun.",
+  "working_directory": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS",
+  "environment": {
+    "CARGO_TARGET_DIR": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/identical",
+    "toolchain_entry": "python3 -B tools/dev/cargo.py",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+  },
+  "results": [
+    {
+      "command": "python3 -B tools/dev/cargo.py test --locked --manifest-path tools/icu-probe/primary/rust/Cargo.toml",
+      "exit_code": 0,
+      "tests": { "cli": 3, "root_identical": 7, "root_primary": 9, "unit": 0, "doc": 0, "passed_total": 19, "failed_total": 0 },
+      "chunks": [
+        {
+          "chunk_id": "7bfcdd",
+          "session_id": 50421,
+          "output": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\n   Compiling icu77-root-primary v0.1.0 (/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust)\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.62s\n     Running unittests src/lib.rs (target/research/icu77-cloud/build/identical/debug/deps/icu77_root_primary-a0537a5277f62d38)\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n     Running unittests src/main.rs (target/research/icu77-cloud/build/identical/debug/deps/icu77_root_primary-39dcc5326842792e)\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n     Running tests/cli.rs (target/research/icu77-cloud/build/identical/debug/deps/cli-40025b6943dd2ff0)\n\nrunning 3 tests\ntest embedded_tables_run_without_reference_environment_and_rows_survive_input_errors ... ok\ntest identical_uses_embedded_nfd_data_and_preserves_row_errors ... ok\ntest signed_hex_fields_are_rejected_and_next_valid_row_is_processed ... ok\n\ntest result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s\n\n     Running tests/root_identical.rs (target/research/icu77-cloud/build/identical/debug/deps/root_identical-6a48ca938eb6ba26)\n\nrunning 7 tests\ntest nfd_tail_does_not_normalize_the_ce_input ... ok\ntest empty_uses_approved_key_and_nul_is_retained_in_identical_level ... ok\ntest identical_checked_adapters_preserve_original_input_positions ... ok\ntest nfd_is_recursive_stable_and_canonical_without_compatibility_decomposition ... ok\ntest primary_results_are_unchanged_through_the_combined_collator ... ok\ntest additional_data_and_default_settings_are_validated ... ok\ntest official_full_keys_cover_level_compression_and_signed_bocsu_boundaries ... ok\n\ntest result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s\n\n     Running tests/root_primary.rs (target/research/icu77-cloud/build/identical/debug/deps/root_primary-4a0cd6eb8899649c)\n\nrunning 9 tests\ntest hangul_jamo_and_expansions_use_complete_table_mappings ... ok\ntest checked_input_adapters_keep_units_and_reject_invalid_surrogates ... ok\ntest empty_and_primary_ignorables_keep_one_zero ... ok\ntest discontiguous_contraction_observes_blocking_and_emits_skipped_marks ... ok\ntest ce_trace_preserves_non_fcd_order_even_when_primary_keys_agree ... ok\ntest prefix_uses_the_actual_preceding_character ... ok\ntest primary_compression_terminates_in_both_directions_and_at_merge ... ok\ntest long_keys_cross_boost_stack_buffer_without_truncation ... ok\n"
+        },
+        {
+          "chunk_id": "ac9a60",
+          "exit_code": 0,
+          "output": "test data_identity_and_settings_are_checked_before_running ... ok\n\ntest result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s\n\n   Doc-tests icu77_root_primary\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n"
+        }
+      ]
+    },
+    {
+      "command": "python3 -B tools/dev/cargo.py fmt --manifest-path tools/icu-probe/primary/rust/Cargo.toml -- --check",
+      "sandbox_permissions": "require_escalated",
+      "exit_code": 0,
+      "chunks": [
+        {
+          "chunk_id": "55345f",
+          "output": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\n"
+        }
+      ]
+    },
+    {
+      "command": "python3 -B tools/dev/cargo.py clippy --locked --all-targets --manifest-path tools/icu-probe/primary/rust/Cargo.toml -- -D warnings",
+      "sandbox_permissions": "require_escalated",
+      "exit_code": 0,
+      "chunks": [
+        {
+          "chunk_id": "5f18b9",
+          "output": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\n    Checking icu77-root-primary v0.1.0 (/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.31s\n"
+        }
+      ]
+    },
+    {
+      "command": "git diff --check -- tools/icu-probe/primary/rust",
+      "exit_code": 0,
+      "chunks": [
+        { "chunk_id": "bde6a5", "output": "" }
+      ]
+    }
+  ]
+}

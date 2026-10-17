@@ -1,0 +1,74 @@
+{
+  "status": "passed_for_recorded_inputs",
+  "scope": "root PRIMARY; complete raw ICU bytes and actual Boost u32 keys",
+  "input_format": "utf8",
+  "case_count": 1112064,
+  "totals": {
+    "passed": 1112064,
+    "mismatched": 0,
+    "unsupported": 0,
+    "reference_error": 0,
+    "rejected_as_expected": 0
+  },
+  "raw_icu_bytes_passed": 1112064,
+  "boost_u32_keys_passed": 1112064,
+  "by_category": {
+    "scalar": {
+      "passed": 1112064,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0,
+      "rejected_as_expected": 0
+    }
+  },
+  "examples": [],
+  "raw_key_length": {
+    "minimum": 1,
+    "maximum": 26,
+    "boost_buffer_boundary_counts": {
+      "99": 0,
+      "100": 0,
+      "101": 0
+    }
+  },
+  "adjacent_icu_compare": "not_requested",
+  "sha256": {
+    "cases": "bc88eff6b7319df752d96b1bfce3bf477527730a6bb151dd5b58ec4f1dc94d33",
+    "reference": "2fcea35270badf69466d9c77d5ead7f9f593c804cbd1301c384860367d7047b9",
+    "candidate": "2fcea35270badf69466d9c77d5ead7f9f593c804cbd1301c384860367d7047b9"
+  },
+  "reference_process": {
+    "schema": "boostregexrs.primary-reference-process.v1",
+    "status": "completed",
+    "command": [
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/primary/oracle",
+      "--input-format",
+      "utf8"
+    ],
+    "cwd": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS",
+    "source": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/cases/all-scalars.tsv",
+    "output": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/all-scalars/reference.tsv",
+    "metadata_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/all-scalars/reference.reference-process.json",
+    "input_rows": 1112064,
+    "output_rows": 1112064,
+    "subprocess_runs": 1,
+    "successful_batches": 1,
+    "signal_failures": 0,
+    "reference_error_count": 0,
+    "reference_error_free": true,
+    "unresolved_signal_ranges": [],
+    "isolation_used": false,
+    "range_convention": "zero-based input rows; end is exclusive; header is excluded",
+    "attempts": [
+      {
+        "attempt": 0,
+        "begin": 0,
+        "end": 1112064,
+        "input": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/cases/all-scalars.tsv",
+        "stdout": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/all-scalars/reference.tsv",
+        "stderr": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/all-scalars/reference.stderr.log",
+        "returncode": 0
+      }
+    ]
+  }
+}

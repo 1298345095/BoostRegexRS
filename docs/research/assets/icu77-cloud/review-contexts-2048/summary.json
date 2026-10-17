@@ -1,0 +1,27 @@
+{
+  "scope": "Additional review diagnostic; excluded from main PRIMARY and CE64 totals",
+  "seed": "0x5350454352455631",
+  "completed_utc": "2026-10-17T11:04:29.966669+00:00",
+  "key_totals": {
+    "passed": 2048,
+    "mismatched": 0,
+    "unsupported": 0,
+    "reference_error": 0,
+    "rejected_as_expected": 0
+  },
+  "ce_totals": {
+    "total": 2048,
+    "passed": 2048,
+    "differences": 0,
+    "examples": []
+  },
+  "original_reviewed_tree": "387ad932340ea5145bcfdc884943cd4a194927cd",
+  "public_commit_with_same_tree": "e2216e4240244c0ae2cb9971fd325d13168508e0",
+  "archive": {
+    "path": "evidence.zip",
+    "bytes": 356512,
+    "sha256": "fe951c51bcadc5058ebf5be584f9a0a5cab8640c986a6a85f829b772757fc910",
+    "files": 11
+  },
+  "retained_identity_scope": "reproduce.py intentionally requires the original local binaries; its local review commit has the same tree as the public commit above. The main cloud/run.py entry is the portable clean-checkout reproducer."
+}

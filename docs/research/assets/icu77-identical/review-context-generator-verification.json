@@ -1,0 +1,17 @@
+{
+  "algorithm": "SplitMix64",
+  "seed": "0x5350454352455631",
+  "count": 2048,
+  "host_unicode_database_used": false,
+  "context_source_sha256": "e57e7c3ee3d0997f2ee2eb79d7b5fdda710fda78864d7ac6b458d5bfa59a38a2",
+  "inputs": {
+    "inputs-utf8.tsv": "40bbd8e0e176a695da5e7cf1e11e524d2f6f1da2f4621bd4340d2d8e18b5723a",
+    "inputs-u16.tsv": "2530dd745d8311e1ffb336e7e87595be2bf807eaf6773aea3655f4477a33c31b"
+  },
+  "generator_sha256": "3bcec63b14c356a7a4209303076f8b99cc9816e5c06b02350ca2f3a069e78d34",
+  "historical_inputs_equal": {
+    "inputs-utf8.tsv": true,
+    "inputs-u16.tsv": true
+  },
+  "validation_scope": "Input regeneration only; no oracle/candidate execution and no new acceptance records"
+}

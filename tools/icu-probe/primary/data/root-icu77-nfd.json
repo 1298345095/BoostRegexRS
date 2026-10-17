@@ -1,0 +1,226 @@
+{
+  "schema": "boostregexrs.icu77-nfd-data.v1",
+  "runtime": {
+    "icu": "77.1",
+    "unicode": "16.0.0",
+    "cldr": "47.0",
+    "icu_data": "77.1",
+    "normalization": "NFD, canonical only, recursively decomposed",
+    "hangul_included": true,
+    "mapping_count": 13253,
+    "root_identical_options": 61456,
+    "mapping_scalars": 36567,
+    "maximum_mapping_length": 4,
+    "ccc_ranges": 590
+  },
+  "source": {
+    "archive_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/icu4c-77_1-src.tgz",
+    "checksum_manifest_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/SHASUM512.txt",
+    "algorithm": "sha512",
+    "published_digest": "a47d6d9c327d037a05ea43d1d1a06b2fd757cc02a94f7c1a238f35cfc3dfd4ab78d0612790f3a3cca0292c77412a9c2c15c8f24b718f79a857e007e66f07e7cd",
+    "actual_digest": "a47d6d9c327d037a05ea43d1d1a06b2fd757cc02a94f7c1a238f35cfc3dfd4ab78d0612790f3a3cca0292c77412a9c2c15c8f24b718f79a857e007e66f07e7cd",
+    "published_digest_matches": true,
+    "detached_signature_verified": false,
+    "checksum_manifest_sha256": "8a1d7a14c9e641ef07186180f10aba2338b5f53bccc845047344cd2ddd200b4d",
+    "archive_sha256": "588e431f77327c39031ffbb8843c0e3bc122c211374485fa87dc5f3faff24061",
+    "extracted_source_files_match_archive": true
+  },
+  "source_files": [
+    {
+      "path": "LICENSE",
+      "bytes": 26487,
+      "sha256": "451167c55c0fa447cc2d5632714f5e3c567fe4f1e1badefab2c1333852198aca"
+    },
+    {
+      "path": "source/common/unicode/uvernum.h",
+      "bytes": 6480,
+      "sha256": "ede6d900f95bee0f775ff2c7bc4bc3d0e29126870f48dfef4cf3a71256d52184"
+    },
+    {
+      "path": "source/common/normalizer2impl.cpp",
+      "bytes": 111045,
+      "sha256": "8c7444d53fc1f8692c2aa0398824835777cfca8e19a60d522a897c96f15c10ac"
+    },
+    {
+      "path": "source/common/normalizer2impl.h",
+      "bytes": 44121,
+      "sha256": "ff582e37f3450231eb3b278bcb833e8ff15a9a36cfb756d79e8f00eada734414"
+    },
+    {
+      "path": "source/common/ucharstrie.cpp",
+      "bytes": 12800,
+      "sha256": "5df2af48250ad1272629eb1d0c7df4cd2574318ab1b13581b4f93f310dbe8553"
+    },
+    {
+      "path": "source/common/ucharstrieiterator.cpp",
+      "bytes": 7462,
+      "sha256": "541d9e2ad9b9aeab3d208e8712ca2f1cd883bfd2f70f49a738c30ebc70efed49"
+    },
+    {
+      "path": "source/common/unicode/ucharstrie.h",
+      "bytes": 23128,
+      "sha256": "0b86db254b334d9771df14343adc4eb008e0fcb63d2c707f55351eedc710d9b3"
+    },
+    {
+      "path": "source/common/utrie2.h",
+      "bytes": 37467,
+      "sha256": "79e37fcb51257a6e21ec261f20a4964707b5b922cfca2dc68c0932c4e2647dec"
+    },
+    {
+      "path": "source/data/in/icudt77l.dat",
+      "bytes": 31895376,
+      "sha256": "310d9b2cb42947fad7f388b09d2ae574e2adeb60ca76abf280438908f20b2d7b"
+    },
+    {
+      "path": "source/data/in/nfc.nrm",
+      "bytes": 36224,
+      "sha256": "86aba1fd4b9c69c9dfa9b65d0ec3054adb9578877006ba631acc803a94b51403"
+    },
+    {
+      "path": "source/i18n/collation.cpp",
+      "bytes": 5524,
+      "sha256": "92a5ad1238f92ca16724acc309679cc4b301efa95d4af006dd59b814567700ce"
+    },
+    {
+      "path": "source/i18n/collation.h",
+      "bytes": 19435,
+      "sha256": "7a857ce64b2a765847743e9312872c5169ed9807dd3d5555150eb1cf2c5a1227"
+    },
+    {
+      "path": "source/i18n/collationdata.cpp",
+      "bytes": 13501,
+      "sha256": "208619a882b8376e67101c03fe8f0c6f2834acc57f338879c34fe46d52211030"
+    },
+    {
+      "path": "source/i18n/collationdata.h",
+      "bytes": 9278,
+      "sha256": "7439df5ff2603150ec2285be1e560df9778b103d054bdac775f2933d5308eb90"
+    },
+    {
+      "path": "source/i18n/collationdatareader.cpp",
+      "bytes": 19538,
+      "sha256": "f4f55d74568c1c17860312ccc769b9a87606eca5810c566b8bf0cd919e62ea56"
+    },
+    {
+      "path": "source/i18n/collationiterator.cpp",
+      "bytes": 37683,
+      "sha256": "6ef4cf0b197f7910fdb2210144af01ede968e36302c9a6a9548de70d0e9bb4f3"
+    },
+    {
+      "path": "source/i18n/collationiterator.h",
+      "bytes": 11002,
+      "sha256": "baa3fd6120e5d9904dc9dd3486b330a780055a9c04987cb5dd049f94867c1a9e"
+    },
+    {
+      "path": "source/i18n/collationkeys.cpp",
+      "bytes": 28052,
+      "sha256": "6465ccc70eb18e267bb809c7846ba79e40724eca4db6431e1335f96888c41e42"
+    },
+    {
+      "path": "source/i18n/collationkeys.h",
+      "bytes": 6864,
+      "sha256": "e18efb33cde91bfb376f7e8dce121e44b10dcd1c314f9546b8b944d647c992c5"
+    },
+    {
+      "path": "source/i18n/collationroot.cpp",
+      "bytes": 4599,
+      "sha256": "3a9c0173d50348b19cee2772de453665317929b6c8d8ae441920eac606166e29"
+    },
+    {
+      "path": "source/i18n/collationroot.h",
+      "bytes": 1461,
+      "sha256": "8e1a1f47f140a37426edea736c2f4487922abaaa47546ecf7c40a5777ff34211"
+    },
+    {
+      "path": "source/i18n/collationsettings.cpp",
+      "bytes": 13073,
+      "sha256": "4e43c3e6f5ba1ae246b26ef95222056afe6a30b91d543d1b844b626b2e0a2a96"
+    },
+    {
+      "path": "source/i18n/collationsettings.h",
+      "bytes": 10412,
+      "sha256": "9361e467568048cee572cbcc1423c78fe1bceede472ec8b563849f22af2d3201"
+    },
+    {
+      "path": "source/i18n/rulebasedcollator.cpp",
+      "bytes": 61988,
+      "sha256": "7754501e64c13b19de170ea17a234d6c8d8220b7614e6eefbead70a5f4b9cc53"
+    },
+    {
+      "path": "source/i18n/utf16collationiterator.cpp",
+      "bytes": 15766,
+      "sha256": "15b368884e282d3a6fdc20947ace79cee2fb63910160f3a73b5948399a1f950b"
+    },
+    {
+      "path": "source/i18n/utf16collationiterator.h",
+      "bytes": 6413,
+      "sha256": "f4b6e624b5e2eb64ae138fe3769e80bc806b243c89a217d42b0dd629ff10dc2b"
+    },
+    {
+      "path": "source/common/normalizer2.cpp",
+      "bytes": 18830,
+      "sha256": "22369d2e645b315b6e93da09a4d0ff8a13da94fd4f281cfec04bb03a24784f94"
+    },
+    {
+      "path": "source/common/unicode/normalizer2.h",
+      "bytes": 35516,
+      "sha256": "ed4a4585f6b7077c999faae5f5f186f500031a2018e1856341397b5c9f0165a7"
+    },
+    {
+      "path": "source/i18n/bocsu.cpp",
+      "bytes": 5140,
+      "sha256": "92b2db727399907f3593a292d7b6fa1002ccdfeafa936d4f5ccc985bf1ea6be3"
+    },
+    {
+      "path": "source/i18n/bocsu.h",
+      "bytes": 5805,
+      "sha256": "a592f54c053da670e9f941c83124e2231f7fa07b31d326a5c985cfb5751dbb1b"
+    }
+  ],
+  "installed_libraries": [
+    {
+      "path": "lib/libicui18n.so.77.1",
+      "bytes": 4903992,
+      "sha256": "5d7597ed5e8369fe194bb8df1468756808ea65008bc0182edeb1d2244fac7f21"
+    },
+    {
+      "path": "lib/libicuuc.so.77.1",
+      "bytes": 2617776,
+      "sha256": "95a76c2d54c0bf35dbe4f01d1aa589ab4337b0370796d5bd7329bfc4c184f6f5"
+    },
+    {
+      "path": "lib/libicudata.so.77.1",
+      "bytes": 31904728,
+      "sha256": "eadfa96e07844c17547f8e9822f81b7cec16735b92f6f45776cfb0af8df13403"
+    }
+  ],
+  "binary": {
+    "path": "root-icu77-nfd.bin",
+    "bytes": 255286,
+    "sha256": "45c59eca6b851ea843c8088343742f1ac706ca4bb657c807a981e1c708a337de"
+  },
+  "generator_files": [
+    {
+      "path": "tools/icu-probe/primary/export/export-nfd.cpp",
+      "bytes": 5360,
+      "sha256": "84312dabe499ed2f529df4b8c620e6e79d7608e52e1016387852227398cc912f"
+    },
+    {
+      "path": "tools/icu-probe/primary/export/generate_nfd.py",
+      "bytes": 4420,
+      "sha256": "911cb3bd1e2456af82afc1c03d9d3ec11395ecca77b8f4007862a56673ce515f"
+    },
+    {
+      "path": "tools/icu-probe/primary/export/generate.py",
+      "bytes": 9870,
+      "sha256": "38a32fd6e97b7397f8d1eb8cf9e7bb656e3f564489b216759135748131ce283a"
+    }
+  ],
+  "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+  "determinism": {
+    "independent_export_processes": 2,
+    "binary_equal": true,
+    "runtime_metadata_equal": true
+  },
+  "runtime_native_dependency": false
+}

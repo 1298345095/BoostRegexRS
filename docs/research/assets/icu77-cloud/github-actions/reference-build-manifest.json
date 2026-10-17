@@ -1,0 +1,100 @@
+{
+  "schema": "boostregexrs.icu77-cloud-reference-build.v1",
+  "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+  "commands": [
+    [
+      "c++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-I/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/deps/boost_1_89_0",
+      "-I/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/install/icu/include",
+      "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/reference/probe.cpp",
+      "-L/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-Wl,-rpath,/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-licui18n",
+      "-licuuc",
+      "-licudata",
+      "-o",
+      "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/bin/icu-reference"
+    ],
+    [
+      "c++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-I/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/deps/boost_1_89_0",
+      "-I/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/install/icu/include",
+      "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/reference/empty-probe.cpp",
+      "-L/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-Wl,-rpath,/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-licui18n",
+      "-licuuc",
+      "-licudata",
+      "-o",
+      "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/bin/empty-probe"
+    ],
+    [
+      "c++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-I/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/deps/boost_1_89_0",
+      "-I/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/install/icu/include",
+      "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/reference/empty-keys.cpp",
+      "-L/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-Wl,-rpath,/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-licui18n",
+      "-licuuc",
+      "-licudata",
+      "-o",
+      "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/bin/empty-keys"
+    ]
+  ],
+  "source_files": [
+    {
+      "path": "tools/icu-probe/reference/probe.cpp",
+      "bytes": 9410,
+      "sha256": "58c2a2de94c27c6c0a52c32e8ec95a4a859c92372d9b9eeda4923302d367c013"
+    },
+    {
+      "path": "tools/icu-probe/reference/empty-probe.cpp",
+      "bytes": 1417,
+      "sha256": "0cefbab64991e3039d019e68e01622dea32307d55afc840196e9623d58afa17b"
+    },
+    {
+      "path": "tools/icu-probe/reference/empty-keys.cpp",
+      "bytes": 6267,
+      "sha256": "212421887940c8ed71aa523510a76866390900277ceabddf38e9199f3e8f40cd"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "target/research/icu77-cloud/bin/icu-reference",
+      "bytes": 86320,
+      "sha256": "3179e9e3cbb12c66b4ddbe1c2bee73d3fdba4221577cf3a424dab4323ee31dad"
+    },
+    {
+      "path": "target/research/icu77-cloud/bin/empty-probe",
+      "bytes": 41424,
+      "sha256": "4355f16a525cf84df6b14b82b3db253c093b4f81685e0680c3fff0be7251ab8d"
+    },
+    {
+      "path": "target/research/icu77-cloud/bin/empty-keys",
+      "bytes": 33624,
+      "sha256": "5555ecce51979a7506036c9e2aca99ba33ff33a8837b19c01b275b8e38fd8e06"
+    }
+  ],
+  "environment_manifest": {
+    "path": "target/research/icu77-cloud/environment-manifest.json",
+    "bytes": 13595,
+    "sha256": "d196e8e29b97bab673e59c4030391cf1384baba4b0650b265048b245525d4f7d"
+  },
+  "dynamic_libraries_verified_local": true
+}

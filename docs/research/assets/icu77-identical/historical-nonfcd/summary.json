@@ -1,0 +1,43 @@
+{
+  "schema": "boostregexrs.historical-root-identical.v1",
+  "scope": "Derived comparison of preserved non-FCD evidence with one recorded new root run",
+  "status": "passed_for_recorded_inputs",
+  "historical_all_locale_identical_differences": 145,
+  "historical_root_identical_differences": 18,
+  "root_full_keys": {
+    "total": 13,
+    "passed": 13,
+    "differences": []
+  },
+  "root_ordering_pairs": {
+    "total": 78,
+    "passed": 78,
+    "mismatched": 0,
+    "previous_differences_now_agree": 18
+  },
+  "other_locale_difference_records_not_addressed_by_this_root_run": 127,
+  "included_in_new_run_input_totals": false,
+  "historical_files_modified": false,
+  "sources": [
+    {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/docs/research/assets/icu-probe/non-fcd/reference-sortkeys.tsv",
+      "sha256": "e031bb6801cbaf0ea6057045078bafea817b8263c3706f60249383f6bc4f39ab"
+    },
+    {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/docs/research/assets/icu-probe/non-fcd/candidate-ordering.tsv",
+      "sha256": "b15a50bf2c73f1a3477f0ef8e3bac42a9b0fbe8876174f26d06a62df9139df3b"
+    },
+    {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/directed/candidate-keys.tsv",
+      "sha256": "2d44c308138fe9daa7d1c3dac6c93c362783713b8b34ea50dc91afecfe862b00"
+    },
+    {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/identical/summary.json",
+      "sha256": "11bc4f38408b909cec044f1510b89bddfc5cca82698dcd8cc680ee86e603d49a"
+    },
+    {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/historical_identical.py",
+      "sha256": "096aa5e0cc28d6af4b6eb09dc035711b60157bdf6e8488515159dc2d44b08a7e"
+    }
+  ]
+}

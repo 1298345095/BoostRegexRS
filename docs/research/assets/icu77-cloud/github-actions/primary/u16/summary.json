@@ -1,0 +1,74 @@
+{
+  "status": "passed_for_recorded_inputs",
+  "scope": "root PRIMARY; complete raw ICU bytes and actual Boost u32 keys",
+  "input_format": "u16",
+  "case_count": 10,
+  "totals": {
+    "passed": 5,
+    "mismatched": 0,
+    "unsupported": 0,
+    "reference_error": 0,
+    "rejected_as_expected": 5
+  },
+  "raw_icu_bytes_passed": 5,
+  "boost_u32_keys_passed": 5,
+  "by_category": {
+    "input_u16": {
+      "passed": 5,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0,
+      "rejected_as_expected": 5
+    }
+  },
+  "examples": [],
+  "raw_key_length": {
+    "minimum": 1,
+    "maximum": 5,
+    "boost_buffer_boundary_counts": {
+      "99": 0,
+      "100": 0,
+      "101": 0
+    }
+  },
+  "adjacent_icu_compare": "not_requested",
+  "sha256": {
+    "cases": "0e1d42e64282f02f34644f8b8c55021dce797cc89aefc0f192f2b5eea9e54c91",
+    "reference": "1a59f184ce8da46601b95b366ec36a4943c19fcdb47af1e16a418180669e3f35",
+    "candidate": "1a59f184ce8da46601b95b366ec36a4943c19fcdb47af1e16a418180669e3f35"
+  },
+  "reference_process": {
+    "schema": "boostregexrs.primary-reference-process.v1",
+    "status": "completed",
+    "command": [
+      "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/build/primary/oracle",
+      "--input-format",
+      "u16"
+    ],
+    "cwd": "/home/runner/work/BoostRegexRS/BoostRegexRS",
+    "source": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/cases/u16.tsv",
+    "output": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/u16/reference.tsv",
+    "metadata_path": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/u16/reference.reference-process.json",
+    "input_rows": 10,
+    "output_rows": 10,
+    "subprocess_runs": 1,
+    "successful_batches": 1,
+    "signal_failures": 0,
+    "reference_error_count": 0,
+    "reference_error_free": true,
+    "unresolved_signal_ranges": [],
+    "isolation_used": false,
+    "range_convention": "zero-based input rows; end is exclusive; header is excluded",
+    "attempts": [
+      {
+        "attempt": 0,
+        "begin": 0,
+        "end": 10,
+        "input": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/cases/u16.tsv",
+        "stdout": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/u16/reference.tsv",
+        "stderr": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/u16/reference.stderr.log",
+        "returncode": 0
+      }
+    ]
+  }
+}

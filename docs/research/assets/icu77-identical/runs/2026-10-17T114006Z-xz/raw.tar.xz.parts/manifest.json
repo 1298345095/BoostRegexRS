@@ -1,0 +1,68 @@
+{
+  "schema": "boostregexrs.binary-parts.v1",
+  "filename": "raw.tar.xz",
+  "bytes": 23509336,
+  "sha256": "ac83c1f401ed9b5143f1ff244aab1246ce3ee8d285d55b5b4c504bf5dceade71",
+  "parts": [
+    {
+      "path": "part-0000.bin",
+      "bytes": 2097152,
+      "sha256": "c7de1752820de2b878fd0e4e34f7cd17db36095b5651cc3a2667075c9f806234"
+    },
+    {
+      "path": "part-0001.bin",
+      "bytes": 2097152,
+      "sha256": "c8b2f1ad42b5657b1fe2806694a67df235d332a6f8982aebac4e48966ae4d410"
+    },
+    {
+      "path": "part-0002.bin",
+      "bytes": 2097152,
+      "sha256": "13e6e3378ed312905a755da26ef47a6e8541dabdd23d95021a5d3213afc2df03"
+    },
+    {
+      "path": "part-0003.bin",
+      "bytes": 2097152,
+      "sha256": "a9f5229fff34468c7fb40603053cc08a7977b8976f99f1e684196d7c3d66bc3c"
+    },
+    {
+      "path": "part-0004.bin",
+      "bytes": 2097152,
+      "sha256": "7b2b49d7c18e9cadd45182b016506a89ff75c957cd1e28d29e3f2aff7dab6438"
+    },
+    {
+      "path": "part-0005.bin",
+      "bytes": 2097152,
+      "sha256": "4195ba96ed351dec1b338857467b57c489bd13d07c73a648e48dbf4a2dd23c51"
+    },
+    {
+      "path": "part-0006.bin",
+      "bytes": 2097152,
+      "sha256": "109f1ee11973354d3b3e3829d172c2fad6262ff58eef66dabb6e672b46cc4cb9"
+    },
+    {
+      "path": "part-0007.bin",
+      "bytes": 2097152,
+      "sha256": "4a599be7187bbc987c72578ccc702040c1799fbabb27e6c7146ac7da4b0279cc"
+    },
+    {
+      "path": "part-0008.bin",
+      "bytes": 2097152,
+      "sha256": "a77d4f421d7d1532bde86e484749dc09f8543b35973d62ef186d26d688840158"
+    },
+    {
+      "path": "part-0009.bin",
+      "bytes": 2097152,
+      "sha256": "d386a8196a8f9ff1798d7661bbff5f2b4c516f27d3c7e423b9a997a1e56ee30b"
+    },
+    {
+      "path": "part-0010.bin",
+      "bytes": 2097152,
+      "sha256": "ef7342511a0f117a44faeb2876122b9d89895968fdceedc8b801a1546aa7b502"
+    },
+    {
+      "path": "part-0011.bin",
+      "bytes": 440664,
+      "sha256": "7dc99897b54cf94a3e980a6fd47f061e2934ece0d3cee98be0d890e9a192c554"
+    }
+  ]
+}

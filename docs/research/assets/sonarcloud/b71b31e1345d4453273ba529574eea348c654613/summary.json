@@ -1,0 +1,23 @@
+{
+  "collected_utc": "2026-10-17T11:38:26.067390+00:00",
+  "repository": "1298345095/BoostRegexRS",
+  "commit": "b71b31e1345d4453273ba529574eea348c654613",
+  "pull_request": 1,
+  "check_id": 117383130668,
+  "check_status": "completed",
+  "quality_gate_conclusion": "failure",
+  "check_output": {
+    "title": "Quality Gate failed",
+    "summary": "Failed conditions  \n![](https://sonarsource.github.io/sonarcloud-github-static-resources/v2/common/failed.svg '') [E Security Rating on New Code](https://sonarcloud.io/project/issues?id=1298345095_BoostRegexRS&pullRequest=1&issueStatuses=OPEN,CONFIRMED&sinceLeakPeriod=true) (required ≥ A)  \n  \n[See analysis details on SonarQube Cloud](https://sonarcloud.io/dashboard?id=1298345095_BoostRegexRS&pullRequest=1)\n\n##   \n![](https://sonarsource.github.io/sonarcloud-github-static-resources/v2/common/light_bulb.svg '') Catch issues before they fail your Quality Gate with our IDE extension ![](https://sonarsource.github.io/sonarcloud-github-static-resources/v2/common/sonarlint.svg '') [SonarQube for IDE](https://www.sonarsource.com/products/sonarlint/features/connected-mode/?referrer=pull-request)\n\n",
+    "text": null,
+    "annotations_count": 50,
+    "annotations_url": "https://api.github.com/repos/1298345095/BoostRegexRS/check-runs/117383130668/annotations"
+  },
+  "annotation_count": 50,
+  "annotations_complete": true,
+  "sonar_api_statuses": {
+    "sonar-issues.json": "not_requested",
+    "sonar-quality-gate.json": "not_requested"
+  },
+  "meaning": "Archived server evidence; collecting a failed check never changes its conclusion."
+}

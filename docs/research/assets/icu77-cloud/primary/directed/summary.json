@@ -1,0 +1,113 @@
+{
+  "status": "passed_for_recorded_inputs",
+  "scope": "root PRIMARY; complete raw ICU bytes and actual Boost u32 keys",
+  "input_format": "utf8",
+  "case_count": 12062,
+  "totals": {
+    "passed": 12062,
+    "mismatched": 0,
+    "unsupported": 0,
+    "reference_error": 0,
+    "rejected_as_expected": 0
+  },
+  "raw_icu_bytes_passed": 12062,
+  "boost_u32_keys_passed": 12062,
+  "by_category": {
+    "combining": {
+      "passed": 700,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0,
+      "rejected_as_expected": 0
+    },
+    "directed": {
+      "passed": 28,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0,
+      "rejected_as_expected": 0
+    },
+    "existing24": {
+      "passed": 24,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0,
+      "rejected_as_expected": 0
+    },
+    "hangul_jamo": {
+      "passed": 11172,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0,
+      "rejected_as_expected": 0
+    },
+    "long": {
+      "passed": 125,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0,
+      "rejected_as_expected": 0
+    },
+    "nonfcd13": {
+      "passed": 13,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0,
+      "rejected_as_expected": 0
+    }
+  },
+  "examples": [],
+  "raw_key_length": {
+    "minimum": 1,
+    "maximum": 30001,
+    "boost_buffer_boundary_counts": {
+      "99": 2,
+      "100": 3,
+      "101": 2
+    }
+  },
+  "adjacent_icu_compare": {
+    "passed": 12061,
+    "mismatched": 0,
+    "unavailable": 0
+  },
+  "sha256": {
+    "cases": "217ba000c41ce28de73d72664f653931c59fa0dc241756b38edbe226a53b8a12",
+    "reference": "cd3bd6e86988cbea5ad6c5d18c67bf9a13a9ff8921f3ffdb47e8a34c68000b9b",
+    "candidate": "cd3bd6e86988cbea5ad6c5d18c67bf9a13a9ff8921f3ffdb47e8a34c68000b9b"
+  },
+  "reference_process": {
+    "schema": "boostregexrs.primary-reference-process.v1",
+    "status": "completed",
+    "command": [
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/primary/oracle",
+      "--input-format",
+      "utf8"
+    ],
+    "cwd": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS",
+    "source": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/cases/directed.tsv",
+    "output": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/directed/reference.tsv",
+    "metadata_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/directed/reference.reference-process.json",
+    "input_rows": 12062,
+    "output_rows": 12062,
+    "subprocess_runs": 1,
+    "successful_batches": 1,
+    "signal_failures": 0,
+    "reference_error_count": 0,
+    "reference_error_free": true,
+    "unresolved_signal_ranges": [],
+    "isolation_used": false,
+    "range_convention": "zero-based input rows; end is exclusive; header is excluded",
+    "attempts": [
+      {
+        "attempt": 0,
+        "begin": 0,
+        "end": 12062,
+        "input": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/cases/directed.tsv",
+        "stdout": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/directed/reference.tsv",
+        "stderr": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/directed/reference.stderr.log",
+        "returncode": 0
+      }
+    ]
+  }
+}

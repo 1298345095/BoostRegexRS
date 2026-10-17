@@ -1,0 +1,57 @@
+{
+  "channel_date": "2026-10-15",
+  "channel_manifest_url": "https://static.rust-lang.org/dist/2026-10-15/channel-rust-stable.toml",
+  "channel_manifest_sha256": "fb152be80975c194aa5fc684b2aec3a6e14e2b855efe2faa4e5f8ae6e590f463",
+  "components": {
+    "rustc": {
+      "available": true,
+      "url": "https://static.rust-lang.org/dist/2026-10-15/rustc-1.99.1-x86_64-unknown-linux-gnu.tar.gz",
+      "hash": "85e7c0e6f21636f714e2a42966011364a6cc56b6548126d32144d6ba90904966",
+      "xz_url": "https://static.rust-lang.org/dist/2026-10-15/rustc-1.99.1-x86_64-unknown-linux-gnu.tar.xz",
+      "xz_hash": "2ff05ff9c08a90861e7f6e4065b40a8b87463b4576186fd613871c3e37f2091f",
+      "version": "1.99.1 (58cf8f9c3 2026-10-13)"
+    },
+    "cargo": {
+      "available": true,
+      "url": "https://static.rust-lang.org/dist/2026-10-15/cargo-1.99.1-x86_64-unknown-linux-gnu.tar.gz",
+      "hash": "47babc028247e26577f8a1bf390b11f447ad9b7ab93f5c9a0dda078935fc149b",
+      "xz_url": "https://static.rust-lang.org/dist/2026-10-15/cargo-1.99.1-x86_64-unknown-linux-gnu.tar.xz",
+      "xz_hash": "53f3521949404d595efb06a55c12c5658d4ed1c75566f33d3d514eaebe70bd8a",
+      "version": "0.100.0 (5f94df478 2026-08-27)"
+    },
+    "rust-std": {
+      "available": true,
+      "url": "https://static.rust-lang.org/dist/2026-10-15/rust-std-1.99.1-x86_64-unknown-linux-gnu.tar.gz",
+      "hash": "d1290c05994a59c029e562cb75be1bddc6fb11a4c501e1b7b0f61d119c6cbb12",
+      "xz_url": "https://static.rust-lang.org/dist/2026-10-15/rust-std-1.99.1-x86_64-unknown-linux-gnu.tar.xz",
+      "xz_hash": "109b074225bf5b9ea3820890876bfdf4ed161adbfaf94b2b4b5984c85ee5d958",
+      "version": "1.99.1 (58cf8f9c3 2026-10-13)"
+    },
+    "rustfmt-preview": {
+      "available": true,
+      "url": "https://static.rust-lang.org/dist/2026-10-15/rustfmt-1.99.1-x86_64-unknown-linux-gnu.tar.gz",
+      "hash": "e3a88008061f485126fe24569c4d3e5a0f49462a06ee6339920f8f202124b13a",
+      "xz_url": "https://static.rust-lang.org/dist/2026-10-15/rustfmt-1.99.1-x86_64-unknown-linux-gnu.tar.xz",
+      "xz_hash": "e3b36c4c7ec3486c059d8067ff48787676612007123aad7a4e8ec12c48ee9ba2",
+      "version": "1.10.0"
+    },
+    "clippy-preview": {
+      "available": true,
+      "url": "https://static.rust-lang.org/dist/2026-10-15/clippy-1.99.1-x86_64-unknown-linux-gnu.tar.gz",
+      "hash": "3c6d008544b6e456cc785c86f8ce3713f0d845b94be3a6c8a34662b8504561b5",
+      "xz_url": "https://static.rust-lang.org/dist/2026-10-15/clippy-1.99.1-x86_64-unknown-linux-gnu.tar.xz",
+      "xz_hash": "458339712a058e52cc4522ff9ef8b59cd1ea1340312216cd94194c464a3f6dc5",
+      "version": "0.1.99"
+    }
+  },
+  "actual": {
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-unknown-linux-gnu\nrelease: 1.99.1\nLLVM version: 23.1.1",
+    "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)"
+  },
+  "build_flags": {
+    "RUSTFLAGS": "-C link-arg=-fuse-ld=bfd",
+    "compiler_loader": "explicit project-local lib directory"
+  },
+  "compiler_sha256": "b53b780f77f952062f8ca8a3b70aef2390b1e45ad91939be94afdc9543026853",
+  "cargo_sha256": "a670e02cfa39ac2e53f77a2d911ca1fc9e2c479b0603ec956625be1daf24e3af"
+}

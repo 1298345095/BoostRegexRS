@@ -1,0 +1,135 @@
+{
+  "scope": "ICU77 root PRIMARY full-key prototype only",
+  "status": "passed_for_recorded_inputs",
+  "totals": {
+    "passed": 1160181,
+    "mismatched": 0,
+    "unsupported": 0,
+    "reference_error": 0,
+    "rejected_as_expected": 11
+  },
+  "generation": {
+    "algorithm": "SplitMix64",
+    "seed": "0x0042494355373701",
+    "host_unicode_database_used": false,
+    "counts": {
+      "directed": 12062,
+      "generated": 20000,
+      "contexts": 16046,
+      "u32": 10,
+      "u16": 10,
+      "all-scalars": 1112064
+    }
+  },
+  "groups": {
+    "directed": {
+      "summary": "directed/summary.json",
+      "case_count": 12062,
+      "totals": {
+        "passed": 12062,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 0
+      }
+    },
+    "generated": {
+      "summary": "generated/summary.json",
+      "case_count": 20000,
+      "totals": {
+        "passed": 20000,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 0
+      }
+    },
+    "contexts": {
+      "summary": "contexts/summary.json",
+      "case_count": 16046,
+      "totals": {
+        "passed": 16046,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 0
+      }
+    },
+    "u32": {
+      "summary": "u32/summary.json",
+      "case_count": 10,
+      "totals": {
+        "passed": 4,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 6
+      }
+    },
+    "u16": {
+      "summary": "u16/summary.json",
+      "case_count": 10,
+      "totals": {
+        "passed": 5,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 5
+      }
+    },
+    "all-scalars": {
+      "summary": "all-scalars/summary.json",
+      "case_count": 1112064,
+      "totals": {
+        "passed": 1112064,
+        "mismatched": 0,
+        "unsupported": 0,
+        "reference_error": 0,
+        "rejected_as_expected": 0
+      }
+    }
+  },
+  "out_of_scope": [
+    "IDENTICAL writer and 145 historical differences",
+    "non-root locale tailoring/FCD settings",
+    "complete regex engine",
+    "six-platform release acceptance",
+    "engine performance/memory acceptance",
+    "librime-rs integration"
+  ],
+  "rust_runtime_environment": {
+    "LD_LIBRARY_PATH": "unset",
+    "ICU_DATA": "intentionally absent directory",
+    "reference_program_invoked_by_candidate": false
+  },
+  "identity": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "data_sha256": "7aefc773d90fc2006c236720cd4e9220720efb33c7b8274ffeb24b494de3034e",
+    "oracle_sha256": "20830e19e338ec48e9e068e7b30a95565d9c707f25b4e65f99b8ef55c05ad887",
+    "candidate_sha256": "023c79f7a5c321370d131985bc1a3cf0eaaea35827b87b99dff70167d7c77c74",
+    "source_sha256": {
+      "tools/icu-probe/primary/compare.py": "1abf02cf1b3fc745ddc220ef5eee61422b1653c2c9a460a04a2f96141854b01e",
+      "tools/icu-probe/primary/export/compare_ce_traces.py": "1eea010270cbe7a539c7d881cc17b205bba6d2e7dc99545c7bc727b1f17a62e6",
+      "tools/icu-probe/primary/export/data_format.py": "0c858da2bf173517bc4c66b3e3e76ab21905867a55aa8ec6557eb8430408368a",
+      "tools/icu-probe/primary/export/export-root.cpp": "bcbddeb196e6961014fe1dbcdad70ea167884f374b32321005a5f12bdbe14151",
+      "tools/icu-probe/primary/export/generate.py": "7ee4cd89eeb777b0bdc8b02c0adc17a94d829176d800a057925db028e7bcad37",
+      "tools/icu-probe/primary/export/trace-root.cpp": "2e00930f4e30ff2c92358a1fc0e566d8bf68c06ea9975ebbca828d29897a7b6a",
+      "tools/icu-probe/primary/generate_cases.py": "cb4bb1ed57e70765f7088cb5dbbf8f1d260f88e585673cbaa202a6b4d0467854",
+      "tools/icu-probe/primary/oracle.cpp": "9bb2a7e2268c31e1c2773521805ad18fd21fab7107ffad1499ce88697cc424c8",
+      "tools/icu-probe/primary/reference_process.py": "941e98a0f67b43828313639627a4eae79c29a22d2ae660cb70330db488ad2be9",
+      "tools/icu-probe/primary/run.py": "5a1fdc2a314ae4455a6d26cf64cb5edf44bee0cc1b349b29dfbbb7f43cd652d6",
+      "tools/icu-probe/primary/rust/Cargo.lock": "e21bdbc98bc403eb3326b84b5ef6dcfabe94e4ee4f1eaf32944204691219e235",
+      "tools/icu-probe/primary/rust/Cargo.toml": "fbae44ece308fd0ee5829e5578c5e8842c1ae69e590cfc5c04da0f77b97bed0d",
+      "tools/icu-probe/primary/rust/src/ce77.rs": "7c561dab25a87020b6c49b897be3184cea8eb8544a5fb6a9d525884a8498b41f",
+      "tools/icu-probe/primary/rust/src/data77.rs": "b43156225a749954c85f1d33d8b99c2a22552211c7b44ab9885b2b682c143946",
+      "tools/icu-probe/primary/rust/src/key77.rs": "c572ea0ec3f7370fa976fdb71848cf467c2db84e77e6b78b5002398447f28816",
+      "tools/icu-probe/primary/rust/src/lib.rs": "2254b865b9247099197c0b3cc504986730f45a9067583ce0bbbabdf8784f581c",
+      "tools/icu-probe/primary/rust/src/main.rs": "9b3ac1d19552e6a8be6992a2e4f2d07fc28f184e0e99240285045aa79d3ec6ba",
+      "tools/icu-probe/primary/rust/tests/cli.rs": "3adf8fe1e43118aed4c4e15aa8edfe6ae8deb6851751c7527e82b6aa01201d3b",
+      "tools/icu-probe/primary/rust/tests/root_primary.rs": "5f09139409f4d539caf96565a1622be939b0400661aba5f5fb7df13cd5d1bd55",
+      "tools/icu-probe/primary/test_compare.py": "cff4d3159b7c31242b5561aa656cb7baff09da40b0033a4ac2c352f1df99bf7c",
+      "tools/icu-probe/primary/test_reference_process.py": "3d74cb836a64b6f3a97a72c7bd6a292d8e262200a337d86db3e8bdc339c49cee"
+    }
+  }
+}

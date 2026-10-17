@@ -1,0 +1,42 @@
+["cargo", "test", "--locked", "--manifest-path", "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/rust/Cargo.toml"]
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.00s
+     Running unittests src/lib.rs (target/research/icu77-cloud/build/primary/debug/deps/icu77_root_primary-a0537a5277f62d38)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/research/icu77-cloud/build/primary/debug/deps/icu77_root_primary-39dcc5326842792e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/cli.rs (target/research/icu77-cloud/build/primary/debug/deps/cli-40025b6943dd2ff0)
+
+running 1 test
+test embedded_tables_run_without_reference_environment_and_rows_survive_input_errors ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/root_primary.rs (target/research/icu77-cloud/build/primary/debug/deps/root_primary-4a0cd6eb8899649c)
+
+running 9 tests
+test ce_trace_preserves_non_fcd_order_even_when_primary_keys_agree ... ok
+test checked_input_adapters_keep_units_and_reject_invalid_surrogates ... ok
+test discontiguous_contraction_observes_blocking_and_emits_skipped_marks ... ok
+test empty_and_primary_ignorables_keep_one_zero ... ok
+test hangul_jamo_and_expansions_use_complete_table_mappings ... ok
+test prefix_uses_the_actual_preceding_character ... ok
+test primary_compression_terminates_in_both_directions_and_at_merge ... ok
+test long_keys_cross_boost_stack_buffer_without_truncation ... ok
+test data_identity_and_settings_are_checked_before_running ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+   Doc-tests icu77_root_primary
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

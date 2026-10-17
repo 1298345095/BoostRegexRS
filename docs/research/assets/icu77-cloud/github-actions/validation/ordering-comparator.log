@@ -1,0 +1,6 @@
+["/usr/bin/python3", "-B", "-m", "unittest", "discover", "-s", "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe", "-p", "test_compare_ordering.py"]
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.007s
+
+OK
