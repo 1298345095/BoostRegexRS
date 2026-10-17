@@ -21,12 +21,14 @@ class CliTrustBoundaries(unittest.TestCase):
             marker = working / "unexpected-shell-execution"
             argument = f"; touch '{marker}' ; $(touch '{marker}')"
             log = working / "literal-arguments.log"
-            prepare.run_logged(
-                [sys.executable, "-c", "import sys; print(repr(sys.argv[1]))", argument],
-                cwd=working, log=log,
-            )
+            command = [sys.executable, "-c", "import sys; print(repr(sys.argv[1]))", argument]
+            prepare.run_logged(command, cwd=working, log=log, timeout=5)
             self.assertFalse(marker.exists())
-            self.assertEqual(log.read_text(encoding="utf-8").splitlines()[1], repr(argument))
+            self.assertEqual(log.read_text(encoding="utf-8"), repr(argument) + "\n")
+            record = json.loads(log.with_suffix(".process.json").read_text(encoding="utf-8"))
+            self.assertEqual(record["command"], command)
+            self.assertEqual(record["exit_status"], 0)
+            self.assertFalse(record["timed_out"])
 
     def test_explicit_output_paths_can_be_outside_the_checkout(self):
         with tempfile.TemporaryDirectory() as directory:

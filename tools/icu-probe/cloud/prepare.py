@@ -15,10 +15,14 @@ import json
 import os
 from pathlib import Path
 import platform
+import shlex
 import shutil
+import signal
 import subprocess
 import sys
 import tarfile
+import threading
+import time
 
 
 REPO = Path(__file__).resolve().parents[3]
@@ -32,6 +36,28 @@ ICU_SHA512 = (
     "a47d6d9c327d037a05ea43d1d1a06b2fd757cc02a94f7c1a238f35cfc3dfd4ab78d0612"
     "790f3a3cca0292c77412a9c2c15c8f24b718f79a857e007e66f07e7cd"
 )
+ACTIVE_PROCESSES: dict[int, subprocess.Popen] = {}
+CANCELLATION_SIGNAL: int | None = None
+
+
+def cancel_active_processes(signum: int, _frame: object) -> None:
+    """Forward an external deadline before Python joins download worker threads."""
+    global CANCELLATION_SIGNAL
+    CANCELLATION_SIGNAL = signum
+    # Do not wait here: a signal can interrupt Popen while its wait lock is held.
+    # Normal finally blocks reap processes and write the cancellation records.
+    for process in list(ACTIVE_PROCESSES.values()):
+        for forwarded in (signal.SIGTERM, signal.SIGKILL):
+            try:
+                os.killpg(process.pid, forwarded)
+            except ProcessLookupError:
+                pass
+
+
+def install_cancellation_handler() -> None:
+    if os.name != "nt" and threading.current_thread() is threading.main_thread():
+        for signum in (signal.SIGTERM, signal.SIGINT):
+            signal.signal(signum, cancel_active_processes)
 
 
 def digest(path: Path, algorithm: str = "sha256") -> str:
@@ -55,8 +81,11 @@ def file_identity(path: Path, relative_to: Path = REPO) -> dict:
     }
 
 
-def command_output(command: list[str]) -> str:
-    result = subprocess.run(command, text=True, capture_output=True, check=True)
+def command_output(command: list[str], *, log: Path | None = None) -> str:
+    if log is not None:
+        run_logged(command, cwd=REPO, log=log, timeout=20)
+        return log.read_text(encoding="utf-8").strip()
+    result = subprocess.run(command, text=True, capture_output=True, check=True, timeout=20)
     return result.stdout.strip()
 
 
@@ -65,15 +94,17 @@ def download(url: str, target: Path) -> None:
         return
     target.parent.mkdir(parents=True, exist_ok=True)
     temporary = target.with_name(target.name + ".part")
-    subprocess.run(
-        ["curl", "--fail", "--location", "--retry", "3", "--silent", "--show-error",
+    run_logged(
+        ["curl", "--fail", "--location", "--retry", "3", "--retry-max-time", "600",
+         "--connect-timeout", "20", "--max-time", "300", "--silent", "--show-error",
          "--output", str(temporary), url],
-        check=True,
+        cwd=target.parent, log=target.parent / "logs" / (target.name + ".log"), timeout=660,
     )
     temporary.replace(target)
 
 
 def fetch_and_verify(cache: Path) -> list[dict]:
+    install_cancellation_handler()
     downloads = cache / "downloads"
     files = [
         (BOOST_BASE + BOOST_ARCHIVE, downloads / BOOST_ARCHIVE),
@@ -140,15 +171,97 @@ def extract_archive(cache: Path, name: str, directory: str, expected: str) -> Pa
     return destination
 
 
-def run_logged(command: list[str], *, cwd: Path, log: Path, env: dict | None = None) -> None:
-    """Run the caller-selected tool with literal argv; corpus data never chooses a command."""
+def stop_process_group(process: subprocess.Popen, grace: float) -> None:
+    """Terminate a timed-out build together with compilers it may have spawned."""
+    if os.name == "nt":
+        subprocess.run(["taskkill", "/PID", str(process.pid), "/T", "/F"],
+                       capture_output=True, timeout=10, check=False)
+    else:
+        try:
+            os.killpg(process.pid, signal.SIGTERM)
+        except ProcessLookupError:
+            pass
+        try:
+            process.wait(timeout=grace)
+        except subprocess.TimeoutExpired:
+            pass
+        # A child can outlive its parent and ignore TERM. Kill the process
+        # group even when wait() already observed the parent's exit.
+        try:
+            os.killpg(process.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+    process.wait(timeout=10)
+
+
+def run_logged(command: list[str], *, cwd: Path, log: Path, env: dict | None = None,
+               timeout: float = 300, terminate_grace: float = 5,
+               input_path: Path | None = None, check: bool = True) -> dict:
+    """Run literal argv with a deadline and retain both streams and exit status.
+
+    Cancellation only records intent asynchronously. Every created child reaches
+    registration, a cancellation check, reaping and metadata before unregistering.
+    Only that safe point may unwind the controller or its download worker.
+    """
+    if timeout <= 0 or terminate_grace <= 0:
+        raise ValueError("Command deadlines and termination grace must be positive")
+    install_cancellation_handler()
     log.parent.mkdir(parents=True, exist_ok=True)
-    with log.open("w", encoding="utf-8") as stream:
-        stream.write(json.dumps({"command": command, "cwd": str(cwd)}) + "\n")
-        stream.flush()
-        result = subprocess.run(command, cwd=cwd, env=env, stdout=stream, stderr=subprocess.STDOUT, shell=False)
-    if result.returncode:
-        raise RuntimeError(f"Command failed ({result.returncode}); see {log}")
+    errors = log.with_suffix(".stderr.log")
+    record = {"command": command, "cwd": str(cwd), "timeout_seconds": timeout,
+              "started_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+              "stdin": str(input_path) if input_path is not None else None,
+              "stdout": str(log), "stderr": str(errors), "returncode": None,
+              "timed_out": False, "launch_error": None, "interrupted_by_signal": None}
+    rendered = subprocess.list2cmdline(command) if os.name == "nt" else shlex.join(command)
+    print(f"[timeout {timeout:g}s] {rendered}\n  stdout: {log}\n  stderr: {errors}", flush=True)
+    started = time.monotonic()
+    source = input_path.open("rb") if input_path is not None else subprocess.DEVNULL
+    process = None
+    try:
+        with log.open("wb") as output, errors.open("wb") as error_output:
+            options = {"creationflags": subprocess.CREATE_NEW_PROCESS_GROUP} if os.name == "nt" else {"start_new_session": True}
+            try:
+                if CANCELLATION_SIGNAL is not None:
+                    raise OSError("Controller was cancelled before process launch")
+                process = subprocess.Popen(command, cwd=cwd, env=env, stdin=source,
+                                           stdout=output, stderr=error_output, shell=False, **options)
+            except OSError as error:
+                record["launch_error"] = str(error)
+                error_output.write(str(error).encode("utf-8"))
+            else:
+                ACTIVE_PROCESSES[process.pid] = process
+                try:
+                    if CANCELLATION_SIGNAL is not None:
+                        stop_process_group(process, terminate_grace)
+                    process.wait(timeout=timeout)
+                except subprocess.TimeoutExpired:
+                    record["timed_out"] = True
+                    stop_process_group(process, terminate_grace)
+                except BaseException:
+                    stop_process_group(process, terminate_grace)
+                    raise
+                finally:
+                    record["returncode"] = process.returncode
+    finally:
+        if input_path is not None:
+            source.close()
+        record["elapsed_seconds"] = time.monotonic() - started
+        record["interrupted_by_signal"] = CANCELLATION_SIGNAL
+        record["exit_status"] = (128 + CANCELLATION_SIGNAL if CANCELLATION_SIGNAL is not None else
+                                 124 if record["timed_out"] else
+                                 127 if record["launch_error"] is not None else record["returncode"])
+        try:
+            write_json(log.with_suffix(".process.json"), record)
+        finally:
+            if process is not None:
+                ACTIVE_PROCESSES.pop(process.pid, None)
+    if CANCELLATION_SIGNAL is not None:
+        raise SystemExit(128 + CANCELLATION_SIGNAL)
+    if check and record["exit_status"] != 0:
+        reason = "timed out" if record["timed_out"] else "failed"
+        raise RuntimeError(f"Command {reason} ({record['exit_status']}); see {log.with_suffix('.process.json')}")
+    return record
 
 
 def source_identities(boost: Path, icu: Path) -> list[dict]:
@@ -187,7 +300,8 @@ def prepare(cache: Path, jobs: int, cc: str = "cc", cxx: str = "c++") -> dict:
     configure = [str(icu / "source/configure"), "--prefix=" + str(prefix),
                  "--enable-shared", "--enable-static", "--disable-tests", "--disable-samples",
                  "--with-data-packaging=library"]
-    compiler = {"cc": command_output([cc, "--version"]), "cxx": command_output([cxx, "--version"])}
+    compiler = {"cc": command_output([cc, "--version"], log=logs / "cc-version.log"),
+                "cxx": command_output([cxx, "--version"], log=logs / "cxx-version.log")}
     recipe = {
         "configure": configure,
         "compiler": compiler,
@@ -213,10 +327,10 @@ def prepare(cache: Path, jobs: int, cc: str = "cc", cxx: str = "c++") -> dict:
         if (build / "Makefile").is_file():
             # make cannot infer changes to the compiler/flags from timestamps.
             # A rejected build cache must not relabel old objects as a new build.
-            run_logged(["make", "clean"], cwd=build, log=logs / "icu-clean.log", env=env)
-        run_logged(configure, cwd=build, log=logs / "icu-configure.log", env=env)
-        run_logged(["make", "-j", str(jobs)], cwd=build, log=logs / "icu-build.log", env=env)
-        run_logged(["make", "install"], cwd=build, log=logs / "icu-install.log", env=env)
+            run_logged(["make", "clean"], cwd=build, log=logs / "icu-clean.log", env=env, timeout=180)
+        run_logged(configure, cwd=build, log=logs / "icu-configure.log", env=env, timeout=180)
+        run_logged(["make", "-j", str(jobs)], cwd=build, log=logs / "icu-build.log", env=env, timeout=1200)
+        run_logged(["make", "install"], cwd=build, log=logs / "icu-install.log", env=env, timeout=180)
         write_json(state_path, {"recipe": recipe, "installed": [file_identity(path) for path in installed]})
 
     os_release = Path("/etc/os-release")
@@ -226,7 +340,7 @@ def prepare(cache: Path, jobs: int, cc: str = "cc", cxx: str = "c++") -> dict:
         "os": platform.platform(), "uname": list(platform.uname()),
         "os_release": os_release.read_text() if os_release.is_file() else None,
         "architecture": platform.machine(), "libc": list(platform.libc_ver()),
-        "python": sys.version, "make": command_output(["make", "--version"]),
+        "python": sys.version, "make": command_output(["make", "--version"], log=logs / "make-version.log"),
         "compiler": compiler, "versions": {"boost": "1.89.0", "icu": "77.1", "unicode": "16.0.0", "cldr": "47"},
         "compiler_executables": [
             {"command": command, "resolved_path": str(Path(shutil.which(command)).resolve()),

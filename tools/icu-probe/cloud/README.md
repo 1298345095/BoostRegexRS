@@ -43,6 +43,20 @@ All dependencies and generated large files default to
 consumer checkout, system ICU installation, or pre-existing `target` cache is
 needed. The scripts do not install their downloaded dependencies system-wide.
 
+Native preparation prints each literal command and its deadline before launch.
+Downloads have a 660-second deadline, ICU configuration and installation 180
+seconds each, the ICU build 1,200 seconds, and reference compilation 300 seconds.
+A command's `.log` contains raw stdout, `.stderr.log` contains raw stderr, and
+`.process.json` records argv, elapsed time, actual exit code and timeout status.
+The process group is terminated on timeout so spawned compilers cannot keep the
+command alive. Timeout status 124 is a failed run; retain the logs before retrying.
+On POSIX hosts, an external SIGTERM/SIGINT is forwarded to every active native
+process group, including concurrent downloads. Their records identify the
+interrupting signal separately from an internal timeout (SIGTERM status 143).
+Cancellation cannot unwind a child launch before registration: the signal handler
+records intent, and normal control flow registers, stops and reaps the child,
+writes its process record, then unregisters it before propagating cancellation.
+
 To intentionally save a new, reviewable small-evidence snapshot as well:
 
 ```sh
