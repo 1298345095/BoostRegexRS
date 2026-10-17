@@ -95,9 +95,16 @@ def input_error(value, kind):
     return None
 
 
-def compare(cases_path, reference_path, candidate_path, input_format="utf8", ordering_path=None):
+def compare(cases_path, reference_path, candidate_path, input_format="utf8", ordering_path=None,
+            *, strength="primary", approved_empty_exceptions=False):
+    if strength not in ("primary", "identical"):
+        raise ValueError("Unknown collation strength")
+    if approved_empty_exceptions and strength != "identical":
+        raise ValueError("ADR-0005 empty exception applies only to IDENTICAL")
     totals = dict.fromkeys(COUNTS, 0)
-    groups = collections.defaultdict(lambda: dict.fromkeys(COUNTS, 0))
+    if approved_empty_exceptions:
+        totals["approved_exception_passed"] = 0
+    groups = collections.defaultdict(lambda: dict.fromkeys(totals, 0))
     examples = []
     seen = set()
     raw_passed = boost_passed = count = 0
@@ -136,6 +143,8 @@ def compare(cases_path, reference_path, candidate_path, input_format="utf8", ord
             raw_passed += expected[0] == actual[0]
             boost_passed += expected[1] == actual[1]
             outcome = "passed" if expected == actual else "mismatched"
+        if approved_empty_exceptions and not case[f"{input_format}_hex"] and outcome == "passed":
+            outcome = "approved_exception_passed"
         if expected_kind == "key":
             length = len(expected[0])
             length_min = length if length_min is None else min(length_min, length)
@@ -145,7 +154,7 @@ def compare(cases_path, reference_path, candidate_path, input_format="utf8", ord
         count += 1
         totals[outcome] += 1
         groups[identity.split("/", 1)[0]][outcome] += 1
-        if outcome not in ("passed", "rejected_as_expected") and len(examples) < 40:
+        if outcome not in ("passed", "approved_exception_passed", "rejected_as_expected") and len(examples) < 40:
             examples.append({"case": case, "reference": reference, "candidate": candidate, "outcome": outcome})
         if ordering is not None and previous is not None:
             pair = next(ordering, None)
@@ -168,7 +177,8 @@ def compare(cases_path, reference_path, candidate_path, input_format="utf8", ord
     complete &= ordering_counts["mismatched"] == 0 and ordering_counts["unavailable"] == 0
     return {
         "status": "passed_for_recorded_inputs" if complete else "differences_or_incomplete",
-        "scope": "root PRIMARY; complete raw ICU bytes and actual Boost u32 keys",
+        "scope": f"root {strength.upper()}; complete raw ICU bytes and actual Boost u32 keys"
+                 + ("; empty IDENTICAL uses separately counted ADR-0005 expectations" if approved_empty_exceptions else ""),
         "input_format": input_format, "case_count": count, "totals": totals,
         "raw_icu_bytes_passed": raw_passed, "boost_u32_keys_passed": boost_passed,
         "by_category": dict(sorted(groups.items())), "examples": examples,
@@ -184,9 +194,12 @@ def main():
         parser.add_argument(f"--{name}", type=Path, required=True)
     parser.add_argument("--input-format", choices=("utf8", "u32", "u16"), default="utf8")
     parser.add_argument("--ordering", type=Path)
+    parser.add_argument("--strength", choices=("primary", "identical"), default="primary")
+    parser.add_argument("--approved-empty-exceptions", action="store_true")
     args = parser.parse_args()
     try:
-        result = compare(args.cases, args.reference, args.candidate, args.input_format, args.ordering)
+        result = compare(args.cases, args.reference, args.candidate, args.input_format, args.ordering,
+                         strength=args.strength, approved_empty_exceptions=args.approved_empty_exceptions)
         status = int(result["status"] != "passed_for_recorded_inputs")
     except (ValueError, OSError, UnicodeError, csv.Error) as error:
         result, status = {"status": "invalid_input", "error": str(error)}, 2

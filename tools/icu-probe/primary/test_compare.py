@@ -83,6 +83,26 @@ class FullKeyComparisonTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Invalid oracle rejection"):
             compare(self.cases, self.reference, self.candidate, "u32")
 
+    def test_identical_empty_exception_is_counted_separately(self):
+        value = self.good.replace("00\t00000000", "01,01,01,01,00\t00000001,00000001,00000001,00000001", 1)
+        self.reference.write_text(value, encoding="utf-8")
+        self.candidate.write_text(value, encoding="utf-8")
+        result = compare(self.cases, self.reference, self.candidate,
+                         strength="identical", approved_empty_exceptions=True)
+        self.assertEqual(result["totals"]["passed"], 1)
+        self.assertEqual(result["totals"]["approved_exception_passed"], 1)
+
+    def test_original_empty_failure_remains_error_with_exception_mode(self):
+        self.reference.write_text(self.good.replace("00\t00000000", "ERROR:SIGNAL_11\tERROR:SIGNAL_11", 1), encoding="utf-8")
+        result = compare(self.cases, self.reference, self.candidate,
+                         strength="identical", approved_empty_exceptions=True)
+        self.assertEqual(result["totals"]["reference_error"], 1)
+        self.assertEqual(result["totals"]["approved_exception_passed"], 0)
+
+    def test_primary_cannot_request_identical_empty_exception(self):
+        with self.assertRaisesRegex(ValueError, "only to IDENTICAL"):
+            compare(self.cases, self.reference, self.candidate, approved_empty_exceptions=True)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,17 +1,20 @@
-//! Pure Rust, fixed-data ICU77 root PRIMARY sort-key research prototype.
+//! Pure Rust, fixed-data ICU77 root PRIMARY/IDENTICAL sort-key research prototype.
 //!
 //! This standalone crate is deliberately isolated from the repository's public
 //! regex API. No native library, locale service, Unicode data from `std`, or
 //! normalization service is called while computing keys.
 
+mod bocsu77;
 mod ce77;
 mod data77;
 mod key77;
+mod nfd77;
 
 use std::fmt;
 
 pub use data77::Data77;
 pub use key77::boost_key;
+pub use nfd77::NfdData77;
 
 pub type Result<T> = std::result::Result<T, Error>;
 
@@ -71,6 +74,8 @@ pub struct Key {
     pub boost: Vec<u32>,
     /// Full CE64 sequence (including sentinel) when tracing is requested.
     pub ces: Option<Vec<u64>>,
+    /// NFD scalars used only by the IDENTICAL level when tracing is requested.
+    pub identical_nfd: Option<Vec<u32>>,
     pub trace: Option<Vec<TraceEvent>>,
 }
 
@@ -96,31 +101,13 @@ impl RootPrimary {
 
     /// Match Boost's checked UTF-32-to-UTF-16 input domain.
     pub fn primary_u32(&self, input: &[u32], trace: bool) -> Result<Key> {
-        for (position, value) in input.iter().copied().enumerate() {
-            if value > 0x10ffff || (0xd800..=0xdfff).contains(&value) {
-                return Err(Error::InvalidUtf32 { position, value });
-            }
-        }
+        validate_utf32(input)?;
         self.compute(input, trace)
     }
 
     /// Match the checked UTF-16-to-UTF-32-to-Boost diagnostic adapter.
     pub fn primary_utf16(&self, input: &[u16], trace: bool) -> Result<Key> {
-        let mut position = 0;
-        while position < input.len() {
-            let value = input[position];
-            if (0xd800..=0xdbff).contains(&value)
-                && input
-                    .get(position + 1)
-                    .is_some_and(|next| (0xdc00..=0xdfff).contains(next))
-            {
-                position += 2;
-            } else if (0xd800..=0xdfff).contains(&value) {
-                return Err(Error::InvalidUtf16 { position, value });
-            } else {
-                position += 1;
-            }
-        }
+        validate_utf16(input)?;
         self.primary_icu_utf16(input, trace)
     }
 
@@ -138,9 +125,114 @@ impl RootPrimary {
             raw_icu,
             boost,
             ces: trace.then_some(ces),
+            identical_nfd: None,
             trace: events,
         })
     }
+}
+
+/// Root collation with the fixed default settings and both Boost key strengths.
+/// `RootPrimary` remains available when only the PRIMARY data is needed.
+#[derive(Debug)]
+pub struct RootCollator {
+    primary: RootPrimary,
+    nfd: NfdData77,
+}
+
+impl RootCollator {
+    pub fn new(data: Data77, nfd: NfdData77) -> Result<Self> {
+        if data.primary_options != 0x10 {
+            return Err(Error::Data("expected root default collation options"));
+        }
+        Ok(Self {
+            primary: RootPrimary::new(data),
+            nfd,
+        })
+    }
+
+    pub fn data(&self) -> &Data77 {
+        self.primary.data()
+    }
+
+    pub fn primary_utf8(&self, input: &str, trace: bool) -> Result<Key> {
+        self.primary.primary_utf8(input, trace)
+    }
+
+    pub fn primary_u32(&self, input: &[u32], trace: bool) -> Result<Key> {
+        self.primary.primary_u32(input, trace)
+    }
+
+    pub fn primary_utf16(&self, input: &[u16], trace: bool) -> Result<Key> {
+        self.primary.primary_utf16(input, trace)
+    }
+
+    pub fn primary_icu_utf16(&self, input: &[u16], trace: bool) -> Result<Key> {
+        self.primary.primary_icu_utf16(input, trace)
+    }
+
+    /// Compute default root IDENTICAL; canonical decomposition is confined to
+    /// its final level. The CE iterator receives the original input unchanged.
+    pub fn identical_utf8(&self, input: &str, trace: bool) -> Result<Key> {
+        self.identical(&input.chars().map(u32::from).collect::<Vec<_>>(), trace)
+    }
+
+    pub fn identical_u32(&self, input: &[u32], trace: bool) -> Result<Key> {
+        validate_utf32(input)?;
+        self.identical(input, trace)
+    }
+
+    pub fn identical_utf16(&self, input: &[u16], trace: bool) -> Result<Key> {
+        validate_utf16(input)?;
+        self.identical_icu_utf16(input, trace)
+    }
+
+    /// Raw ICU UTF-16 diagnostic, distinct from Boost's checked input domain.
+    pub fn identical_icu_utf16(&self, input: &[u16], trace: bool) -> Result<Key> {
+        self.identical(&decode_utf16_units(input), trace)
+    }
+
+    fn identical(&self, input: &[u32], trace: bool) -> Result<Key> {
+        let data = self.data();
+        let (ces, events) = ce77::Elements::new(data, input, trace).collect()?;
+        let nfd = self.nfd.normalize(input);
+        let raw_icu = key77::identical_bytes(&ces, &data.compressible, &nfd);
+        let boost = boost_key(&raw_icu);
+        Ok(Key {
+            raw_icu,
+            boost,
+            ces: trace.then_some(ces),
+            identical_nfd: trace.then_some(nfd),
+            trace: events,
+        })
+    }
+}
+
+fn validate_utf32(input: &[u32]) -> Result<()> {
+    for (position, value) in input.iter().copied().enumerate() {
+        if value > 0x10ffff || (0xd800..=0xdfff).contains(&value) {
+            return Err(Error::InvalidUtf32 { position, value });
+        }
+    }
+    Ok(())
+}
+
+fn validate_utf16(input: &[u16]) -> Result<()> {
+    let mut position = 0;
+    while position < input.len() {
+        let value = input[position];
+        if (0xd800..=0xdbff).contains(&value)
+            && input
+                .get(position + 1)
+                .is_some_and(|next| (0xdc00..=0xdfff).contains(next))
+        {
+            position += 2;
+        } else if (0xd800..=0xdfff).contains(&value) {
+            return Err(Error::InvalidUtf16 { position, value });
+        } else {
+            position += 1;
+        }
+    }
+    Ok(())
 }
 
 /// Decode exactly as ordinary ICU UTF16CollationIterator: pair valid surrogates,

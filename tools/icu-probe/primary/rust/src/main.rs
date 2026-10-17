@@ -4,9 +4,25 @@ use std::fs;
 use std::io::{self, BufRead, Write};
 use std::process::ExitCode;
 
-use icu77_root_primary::{Data77, Key, RootPrimary};
+use icu77_root_primary::{Data77, Key, NfdData77, RootCollator};
 
 const EMBEDDED_DATA: &[u8] = include_bytes!("../../data/root-icu77.bin");
+const EMBEDDED_NFD_DATA: &[u8] = include_bytes!("../../data/root-icu77-nfd.bin");
+
+#[derive(Clone, Copy)]
+enum Strength {
+    Primary,
+    Identical,
+}
+
+impl Strength {
+    fn name(self) -> &'static str {
+        match self {
+            Self::Primary => "primary",
+            Self::Identical => "identical",
+        }
+    }
+}
 
 #[derive(Clone, Copy)]
 enum InputFormat {
@@ -27,6 +43,8 @@ impl InputFormat {
 
 struct Options {
     data: Option<String>,
+    nfd_data: Option<String>,
+    strength: Strength,
     format: InputFormat,
     trace: bool,
     icu_utf16_only: bool,
@@ -45,6 +63,8 @@ fn main() -> ExitCode {
 fn run() -> Result<(), Box<dyn std::error::Error>> {
     let mut options = Options {
         data: None,
+        nfd_data: None,
+        strength: Strength::Primary,
         format: InputFormat::Utf8,
         trace: false,
         icu_utf16_only: false,
@@ -53,6 +73,14 @@ fn run() -> Result<(), Box<dyn std::error::Error>> {
     while let Some(arg) = args.next() {
         match arg.as_str() {
             "--data" => options.data = Some(args.next().ok_or("--data needs a path")?),
+            "--nfd-data" => options.nfd_data = Some(args.next().ok_or("--nfd-data needs a path")?),
+            "--strength" => {
+                options.strength = match args.next().as_deref() {
+                    Some("primary") => Strength::Primary,
+                    Some("identical") => Strength::Identical,
+                    _ => return Err("--strength must be primary or identical".into()),
+                };
+            }
             "--input-format" => {
                 options.format = match args.next().as_deref() {
                     Some("utf8") => InputFormat::Utf8,
@@ -65,7 +93,7 @@ fn run() -> Result<(), Box<dyn std::error::Error>> {
             "--icu-utf16-only" => options.icu_utf16_only = true,
             "--help" | "-h" => {
                 println!(
-                    "icu77-root-primary [--data PATH] [--input-format utf8|u32|u16] [--trace] [--icu-utf16-only]\n\
+                    "icu77-root-primary [--data PATH] [--nfd-data PATH] [--strength primary|identical] [--input-format utf8|u32|u16] [--trace] [--icu-utf16-only]\n\
                     Reads TSV from stdin: case_id<TAB>utf8_hex (or comma-separated u32/u16 hex).\n\
                     Writes: case_id<TAB>raw_icu_hex<TAB>boost_u32_hex.\n\
                     --trace writes one JSON diagnostic per input to stderr.\n\
@@ -80,9 +108,11 @@ fn run() -> Result<(), Box<dyn std::error::Error>> {
         return Err("--icu-utf16-only requires --input-format u16".into());
     }
     let external_data = options.data.as_ref().map(fs::read).transpose()?;
-    let collator = RootPrimary::new(Data77::from_bytes(
-        external_data.as_deref().unwrap_or(EMBEDDED_DATA),
-    )?);
+    let external_nfd = options.nfd_data.as_ref().map(fs::read).transpose()?;
+    let collator = RootCollator::new(
+        Data77::from_bytes(external_data.as_deref().unwrap_or(EMBEDDED_DATA))?,
+        NfdData77::from_bytes(external_nfd.as_deref().unwrap_or(EMBEDDED_NFD_DATA))?,
+    )?;
     let stdin = io::stdin();
     let stdout = io::stdout();
     let stderr = io::stderr();
@@ -127,19 +157,25 @@ fn run() -> Result<(), Box<dyn std::error::Error>> {
 
 type RowResult = Result<Key, (&'static str, String)>;
 
-fn compute_row(collator: &RootPrimary, input: &str, options: &Options) -> RowResult {
+fn compute_row(collator: &RootCollator, input: &str, options: &Options) -> RowResult {
     let result = match options.format {
         InputFormat::Utf8 => {
             let bytes =
                 parse_bytes(input).map_err(|description| ("INVALID_UTF8_HEX", description))?;
             let text =
                 std::str::from_utf8(&bytes).map_err(|error| ("INVALID_UTF8", error.to_string()))?;
-            collator.primary_utf8(text, options.trace)
+            match options.strength {
+                Strength::Primary => collator.primary_utf8(text, options.trace),
+                Strength::Identical => collator.identical_utf8(text, options.trace),
+            }
         }
         InputFormat::U32 => {
             let units =
                 parse_units(input, 8).map_err(|description| ("INVALID_UTF32_HEX", description))?;
-            collator.primary_u32(&units, options.trace)
+            match options.strength {
+                Strength::Primary => collator.primary_u32(&units, options.trace),
+                Strength::Identical => collator.identical_u32(&units, options.trace),
+            }
         }
         InputFormat::U16 => {
             let units =
@@ -148,10 +184,11 @@ fn compute_row(collator: &RootPrimary, input: &str, options: &Options) -> RowRes
                 .into_iter()
                 .map(|unit| unit as u16)
                 .collect::<Vec<_>>();
-            if options.icu_utf16_only {
-                collator.primary_icu_utf16(&units, options.trace)
-            } else {
-                collator.primary_utf16(&units, options.trace)
+            match (options.strength, options.icu_utf16_only) {
+                (Strength::Primary, false) => collator.primary_utf16(&units, options.trace),
+                (Strength::Primary, true) => collator.primary_icu_utf16(&units, options.trace),
+                (Strength::Identical, false) => collator.identical_utf16(&units, options.trace),
+                (Strength::Identical, true) => collator.identical_icu_utf16(&units, options.trace),
             }
         }
     };
@@ -249,9 +286,10 @@ fn write_trace(
 ) -> io::Result<()> {
     write!(
         output,
-        "{{\"case_id\":{},\"input_format\":\"{}\",\"icu_utf16_only\":{},\"raw_icu_hex\":\"{}\",\"boost_u32_hex\":\"{}\",\"ces\":[",
+        "{{\"case_id\":{},\"input_format\":\"{}\",\"strength\":\"{}\",\"icu_utf16_only\":{},\"raw_icu_hex\":\"{}\",\"boost_u32_hex\":\"{}\",\"ces\":[",
         json_string(case_id),
         options.format.name(),
+        options.strength.name(),
         options.icu_utf16_only,
         raw,
         boost
@@ -262,7 +300,13 @@ fn write_trace(
         }
         write!(output, "\"{ce:016x}\"")?;
     }
-    write!(output, "],\"events\":[")?;
+    write!(
+        output,
+        "],\"nfd_u32_hex\":{},\"events\":[",
+        key.identical_nfd
+            .as_deref()
+            .map_or_else(|| "null".into(), |nfd| json_string(&u32_hex(nfd)))
+    )?;
     for (index, event) in key.trace.as_deref().unwrap_or_default().iter().enumerate() {
         if index != 0 {
             write!(output, ",")?;

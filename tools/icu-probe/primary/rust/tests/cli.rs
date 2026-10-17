@@ -69,3 +69,31 @@ fn signed_hex_fields_are_rejected_and_next_valid_row_is_processed() {
         );
     }
 }
+
+#[test]
+fn identical_uses_embedded_nfd_data_and_preserves_row_errors() {
+    let mut child = Command::new(env!("CARGO_BIN_EXE_icu77-root-primary"))
+        .args(["--strength", "identical", "--trace"])
+        .env_clear()
+        .stdin(Stdio::piped())
+        .stdout(Stdio::piped())
+        .stderr(Stdio::piped())
+        .spawn()
+        .unwrap();
+    child
+        .stdin
+        .take()
+        .unwrap()
+        .write_all(b"case_id\tutf8_hex\nempty\t\ninvalid\t+0\naccent\tc3a9\n")
+        .unwrap();
+    let result = child.wait_with_output().unwrap();
+    assert!(result.status.success());
+    assert_eq!(
+        String::from_utf8(result.stdout).unwrap(),
+        "case_id\traw_icu_hex\tboost_u32_hex\nempty\t01,01,01,01,00\t00000001,00000001,00000001,00000001\ninvalid\tERROR:INVALID_UTF8_HEX\tERROR:INVALID_UTF8_HEX\naccent\t33,01,45,88,01,06,01,01,96,d4,ba,00\t00000033,00000001,00000045,00000088,00000001,00000006,00000001,00000001,00000096,000000d4,000000ba\n"
+    );
+    let diagnostics = String::from_utf8(result.stderr).unwrap();
+    assert!(diagnostics.contains("\"strength\":\"identical\""));
+    assert!(diagnostics.contains("\"nfd_u32_hex\":\"00000065,00000301\""));
+    assert!(diagnostics.contains("INVALID_UTF8_HEX"));
+}

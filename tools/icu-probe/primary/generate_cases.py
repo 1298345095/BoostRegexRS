@@ -174,6 +174,33 @@ def input_boundaries(kind):
         yield f"input_{kind}/{index}", value
 
 
+def identical_directed():
+    """The existing coverage plus ICU77 lower-level and BOCSU boundaries."""
+    yield from directed()
+    # ICU77 collationkeys.h: SEC_COMMON_MAX_COUNT=0x21,
+    # TER_ONLY_COMMON_MAX_COUNT=0x61. Include both adjacent lengths and flushes.
+    for length in (0, 1, 2, 32, 33, 34, 64, 65, 66, 96, 97, 98, 193, 194, 195):
+        for label, tail in (("accent", "\u0301"), ("uppercase", "A"),
+                            ("tertiary_low", "\u0345"), ("merge", "\ufffe"), ("end", "")):
+            yield f"identical_common/{label}-{length}", "a" * length + tail
+    # ICU77 bocsu.h: SLOPE_SINGLE=80, tails=253, two-byte lead count=42,
+    # three-byte lead count=3. The iterator recenters each preceding code point.
+    positive_two = 42 * 253 + 41
+    positive_three = 3 * 253 * 253 + 2 * 253 + 252
+    boundaries = (-positive_three - 1, -positive_two - 1, -80, 80, positive_two, positive_three)
+    for previous in (0, 0x1000, 0x4E00, 0x20000, 0x50000, 0x10FF00):
+        center = 0x9FFF - positive_two if 0x4E00 <= previous < 0xA000 else (previous & ~0x7F) + 80
+        for boundary in boundaries:
+            for adjacent in (-1, 0, 1):
+                cp = center + boundary + adjacent
+                if 0 <= cp <= 0x10FFFF and not 0xD800 <= cp <= 0xDFFF:
+                    yield f"bocsu_boundary/{previous:x}-{boundary}-{adjacent}", chr(previous) + chr(cp)
+    for index, value in enumerate(("\ufffe", "\ufffe\ufffe", "\U0010ffff\ufffe\0",
+                                   "a\u0315\u0300", "\u0f73\u0f75\u0f81", "\u1e69\u0327",
+                                   "\u0345\u0301\u0323", "\U0001d15e\U0001d1c0", "\u212b\u0301")):
+        yield f"identical_nfd/{index}", value
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)

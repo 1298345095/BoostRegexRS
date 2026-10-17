@@ -271,13 +271,25 @@ fn validate_ranges<T>(ranges: &[Range<T>]) -> Result<()> {
     Ok(())
 }
 
-struct Reader<'a> {
+pub(crate) struct Reader<'a> {
     bytes: &'a [u8],
     pos: usize,
 }
 
 impl<'a> Reader<'a> {
-    fn take(&mut self, length: usize) -> Result<&'a [u8]> {
+    pub(crate) fn new(bytes: &'a [u8]) -> Self {
+        Self { bytes, pos: 0 }
+    }
+
+    pub(crate) fn finish(self) -> Result<()> {
+        if self.pos == self.bytes.len() {
+            Ok(())
+        } else {
+            Err(Error::Data("unexpected bytes after final table segment"))
+        }
+    }
+
+    pub(crate) fn take(&mut self, length: usize) -> Result<&'a [u8]> {
         let end = self
             .pos
             .checked_add(length)
@@ -296,7 +308,7 @@ impl<'a> Reader<'a> {
         ))
     }
 
-    fn u32(&mut self) -> Result<u32> {
+    pub(crate) fn u32(&mut self) -> Result<u32> {
         Ok(u32::from_le_bytes(
             self.take(4)?.try_into().expect("checked length"),
         ))
@@ -308,7 +320,7 @@ impl<'a> Reader<'a> {
         ))
     }
 
-    fn count(&mut self, minimum_width: usize) -> Result<usize> {
+    pub(crate) fn count(&mut self, minimum_width: usize) -> Result<usize> {
         let count = self.u32()? as usize;
         if count > (self.bytes.len() - self.pos) / minimum_width {
             return Err(Error::Data("table count exceeds remaining data"));

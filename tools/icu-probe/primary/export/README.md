@@ -1,5 +1,8 @@
 # Fixed ICU77 root-data generation
 
+The independent IDENTICAL normalization-data exporter is documented below;
+it preserves the existing PRIMARY blob and its historical evidence.
+
 This is a development-only C++/Python toolchain. The Rust prototype reads the
 checked-in `../data/root-icu77.bin` and does not load ICU, launch these programs,
 or require a C++ compiler.
@@ -47,6 +50,27 @@ effective public attributes, and output SHA-256 in `../data/root-icu77.json`.
 Build logs, both independent outputs, a generation manifest, and a readable
 context report remain in `target/research/icu77-cloud/build/primary-export/`.
 The generator does not query sort keys or consume the regression corpus.
+
+### IDENTICAL canonical decomposition and CCC
+
+```sh
+python3 -B tools/icu-probe/primary/export/generate_nfd.py
+python3 -B tools/icu-probe/primary/export/generate_nfd.py --check
+```
+
+This writes/checks `../data/root-icu77-nfd.bin`, with a separate provenance file
+`root-icu77-nfd.json`. It verifies official archive bytes and installed library
+identities, builds `export-nfd.cpp`, and requires two independent exports to
+produce identical binary and runtime metadata. The build and generated raw
+outputs are under `CACHE/build/identical-export/`.
+
+The exporter calls the fixed ICU77 NFD `Normalizer2` for complete recursive
+canonical decompositions and canonical combining classes. It includes Hangul
+and uses no host Unicode database. The fixed root IDENTICAL settings are also
+read directly from `CollationRoot`: options `0xf010`, no reordering. Actual
+normalization remains OFF for collation-element iteration. Only the final
+IDENTICAL level uses NFD and BOCSU. The independent schema is in
+[FORMAT.md](../data/FORMAT.md).
 
 ## Format and actual exported data
 

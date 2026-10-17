@@ -79,3 +79,31 @@ binary checksum, and table counts are recorded by `../export/generate.py` in
 `LICENSE-ICU.txt`; see `NOTICE.md` for upstream file identities and the changes
 made for this prototype. Regeneration requires ICU only in the development
 environment. Running the Rust prototype requires only the checked-in data.
+
+## Independent IDENTICAL NFD data, schema 1
+
+`root-icu77-nfd.bin` is a separate file; adding IDENTICAL does not change the
+PRIMARY/CE blob above. All integers below are little-endian and tightly packed.
+
+| Field | Encoding |
+| --- | --- |
+| Magic | Eight ASCII bytes `BRSNFD77` |
+| Schema | `u32`, value 1 |
+| ICU / Unicode / CLDR versions | Six `u32`: `77,1,16,0,47,0` |
+| Canonical mapping count | `u32` |
+| Each mapping, sorted by scalar | `code_point:u32`, `length:u32`, then `length` scalar `u32` values |
+| Combining-class range count | `u32` |
+| Each range | `end_inclusive:u32`, `canonical_combining_class:u8` |
+
+Mappings are fully recursive canonical decompositions from ICU77
+`Normalizer2::getNFDInstance()->getDecomposition`, including all Hangul syllables.
+An unlisted code point maps to itself. CCC ranges partition the complete
+U+0000..U+10FFFF domain, including zero-CCC and surrogate ranges. There is no
+padding or trailing data. The exporter does not read sort keys or test strings.
+
+The recorded file is 255,286 bytes and contains 13,253 mappings (36,567 scalar
+values, maximum mapping length 4) and 590 CCC ranges. Its SHA256 is
+`45c59eca6b851ea843c8088343742f1ac706ca4bb657c807a981e1c708a337de`.
+Source identities and generation settings are in `root-icu77-nfd.json`.
+These mappings are used only for the final IDENTICAL NFD/BOCSU level; the CE
+iterator continues to consume the original, normalization-OFF root input.

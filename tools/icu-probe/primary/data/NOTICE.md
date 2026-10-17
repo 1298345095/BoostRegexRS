@@ -40,9 +40,11 @@ official digest is verified; detached signatures are not verified.
 | `i18n/collationdata.h`, `collationroot.*`, `collationdatareader.cpp` | Root CE32/CE/context/Jamo/compression tables and their identity |
 | `i18n/collation.h`, `collation.cpp` | CE32 tags, CE construction, offset and implicit primaries |
 | `i18n/collationiterator.*`, `utf16collationiterator.*` | Ordinary UTF-16 iteration, prefixes, contractions, expansions, Hangul, discontiguous matching |
-| `i18n/collationkeys.cpp` | PRIMARY byte compression and termination |
+| `i18n/collationkeys.cpp` | PRIMARY and subsequent-level compression and termination |
+| `i18n/bocsu.*` | IDENTICAL BOCSU difference encoding |
 | `i18n/collationsettings.*`, `rulebasedcollator.cpp` | Effective root options and sort-key dispatch |
 | `common/normalizer2impl.*`, `data/in/nfc.nrm` | FCD16 leading/trailing combining-class data for context matching |
+| `common/normalizer2.cpp`, `common/unicode/normalizer2.h`, `common/normalizer2impl.*`, `data/in/nfc.nrm` | Independent recursive canonical mappings and CCC for the IDENTICAL NFD tail |
 | `common/ucharstrie*`, `common/unicode/ucharstrie.h` | Complete enumeration of ICU context tries |
 
 The fixed branch source can be reviewed at
@@ -63,9 +65,10 @@ data, substitute ICU4X's reduced collation data, or generate an input-to-key
 answer table. All 256 primary-compression flags are copied from the actual root
 data.
 
-The Rust code transcribes the algorithms needed for root PRIMARY into safe
-Rust and uses the generated static data. Ordinary root input is not uniformly
-NFD-normalized. IDENTICAL and locale tailoring remain separate later phases;
-the inclusion of all weight bits in the data does not imply those features
-have been implemented. These are research tools, isolated from the root
-library's public API.
+The Rust code transcribes the root sort-key algorithms into safe Rust and uses
+the generated static data. Ordinary root CE input is not uniformly
+NFD-normalized. The separate `root-icu77-nfd.bin` adds fully recursive canonical
+decompositions and combining classes for the final IDENTICAL NFD/BOCSU level;
+its source and generator hashes are recorded in `root-icu77-nfd.json`.
+Locale tailoring and settings require their own coverage. These research tools
+remain isolated from the root library's public API.

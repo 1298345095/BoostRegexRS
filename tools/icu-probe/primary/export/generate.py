@@ -75,7 +75,7 @@ def save_json(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
 
 
-def verify_source(cache: Path) -> tuple[dict, list[dict]]:
+def verify_source(cache: Path, source_files=SOURCE_FILES) -> tuple[dict, list[dict]]:
     archive = cache / "downloads" / ICU_ARCHIVE
     checksum_manifest = cache / "downloads" / "SHASUM512.txt"
     archive_hash = digest(archive, "sha512")
@@ -93,7 +93,7 @@ def verify_source(cache: Path) -> tuple[dict, list[dict]]:
     # the verified archive. A modified development source is not silently accepted.
     source_records = []
     with tarfile.open(archive, "r:gz") as release:
-        for name in SOURCE_FILES:
+        for name in source_files:
             path = cache / "deps" / "icu" / name
             archived = release.extractfile("icu/" + name)
             if archived is None or archived.read() != path.read_bytes():

@@ -1,5 +1,10 @@
 # ICU77 root PRIMARY full-key prototype
 
+Root IDENTICAL now has a separate implementation and differential runner; see
+[IDENTICAL.md](IDENTICAL.md). The commands and original results below describe
+the preserved PRIMARY stage. IDENTICAL results are written to `CACHE/identical/`
+and do not replace that evidence.
+
 This directory implements and tests a pure Rust root PRIMARY sort-key prototype
 against official Boost.Regex 1.89.0 and ICU4C 77.1, with Unicode 16.0.0 and CLDR
 47 fixed. Both the complete ICU byte sequence and every element of Boost's

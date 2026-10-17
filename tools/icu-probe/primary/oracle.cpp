@@ -7,6 +7,7 @@
 #include <unicode/ulocdata.h>
 #include <unicode/uversion.h>
 #include <cstdint>
+#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <memory>
@@ -80,23 +81,52 @@ void check_versions() {
 
 int main(int argc, char** argv) try {
     std::string format = "utf8";
+    std::string strength = "primary";
+    std::string metadata_path;
     bool order_pairs = false;
+    bool approved_empty = false;
     for (int i = 1; i < argc; ++i) {
         const std::string arg(argv[i]);
         if (arg == "--input-format" && i + 1 < argc) format = argv[++i];
+        else if (arg == "--strength" && i + 1 < argc) strength = argv[++i];
+        else if (arg == "--metadata" && i + 1 < argc) metadata_path = argv[++i];
+        else if (arg == "--approved-empty-exception") approved_empty = true;
         else if (arg == "--order-pairs") order_pairs = true;
-        else throw std::invalid_argument("usage: oracle [--input-format utf8|u32|u16] [--order-pairs]");
+        else throw std::invalid_argument("usage: oracle [--input-format utf8|u32|u16] [--strength primary|identical] [--approved-empty-exception] [--metadata PATH] [--order-pairs]");
     }
     if (format != "utf8" && format != "u32" && format != "u16") throw std::invalid_argument("Unknown input format");
+    if (strength != "primary" && strength != "identical") throw std::invalid_argument("Unknown strength");
+    if (approved_empty && strength != "identical") throw std::invalid_argument("Approved empty exception is IDENTICAL only");
     check_versions();
     UErrorCode status = U_ZERO_ERROR;
     std::unique_ptr<icu::Collator> collator(icu::Collator::createInstance(icu::Locale::getRoot(), status));
     if (U_FAILURE(status) || !collator) throw std::runtime_error("Root collator creation failed");
-    collator->setStrength(icu::Collator::PRIMARY);
+    collator->setStrength(strength == "identical" ? icu::Collator::IDENTICAL : icu::Collator::PRIMARY);
     if (collator->getAttribute(UCOL_NORMALIZATION_MODE, status) != UCOL_OFF || U_FAILURE(status))
         throw std::runtime_error("Unexpected root normalization setting");
     boost::icu_regex_traits traits;
     traits.imbue(icu::Locale::getRoot());
+    if (!metadata_path.empty()) {
+        std::ofstream metadata(metadata_path);
+        metadata << "{\n  \"boost\": \"1.89.0\", \"icu\": \"77.1\", \"unicode\": \"16.0.0\", \"cldr\": \"47.0\",\n"
+                 << "  \"locale\": \"root\", \"strength\": \"" << strength << "\",\n"
+                 << "  \"approved_empty_exception\": " << (approved_empty ? "true" : "false") << ",\n  \"attributes\": {";
+        const std::pair<const char*, UColAttribute> attributes[] = {
+            {"strength", UCOL_STRENGTH}, {"normalization", UCOL_NORMALIZATION_MODE},
+            {"numeric", UCOL_NUMERIC_COLLATION}, {"alternate", UCOL_ALTERNATE_HANDLING},
+            {"case_level", UCOL_CASE_LEVEL}, {"case_first", UCOL_CASE_FIRST},
+            {"french_secondary", UCOL_FRENCH_COLLATION}, {"hiragana_quaternary", UCOL_HIRAGANA_QUATERNARY_MODE},
+        };
+        bool first = true;
+        for (const auto& attribute : attributes) {
+            metadata << (first ? "\n" : ",\n") << "    \"" << attribute.first << "\": "
+                     << collator->getAttribute(attribute.second, status);
+            first = false;
+        }
+        metadata << "\n  }\n}\n";
+        metadata.flush();
+        if (U_FAILURE(status) || !metadata) throw std::runtime_error("Oracle metadata write failed");
+    }
     std::ios::sync_with_stdio(false);
     std::cout << (order_pairs ? "left_id\tright_id\tordering\n" : "case_id\traw_icu_hex\tboost_u32_hex\n");
     std::string line;
@@ -138,7 +168,17 @@ int main(int argc, char** argv) try {
                 throw std::runtime_error("ICU key preflight changed");
             // This is the actual unmodified Boost call, including its stack/heap
             // buffer paths. The valid-pointer ICU call above is independent.
-            const auto key = traits.transform_primary(first, first + scalars.size());
+            std::vector<UChar32> key;
+            if (approved_empty && scalars.empty()) {
+                // ADR-0005 only: independently computed valid-pointer ICU bytes,
+                // then the documented Boost byte-per-u32 convention. The runner
+                // records the original crashing call separately, never as a pass.
+                key.assign(raw.begin(), raw.end());
+                if (key.size() > 1 && key.back() == 0) key.pop_back();
+            } else {
+                key = strength == "identical" ? traits.transform(first, first + scalars.size())
+                                               : traits.transform_primary(first, first + scalars.size());
+            }
             std::cout << id << '\t' << hex(raw, 2) << '\t' << hex(key, 8) << '\n';
         } catch (const std::out_of_range&) {
             if (order_pairs) throw;
