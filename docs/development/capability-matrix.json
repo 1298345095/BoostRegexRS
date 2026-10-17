@@ -3434,12 +3434,25 @@
       "group": "unicode",
       "capability": "identical_root",
       "upstream": "docs/adr/",
-      "status": "not_implemented",
-      "implementation": [],
-      "tests": [],
-      "evidence": [],
-      "platforms_verified": [],
-      "notes": ""
+      "status": "reference_passed",
+      "implementation": [
+        "tools/icu-probe/primary/rust/src/lib.rs",
+        "tools/icu-probe/primary/rust/src/key77.rs",
+        "tools/icu-probe/primary/rust/src/bocsu77.rs",
+        "tools/icu-probe/primary/rust/src/nfd77.rs"
+      ],
+      "tests": [
+        "tools/icu-probe/primary/rust/tests/root_identical.rs",
+        "tools/icu-probe/primary/run_identical.py"
+      ],
+      "evidence": [
+        "docs/research/root-identical-results.md",
+        "docs/research/assets/icu77-identical/runs/2026-10-17T114006Z-xz/summary.json"
+      ],
+      "platforms_verified": [
+        "linux_x64_glibc"
+      ],
+      "notes": "Research crate; public library integration remains open. 1,159,652 original nonempty full keys and 696 separately approved empty keys passed; 11 invalid inputs rejected. Three original empty Boost crashes remain reference errors. Full scalar sweep plus generated/context suites do not exhaust arbitrary strings."
     },
     {
       "id": "unicode.complete_locales",

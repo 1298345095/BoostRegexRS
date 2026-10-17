@@ -20,6 +20,15 @@ return the live PR state without a commit/analysis identifier. Those responses
 are explicitly marked `live_pr_unpinned` and `associated_commit_verified: false`;
 they must not be attributed to the historical commit named by the directory.
 
+The `Collect Sonar quality evidence` Actions workflow runs the same read-only
+collector from GitHub's runner network. Select an existing analyzed commit with
+its `commit` dispatch input. Its automatic development-branch run uses the
+recorded IDENTICAL source commit. It uses only read permissions, with an optional
+repository `SONAR_TOKEN` sent exclusively to SonarCloud. An absent token still
+allows a public API attempt. The workflow uploads the complete responses; retain
+those artifacts in this repository before their stated 14-day expiry. A successful
+collection job does not override a failed `SonarCloud Code Analysis` gate.
+
 Run the developer CLI boundary regressions with:
 
 ```sh

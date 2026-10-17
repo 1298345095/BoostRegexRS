@@ -322,7 +322,7 @@ Edit per-ID decisions in capability-matrix.json; regenerate with `python3 -B too
 | [unicode.extended_names](../adr/) | not_implemented | Pending |
 | [unicode.property_aliases](../adr/) | not_implemented | Pending |
 | [unicode.primary_root](../adr/) | reference_passed | `tools/icu-probe/primary/rust/src/lib.rs`; `tools/icu-probe/primary/rust/tests/root_primary.rs`; `docs/research/assets/icu77-cloud/github-actions/primary/summary.json` |
-| [unicode.identical_root](../adr/) | not_implemented | Pending |
+| [unicode.identical_root](../adr/) | reference_passed | `tools/icu-probe/primary/rust/src/lib.rs`; `tools/icu-probe/primary/rust/src/key77.rs`; `tools/icu-probe/primary/rust/src/bocsu77.rs`; `tools/icu-probe/primary/rust/src/nfd77.rs`; `tools/icu-probe/primary/rust/tests/root_identical.rs`; `tools/icu-probe/primary/run_identical.py`; `docs/research/root-identical-results.md`; `docs/research/assets/icu77-identical/runs/2026-10-17T114006Z-xz/summary.json` |
 | [unicode.complete_locales](../adr/) | not_implemented | Pending |
 | [unicode.collation_types](../adr/) | not_implemented | Pending |
 | [unicode.locale_aliases](../adr/) | not_implemented | Pending |

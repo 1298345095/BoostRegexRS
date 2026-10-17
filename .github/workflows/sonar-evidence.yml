@@ -1,0 +1,46 @@
+name: Collect Sonar quality evidence
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: Full commit SHA with an existing SonarCloud analysis
+        type: string
+        required: true
+        default: ecca4f8d007f7dc0eb71c19316a67542f25a6653
+  push:
+    branches:
+      - work/root-primary-cloud
+    paths:
+      - .github/workflows/sonar-evidence.yml
+
+permissions:
+  contents: read
+  checks: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Collect server responses without changing the gate
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          TARGET_COMMIT: ${{ inputs.commit || 'ecca4f8d007f7dc0eb71c19316a67542f25a6653' }}
+        run: |
+          python3 -B tools/quality/collect_sonar_evidence.py \
+            --commit "$TARGET_COMMIT" --pull-request 1 \
+            --output docs/research/assets/sonarcloud/actions-observation
+      - name: Preserve collected server evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: sonar-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: docs/research/assets/sonarcloud/actions-observation/
+          if-no-files-found: error
+          retention-days: 14
