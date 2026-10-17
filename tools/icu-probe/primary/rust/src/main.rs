@@ -159,7 +159,7 @@ fn compute_row(collator: &RootPrimary, input: &str, options: &Options) -> RowRes
 }
 
 fn parse_bytes(input: &str) -> Result<Vec<u8>, String> {
-    if !input.is_ascii() || !input.len().is_multiple_of(2) {
+    if !input.as_bytes().iter().all(u8::is_ascii_hexdigit) || !input.len().is_multiple_of(2) {
         return Err("UTF-8 hex must consist of complete byte pairs".into());
     }
     input
@@ -181,7 +181,7 @@ fn parse_units(input: &str, width: usize) -> Result<Vec<u32>, String> {
     input
         .split(',')
         .map(|unit| {
-            if unit.len() != width || !unit.is_ascii() {
+            if unit.len() != width || !unit.as_bytes().iter().all(u8::is_ascii_hexdigit) {
                 return Err(format!(
                     "expected exactly {width} hexadecimal digits per input unit"
                 ));
