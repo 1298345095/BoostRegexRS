@@ -74,6 +74,15 @@ class OrderingComparisonTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.result()
 
+    def test_reference_error_status_requires_ascii_digits(self):
+        self.candidate_rows()
+        text = self.reference.read_text(encoding="utf-8")
+        for marker in ("ERROR:SIGNAL_1\u0661", "ERROR:EXIT_2\uff12"):
+            with self.subTest(marker=marker):
+                self.reference.write_text(text.replace("empty\t0\t1,1", f"empty\t0\t{marker}"), encoding="utf-8")
+                with self.assertRaises(ValueError):
+                    self.result()
+
 
 if __name__ == "__main__":
     unittest.main()

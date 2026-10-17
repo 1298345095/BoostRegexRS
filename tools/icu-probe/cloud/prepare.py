@@ -40,6 +40,7 @@ def digest(path: Path, algorithm: str = "sha256") -> str:
 
 
 def write_json(path: Path, value: object) -> None:
+    """Write to the invoking developer's explicit destination, including outside the checkout."""
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_name(path.name + ".tmp")
     temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -140,11 +141,12 @@ def extract_archive(cache: Path, name: str, directory: str, expected: str) -> Pa
 
 
 def run_logged(command: list[str], *, cwd: Path, log: Path, env: dict | None = None) -> None:
+    """Run the caller-selected tool with literal argv; corpus data never chooses a command."""
     log.parent.mkdir(parents=True, exist_ok=True)
     with log.open("w", encoding="utf-8") as stream:
         stream.write(json.dumps({"command": command, "cwd": str(cwd)}) + "\n")
         stream.flush()
-        result = subprocess.run(command, cwd=cwd, env=env, stdout=stream, stderr=subprocess.STDOUT)
+        result = subprocess.run(command, cwd=cwd, env=env, stdout=stream, stderr=subprocess.STDOUT, shell=False)
     if result.returncode:
         raise RuntimeError(f"Command failed ({result.returncode}); see {log}")
 

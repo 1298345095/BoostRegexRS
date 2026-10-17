@@ -20,6 +20,7 @@ from rust_toolchain import prepare_rust
 
 PROBE = REPO / "tools/icu-probe"
 PRIMARY = PROBE / "primary"
+CARGO_MANIFEST = "Cargo.toml"
 
 
 def command(command, log, env):
@@ -59,10 +60,10 @@ def gates(cache, env):
     logs.mkdir(exist_ok=True)
     for folder, pattern, label in ((PROBE, "test_compare_ordering.py", "ordering-comparator"), (PRIMARY, "test_*.py", "primary-harness")):
         command([sys.executable, "-B", "-m", "unittest", "discover", "-s", folder, "-p", pattern], logs / f"{label}.log", env)
-    command(["cargo", "test", "--locked", "--manifest-path", REPO / "Cargo.toml"], logs / "root-tests.log", env)
+    command(["cargo", "test", "--locked", "--manifest-path", REPO / CARGO_MANIFEST], logs / "root-tests.log", env)
     for folder, label in ((PROBE / "rust", "candidate"), (PRIMARY / "rust", "primary")):
         package_env = {**env, "CARGO_TARGET_DIR": str(cache / "build" / label)}
-        command(["cargo", "test", "--locked", "--manifest-path", folder / "Cargo.toml"], logs / f"{label}-tests.log", package_env)
+        command(["cargo", "test", "--locked", "--manifest-path", folder / CARGO_MANIFEST], logs / f"{label}-tests.log", package_env)
         # Cargo's clippy driver recognizes the compiler by the rustc filename;
         # use the unmodified binary for these companion-tool invocations.
         lint_env = dict(package_env)
@@ -70,8 +71,8 @@ def gates(cache, env):
             lint_env["RUSTC"] = str(cache / "toolchain/install/bin/rustc")
             lint_env["RUSTDOC"] = str(cache / "toolchain/install/bin/rustdoc")
             lint_env["LD_LIBRARY_PATH"] = str(cache / "toolchain/install/lib")
-        command(["cargo", "fmt", "--manifest-path", folder / "Cargo.toml", "--", "--check"], logs / f"{label}-fmt.log", lint_env)
-        command(["cargo", "clippy", "--locked", "--all-targets", "--manifest-path", folder / "Cargo.toml", "--", "-D", "warnings"], logs / f"{label}-clippy.log", lint_env)
+        command(["cargo", "fmt", "--manifest-path", folder / CARGO_MANIFEST, "--", "--check"], logs / f"{label}-fmt.log", lint_env)
+        command(["cargo", "clippy", "--locked", "--all-targets", "--manifest-path", folder / CARGO_MANIFEST, "--", "-D", "warnings"], logs / f"{label}-clippy.log", lint_env)
     command(["git", "diff", "--check"], logs / "diff-check.log", env)
     # The candidate itself runs with the native ICU search path absent. These
     # two extra observations make the runtime boundary independently reviewable.

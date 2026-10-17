@@ -19,6 +19,10 @@ from prepare import DEFAULT_CACHE, REPO, file_identity, write_json
 
 PROBE = REPO / "tools/icu-probe"
 HISTORICAL = REPO / "docs/research/assets/icu-probe"
+REFERENCE_KEYS = "reference-sortkeys.tsv"
+CANDIDATE_ORDERING = "candidate-ordering.tsv"
+LOCALE_QUERIES = "locales.tsv"
+MANIFEST = "manifest.json"
 
 
 def comparator_module():
@@ -60,7 +64,7 @@ def original_keys(path: Path, comparator) -> dict[tuple[str, str, str], tuple[in
 
 
 def compare_originals(cloud: Path, historical: Path, cases: Path, comparator) -> dict:
-    windows_keys = original_keys(historical / "reference-sortkeys.tsv", comparator)
+    windows_keys = original_keys(historical / REFERENCE_KEYS, comparator)
     linux_keys = original_keys(cloud / "sortkeys.tsv", comparator)
     ids = [row["case_id"] for row in table(cases, ("case_id", "utf8_hex"))]
     expected = set(itertools.product(comparator.LOCALES, ids, comparator.STRENGTHS))
@@ -94,15 +98,15 @@ def compare_originals(cloud: Path, historical: Path, cases: Path, comparator) ->
             "cloud_linux": dict(Counter(row["cloud_linux"] for row in errors)),
         },
         "reference_errors": errors, "valid_key_differences": differences,
-        "source_files": [file_identity(historical / "reference-sortkeys.tsv"), file_identity(cloud / "sortkeys.tsv")],
+        "source_files": [file_identity(historical / REFERENCE_KEYS), file_identity(cloud / "sortkeys.tsv")],
     }
 
 
 def compare_locale_queries(cloud: Path) -> dict:
     origins = {}
     for name, metadata_file, locale_file in [
-        ("historical_windows", HISTORICAL / "reference-metadata.json", HISTORICAL / "locales.tsv"),
-        ("cloud_linux", cloud / "metadata.json", cloud / "locales.tsv"),
+        ("historical_windows", HISTORICAL / "reference-metadata.json", HISTORICAL / LOCALE_QUERIES),
+        ("cloud_linux", cloud / "metadata.json", cloud / LOCALE_QUERIES),
     ]:
         metadata = json.loads(metadata_file.read_text(encoding="utf-8-sig"))
         rows = table(locale_file, ("requested", "imbue_previous", "getloc", "second_imbue_previous"))
@@ -144,12 +148,12 @@ def copy_snapshot(cache: Path, output: Path, snapshot: Path) -> None:
         destination.mkdir(parents=True, exist_ok=True)
         reference = cache / "reference" / name
         for source_name, destination_name in [
-            ("sortkeys.tsv", "reference-sortkeys.tsv"), ("metadata.json", "reference-metadata.json"),
-            ("locales.tsv", "locales.tsv"), ("names.tsv", "names.tsv"),
+            ("sortkeys.tsv", REFERENCE_KEYS), ("metadata.json", "reference-metadata.json"),
+            (LOCALE_QUERIES, LOCALE_QUERIES), ("names.tsv", "names.tsv"),
             ("stdout.log", "reference-stdout.log"), ("stderr.log", "reference-stderr.log"),
         ]:
             shutil.copyfile(reference / source_name, destination / destination_name)
-        for filename in ["codepoint-summary.json", "candidate-ordering.tsv", "ordering-summary.json",
+        for filename in ["codepoint-summary.json", CANDIDATE_ORDERING, "ordering-summary.json",
                          "candidate-stdout.log", "candidate-stderr.log"]:
             shutil.copyfile(output / name / filename, destination / filename)
     empty_destination = snapshot / "empty-keys"
@@ -160,10 +164,10 @@ def copy_snapshot(cache: Path, output: Path, snapshot: Path) -> None:
     for source, name in [
         (cache / "environment-manifest.json", "environment-manifest.json"),
         (cache / "reference-build-manifest.json", "reference-build-manifest.json"),
-        (cache / "reference/manifest.json", "reference-manifest.json"),
+        (cache / "reference" / MANIFEST, "reference-manifest.json"),
         (cache / "reference/empty-diagnostics.json", "empty-diagnostics.json"),
         (output / "cross-platform-summary.json", "cross-platform-summary.json"),
-        (output / "manifest.json", "replay-manifest.json"),
+        (output / MANIFEST, "replay-manifest.json"),
     ]:
         shutil.copyfile(source, snapshot / name)
     write_json(snapshot / "snapshot-manifest.json", {
@@ -198,20 +202,20 @@ def run_replay(cache: Path, output: Path | None = None, snapshot: Path | None = 
         reference = cache / "reference" / name
         command = [str(candidate), "--reference", str(cache / "reference/baseline/codepoints.bin"),
                    "--summary", str(destination / "codepoint-summary.json"), "--cases", str(cases),
-                   "--ordering-output", str(destination / "candidate-ordering.tsv")]
+                   "--ordering-output", str(destination / CANDIDATE_ORDERING)]
         completed = subprocess.run(command, capture_output=True)
         (destination / "candidate-stdout.log").write_bytes(completed.stdout)
         (destination / "candidate-stderr.log").write_bytes(completed.stderr)
         if completed.returncode:
             raise RuntimeError(f"ICU4X replay failed ({completed.returncode}); see {destination}")
         commands.append(command)
-        result = comparator.compare(cases, reference / "sortkeys.tsv", destination / "candidate-ordering.tsv")
+        result = comparator.compare(cases, reference / "sortkeys.tsv", destination / CANDIDATE_ORDERING)
         write_json(destination / "ordering-summary.json", result)
         results[name] = result
         cross_platform[name] = compare_originals(reference, historical, cases, comparator)
-        historic_ordering = table(historical / "candidate-ordering.tsv",
+        historic_ordering = table(historical / CANDIDATE_ORDERING,
                                  ("locale", "strength", "left_id", "right_id", "ordering"))
-        cloud_ordering = table(destination / "candidate-ordering.tsv",
+        cloud_ordering = table(destination / CANDIDATE_ORDERING,
                               ("locale", "strength", "left_id", "right_id", "ordering"))
         cross_platform[name]["candidate_sign_rows"] = {
             "historical_windows": len(historic_ordering), "cloud_linux": len(cloud_ordering),
@@ -240,9 +244,9 @@ def run_replay(cache: Path, output: Path | None = None, snapshot: Path | None = 
         "sort_key_bytes_from_icu4x": "unsupported; only the separate PRIMARY prototype provides complete keys",
         "scripts": [file_identity(Path(__file__)), file_identity(PROBE / "compare_ordering.py")],
         "files": [file_identity(path) for path in sorted(output.rglob("*"))
-                  if path.is_file() and path.name != "manifest.json"],
+                  if path.is_file() and path.name != MANIFEST],
     }
-    write_json(output / "manifest.json", manifest)
+    write_json(output / MANIFEST, manifest)
     if snapshot is not None:
         copy_snapshot(cache, output, snapshot)
     print(json.dumps(manifest["result_totals"]), flush=True)

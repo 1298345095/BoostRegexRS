@@ -18,7 +18,7 @@ LOCALES = (
     "es_ES@collation=traditional", "zh_CN", "ja_JP", "th_TH",
 )
 STRENGTHS = ("primary", "identical")
-REFERENCE_ERROR = re.compile(r"ERROR:(?:ACCESS_VIOLATION|SIGNAL_[1-9][0-9]*|EXIT_[1-9][0-9]*|CPP_EXCEPTION)")
+REFERENCE_ERROR = re.compile(r"ERROR:(?:ACCESS_VIOLATION|SIGNAL_[1-9]\d*|EXIT_[1-9]\d*|CPP_EXCEPTION)", re.ASCII)
 
 
 def read_rows(path, columns):
