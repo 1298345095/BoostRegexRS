@@ -1,0 +1,6 @@
+["/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3", "-B", "-m", "unittest", "discover", "-s", "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe", "-p", "test_compare_ordering.py"]
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.004s
+
+OK

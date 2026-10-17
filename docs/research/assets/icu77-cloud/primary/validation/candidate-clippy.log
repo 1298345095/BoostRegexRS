@@ -1,0 +1,2 @@
+["cargo", "clippy", "--locked", "--all-targets", "--manifest-path", "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/rust/Cargo.toml", "--", "-D", "warnings"]
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.03s

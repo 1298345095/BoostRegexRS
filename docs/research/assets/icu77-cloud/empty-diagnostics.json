@@ -1,0 +1,34 @@
+[
+  {
+    "mode": "boost_primary",
+    "exit_code": 0,
+    "outcome": "valid_reference_result",
+    "signal": null,
+    "stdout": "length=1 key=00000000,",
+    "stderr": ""
+  },
+  {
+    "mode": "boost_identical",
+    "exit_code": -11,
+    "outcome": "reference_error",
+    "signal": "SIGSEGV",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "mode": "icu_null",
+    "exit_code": -11,
+    "outcome": "reference_error",
+    "signal": "SIGSEGV",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "mode": "icu_nonnull",
+    "exit_code": 0,
+    "outcome": "valid_reference_result",
+    "signal": null,
+    "stdout": "length=5 key=01,01,01,01,00,",
+    "stderr": ""
+  }
+]

@@ -61,6 +61,19 @@ class OrderingComparisonTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "duplicate"):
             self.result()
 
+    def test_posix_reference_signal_retains_reference_error(self):
+        self.candidate_rows()
+        text = self.reference.read_text(encoding="utf-8").replace("empty\t0\t1,1", "empty\t0\tERROR:SIGNAL_11")
+        self.reference.write_text(text, encoding="utf-8")
+        self.assertEqual(self.result()["totals"], {"passed": 1, "mismatched": 0, "unsupported": 0, "reference_error": 1})
+
+    def test_unknown_reference_marker_is_invalid(self):
+        self.candidate_rows()
+        text = self.reference.read_text(encoding="utf-8").replace("empty\t0\t1,1", "empty\t0\tERROR:TYPO")
+        self.reference.write_text(text, encoding="utf-8")
+        with self.assertRaises(ValueError):
+            self.result()
+
 
 if __name__ == "__main__":
     unittest.main()

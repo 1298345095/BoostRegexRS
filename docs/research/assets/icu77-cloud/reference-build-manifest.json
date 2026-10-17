@@ -1,0 +1,100 @@
+{
+  "schema": "boostregexrs.icu77-cloud-reference-build.v1",
+  "compiler": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+  "commands": [
+    [
+      "c++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-I/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/deps/boost_1_89_0",
+      "-I/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/install/icu/include",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/reference/probe.cpp",
+      "-L/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-Wl,-rpath,/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-licui18n",
+      "-licuuc",
+      "-licudata",
+      "-o",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/bin/icu-reference"
+    ],
+    [
+      "c++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-I/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/deps/boost_1_89_0",
+      "-I/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/install/icu/include",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/reference/empty-probe.cpp",
+      "-L/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-Wl,-rpath,/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-licui18n",
+      "-licuuc",
+      "-licudata",
+      "-o",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/bin/empty-probe"
+    ],
+    [
+      "c++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "-I/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/deps/boost_1_89_0",
+      "-I/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/install/icu/include",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/reference/empty-keys.cpp",
+      "-L/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-Wl,-rpath,/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/install/icu/lib",
+      "-licui18n",
+      "-licuuc",
+      "-licudata",
+      "-o",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/bin/empty-keys"
+    ]
+  ],
+  "source_files": [
+    {
+      "path": "tools/icu-probe/reference/probe.cpp",
+      "bytes": 9410,
+      "sha256": "58c2a2de94c27c6c0a52c32e8ec95a4a859c92372d9b9eeda4923302d367c013"
+    },
+    {
+      "path": "tools/icu-probe/reference/empty-probe.cpp",
+      "bytes": 1417,
+      "sha256": "0cefbab64991e3039d019e68e01622dea32307d55afc840196e9623d58afa17b"
+    },
+    {
+      "path": "tools/icu-probe/reference/empty-keys.cpp",
+      "bytes": 6267,
+      "sha256": "212421887940c8ed71aa523510a76866390900277ceabddf38e9199f3e8f40cd"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "target/research/icu77-cloud/bin/icu-reference",
+      "bytes": 86320,
+      "sha256": "5377d74f8aa0a9d735b94e8c2a575ef471bc12b360bb03362866e02034ce92f7"
+    },
+    {
+      "path": "target/research/icu77-cloud/bin/empty-probe",
+      "bytes": 41424,
+      "sha256": "43ca4e9b3ec0919edfb9f739fffb907b8066c4d5322a5fa4e11e9d3c66b8c0f6"
+    },
+    {
+      "path": "target/research/icu77-cloud/bin/empty-keys",
+      "bytes": 33624,
+      "sha256": "a084966d02bfd2e16992819753c36e63b35d7c81dba510b5ae696dee096d5c9c"
+    }
+  ],
+  "environment_manifest": {
+    "path": "target/research/icu77-cloud/environment-manifest.json",
+    "bytes": 13569,
+    "sha256": "21216d0278adac1d5dc95c51e76e3c0c8c9972382f8c5ab7ba09549d765bc05c"
+  },
+  "dynamic_libraries_verified_local": true
+}

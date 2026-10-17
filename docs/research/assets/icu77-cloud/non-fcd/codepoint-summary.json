@@ -1,0 +1,200 @@
+{
+  "collation_comparison": {
+    "cases": 13,
+    "construction_failures": [],
+    "fallback_policy": "explicit mapping; constructor error produces unsupported; ICU4X internal locale data fallback remains library behavior, pairwise agreement alone does not prove locale identity",
+    "locale_mappings": [
+      {
+        "bcp47": "und",
+        "icu": "root"
+      },
+      {
+        "bcp47": "en-US",
+        "icu": "en_US"
+      },
+      {
+        "bcp47": "tr-TR",
+        "icu": "tr_TR"
+      },
+      {
+        "bcp47": "de-DE",
+        "icu": "de_DE"
+      },
+      {
+        "bcp47": "sv-SE",
+        "icu": "sv_SE"
+      },
+      {
+        "bcp47": "fr-CA",
+        "icu": "fr_CA"
+      },
+      {
+        "bcp47": "es-ES-u-co-trad",
+        "icu": "es_ES@collation=traditional"
+      },
+      {
+        "bcp47": "zh-CN",
+        "icu": "zh_CN"
+      },
+      {
+        "bcp47": "ja-JP",
+        "icu": "ja_JP"
+      },
+      {
+        "bcp47": "th-TH",
+        "icu": "th_TH"
+      }
+    ],
+    "rows": 1560
+  },
+  "data_versions": {
+    "cldr": "47",
+    "icu4x": "2.0.0",
+    "unicode": "16.0.0"
+  },
+  "icu_compat_adapter": {
+    "blank": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    },
+    "category": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    },
+    "digit10": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    },
+    "digit16": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    },
+    "digit36": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    },
+    "fold": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    },
+    "lower": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    },
+    "space": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    },
+    "upper": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    }
+  },
+  "raw_icu4x": {
+    "blank": {
+      "compared": 0,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 1114112
+    },
+    "category": {
+      "compared": 1114112,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 0
+    },
+    "digit10": {
+      "compared": 0,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 1114112
+    },
+    "digit16": {
+      "compared": 0,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 1114112
+    },
+    "digit36": {
+      "compared": 0,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 1114112
+    },
+    "fold": {
+      "compared": 1112064,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 2048
+    },
+    "lower": {
+      "compared": 1112064,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 2048
+    },
+    "space": {
+      "compared": 1114112,
+      "first_examples": [
+        {
+          "actual": 0,
+          "codepoint": "U+001C",
+          "expected": 1
+        },
+        {
+          "actual": 0,
+          "codepoint": "U+001D",
+          "expected": 1
+        },
+        {
+          "actual": 0,
+          "codepoint": "U+001E",
+          "expected": 1
+        },
+        {
+          "actual": 0,
+          "codepoint": "U+001F",
+          "expected": 1
+        }
+      ],
+      "mismatches": 4,
+      "unsupported": 0
+    },
+    "upper": {
+      "compared": 1112064,
+      "first_examples": [],
+      "mismatches": 0,
+      "unsupported": 2048
+    }
+  },
+  "raw_missing_apis": [
+    "POSIX blank function",
+    "ICU u_digit numeric conversion"
+  ],
+  "record_bytes": 40,
+  "records": 1114112,
+  "reference": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/reference/baseline/codepoints.bin",
+  "sort_key_output": "unsupported: ICU4X 2.0 has no public sort-key API",
+  "surrogate_policy": {
+    "adapter_simple_case": "identity for surrogate codepoints, Unicode simple case mapping default",
+    "raw_simple_case": "unsupported: Rust char rejects U+D800..DFFF"
+  }
+}

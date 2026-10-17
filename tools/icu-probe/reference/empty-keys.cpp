@@ -20,6 +20,18 @@ std::string version(const UVersionInfo value) {
     return buffer;
 }
 
+std::string compiler_identity() {
+#if defined(_MSC_VER)
+    return "MSVC " + std::to_string(_MSC_VER);
+#elif defined(__clang__)
+    return "Clang " __clang_version__;
+#elif defined(__GNUC__)
+    return "GCC " __VERSION__;
+#else
+    return "unknown C++ compiler";
+#endif
+}
+
 std::string hex(const std::vector<std::uint8_t>& bytes, int width) {
     std::ostringstream stream;
     bool first = true;
@@ -43,7 +55,7 @@ int main(int argc, char** argv) try {
     ulocdata_getCLDRVersion(cldr, &status);
     u_getDataVersion(data, &status);
     if (U_FAILURE(status)) throw std::runtime_error(u_errorName(status));
-    if (icu[0] != 77 || icu[1] != 1 || unicode[0] != 16 || unicode[1] != 0 || cldr[0] != 47)
+    if (icu[0] != 77 || icu[1] != 1 || unicode[0] != 16 || unicode[1] != 0 || cldr[0] != 47 || data[0] != 77 || data[1] != 1)
         throw std::runtime_error("Unexpected reference version");
 
     std::ofstream metadata(directory / "metadata.json");
@@ -52,7 +64,7 @@ int main(int argc, char** argv) try {
              << "  \"unicode\": \"" << version(unicode) << "\",\n"
              << "  \"cldr\": \"" << version(cldr) << "\",\n"
              << "  \"data\": \"" << version(data) << "\",\n"
-             << "  \"compiler\": \"MSVC " << _MSC_VER << "\",\n"
+             << "  \"compiler\": \"" << compiler_identity() << "\",\n"
              << "  \"valid_sentinel_pointer\": true,\n  \"input_utf16_units\": 0,\n"
              << "  \"locale_count\": 10,\n  \"key_count\": 20,\n"
              << "  \"rust_full_key_implementation_verified\": false\n}\n";

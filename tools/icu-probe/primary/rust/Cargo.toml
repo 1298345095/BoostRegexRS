@@ -1,0 +1,17 @@
+[package]
+name = "icu77-root-primary"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "Unicode-3.0"
+description = "Isolated pure Rust ICU 77.1 root PRIMARY compatibility prototype"
+
+[workspace]
+
+[dependencies]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "warn"

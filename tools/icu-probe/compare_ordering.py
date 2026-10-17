@@ -9,6 +9,7 @@ import csv
 import hashlib
 import itertools
 import json
+import re
 from pathlib import Path
 
 
@@ -17,6 +18,7 @@ LOCALES = (
     "es_ES@collation=traditional", "zh_CN", "ja_JP", "th_TH",
 )
 STRENGTHS = ("primary", "identical")
+REFERENCE_ERROR = re.compile(r"ERROR:(?:ACCESS_VIOLATION|SIGNAL_[1-9][0-9]*|EXIT_[1-9][0-9]*|CPP_EXCEPTION)")
 
 
 def read_rows(path, columns):
@@ -50,7 +52,7 @@ def compare(cases_path, reference_path, candidate_path, locales=LOCALES):
             raise ValueError(f"Duplicate reference row: {identity}")
         decoded = {}
         for strength in STRENGTHS:
-            if row[strength] == "ERROR:ACCESS_VIOLATION":
+            if REFERENCE_ERROR.fullmatch(row[strength]):
                 decoded[strength] = None
                 continue
             decoded[strength] = tuple(int(part, 16) for part in row[strength].split(",")) if row[strength] else ()

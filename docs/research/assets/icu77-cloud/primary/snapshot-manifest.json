@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "purpose": "new cloud root PRIMARY evidence, separate from historical Windows",
+  "files": [
+    {
+      "path": "all-scalars/summary.json",
+      "bytes": 2650,
+      "sha256": "981d04446c9b6f684039a60e633f45f86d56ca82d255dc1b85128ec851693a91"
+    },
+    {
+      "path": "cases/generation.json",
+      "bytes": 249,
+      "sha256": "56f969e00ef312169639d8f23561eaa20b5ccb6755f605f3f51bd7037df6b080"
+    },
+    {
+      "path": "ce-audit-final-contexts/summary.json",
+      "bytes": 2360,
+      "sha256": "d083826a7311e63eb16bf5ed3e5f0ca79dd70e021ef2e4ed21d10b2553010309"
+    },
+    {
+      "path": "ce-audit-final-directed/summary.json",
+      "bytes": 2362,
+      "sha256": "f6152f0b042ae224807c226d4a6f60538c316a6ba7259bd7076d9ad52401ee17"
+    },
+    {
+      "path": "cloud-summary.json",
+      "bytes": 35619,
+      "sha256": "5e9459b5277ece67e064e3d6512c52d7137b46a7f0c0e488e6d96a4095a615d2"
+    },
+    {
+      "path": "contexts/summary.json",
+      "bytes": 3492,
+      "sha256": "0d192f3b62f83e9fb18c7c70b62022ed0cd1b1f767d3c2efda41cf1a962b2b9e"
+    },
+    {
+      "path": "data-generation-manifest.json",
+      "bytes": 8862,
+      "sha256": "84e47ead7b3ac39500893b5bc6348b935e9f1a08302f5ebd3dfceff10ca52136"
+    },
+    {
+      "path": "directed/summary.json",
+      "bytes": 3438,
+      "sha256": "55f07b7c58fd946d01b37cb7c45ac7cf2bc6711d130efa64f33a40470eb0b323"
+    },
+    {
+      "path": "generated/summary.json",
+      "bytes": 2682,
+      "sha256": "fe2af16e617a52d3072bf849a0495b5bd0cef33a1f47715a6fc0bc15446b6c61"
+    },
+    {
+      "path": "rust-toolchain-manifest.json",
+      "bytes": 3226,
+      "sha256": "728ed5c86b52176522fd16205f492d61507e9540af330f71c0ffd9eb890ef94f"
+    },
+    {
+      "path": "sample-candidate.tsv",
+      "bytes": 30021,
+      "sha256": "eb0574c13bf3746e1e5fe34f7cbc0913f1222671c6113b0245313c4e09c684ec"
+    },
+    {
+      "path": "sample-cases.tsv",
+      "bytes": 6843,
+      "sha256": "3fc93ea26aa44fb541d009e3b850e11f4a54016263a79faac6afc044ef3994bb"
+    },
+    {
+      "path": "sample-reference.tsv",
+      "bytes": 30021,
+      "sha256": "eb0574c13bf3746e1e5fe34f7cbc0913f1222671c6113b0245313c4e09c684ec"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 5480,
+      "sha256": "387a58ac2ec6d3f7da247b0b51ec92dd425add3637bfaa1d22cc9a5d969c024a"
+    },
+    {
+      "path": "u16/summary.json",
+      "bytes": 2558,
+      "sha256": "7861bb940cb29a7d16586f1a5b7164c8b40ca49be6ea1d3f5179d84a0d1b1ed4"
+    },
+    {
+      "path": "u32/summary.json",
+      "bytes": 2558,
+      "sha256": "342e6992512782c2c2be4c31c96634af7137bae800dabf27d8efc0beb097a109"
+    },
+    {
+      "path": "validation/candidate-clippy.log",
+      "bytes": 244,
+      "sha256": "4f86f30e619ce030ba1df3292fad3e938d6e4fac7547c7a49535563b14c9970e"
+    },
+    {
+      "path": "validation/candidate-fmt.log",
+      "bytes": 133,
+      "sha256": "5355c0140c9939c230cb173284a4c445d095d53e1b51ac8a0f78ba189aa52a95"
+    },
+    {
+      "path": "validation/candidate-tests.log",
+      "bytes": 443,
+      "sha256": "ab979a50a239b1c5705f8354bb10a950f62b9af9c50e99c45d77b21895b51612"
+    },
+    {
+      "path": "validation/diff-check.log",
+      "bytes": 27,
+      "sha256": "fe996e3f8e8dd2792f878567e525524dc33baecf59900a8f99192a65a5189273"
+    },
+    {
+      "path": "validation/ordering-comparator.log",
+      "bytes": 324,
+      "sha256": "8beeca23ddf048ea226a511bde136f0293f74a4fcf56f073145ebb8fe3f7727f"
+    },
+    {
+      "path": "validation/primary-clippy.log",
+      "bytes": 252,
+      "sha256": "11c57cf3e0d6c8c1f8d8f71b2cc78cf708445ae7041ea9f73f6070e4e6d90f33"
+    },
+    {
+      "path": "validation/primary-fmt.log",
+      "bytes": 141,
+      "sha256": "7de1807f165722fb8262a2df59d5581bd11467d81fd4addd156f5e5fec2af227"
+    },
+    {
+      "path": "validation/primary-harness.log",
+      "bytes": 325,
+      "sha256": "19155010add400ad9044627cb08fbd6e8dfc471068d3e8e9d524c754cd8077c5"
+    },
+    {
+      "path": "validation/primary-ldd.txt",
+      "bytes": 230,
+      "sha256": "867face9446eeba76f4e8ba35721b9a2423fb1357488e4d6d144d25f9a408179"
+    },
+    {
+      "path": "validation/primary-tests.log",
+      "bytes": 1985,
+      "sha256": "7cacd8de7055745f2e79f028a4202f4b1297a34a7254005b405a5447539bc3db"
+    },
+    {
+      "path": "validation/root-tests.log",
+      "bytes": 813,
+      "sha256": "dfe5d55749f955964057100e85fcc613b03d833a91948cea5b781afa37698531"
+    }
+  ]
+}
