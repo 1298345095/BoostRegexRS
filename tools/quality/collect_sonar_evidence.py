@@ -19,6 +19,7 @@ import urllib.request
 
 REPO = "1298345095/BoostRegexRS"
 PROJECT = "1298345095_BoostRegexRS"
+ORGANIZATION = "1298345095"
 ROOT = Path(__file__).resolve().parents[2]
 GITHUB_API = f"https://api.github.com/repos/{REPO}"
 SONAR_API = "https://sonarcloud.io/api"
@@ -82,9 +83,11 @@ def collect(commit, pull_request, output, github_only=False, inspect_access=Fals
         # This endpoint returns a validity boolean, not a token or user profile.
         # Read access to a public project does not imply issue-management access.
         queries["sonar-authentication.json"] = ("authentication/validate", {})
-        queries["sonar-issue-api.json"] = ("webservices/show", {"controller": "api/issues"})
+        queries["sonar-web-api.json"] = ("webservices/list", {})
         for rule in ("S2083", "S8701", "S8705", "S8707"):
-            queries[f"sonar-rule-{rule}.json"] = ("rules/show", {"key": "pythonsecurity:" + rule})
+            queries[f"sonar-rule-{rule}.json"] = (
+                "rules/show", {"key": "pythonsecurity:" + rule, "organization": ORGANIZATION}
+            )
     sonar_statuses = {}
     for filename, (endpoint, parameters) in queries.items():
         if github_only:
