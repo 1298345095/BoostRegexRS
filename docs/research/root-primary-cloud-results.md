@@ -4,7 +4,9 @@
 
 ## 1. 阶段结论
 
-[cloud-handoff.md](cloud-handoff.md) 定义的首轮云端工作已经实际执行：取得并核验官方依赖，在项目局部目录建立参考环境，重放已提交语料，从完整 ICU77 数据生成固定 Rust 数据，实现并运行纯 Rust root PRIMARY 排序键。最终统一运行完成于 **2026-10-17 10:41:24 UTC**，全程返回 **0**；结果标记为 `stage_status: passed`、`coverage_profile: full_recorded_suite`。[统一结果](assets/icu77-cloud/primary/cloud-summary.json)
+[cloud-handoff.md](cloud-handoff.md) 定义的首轮云端工作已经实际执行：取得并核验官方依赖，在项目局部目录建立参考环境，重放已提交语料，从完整 ICU77 数据生成固定 Rust 数据，实现并运行纯 Rust root PRIMARY 排序键。本地完整运行完成于 **2026-10-17 10:41:24 UTC**，全程返回 **0**；结果标记为 `stage_status: passed`、`coverage_profile: full_recorded_suite`。[本地统一结果](assets/icu77-cloud/primary/cloud-summary.json)
+
+随后修复独立审查发现的一处 CLI 十六进制协议问题；包含修复的提交 **`9e57799d39c7610bfb6a93b1e7f8a51205e5b4a7`** 在 GitHub Actions 的干净 checkout 中通过完整阶段。最终 PR 运行于 **2026-10-17 11:10:28 UTC** 完成全部计算和验证，结果与本地主验收一致，Rust 测试增至 **11 项**。对应 [PR #1](https://github.com/1298345095/BoostRegexRS/pull/1)、[成功的最终 Actions](https://github.com/1298345095/BoostRegexRS/actions/runs/39027271124) 和 [CI 实际结果](assets/icu77-cloud/github-actions/cloud-summary.json)；源文件身份、归档核验与两次修复后运行均记录在 [run-record.json](assets/icu77-cloud/github-actions/run-record.json)。
 
 本轮 **1,160,181 条合法输入记录**同时通过完整 ICU 原始字节序列与实际 Boost 暴露的 u32 键序列对照；另有 **11 条非法输入按预期拒绝**，没有混入有效键通过数。记录范围内为 **0 差异、0 未支持、0 参考错误**。这里统计的是输入记录，各集合可以包含相同字符串；没有把这些记录称为互不重复的字符串。[PRIMARY 汇总](assets/icu77-cloud/primary/summary.json)
 
@@ -261,7 +263,7 @@ env -u LD_LIBRARY_PATH ICU_DATA=/nonexistent/icu-data \
 | 旧排序比较器 Python 回归 | 8 tests 通过 |
 | PRIMARY 比较 / 参考进程 Python 回归 | 15 tests 通过 |
 | Python 合计 | **23 tests 通过** |
-| Rust PRIMARY | **10 tests 通过**：9 个算法 / 数据 / 边界测试和 1 个独立 CLI 子进程测试 |
+| Rust PRIMARY | 初次本地快照 10 tests 通过；协议修复后及最终 CI 为 **11 tests 通过**：9 个核心测试、2 个 CLI 集成测试 |
 | 根 crate | 1 个既有骨架测试通过 |
 | 旧 ICU4X 候选 `cargo test` | 命令通过，0 个内置测试；实际验收来自外部重放 |
 | 两个研究 crate `cargo fmt -- --check` | 通过 |
@@ -272,6 +274,23 @@ env -u LD_LIBRARY_PATH ICU_DATA=/nonexistent/icu-data \
 | `git diff --check` | 通过 |
 
 根 crate 原有名称 `BoostRegexRS` 仍产生 `non_snake_case` 警告；本轮没有为消除该既有警告而改名公开 crate。新的研究 crate 在上述 `-D warnings` Clippy 条件下通过。测试名称、原始输出和运行命令均保存，不能把根 crate 的一个骨架测试理解成正则引擎测试已经完成。[根测试日志](assets/icu77-cloud/primary/validation/root-tests.log)、[PRIMARY 测试日志](assets/icu77-cloud/primary/validation/primary-tests.log)
+
+### 独立审查、协议修复与干净 CI
+
+规范轴和规格轴分别审查了固定树 `387ad932340ea5145bcfdc884943cd4a194927cd`。规范轴未发现实质问题；规格轴发现原 CLI 使用 `from_str_radix` 时接受前导 `+`，使 UTF-8 `+0`、UTF-16 `+061`、UTF-32 `+0000061` 绕过已写明的十六进制协议。现在在转换前逐字节要求 `is_ascii_hexdigit`，三个入口均返回对应 `ERROR:INVALID_*_HEX`，并继续处理下一条合法输入。先加入回归时实际复现失败，修复后独立复核通过。该修复没有改变 CE / PRIMARY 编码或固定数据。[修复提交](https://github.com/1298345095/BoostRegexRS/commit/9e57799d39c7610bfb6a93b1e7f8a51205e5b4a7)、[最终 11 项 Rust 测试日志](assets/icu77-cloud/github-actions/validation/primary-tests.log)
+
+审查还独立记录了一组 seed `0x5350454352455631` 的 2,048 条上下文插入 / 串接变体：完整键与完整 CE64 各 2,048 条通过，0 差异。为补齐原始文件，于 11:04:29 UTC 进行了单列的新重放，并保存输入、参考 / 候选键、CE trace、生成脚本和源身份。这组诊断使用原本地记录的二进制，**没有加入主 1,160,181 键 / 28,108 CE 计数**。[附加摘要](assets/icu77-cloud/review-contexts-2048/summary.json)、[完整原始归档](assets/icu77-cloud/review-contexts-2048/evidence.zip)
+
+GitHub Actions 使用全新 `ubuntu-24.04` runner，未恢复任何依赖或 target 缓存，执行与本地相同的完整命令。实际用户空间为 Ubuntu 24.04.5 LTS、Linux `6.17.0-1022-azure`、GCC 13.3.0、Python 3.12.3；Rust 仍由项目入口核验并安装 stable 1.99.1。最初实现的 push、协议修复后的 push 和 PR 三次运行均成功。[CI 环境](assets/icu77-cloud/github-actions/environment-manifest.json)、[工具链](assets/icu77-cloud/github-actions/rust-toolchain-manifest.json)、[运行记录](assets/icu77-cloud/github-actions/run-record.json)
+
+最终归档已下载并实际验证：**197 个文件、42,151,399 bytes**，SHA256 如下。CI 的 21 个被测源文件摘要与修复提交一致；六组输入、参考输出、候选输出的 SHA256 三元组均与本地主记录完全相同。完整键计数、28,108 条 CE 审计、七项历史重放门槛、23 项 Python 测试、11 项 Rust PRIMARY 测试、format 和 Clippy 全部通过。[最终 CI 汇总](assets/icu77-cloud/github-actions/cloud-summary.json)、[CI 快照清单](assets/icu77-cloud/github-actions/snapshot-manifest.json)
+
+```text
+Final PR Actions artifact SHA256
+8118b6112f435fd8fafcbad0d959fca3b6616cd4ebd4e1587ffcbb210acb0dc7
+```
+
+[完整 CI artifact](https://github.com/1298345095/BoostRegexRS/actions/runs/39027271124/artifacts/12098849199) 包含全量输入 / 键 / CE trace、参考数据、过程记录和日志；配置保留 14 天。仓库内保留来源、摘要、完整键样例及最终 CI 的小型证据；大文件可以通过统一入口重新生成。最后的文档和证据索引提交不会改变已测试的 Rust、参考工具、生成器或固定数据。
 
 ## 8. 结论边界与剩余工作
 

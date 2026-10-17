@@ -183,5 +183,14 @@ trees, download archives, native/Rust installations, Cargo caches, and compiled
 build caches are excluded. Inspect the specific Actions run and its artifact for
 that runner's actual status and environment identity.
 
+The recorded final [PR run](https://github.com/1298345095/BoostRegexRS/actions/runs/39027271124)
+and [push run](https://github.com/1298345095/BoostRegexRS/actions/runs/39027211113)
+both passed on `9e57799d39c7610bfb6a93b1e7f8a51205e5b4a7`, including the CLI
+hexadecimal-protocol regression. The final artifact contains 197 files and its
+SHA256 was verified after download. The [run record](../../../docs/research/assets/icu77-cloud/github-actions/run-record.json)
+and [result report](../../../docs/research/root-primary-cloud-results.md#独立审查协议修复与干净-ci)
+retain exact source/environment identities and distinguish the initial local
+10-test snapshot from the final 11-test Rust package result.
+
 The historical PowerShell/MSVC commands remain documented at the
 [probe entry point](../README.md#historical-windowsmsvc-probe).

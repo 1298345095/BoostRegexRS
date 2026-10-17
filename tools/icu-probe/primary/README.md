@@ -183,12 +183,21 @@ key ordering. Independent CE64 audits pass all 28,108 directed/context inputs,
 including primary-ignorable CEs and the end sentinel; this checks iteration
 details that PRIMARY bytes alone could conceal.
 
-The Rust package's 10 regression/integration tests, formatting check, and
+The Rust package's 11 regression/integration tests, formatting check, and
 `clippy --all-targets -- -D warnings` pass. The runner executes the candidate
 without the ICU library search path and with `ICU_DATA` pointing to an absent
 directory; linkage inspection shows no ICU, Boost, or C++ standard library
 dependency. Data regeneration with `--check` reproduces the checked-in binary.
 Detailed gate logs and identities accompany the new cloud evidence.
+
+The final clean-checkout [GitHub Actions run](https://github.com/1298345095/BoostRegexRS/actions/runs/39027271124)
+also passes the complete suite on commit
+`9e57799d39c7610bfb6a93b1e7f8a51205e5b4a7`. Its extra CLI regression rejects
+signed hexadecimal fields in all three input modes while continuing subsequent
+valid rows. The earlier local snapshot records 10 tests; the final
+[CI test log](../../../docs/research/assets/icu77-cloud/github-actions/validation/primary-tests.log)
+records 11. All six corpus input/reference/candidate file-hash triplets match
+the local full-key evidence exactly.
 
 Complete generated inputs, full keys, per-group JSON summaries, process records,
 and CE traces are retained under `CACHE/primary/`. Each summary records hashes

@@ -1,0 +1,22 @@
+["cargo", "test", "--locked", "--manifest-path", "/home/runner/work/BoostRegexRS/BoostRegexRS/Cargo.toml"]
+   Compiling BoostRegexRS v0.1.0 (/home/runner/work/BoostRegexRS/BoostRegexRS)
+warning: crate `BoostRegexRS` should have a snake case name
+  |
+  = help: convert the identifier to snake case: `boost_regex_rs`
+  = note: `#[warn(non_snake_case)]` (part of `#[warn(nonstandard_style)]`) on by default
+
+warning: `BoostRegexRS` (lib) generated 1 warning
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.33s
+     Running unittests src/lib.rs (target/debug/deps/BoostRegexRS-8544a5ab656cd2d2)
+
+running 1 test
+test tests::it_works ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests BoostRegexRS
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
