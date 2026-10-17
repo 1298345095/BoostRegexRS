@@ -40,6 +40,11 @@ The summary records only whether `SONAR_TOKEN` was supplied. Neither a successfu
 public read nor a valid authentication response is treated as proof of permission
 to change issue status. This inspection does not submit issue transitions.
 
+The [P01 access observation](../../docs/research/assets/sonarcloud/actions-39066906674/README.md)
+retains the original Actions ZIP, verified project identity, successful corrected
+API reads, and the remaining authenticated issue-management gap. Its successful
+collection still records a failed gate.
+
 Run the developer CLI boundary regressions with:
 
 ```sh
