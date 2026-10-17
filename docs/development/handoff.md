@@ -8,7 +8,45 @@ The user resumed all ticket implementation on 2026-10-18 (Asia/Shanghai), reques
 
 Use [GitHub issue #148](https://github.com/1298345095/BoostRegexRS/issues/148) for live task specifications and dependencies, and [coverage](tickets/coverage.md) for capability ownership. Do not maintain a second local task tracker.
 
-Current work: simplify ticket storage; complete U01 (#5) FCD cursor repair and P01 (#3) Sonar access investigation. V01 (#8) reference reproduction follows. Implementation acceptance remains open.
+Duplicate ticket mirrors and their generation machinery were removed through
+`af49df4c`. Sonar API routing and bounded collection were fixed in `bf33836e` and
+`ce4eb40d`. The native command runner in `ca903515` records literal argv, stdin,
+separate streams, deadlines, cancellation and actual exit status. Its six process
+lifecycle and three CLI-boundary tests passed before publication.
+
+Current work: complete P01 (#3) access evidence, publish the reviewed V01 (#8)
+native reference tools in small groups, and assemble U01 (#5) with its complete
+source/data prerequisites before clean-checkout verification. The gate and
+overall implementation acceptance remain open.
+
+### Workspace recovery on 2026-10-17
+
+Automated workspace maintenance removed the local checkout and native caches,
+observed at 23:02 UTC. The remote branch remained at `ca903515`; an attempted
+upload of the next source group had failed validation before creating a commit.
+The work branch was re-cloned into `BoostRegexRS-recovery`.
+
+The committed `paused-sources.tar.xz` was verified against its manifest, including
+all 629 member hashes, and 628 members restored. The sole overlap was the older
+`tools/quality/collect_sonar_evidence.py`; the newer committed routing fix was
+retained. All 433 members of `selected-evidence.tar.xz` were verified and restored.
+The original checkpoint and complete failed-locale-run archive remain unchanged.
+
+The unpublished V01 tools and later U01 tests/settings validation are being
+reconstructed from the checkpoint, reviewed source mechanisms and retained
+conversation patches. Previously reported working-tree runs are not a substitute
+for new durable evidence: their unpublished raw files and binaries were pruned.
+Rebuild the fixed native environment and rerun the assembled committed sources
+before closing either implementation ticket. Keep new runs separately dated.
+
+The successful Sonar access artifact from Actions run `39066906674` remains
+available remotely (artifact `12113801642`, SHA-256
+`69561dfa3ef22ec4061c76b0eb94c6a636d7c7b69cc691843da37ebd38112cd9`). Re-download and
+verify it for P01. It records eight HTTP 200 responses, 91 unresolved issues,
+20 security-rule issues, no supplied Sonar token and a failed security gate;
+its Sonar responses are live PR state without a verified associated commit.
+The later local 403 observation was not uploaded before pruning and must not be
+recreated under its old timestamp. Earlier published/checkpoint failures survive.
 
 The [checkpoint](tickets/checkpoint/README.md) preserves paused sources and original evidence. Keep it intact and commit validated mechanisms separately from this historical archive.
 
