@@ -1,0 +1,131 @@
+{
+  "release": "https://github.com/unicode-org/icu/releases/tag/release-77-1",
+  "asset_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/icu4c-77_1-Win64-MSVC2022.zip",
+  "hash_manifest_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/SHASUM512.txt",
+  "archive_sha512": "b88b1013b2de56ad5f61a6f31997046851e882e5373579e565f32f455a44f4b9e814197129a3547f600eac184d98075b7ccaefcc46ee80a5c7e3a7a0fcd3e08a",
+  "manifest_sha512_match": true,
+  "address_sanitizer": false,
+  "os": "Microsoft Windows 10.0.26200",
+  "process_architecture": "X64",
+  "boost_root": "D:\\NewProgram\\librime-rs\\target\\regex-oracle-cache\\boost_1_89_0",
+  "boost_version_header_sha256": "eb10cb13ccb449c8dc08f28cf62b81fc7fe114f77796f3d7517d8c31e913877a",
+  "boost_icu_traits_header_sha256": "38709e866aeb84bf0ee6a3a7da4a7ac7f081810fe3ee05d748f9ce189b7bfc16",
+  "generated_utc": "2026-10-17T08:50:32.6796666Z",
+  "files": [
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu4c-77_1-Win64-MSVC2022.zip",
+      "bytes": 29381458,
+      "sha256": "6b62471ed2895959d6a85c64c58572ac677734547fe8383e6e3fd706a06dc3fa"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\SHASUM512.txt",
+      "bytes": 1718,
+      "sha256": "8a1d7a14c9e641ef07186180f10aba2338b5f53bccc845047344cd2ddd200b4d"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu-reference.exe",
+      "bytes": 514560,
+      "sha256": "82bceff16c5ed44d106ac9ecc459de60971101649b8c78985c063d15bf78c5b5"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\reference\\probe.cpp",
+      "bytes": 6325,
+      "sha256": "644dbfdb53a984fa50bf6cecb5c32391db13f3e434ac6640b023f9975e2bd099"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\reference\\cases.tsv",
+      "bytes": 839,
+      "sha256": "8f7e1cca3ee2b759269c02243168a9a195f2045a8cdf38c79af7e019d7458db5"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\reference\\run.ps1",
+      "bytes": 7349,
+      "sha256": "75ed3a0ab94528b5a0a13cb91debbd1e83f5d106c39d4ee985920b1f696fc340"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\empty-probe.exe",
+      "bytes": 36352,
+      "sha256": "91b347760a8044ac466a05f8222b3e747db8a6b03a55027950ab8d9f56ec2302"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\reference\\empty-probe.cpp",
+      "bytes": 1417,
+      "sha256": "0cefbab64991e3039d019e68e01622dea32307d55afc840196e9623d58afa17b"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\asan-output\\empty-diagnostics.json",
+      "bytes": 4718,
+      "sha256": "3fd8bb323520e0b3c038d982c73527af664105dd3c6b6c89d2d2ae8dd0011233"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icudt77.dll",
+      "bytes": 31898624,
+      "sha256": "34802b95108b76308f4b25b99010fd99bf0e4e320241efade51218a53a4e9ee0"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuin77.dll",
+      "bytes": 3585024,
+      "sha256": "9c3773bbe7ddafdf7aaa0ac2d40d310e043f144028bef3a22ea2da3a8bcf4cc4"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuio77.dll",
+      "bytes": 62976,
+      "sha256": "26273d102b14f4a1322deebcd484edf1c7d4531ad521627270a8ef6b22d58c0f"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icutu77.dll",
+      "bytes": 381952,
+      "sha256": "7a4ceba851abacada6bbb262a736f4a348c802b947adb6775bfec7afe0f00842"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuuc77.dll",
+      "bytes": 2552320,
+      "sha256": "c32696ca01b35c1b26a9146f3fd7544abbbec9586a6ef30765e618ed9c0f486d"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\testplug.dll",
+      "bytes": 12800,
+      "sha256": "1c02854ecb48385c9ca431c08cb001474d87fc19d76d8fb3307c5d4eb54c8a90"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\output\\codepoints.bin",
+      "bytes": 44564480,
+      "sha256": "09d765de08abdebdfd554e4a0d65c843480d231bb87f8cfd9d728e76efd80e14"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\output\\empty-diagnostics.json",
+      "bytes": 466,
+      "sha256": "786e7db77e16656a5cb5ca751eaecbcac0b0723e22a620cf935b58913e1f3203"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\output\\locales.tsv",
+      "bytes": 343,
+      "sha256": "dbffe9ef1276f844c6766b3ae08d44db0fc9130275d76c3f34b317e87f55efb9"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\output\\metadata.json",
+      "bytes": 217,
+      "sha256": "6e6d75b77e0fb561207abad60ae00267cf69b392ff74df4bcc663ebe5ec2a3ff"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\output\\names.tsv",
+      "bytes": 360,
+      "sha256": "075faad67dcd21426270bf295ad40efb99a2425a5ca036875ce48abef9fc8944"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\output\\sortkeys.tsv",
+      "bytes": 89708,
+      "sha256": "ed0465cc9583e10f07f497574d00f20997401518231170b515aad2eb8341fff4"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\output\\stderr.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\output\\stdout.log",
+      "bytes": 88,
+      "sha256": "bb5f767d55510148ddb57112a1401f7d8575b05ef9e26f24b909395122b1bb09"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+case_id	utf8_hex
+a_0315_0300	61cc95cc80
+a_0300_0315	61cc80cc95
+a_0301_0323	61cc81cca3
+a_0323_0301	61cca3cc81
+e1_0323	c3a1cca3
+leading_0315_0300	cc95cc80
+leading_0300_0315	cc80cc95
+a_plain	61
+a_0301_0327	61cc81cca7
+a_0327_0301	61cca7cc81
+e1_0327	c3a1cca7
+alpha_0345_0300	ceb1cd85cc80
+alpha_0300_0345	ceb1cc80cd85

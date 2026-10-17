@@ -1,0 +1,33 @@
+{
+  "source_sha256": {
+    "tools/icu-probe/compare_ordering.py": "7cf6ed7fa5ca2484933d9395d6ac01dedd6109c23f16c2643ea07b33beab2060",
+    "tools/icu-probe/README.md": "b65172540a97499b4c1f901eae4c5af451bdc3940ff86f3389e441fb17260f85",
+    "tools/icu-probe/reference/cases.tsv": "8f7e1cca3ee2b759269c02243168a9a195f2045a8cdf38c79af7e019d7458db5",
+    "tools/icu-probe/reference/empty-probe.cpp": "0cefbab64991e3039d019e68e01622dea32307d55afc840196e9623d58afa17b",
+    "tools/icu-probe/reference/probe.cpp": "644dbfdb53a984fa50bf6cecb5c32391db13f3e434ac6640b023f9975e2bd099",
+    "tools/icu-probe/reference/README.md": "5f3bff5a6608021d99b5f40524114a2357ba922d170d2969d5aec88d3ed01454",
+    "tools/icu-probe/reference/run.ps1": "75ed3a0ab94528b5a0a13cb91debbd1e83f5d106c39d4ee985920b1f696fc340",
+    "tools/icu-probe/run.ps1": "0f7d838e7a690a4a499c1b81708d19a8863b774cbef405aa6e50824e64ee0621",
+    "tools/icu-probe/rust/Cargo.lock": "377c16c57a7329aff9bdd93d0d8b71e181ee804bbae93533ee9d137a5a3dc5f1",
+    "tools/icu-probe/rust/Cargo.toml": "9a6c3b8813326fd85ecf297cac6fb192ba13f160be8ebee451d251d13745b8cb",
+    "tools/icu-probe/rust/README.md": "5f11bab43e8a1d720d525b096f8d8e44bd1d98fe91c034cbca55ba845d66c08d",
+    "tools/icu-probe/rust/src/main.rs": "a8eda0b8d2211cef9f8bb91d3ea4e3ae49278527aa8cd88648032450f22b1656",
+    "tools/icu-probe/test_compare_ordering.py": "522fc08df4cb97e8b1714b9176786562452a44eed1887b2fefda4af8180c144d"
+  },
+  "snapshot_sha256": {
+    "reference-metadata.json": "6e6d75b77e0fb561207abad60ae00267cf69b392ff74df4bcc663ebe5ec2a3ff",
+    "reference-manifest.json": "322df04ed0a0838c988984862202656a14eca5311fa3ca56b53adafa639209fa",
+    "empty-diagnostics.json": "786e7db77e16656a5cb5ca751eaecbcac0b0723e22a620cf935b58913e1f3203",
+    "empty-diagnostics-asan.json": "3fd8bb323520e0b3c038d982c73527af664105dd3c6b6c89d2d2ae8dd0011233",
+    "locales.tsv": "dbffe9ef1276f844c6766b3ae08d44db0fc9130275d76c3f34b317e87f55efb9",
+    "names.tsv": "075faad67dcd21426270bf295ad40efb99a2425a5ca036875ce48abef9fc8944",
+    "reference-sortkeys.tsv": "ed0465cc9583e10f07f497574d00f20997401518231170b515aad2eb8341fff4",
+    "codepoint-summary.json": "225566d270a0452bc9c6a7924adb0a9c2fb3001ad61903ab99ffccaeb6b01d2c",
+    "candidate-ordering.tsv": "56fa40c4b395387b95d0037f70eac3856909896e15f61eca0127b6e6915469f2",
+    "rustc.txt": "67d86fbf74071a3c2fbf23eb9e4e28e3ecc0f81b6fce3d35f5bbc88b7de1ecfb",
+    "cargo.txt": "9b49dba8d2babeee49c10f53ad9060fcdfadb5e9d2a0feab5c168db1005ccba1",
+    "cargo-tree.txt": "15041954e899d7410d7971a8a099ce21f1da7bbdae9dc8d93019f2f49808bb6a",
+    "ordering-summary.json": "7ffb7698303dd7dfc6c8a3c9893630e2225b9e346dec124a3fa6869f4cf1fc91",
+    "full-run.log": "6f1326c683c1f9e8fd62bf9fb43a22df24f96e0be51316645c300f2cb2d56352"
+  }
+}

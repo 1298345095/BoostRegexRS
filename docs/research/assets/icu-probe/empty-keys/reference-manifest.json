@@ -1,0 +1,96 @@
+{
+  "purpose": "Expected values for approved empty-input compatibility exception; not a Rust implementation pass",
+  "original_boost_reference_modified": false,
+  "input": "Valid UTF-16 sentinel pointer with explicit length 0",
+  "boost_wrapper_rule": "Strip one trailing zero only if length > 1; promote each remaining byte to u32",
+  "release_url": "https://github.com/unicode-org/icu/releases/tag/release-77-1",
+  "asset_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/icu4c-77_1-Win64-MSVC2022.zip",
+  "archive_sha512": "b88b1013b2de56ad5f61a6f31997046851e882e5373579e565f32f455a44f4b9e814197129a3547f600eac184d98075b7ccaefcc46ee80a5c7e3a7a0fcd3e08a",
+  "official_manifest_sha512_match": true,
+  "signatures_verified": false,
+  "generated_utc": "2026-10-17T08:58:31.6519127Z",
+  "os": "Microsoft Windows 10.0.26200",
+  "architecture": "X64",
+  "files": [
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\reference\\empty-keys.cpp",
+      "bytes": 5955,
+      "sha256": "0a7f1278e9feeea62913d82be12dbc3fdf4f5a9f3b6e46a0312212d8ab0efe22"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\reference\\run-empty-keys.ps1",
+      "bytes": 4846,
+      "sha256": "af6c5b60e0817a8823b5892412687cacffcd9d80c21a9c339e427446dd8c8c84"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\empty-keys\\empty-keys.exe",
+      "bytes": 71680,
+      "sha256": "8d2addcb6cf661109015456cfebc932734012de5575ab7858410b4c038566355"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu4c-77_1-Win64-MSVC2022.zip",
+      "bytes": 29381458,
+      "sha256": "6b62471ed2895959d6a85c64c58572ac677734547fe8383e6e3fd706a06dc3fa"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\SHASUM512.txt",
+      "bytes": 1718,
+      "sha256": "8a1d7a14c9e641ef07186180f10aba2338b5f53bccc845047344cd2ddd200b4d"
+    },
+    {
+      "path": "D:\\NewProgram\\librime-rs\\target\\regex-oracle-cache\\boost_1_89_0\\boost\\regex\\v5\\icu.hpp",
+      "bytes": 63279,
+      "sha256": "38709e866aeb84bf0ee6a3a7da4a7ac7f081810fe3ee05d748f9ce189b7bfc16"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuuc77.dll",
+      "bytes": 2552320,
+      "sha256": "c32696ca01b35c1b26a9146f3fd7544abbbec9586a6ef30765e618ed9c0f486d"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuin77.dll",
+      "bytes": 3585024,
+      "sha256": "9c3773bbe7ddafdf7aaa0ac2d40d310e043f144028bef3a22ea2da3a8bcf4cc4"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icudt77.dll",
+      "bytes": 31898624,
+      "sha256": "34802b95108b76308f4b25b99010fd99bf0e4e320241efade51218a53a4e9ee0"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\empty-keys\\build.log",
+      "bytes": 16,
+      "sha256": "b82f0e81fbd9d372b648d81e135cd9c4a12de2d2e43ed8ee94a35f3a72d8ee6d"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\empty-keys\\collator-settings.tsv",
+      "bytes": 1078,
+      "sha256": "3326064c676b975fb862fa78a94d107a25934ac923b8f87ac45c877b6dd7ab00"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\empty-keys\\empty-keys.obj",
+      "bytes": 397915,
+      "sha256": "d49e70cda5fb275d1cb3e4a3a3b81436f3ef5b8c2248d09fbdca09166d04903e"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\empty-keys\\keys.tsv",
+      "bytes": 1037,
+      "sha256": "9b17dbdc5d401bbe41ced62c1ae99164297acca340bd8c9ce1dec9026b6e8f6f"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\empty-keys\\metadata.json",
+      "bytes": 349,
+      "sha256": "7d9f48ff8b90f93c912284f0ca4608a4a109a921f134dce6c0e2dacca6adb881"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\empty-keys\\stderr.log",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\empty-keys\\stdout.log",
+      "bytes": 73,
+      "sha256": "0d6ee272832ef087ebce8698e6db487208ef7796448079fa6fd3783765a5fa4a"
+    }
+  ]
+}

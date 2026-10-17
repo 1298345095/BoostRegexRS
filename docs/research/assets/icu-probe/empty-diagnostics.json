@@ -1,0 +1,26 @@
+[
+  {
+    "mode": "boost_primary",
+    "exit_code": 0,
+    "stdout": "length=1 key=00000000,",
+    "stderr": ""
+  },
+  {
+    "mode": "boost_identical",
+    "exit_code": -1073741819,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "mode": "icu_null",
+    "exit_code": -1073741819,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "mode": "icu_nonnull",
+    "exit_code": 0,
+    "stdout": "length=5 key=01,01,01,01,00,",
+    "stderr": ""
+  }
+]

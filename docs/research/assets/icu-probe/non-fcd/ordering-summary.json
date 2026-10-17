@@ -1,0 +1,452 @@
+{
+  "comparison_sign_status": "differences_or_incomplete",
+  "sort_key_byte_compatibility": "not_validated_candidate_has_no_key_output",
+  "case_count": 13,
+  "locale_count": 10,
+  "pair_count": 1560,
+  "totals": {
+    "passed": 1415,
+    "mismatched": 145,
+    "unsupported": 0,
+    "reference_error": 0
+  },
+  "by_locale_strength": [
+    {
+      "locale": "root",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "passed": 60,
+      "mismatched": 18,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "en_US",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "passed": 60,
+      "mismatched": 18,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "tr_TR",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "tr_TR",
+      "strength": "identical",
+      "passed": 60,
+      "mismatched": 18,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "de_DE",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "de_DE",
+      "strength": "identical",
+      "passed": 60,
+      "mismatched": 18,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "sv_SE",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "sv_SE",
+      "strength": "identical",
+      "passed": 60,
+      "mismatched": 18,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "fr_CA",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "fr_CA",
+      "strength": "identical",
+      "passed": 63,
+      "mismatched": 15,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "es_ES@collation=traditional",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "es_ES@collation=traditional",
+      "strength": "identical",
+      "passed": 60,
+      "mismatched": 18,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "zh_CN",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "zh_CN",
+      "strength": "identical",
+      "passed": 74,
+      "mismatched": 4,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "ja_JP",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "ja_JP",
+      "strength": "identical",
+      "passed": 60,
+      "mismatched": 18,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "th_TH",
+      "strength": "primary",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "th_TH",
+      "strength": "identical",
+      "passed": 78,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    }
+  ],
+  "examples": [
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "a_0300_0315",
+      "ordering": "0",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "a_0301_0323",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "e1_0323",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "a_0301_0327",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "a_0327_0301",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "e1_0327",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0300_0315",
+      "right_id": "a_0301_0323",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0300_0315",
+      "right_id": "e1_0323",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0300_0315",
+      "right_id": "a_0301_0327",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0300_0315",
+      "right_id": "e1_0327",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0301_0323",
+      "right_id": "a_0323_0301",
+      "ordering": "0",
+      "expected_ordering": -1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0301_0323",
+      "right_id": "a_0327_0301",
+      "ordering": "1",
+      "expected_ordering": -1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0323_0301",
+      "right_id": "e1_0323",
+      "ordering": "0",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "e1_0323",
+      "right_id": "a_0327_0301",
+      "ordering": "1",
+      "expected_ordering": -1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "leading_0315_0300",
+      "right_id": "leading_0300_0315",
+      "ordering": "0",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0301_0327",
+      "right_id": "a_0327_0301",
+      "ordering": "0",
+      "expected_ordering": -1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "a_0327_0301",
+      "right_id": "e1_0327",
+      "ordering": "0",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "alpha_0345_0300",
+      "right_id": "alpha_0300_0345",
+      "ordering": "0",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "a_0300_0315",
+      "ordering": "0",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "a_0301_0323",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "e1_0323",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "a_0301_0327",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "a_0327_0301",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0315_0300",
+      "right_id": "e1_0327",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0300_0315",
+      "right_id": "a_0301_0323",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0300_0315",
+      "right_id": "e1_0323",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0300_0315",
+      "right_id": "a_0301_0327",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0300_0315",
+      "right_id": "e1_0327",
+      "ordering": "-1",
+      "expected_ordering": 1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0301_0323",
+      "right_id": "a_0323_0301",
+      "ordering": "0",
+      "expected_ordering": -1,
+      "outcome": "mismatched"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "a_0301_0323",
+      "right_id": "a_0327_0301",
+      "ordering": "1",
+      "expected_ordering": -1,
+      "outcome": "mismatched"
+    }
+  ],
+  "source_sha256": {
+    "cases": "7139c4f662b73c661404049c791e3cd10c2d34a96682a71df30d324afa9d7701",
+    "reference_sortkeys": "e031bb6801cbaf0ea6057045078bafea817b8263c3706f60249383f6bc4f39ab",
+    "candidate_ordering": "b15a50bf2c73f1a3477f0ef8e3bac42a9b0fbe8876174f26d06a62df9139df3b"
+  }
+}

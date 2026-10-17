@@ -1,0 +1,11 @@
+{
+  "boost": "1_89",
+  "icu": "77.1",
+  "unicode": "16.0",
+  "cldr": "47.0",
+  "data": "77.1",
+  "default_locale": "en_US",
+  "compiler": "MSVC 1951",
+  "codepoint_records": 1114112,
+  "record_bytes": 40
+}

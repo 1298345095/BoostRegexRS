@@ -1,0 +1,13 @@
+{
+  "purpose": "expected values for approved empty-input compatibility exception",
+  "icu": "77.1",
+  "unicode": "16.0",
+  "cldr": "47.0",
+  "data": "77.1",
+  "compiler": "MSVC 1951",
+  "valid_sentinel_pointer": true,
+  "input_utf16_units": 0,
+  "locale_count": 10,
+  "key_count": 20,
+  "rust_full_key_implementation_verified": false
+}

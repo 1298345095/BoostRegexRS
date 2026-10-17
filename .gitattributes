@@ -1,0 +1,5 @@
+# Preserve archived evidence, including original CRLF and empty TSV fields.
+# Its SHA256 manifests validate bytes; whitespace cleanup would corrupt them.
+docs/research/assets/** -text -whitespace
+# The empty-string case intentionally ends with an empty TSV field.
+tools/icu-probe/reference/cases.tsv whitespace=-blank-at-eol

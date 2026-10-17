@@ -1,0 +1,26 @@
+[
+  {
+    "mode": "boost_primary",
+    "exit_code": 0,
+    "stdout": "length=1 key=00000000,",
+    "stderr": ""
+  },
+  {
+    "mode": "boost_identical",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "=================================================================\n==48052==ERROR: AddressSanitizer: access-violation on unknown address 0x000000000000 (pc 0x7ffe1312e6e0 bp 0x0052ed96f370 sp 0x0052ed96f110 T0)\n==48052==The signal is caused by a READ memory access.\n==48052==Hint: address points to the zero page.\n    #0 0x7ffe1312e6df  (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuuc77.dll+0x18010e6df)\n    #1 0x7ffdccf8e19c  (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuin77.dll+0x18003e19c)\n    #2 0x7ffdccf8e0fb  (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuin77.dll+0x18003e0fb)\n    #3 0x7ffdccf8ddbc  (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuin77.dll+0x18003ddbc)\n    #4 0x7ff65175ac18 in boost::re_detail_600::icu_regex_traits_implementation::do_transform(int const *, int const *, class icu_77::Collator const *) const D:\\NewProgram\\librime-rs\\target\\regex-oracle-cache\\boost_1_89_0\\boost\\regex\\v5\\icu.hpp:82\n    #5 0x7ff65175d255 in boost::re_detail_600::icu_regex_traits_implementation::transform D:\\NewProgram\\librime-rs\\target\\regex-oracle-cache\\boost_1_89_0\\boost\\regex\\v5\\icu.hpp:99\n    #6 0x7ff65175d255 in boost::icu_regex_traits::transform D:\\NewProgram\\librime-rs\\target\\regex-oracle-cache\\boost_1_89_0\\boost\\regex\\v5\\icu.hpp:182\n    #7 0x7ff65175d255 in main D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\reference\\empty-probe.cpp:14\n    #8 0x7ff65175f71e in invoke_main D:\\a\\_work\\1\\s\\src\\vctools\\crt\\vcstartup\\src\\startup\\exe_common.inl:78\n    #9 0x7ff65175f71e in __scrt_common_main_seh D:\\a\\_work\\1\\s\\src\\vctools\\crt\\vcstartup\\src\\startup\\exe_common.inl:288\n    #10 0x7ffee318cd86  (C:\\Windows\\System32\\KERNEL32.DLL+0x18002cd86)\n    #11 0x7ffee462caeb  (C:\\Windows\\SYSTEM32\\ntdll.dll+0x1800acaeb)\n\n==48052==Register values:\nrax = 118266ba0450  rbx = 0  rcx = 117666bab150  rdx = 0  \nrdi = 0  rsi = 117666bab150  rbp = 52ed96f370  rsp = 52ed96f110  \nr8  = 0  r9  = c0  r10 = 52ed96f568  r11 = 52ed96f427  \nr12 = 0  r13 = 0  r14 = 0  r15 = 0  \nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: access-violation (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuuc77.dll+0x18010e6df) \n==48052==ABORTING"
+  },
+  {
+    "mode": "icu_null",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "=================================================================\n==35164==ERROR: AddressSanitizer: access-violation on unknown address 0x000000000000 (pc 0x7ffe1312e6e0 bp 0x002cebf0f7c0 sp 0x002cebf0f560 T0)\n==35164==The signal is caused by a READ memory access.\n==35164==Hint: address points to the zero page.\n    #0 0x7ffe1312e6df  (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuuc77.dll+0x18010e6df)\n    #1 0x7ffdccf8e19c  (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuin77.dll+0x18003e19c)\n    #2 0x7ffdccf8e0fb  (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuin77.dll+0x18003e0fb)\n    #3 0x7ffdccf8ddbc  (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuin77.dll+0x18003ddbc)\n    #4 0x7ff65175d5ea in main D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\reference\\empty-probe.cpp:23\n    #5 0x7ff65175f71e in invoke_main D:\\a\\_work\\1\\s\\src\\vctools\\crt\\vcstartup\\src\\startup\\exe_common.inl:78\n    #6 0x7ff65175f71e in __scrt_common_main_seh D:\\a\\_work\\1\\s\\src\\vctools\\crt\\vcstartup\\src\\startup\\exe_common.inl:288\n    #7 0x7ffee318cd86  (C:\\Windows\\System32\\KERNEL32.DLL+0x18002cd86)\n    #8 0x7ffee462caeb  (C:\\Windows\\SYSTEM32\\ntdll.dll+0x1800acaeb)\n\n==35164==Register values:\nrax = 1202b9ba0450  rbx = 0  rcx = 11f6b9bab150  rdx = 0  \nrdi = 0  rsi = 11f6b9bab150  rbp = 2cebf0f7c0  rsp = 2cebf0f560  \nr8  = 0  r9  = c0  r10 = 2cebf0f9b8  r11 = 8101010101010100  \nr12 = 0  r13 = 0  r14 = 0  r15 = 0  \nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: access-violation (D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuuc77.dll+0x18010e6df) \n==35164==ABORTING"
+  },
+  {
+    "mode": "icu_nonnull",
+    "exit_code": 0,
+    "stdout": "length=5 key=01,01,01,01,00,",
+    "stderr": ""
+  }
+]

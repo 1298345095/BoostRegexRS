@@ -1,0 +1,5 @@
+ICU 77.1, Unicode 16.0, CLDR 47.0; wrote 480 sort keys and 1114112 codepoint records
+
+Reference output: D:\MyProgram\BoostRegexRS\target\research\icu-probe\reference\output
+{"passed": 5290, "mismatched": 0, "unsupported": 0, "reference_error": 230}
+Probe results: D:\MyProgram\BoostRegexRS\target\research\icu-probe; exit 1 means observed differences or incomplete reference coverage. Full sort-key compatibility is not validated.

@@ -1,0 +1,452 @@
+{
+  "comparison_sign_status": "differences_or_incomplete",
+  "sort_key_byte_compatibility": "not_validated_candidate_has_no_key_output",
+  "case_count": 24,
+  "locale_count": 10,
+  "pair_count": 5520,
+  "totals": {
+    "passed": 5290,
+    "mismatched": 0,
+    "unsupported": 0,
+    "reference_error": 230
+  },
+  "by_locale_strength": [
+    {
+      "locale": "root",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    },
+    {
+      "locale": "en_US",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    },
+    {
+      "locale": "tr_TR",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "tr_TR",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    },
+    {
+      "locale": "de_DE",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "de_DE",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    },
+    {
+      "locale": "sv_SE",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "sv_SE",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    },
+    {
+      "locale": "fr_CA",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "fr_CA",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    },
+    {
+      "locale": "es_ES@collation=traditional",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "es_ES@collation=traditional",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    },
+    {
+      "locale": "zh_CN",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "zh_CN",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    },
+    {
+      "locale": "ja_JP",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "ja_JP",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    },
+    {
+      "locale": "th_TH",
+      "strength": "primary",
+      "passed": 276,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0
+    },
+    {
+      "locale": "th_TH",
+      "strength": "identical",
+      "passed": 253,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 23
+    }
+  ],
+  "examples": [
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "ascii",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "a",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "a_umlaut",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "a_combining_umlaut",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "sharp_s",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "ss",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "upper_i",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "lower_i",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "upper_i_dot",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "dotless_i",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "a_ring",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "upper_a_umlaut",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "upper_o_umlaut",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "kana_hiragana",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "kana_katakana",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "han",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "thai",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "embedded_nul",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "supplementary",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "traditional_ch",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "traditional_cz",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "french_accents",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "root",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "long_ascii",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "ascii",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "a",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "a_umlaut",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "a_combining_umlaut",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "sharp_s",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "ss",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    },
+    {
+      "locale": "en_US",
+      "strength": "identical",
+      "left_id": "empty",
+      "right_id": "upper_i",
+      "ordering": "-1",
+      "expected_ordering": null,
+      "outcome": "reference_error"
+    }
+  ],
+  "source_sha256": {
+    "cases": "8f7e1cca3ee2b759269c02243168a9a195f2045a8cdf38c79af7e019d7458db5",
+    "reference_sortkeys": "ed0465cc9583e10f07f497574d00f20997401518231170b515aad2eb8341fff4",
+    "candidate_ordering": "56fa40c4b395387b95d0037f70eac3856909896e15f61eca0127b6e6915469f2"
+  }
+}

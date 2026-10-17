@@ -1,0 +1,62 @@
+{
+  "purpose": "Non-FCD ordering falsification probe; full Rust sort-key output remains unavailable",
+  "generated_utc": "2026-10-17T08:56:16.5197746Z",
+  "files": [
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\run-non-fcd.ps1",
+      "sha256": "8738e6db965a4b50075cc8af1dd4a51102363c9d0514f85cdb3aa47870450ec9"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\non-fcd-cases.tsv",
+      "sha256": "7139c4f662b73c661404049c791e3cd10c2d34a96682a71df30d324afa9d7701"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu-reference.exe",
+      "sha256": "82bceff16c5ed44d106ac9ecc459de60971101649b8c78985c063d15bf78c5b5"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\rust\\build\\release\\icu4x-compat-probe.exe",
+      "sha256": "e42e531f771372700f4a446771fb89aa3c6e77571d954a6558fb6bbd2807b949"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\rust\\rustc.txt",
+      "sha256": "67d86fbf74071a3c2fbf23eb9e4e28e3ecc0f81b6fce3d35f5bbc88b7de1ecfb"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\tools\\icu-probe\\rust\\Cargo.lock",
+      "sha256": "377c16c57a7329aff9bdd93d0d8b71e181ee804bbae93533ee9d137a5a3dc5f1"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuuc77.dll",
+      "sha256": "c32696ca01b35c1b26a9146f3fd7544abbbec9586a6ef30765e618ed9c0f486d"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icuin77.dll",
+      "sha256": "9c3773bbe7ddafdf7aaa0ac2d40d310e043f144028bef3a22ea2da3a8bcf4cc4"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\icu77\\bin64\\icudt77.dll",
+      "sha256": "34802b95108b76308f4b25b99010fd99bf0e4e320241efade51218a53a4e9ee0"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\non-fcd\\reference\\metadata.json",
+      "sha256": "6e6d75b77e0fb561207abad60ae00267cf69b392ff74df4bcc663ebe5ec2a3ff"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\non-fcd\\reference\\sortkeys.tsv",
+      "sha256": "e031bb6801cbaf0ea6057045078bafea817b8263c3706f60249383f6bc4f39ab"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\non-fcd\\candidate-summary.json",
+      "sha256": "dd343528e937f2c8c2f25016aebd6452d40a7989c63a5bbb268ae957ff030c7e"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\non-fcd\\candidate-ordering.tsv",
+      "sha256": "b15a50bf2c73f1a3477f0ef8e3bac42a9b0fbe8876174f26d06a62df9139df3b"
+    },
+    {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\non-fcd\\ordering-summary.json",
+      "sha256": "459becf2d25914ff46b918171ea7e8a80e5940d506606fa82baba53b2ab6a745"
+    }
+  ]
+}

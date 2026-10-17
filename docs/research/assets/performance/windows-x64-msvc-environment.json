@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-17",
+  "os": "Windows 11 Enterprise 10.0.26200 x64",
+  "cpu": "Intel Core i9-13900H",
+  "cores": 14,
+  "logical_processors": 20,
+  "memory_bytes": 68314955776,
+  "msc_ver": 1951,
+  "flags": [
+    "/O2",
+    "/Ob2",
+    "/DNDEBUG",
+    "/EHsc",
+    "/std:c++17",
+    "/DBOOST_REGEX_NO_LIB",
+    "/utf-8",
+    "/W4"
+  ],
+  "boost_root": "D:\\NewProgram\\librime-rs\\target\\regex-oracle-cache\\boost_1_89_0",
+  "boost_version": 108900,
+  "icu": false,
+  "affinity_fixed": false,
+  "power_policy_fixed": false,
+  "memory_measured": false,
+  "batch_count": 9,
+  "calibration_min_ms": 250,
+  "source_hash": "BBF75F0327C6A4FCC88BAD5C7F5122CE1DC55C4FCE983A8478EB83AC0630457E",
+  "headers": [
+    {
+      "path": "boost\\version.hpp",
+      "sha256": "EB10CB13CCB449C8DC08F28CF62B81FC7FE114F77796F3D7517D8C31E913877A"
+    },
+    {
+      "path": "boost\\regex.hpp",
+      "sha256": "E85776DA534F21A978EF66A48AB7AF748DC7EB23CA98057DD56CF25CC00D0B41"
+    },
+    {
+      "path": "boost\\regex\\config.hpp",
+      "sha256": "30561F4D3F1F2F1E4860E024ECE670CA3F6D9DBD09FF76B3DCC3C8426FD29114"
+    },
+    {
+      "path": "boost\\regex\\v5\\perl_matcher_common.hpp",
+      "sha256": "CBDB43A11F21C40DFCFBADA788D9173FACC52F8FD6C745E4604E10686D59820F"
+    },
+    {
+      "path": "boost\\regex\\v5\\w32_regex_traits.hpp",
+      "sha256": "9BFA05B6F044E4488E50BFEDA1A5CD5DCF9AA8AC730500911A41D81EA8C0D670"
+    }
+  ],
+  "compiler_file_version": "19.51.36260.0",
+  "crt": "MT_StaticRelease; LIBCMT; libcpmt (verified object directives)",
+  "explicit_standalone_macro": false,
+  "explicit_boost_has_threads_macro": false
+}
