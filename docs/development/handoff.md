@@ -2,9 +2,75 @@
 
 Updated: 2026-10-17. Tracking: [issue #2](https://github.com/1298345095/BoostRegexRS/issues/2).
 
+## Current activity: implementation paused by the user
+
+The latest user instruction on 2026-10-17 is to **pause the current development
+task and use the `to-tickets` skill to write all remaining work as tickets**.
+This supersedes the earlier automatic-continuation instruction for the present
+activity. All implementation agents stopped. Do not resume implementation,
+experiments or long validation merely because ticket authoring is complete.
+
+The durable backlog is [index issue #148](https://github.com/1298345095/BoostRegexRS/issues/148)
+and `docs/development/tickets/`. It contains 145 remaining-work tickets (#3–#147),
+with 794 explicit dependency links, ownership of all 406 existing capability rows
+and one full-file owner for each of 73 upstream test files. All tickets reach
+final acceptance [#147](https://github.com/1298345095/BoostRegexRS/issues/147).
+Eight tickets are unblocked but remain paused: P01 #3, P02 #4, U01 #5, U05 #6,
+U15 #7, V01 #8, V02 #9 and V38 #10. `ready-for-agent` is not execution permission
+during this pause. Every published body/title/label/state was independently
+reread; see `tickets/publication-verification.json`.
+
+The checkpoint archive preserves 629 changed/untracked source, tool, test and locale-data files over
+commit `1b0149efb649bcec7b5d6c4c0be2f7e403189cea`; it is a source preservation
+checkpoint, not a validated implementation commit. Separate archives preserve
+433 selected evidence files and all 21,677 files of the failed locale run,
+including its successful groups. The latter is transported as seven binary
+parts with exact reassembly and verification commands in `tickets/checkpoint/README.md`.
+Original working-tree sources and raw outputs remain in place. The parent issue
+was reread and remains open with its title, body and labels unchanged.
+
+Reproduce the ticket audit without running implementation tests:
+
+```sh
+python3 -B tools/dev/assemble_ticket_backlog.py
+python3 -B tools/dev/ticket_backlog.py check
+python3 -B tools/dev/ticket_backlog.py render
+```
+
+At the pause boundary:
+
+- The root byte engine checkpoint has 35 passing tests reported in execution
+  records, plus `cargo check` and direct rustfmt/clippy-driver checks. Raw output
+  was not archived; ordinary cargo fmt/clippy failed in the launcher due to the
+  environment's missing `/proc/self/exe`. Independent Rust/Boost comparison is
+  still pending. Formatter mechanism corrections have not been implemented.
+- The byte oracle ran 6,258 upstream operation rows and 13,954 generated rows:
+  19,853 successful results, 359 compile errors, no process/resource/protocol
+  errors. Applicable original assertions passed; 266 full-match observations
+  have no original assertion. Newer protocol/generator edits require a fresh
+  run. These are reference results, not Rust compatibility passes.
+- Locale export retains 130 owners, 432 settings, 538 configurations and 13,982
+  requests. The first combined run completed 451 configurations and reported
+  1,416,550 ordinary passes, two full-key differences, 9,922 expected rejections,
+  9,038 approved empty-key results and 451 original empty reference errors.
+  All-owner scalar/context/long sweeps have not started. The supplementary/FCD
+  fix was written in three Rust files but has not been formatted, built or
+  tested. The old failing binary and raw run remain unchanged.
+- Six native CI jobs at source `1b0149ef` actually passed, all using Rust 1.99.1:
+  [run 39034545308](https://github.com/1298345095/BoostRegexRS/actions/runs/39034545308).
+  Each executed the same 19 root collation research-crate tests; doctest commands
+  contained zero cases. Whole-library, full native-reference, performance and
+  memory acceptance are not established by that run.
+- Sonar still has no passing gate evidence. The second read-only observation
+  records `sonar_token_supplied: false`. Rule metadata requests need the observed
+  organization parameter; the collector correction is uncommitted. The newly
+  installed SonarQube skills are now visible, while no callable Sonar tool was
+  exposed in the current registry. This is a follow-up ticket, not a reason to
+  change the gate, exclude rules or resume development during the pause.
+
 ## Active authorization and completion condition
 
-Continue to the complete standalone pure Rust Boost.Regex 1.89.0 library under
+When the user resumes development, continue to the complete standalone pure Rust Boost.Regex 1.89.0 library under
 ADR-0001 through ADR-0005. The user explicitly expanded the former PRIMARY-only
 stage on 2026-10-17. After each verified scoped commit, select the next ready
 capability and continue. Only complete capability, six-target, performance,
@@ -45,7 +111,7 @@ verify the resulting semantics.
   [39031119405](https://github.com/1298345095/BoostRegexRS/actions/runs/39031119405)
   completed successfully. This does not add six-target or full IDENTICAL CI evidence.
 
-## Current work and ownership
+## Implementation ownership at the pause boundary
 
 - Root: full capability tracking, GitHub delivery, regex reference and independent
   complete-result comparison, Sonar evidence and CI configuration.
@@ -95,12 +161,18 @@ still fails. A read-only access inspection will record credential presence as a
 boolean, authentication validity and API/rule definitions. Public read access
 does not establish permission to change issues.
 
-The user reports installing SonarQube; the current callable-tool registry exposes
-no Sonar operation, and plugin searches returned no available connection. Do not
+The user reports installing SonarQube; its skills subsequently became visible.
+The current callable-tool registry still exposes no Sonar operation. Earlier
+plugin searches returned no available connection; they are historical observations. Do not
 ask for a repeat installation or invent a connection. Optional SONAR_TOKEN is
 sent only to SonarCloud, never included in evidence or logs.
 
-## Next actions
+## Next implementation actions after the user resumes
+
+Use the dependency-ordered ticket index and its current GitHub issue states.
+The following older implementation notes supply context, not a competing task
+order or an instruction to resume now. Sonar follow-up is P01/V37/V39; the known
+FCD repair is U01. Do not use the old prose to bypass their acceptance criteria.
 
 1. Finish source-to-sink Sonar review using the successful Actions evidence and
    actual rule definitions; inspect issue-management access without changing gates.

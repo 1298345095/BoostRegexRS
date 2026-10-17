@@ -1,0 +1,43 @@
+{
+  "schema": "boostregexrs.binary-parts.v1",
+  "filename": "raw.tar.xz",
+  "bytes": 12901312,
+  "sha256": "420e9a99cd2f08aa0920a77cc4c796f484099ca5466fd85d0e60584fd68e4d97",
+  "parts": [
+    {
+      "path": "part-0000.bin",
+      "bytes": 2097152,
+      "sha256": "1d35e27f94ec5141a3a8324b12bc4b71f805f3650814401cf6c03212d1042966"
+    },
+    {
+      "path": "part-0001.bin",
+      "bytes": 2097152,
+      "sha256": "a5ac4ac8f89f8723aa39584f15c54ca75bcf4a5bf48965a42db05fa71377218d"
+    },
+    {
+      "path": "part-0002.bin",
+      "bytes": 2097152,
+      "sha256": "792dbf89500aa37d48a4619feef2966df5a7f86700d50a199446857465123adf"
+    },
+    {
+      "path": "part-0003.bin",
+      "bytes": 2097152,
+      "sha256": "c1e95b3c46217e0a3ee40df0fc34568d4fbc90ff82b1f50c77b0336953508c57"
+    },
+    {
+      "path": "part-0004.bin",
+      "bytes": 2097152,
+      "sha256": "211a640ee1752e48f63e1682478abfd5f093e44e833b5719bc401cd758398872"
+    },
+    {
+      "path": "part-0005.bin",
+      "bytes": 2097152,
+      "sha256": "eff4c1615c21639d59ed67622ea027bb5d8c7fd42197af57e0ba63f2bdf495b4"
+    },
+    {
+      "path": "part-0006.bin",
+      "bytes": 318400,
+      "sha256": "78d840e6db3b389655c3037b1055cdbd512c08031a02608055b57688b830861e"
+    }
+  ]
+}
