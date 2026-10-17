@@ -1,0 +1,3055 @@
+[
+  {
+    "capability": "syntax_option.perl_syntax_group",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.basic_syntax_group",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_option.literal",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.main_option_type",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.no_bk_refs",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B12"
+    ]
+  },
+  {
+    "capability": "syntax_option.no_perl_ex",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_option.no_mod_m",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.mod_x",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.mod_s",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.no_mod_s",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.no_char_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_option.no_intervals",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_option.bk_plus_qm",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_option.bk_vbar",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_option.emacs_ex",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B03"
+    ]
+  },
+  {
+    "capability": "syntax_option.no_escape_in_lists",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06"
+    ]
+  },
+  {
+    "capability": "syntax_option.newline_alt",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_option.no_except",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "syntax_option.failbit",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "syntax_option.icase",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U22"
+    ]
+  },
+  {
+    "capability": "syntax_option.nocollate",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B07",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_option.collate",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B07",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_option.nosubs",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B08"
+    ]
+  },
+  {
+    "capability": "syntax_option.save_subexpression_location",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B09"
+    ]
+  },
+  {
+    "capability": "syntax_option.no_empty_expressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.optimize",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B13"
+    ]
+  },
+  {
+    "capability": "syntax_option.basic",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_option.extended",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_option.normal",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.emacs",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B03"
+    ]
+  },
+  {
+    "capability": "syntax_option.awk",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_option.grep",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_option.egrep",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_option.sed",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_option.perl",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.ECMAScript",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.JavaScript",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_option.JScript",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_default",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B24"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_bol",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_eol",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_bob",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_eob",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_bow",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_eow",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_dot_newline",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_dot_null",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_prev_avail",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_init",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_any",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B11",
+      "B19"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_null",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_continuous",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_partial",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B23"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_stop",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_initial_null",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_all",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_perl",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B24"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_posix",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B24"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_nosubs",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B11"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_extra",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B21"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_single_line",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_unused1",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_unused2",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_unused3",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_max",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "match_format_option.format_perl",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B32",
+      "B33"
+    ]
+  },
+  {
+    "capability": "match_format_option.format_default",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B32",
+      "B33"
+    ]
+  },
+  {
+    "capability": "match_format_option.format_sed",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B34"
+    ]
+  },
+  {
+    "capability": "match_format_option.format_all",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B35"
+    ]
+  },
+  {
+    "capability": "match_format_option.format_no_copy",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B36"
+    ]
+  },
+  {
+    "capability": "match_format_option.format_first_only",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B36"
+    ]
+  },
+  {
+    "capability": "match_format_option.format_is_if",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "match_format_option.format_literal",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B34"
+    ]
+  },
+  {
+    "capability": "match_format_option.match_not_any",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_ok",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_no_match",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_bad_pattern",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_collate",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25",
+      "U25"
+    ]
+  },
+  {
+    "capability": "error_category.error_ctype",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25",
+      "U23"
+    ]
+  },
+  {
+    "capability": "error_category.error_escape",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_backref",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_brack",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_paren",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_brace",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_badbrace",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_range",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_space",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_badrepeat",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_end",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_size",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_right_paren",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_empty",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_complexity",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_stack",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_perl_extension",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "error_category.error_unknown",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "syntax_perl.perl_regular_expression_syntax",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_perl.wildcard",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_perl.anchors",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_perl.marked_sub_expressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B08"
+    ]
+  },
+  {
+    "capability": "syntax_perl.non_marking_grouping",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_perl.repeats",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B10",
+      "B14"
+    ]
+  },
+  {
+    "capability": "syntax_perl.non_greedy_repeats",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B10",
+      "B14"
+    ]
+  },
+  {
+    "capability": "syntax_perl.possessive_repeats",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B16"
+    ]
+  },
+  {
+    "capability": "syntax_perl.back_references",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B12",
+      "U22"
+    ]
+  },
+  {
+    "capability": "syntax_perl.alternation",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B11"
+    ]
+  },
+  {
+    "capability": "syntax_perl.character_sets",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_perl.single_characters",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06"
+    ]
+  },
+  {
+    "capability": "syntax_perl.character_ranges",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_perl.negation",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_perl.character_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_perl.collating_elements",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B07",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_perl.equivalence_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B07",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_perl.escaped_characters",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06"
+    ]
+  },
+  {
+    "capability": "syntax_perl.combinations",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06"
+    ]
+  },
+  {
+    "capability": "syntax_perl.escapes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05"
+    ]
+  },
+  {
+    "capability": "syntax_perl.single_character_character_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U23",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_perl.character_properties",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_perl.word_boundaries",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_perl.buffer_boundaries",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "syntax_perl.continuation_escape",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "syntax_perl.quoting_escape",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05"
+    ]
+  },
+  {
+    "capability": "syntax_perl.unicode_escapes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_perl.matching_line_endings",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_perl.keeping_back_some_text",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "syntax_perl.any_other_escape",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05"
+    ]
+  },
+  {
+    "capability": "syntax_perl.perl_extended_patterns",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_perl.named_subexpressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B08"
+    ]
+  },
+  {
+    "capability": "syntax_perl.comments",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_perl.modifiers",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_perl.non_marking_groups",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_perl.branch_reset",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B08"
+    ]
+  },
+  {
+    "capability": "syntax_perl.lookahead",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B15"
+    ]
+  },
+  {
+    "capability": "syntax_perl.lookbehind",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B15"
+    ]
+  },
+  {
+    "capability": "syntax_perl.independent_sub_expressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B16"
+    ]
+  },
+  {
+    "capability": "syntax_perl.recursive_expressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B17"
+    ]
+  },
+  {
+    "capability": "syntax_perl.conditional_expressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B18"
+    ]
+  },
+  {
+    "capability": "syntax_perl.backtracking_control_verbs",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B19",
+      "B20"
+    ]
+  },
+  {
+    "capability": "syntax_perl.operator_precedence",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_perl.what_gets_matched",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B11"
+    ]
+  },
+  {
+    "capability": "syntax_perl.variations",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_perl.pattern_modifiers",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B01"
+    ]
+  },
+  {
+    "capability": "syntax_basic.wildcard",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_basic.anchors",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_basic.marked_sub_expressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_basic.repeats",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02",
+      "B10"
+    ]
+  },
+  {
+    "capability": "syntax_basic.back_references",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02",
+      "B12",
+      "U22"
+    ]
+  },
+  {
+    "capability": "syntax_basic.character_sets",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_basic.single_characters",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06"
+    ]
+  },
+  {
+    "capability": "syntax_basic.character_ranges",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_basic.negation",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_basic.character_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_basic.collating_elements",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B07",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_basic.equivalence_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B07",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_basic.combinations",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06"
+    ]
+  },
+  {
+    "capability": "syntax_basic.escapes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_basic.what_gets_matched",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B24"
+    ]
+  },
+  {
+    "capability": "syntax_basic.variations",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B02"
+    ]
+  },
+  {
+    "capability": "syntax_basic.emacs",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B03"
+    ]
+  },
+  {
+    "capability": "syntax_extended.wildcard",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_extended.anchors",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_extended.marked_sub_expressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_extended.repeats",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04",
+      "B10"
+    ]
+  },
+  {
+    "capability": "syntax_extended.back_references",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04",
+      "B12",
+      "U22"
+    ]
+  },
+  {
+    "capability": "syntax_extended.alternation",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_extended.character_sets",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_extended.single_characters",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06"
+    ]
+  },
+  {
+    "capability": "syntax_extended.character_ranges",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_extended.negation",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_extended.character_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_extended.collating_elements",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B07",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_extended.equivalence_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B07",
+      "U25"
+    ]
+  },
+  {
+    "capability": "syntax_extended.combinations",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B06"
+    ]
+  },
+  {
+    "capability": "syntax_extended.escapes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_extended.escapes_matching_a_specific_character",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05"
+    ]
+  },
+  {
+    "capability": "syntax_extended.single_character_character_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_extended.character_properties",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_extended.word_boundaries",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22",
+      "U23"
+    ]
+  },
+  {
+    "capability": "syntax_extended.buffer_boundaries",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "syntax_extended.continuation_escape",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "syntax_extended.quoting_escape",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05"
+    ]
+  },
+  {
+    "capability": "syntax_extended.unicode_escapes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "U24"
+    ]
+  },
+  {
+    "capability": "syntax_extended.any_other_escape",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05"
+    ]
+  },
+  {
+    "capability": "syntax_extended.operator_precedence",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_extended.what_gets_matched",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B24"
+    ]
+  },
+  {
+    "capability": "syntax_extended.variations",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_extended.egrep",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "syntax_extended.awk",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B04"
+    ]
+  },
+  {
+    "capability": "format_boost_syntax.grouping",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B35"
+    ]
+  },
+  {
+    "capability": "format_boost_syntax.conditionals",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B35"
+    ]
+  },
+  {
+    "capability": "format_boost_syntax.placeholder_sequences",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B33"
+    ]
+  },
+  {
+    "capability": "format_boost_syntax.escape_sequences",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B34"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.construct",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B27"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.assign",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B27"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.flags",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B27"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.mark_count",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B08"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.pattern",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B27"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.subexpression_locations",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B09"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.named_subexpressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B08"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.status",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B25"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.compare",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B27"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.swap",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B27"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.imbue",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N04",
+      "N09",
+      "U11"
+    ]
+  },
+  {
+    "capability": "api.basic_regex.getloc",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N04",
+      "N09",
+      "U11"
+    ]
+  },
+  {
+    "capability": "api.regex_search.search",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B13"
+    ]
+  },
+  {
+    "capability": "api.regex_search.search_from",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "api.regex_search.search_range",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "api.regex_search.previous_context",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "api.regex_match.full_match",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22"
+    ]
+  },
+  {
+    "capability": "api.match_result.ready",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.match_result.size",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.match_result.empty",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.match_result.indexed_capture",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.match_result.named_capture",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.match_result.prefix",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.match_result.suffix",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.match_result.position",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.match_result.length",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.match_result.format",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B32",
+      "B33",
+      "B34",
+      "B35",
+      "B38"
+    ]
+  },
+  {
+    "capability": "api.match_result.all_capture_histories",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B21"
+    ]
+  },
+  {
+    "capability": "api.match_result.partial_match",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B23"
+    ]
+  },
+  {
+    "capability": "api.sub_match.matched",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.sub_match.range",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.sub_match.text",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.sub_match.compare",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B26"
+    ]
+  },
+  {
+    "capability": "api.regex_replace.replace_all",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B36"
+    ]
+  },
+  {
+    "capability": "api.regex_replace.replace_first",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B36"
+    ]
+  },
+  {
+    "capability": "api.regex_replace.callback",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B37"
+    ]
+  },
+  {
+    "capability": "api.regex_replace.write_to",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B38",
+      "I06",
+      "I07",
+      "I08",
+      "I09",
+      "R04"
+    ]
+  },
+  {
+    "capability": "api.regex_iterator.iteration",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B28",
+      "I06",
+      "I07",
+      "I08",
+      "I09"
+    ]
+  },
+  {
+    "capability": "api.regex_iterator.zero_width_progress",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B28"
+    ]
+  },
+  {
+    "capability": "api.regex_iterator.error_once_then_end",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B28",
+      "R04"
+    ]
+  },
+  {
+    "capability": "api.regex_token_iterator.selected_groups",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B29",
+      "I06",
+      "I07",
+      "I08",
+      "I09"
+    ]
+  },
+  {
+    "capability": "api.regex_token_iterator.multiple_groups",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B29"
+    ]
+  },
+  {
+    "capability": "api.regex_token_iterator.unmatched_tokens",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B29"
+    ]
+  },
+  {
+    "capability": "api.regex_token_iterator.trailing_unmatched",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B29"
+    ]
+  },
+  {
+    "capability": "api.regex_grep.callback",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B30"
+    ]
+  },
+  {
+    "capability": "api.regex_grep.early_stop",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B30"
+    ]
+  },
+  {
+    "capability": "api.regex_split.split",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B31"
+    ]
+  },
+  {
+    "capability": "api.regex_split.captures",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B31"
+    ]
+  },
+  {
+    "capability": "api.regex_split.input_consumption",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B31"
+    ]
+  },
+  {
+    "capability": "api.regex_split.limit",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B31"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.translate",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01",
+      "N10",
+      "U15",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.translate_nocase",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01",
+      "N10",
+      "U15",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.transform",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01",
+      "U04",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.transform_primary",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01",
+      "U04",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.lookup_classname",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01",
+      "U17",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.lookup_collatename",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01",
+      "U19",
+      "U20",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.isctype",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01",
+      "U16",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.value",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01",
+      "N10",
+      "U18",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.length",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "I01",
+      "N01",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.imbue",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N03",
+      "N05",
+      "N06",
+      "N07",
+      "N09",
+      "N11",
+      "N12",
+      "U11",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.getloc",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N03",
+      "N05",
+      "N06",
+      "N07",
+      "N09",
+      "N11",
+      "N12",
+      "U11",
+      "U21"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.custom_single_thread",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01",
+      "N02",
+      "N09",
+      "N10"
+    ]
+  },
+  {
+    "capability": "api.regex_traits.custom_send_sync",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N02"
+    ]
+  },
+  {
+    "capability": "api.posix_api.basic_extended_compile",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B39",
+      "P10"
+    ]
+  },
+  {
+    "capability": "api.posix_api.search",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B40",
+      "P10"
+    ]
+  },
+  {
+    "capability": "api.posix_api.captures",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B40",
+      "P10"
+    ]
+  },
+  {
+    "capability": "api.posix_api.error_categories",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B39",
+      "P10"
+    ]
+  },
+  {
+    "capability": "api.posix_api.execution_flags",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B40",
+      "P10"
+    ]
+  },
+  {
+    "capability": "input.arbitrary_bytes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B05",
+      "I01",
+      "I10",
+      "N08"
+    ]
+  },
+  {
+    "capability": "input.utf8",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "I04",
+      "I08",
+      "I10"
+    ]
+  },
+  {
+    "capability": "input.utf16",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "I03",
+      "I07",
+      "I10"
+    ]
+  },
+  {
+    "capability": "input.utf32",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "I02",
+      "I06",
+      "I10"
+    ]
+  },
+  {
+    "capability": "input.native_wide",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "I05",
+      "I09",
+      "I10",
+      "P10"
+    ]
+  },
+  {
+    "capability": "input.invalid_utf8",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "I04"
+    ]
+  },
+  {
+    "capability": "input.invalid_utf16",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "I03"
+    ]
+  },
+  {
+    "capability": "input.invalid_utf32",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "I02"
+    ]
+  },
+  {
+    "capability": "input.original_positions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "B22",
+      "I02",
+      "I03",
+      "I04",
+      "I05",
+      "I06",
+      "I07",
+      "I08",
+      "I09"
+    ]
+  },
+  {
+    "capability": "unicode.fixed_data_version",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U04",
+      "U26"
+    ]
+  },
+  {
+    "capability": "unicode.case_mapping",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U15",
+      "U22"
+    ]
+  },
+  {
+    "capability": "unicode.classification",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U16",
+      "U23"
+    ]
+  },
+  {
+    "capability": "unicode.digits",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U18"
+    ]
+  },
+  {
+    "capability": "unicode.names",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U19",
+      "U20"
+    ]
+  },
+  {
+    "capability": "unicode.extended_names",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U20"
+    ]
+  },
+  {
+    "capability": "unicode.property_aliases",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U17",
+      "U23"
+    ]
+  },
+  {
+    "capability": "unicode.primary_root",
+    "existing_status": "reference_passed",
+    "tickets": [
+      "U04"
+    ]
+  },
+  {
+    "capability": "unicode.identical_root",
+    "existing_status": "reference_passed",
+    "tickets": [
+      "U04"
+    ]
+  },
+  {
+    "capability": "unicode.complete_locales",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U01",
+      "U02",
+      "U10"
+    ]
+  },
+  {
+    "capability": "unicode.collation_types",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U02",
+      "U03",
+      "U08",
+      "U10"
+    ]
+  },
+  {
+    "capability": "unicode.locale_aliases",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U05",
+      "U06",
+      "U07"
+    ]
+  },
+  {
+    "capability": "unicode.locale_fallback",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U08",
+      "U10"
+    ]
+  },
+  {
+    "capability": "unicode.locale_settings",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U01",
+      "U03",
+      "U07",
+      "U09"
+    ]
+  },
+  {
+    "capability": "unicode.system_default_getloc",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U11",
+      "U12",
+      "U13"
+    ]
+  },
+  {
+    "capability": "unicode.previous_imbue",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U11",
+      "U12",
+      "U13"
+    ]
+  },
+  {
+    "capability": "unicode.empty_key_exception",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U14"
+    ]
+  },
+  {
+    "capability": "native_traits.c_locale",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N03",
+      "N05",
+      "N06"
+    ]
+  },
+  {
+    "capability": "native_traits.cpp_locale",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N04",
+      "N11",
+      "N12"
+    ]
+  },
+  {
+    "capability": "native_traits.win32_locale",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N07",
+      "N08"
+    ]
+  },
+  {
+    "capability": "native_traits.code_pages",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N06",
+      "N08",
+      "N12"
+    ]
+  },
+  {
+    "capability": "native_traits.custom_collation",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01"
+    ]
+  },
+  {
+    "capability": "native_traits.custom_classes",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N01"
+    ]
+  },
+  {
+    "capability": "resources.compile_work",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "R01"
+    ]
+  },
+  {
+    "capability": "resources.execution_work",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "R02"
+    ]
+  },
+  {
+    "capability": "resources.engine_memory",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "R01",
+      "R02"
+    ]
+  },
+  {
+    "capability": "resources.output_budget",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "R03"
+    ]
+  },
+  {
+    "capability": "resources.match_count_budget",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "R03"
+    ]
+  },
+  {
+    "capability": "resources.explicit_limit_errors",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "R01",
+      "R02"
+    ]
+  },
+  {
+    "capability": "resources.result_atomicity",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "R03"
+    ]
+  },
+  {
+    "capability": "resources.streaming_partial_output",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "R04"
+    ]
+  },
+  {
+    "capability": "resources.iterator_terminal_error",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "R04"
+    ]
+  },
+  {
+    "capability": "resources.independent_match_state",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "N02"
+    ]
+  },
+  {
+    "capability": "platform.windows_x64_msvc",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V21"
+    ]
+  },
+  {
+    "capability": "platform.windows_arm64_msvc",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V22"
+    ]
+  },
+  {
+    "capability": "platform.linux_x64_glibc",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V23"
+    ]
+  },
+  {
+    "capability": "platform.linux_arm64_glibc",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V24"
+    ]
+  },
+  {
+    "capability": "platform.macos_intel",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V25"
+    ]
+  },
+  {
+    "capability": "platform.macos_arm64",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V26"
+    ]
+  },
+  {
+    "capability": "performance.compile",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V31"
+    ]
+  },
+  {
+    "capability": "performance.ordinary_search",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V32"
+    ]
+  },
+  {
+    "capability": "performance.ordinary_captures",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V33"
+    ]
+  },
+  {
+    "capability": "performance.ordinary_replace",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V34"
+    ]
+  },
+  {
+    "capability": "performance.complex_syntax",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V35"
+    ]
+  },
+  {
+    "capability": "performance.unicode",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V36"
+    ]
+  },
+  {
+    "capability": "performance.short_inputs",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V27"
+    ]
+  },
+  {
+    "capability": "performance.large_inputs",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V27"
+    ]
+  },
+  {
+    "capability": "performance.backtracking_inputs",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V27"
+    ]
+  },
+  {
+    "capability": "performance.engine_working_memory",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V27",
+      "V28",
+      "V29",
+      "V30",
+      "V31",
+      "V32",
+      "V33",
+      "V34",
+      "V35",
+      "V36"
+    ]
+  },
+  {
+    "capability": "validation.official_source_identity",
+    "existing_status": "reference_passed",
+    "tickets": [
+      "V01"
+    ]
+  },
+  {
+    "capability": "validation.upstream_tests",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V03",
+      "V04",
+      "V05",
+      "V06",
+      "V07",
+      "V08",
+      "V09",
+      "V10",
+      "V11"
+    ]
+  },
+  {
+    "capability": "validation.deterministic_generation",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V03",
+      "V13",
+      "V14",
+      "V15"
+    ]
+  },
+  {
+    "capability": "validation.fuzz_minimized_regressions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V13",
+      "V16",
+      "V17",
+      "V18",
+      "V19"
+    ]
+  },
+  {
+    "capability": "validation.all_option_interactions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V13",
+      "V14",
+      "V15"
+    ]
+  },
+  {
+    "capability": "validation.patched_consumer_reference",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "P02",
+      "V12"
+    ]
+  },
+  {
+    "capability": "validation.sonar_quality_gate",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "P01",
+      "V37",
+      "V39"
+    ]
+  },
+  {
+    "capability": "validation.clean_checkout",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "U26",
+      "V20",
+      "V38",
+      "V43"
+    ]
+  },
+  {
+    "capability": "documentation.public_api",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "P09",
+      "V40"
+    ]
+  },
+  {
+    "capability": "documentation.examples",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V40"
+    ]
+  },
+  {
+    "capability": "documentation.compatibility",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V42"
+    ]
+  },
+  {
+    "capability": "documentation.approved_exceptions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V42"
+    ]
+  },
+  {
+    "capability": "documentation.build_test_instructions",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "P09",
+      "V38",
+      "V42"
+    ]
+  },
+  {
+    "capability": "documentation.performance_protocol",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "V27",
+      "V42"
+    ]
+  },
+  {
+    "capability": "documentation.licenses",
+    "existing_status": "not_implemented",
+    "tickets": [
+      "P09",
+      "U26",
+      "V41"
+    ]
+  },
+  {
+    "capability": "upstream_test.c_compiler_checks_posix_api_check_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V07"
+    ]
+  },
+  {
+    "capability": "upstream_test.c_compiler_checks_wide_posix_api_check_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V07"
+    ]
+  },
+  {
+    "capability": "upstream_test.captures_captures_test_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.collate_info_collate_info_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  },
+  {
+    "capability": "upstream_test.concepts_concept_check_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.concepts_icu_concept_check_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  },
+  {
+    "capability": "upstream_test.concepts_module_concept_check_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.concepts_range_concept_check_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.concepts_test_bug_11988_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  },
+  {
+    "capability": "upstream_test.config_info_regex_config_info_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.config_info_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.de_fuzz_narrow_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V09"
+    ]
+  },
+  {
+    "capability": "upstream_test.de_fuzz_wide_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V09"
+    ]
+  },
+  {
+    "capability": "upstream_test.issue153_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V09"
+    ]
+  },
+  {
+    "capability": "upstream_test.issue227_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V05"
+    ]
+  },
+  {
+    "capability": "upstream_test.issue232_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V05"
+    ]
+  },
+  {
+    "capability": "upstream_test.issue244_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V05"
+    ]
+  },
+  {
+    "capability": "upstream_test.issue245_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V05"
+    ]
+  },
+  {
+    "capability": "upstream_test.lookbehind_recursion_stress_test_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V09"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_credit_card_example_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V07"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_partial_regex_grep_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_partial_regex_iterate_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_partial_regex_match_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_grep_example_1_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_grep_example_2_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_grep_example_3_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_iterator_example_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_match_example_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_merge_example_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V07"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_replace_example_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V07"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_search_example_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_split_example_1_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V07"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_split_example_2_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V07"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_token_iterator_eg_1_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.module_regex_token_iterator_eg_2_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.named_subexpressions_named_subexpressions_test_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.object_cache_object_cache_test_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.pathology_bad_expression_test_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V09"
+    ]
+  },
+  {
+    "capability": "upstream_test.pathology_recursion_test_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V09"
+    ]
+  },
+  {
+    "capability": "upstream_test.quick_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.quick_icu_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  },
+  {
+    "capability": "upstream_test.regex_replace_overflow_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V09"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_basic_tests_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_main_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_alt_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_anchors_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_asserts_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V05"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_backrefs_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V05"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_deprecated_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V07"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_emacs_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_escapes_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_grep_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_icu_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_locale_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_mfc_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_non_greedy_repeats_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_operators_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_overloads_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V06"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_perl_ex_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V05"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_replace_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V07"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_sets_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_simple_repeats_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V04"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_tricky_cases_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V05"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_test_unicode_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  },
+  {
+    "capability": "upstream_test.regress_wmain_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  },
+  {
+    "capability": "upstream_test.test_consolidated_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.test_warnings_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.test_windows_defs_1_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.test_windows_defs_2_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.test_windows_defs_3_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.test_windows_defs_4_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V10"
+    ]
+  },
+  {
+    "capability": "upstream_test.unicode_unicode_casefold_test_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  },
+  {
+    "capability": "upstream_test.unicode_unicode_iterator_test_cpp",
+    "existing_status": "mapping_pending",
+    "tickets": [
+      "V08"
+    ]
+  }
+]

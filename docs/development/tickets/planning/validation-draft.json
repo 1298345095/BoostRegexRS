@@ -1,0 +1,2834 @@
+{
+  "schema": "boostregexrs.validation-ticket-draft.v1",
+  "status": "draft_only_implementation_paused",
+  "language": "en",
+  "scope": "Reference provenance, durable evidence, upstream applicability/ports, deterministic/fuzz validation, six native platform acceptance, fixed time/memory acceptance, quality and final documentation/package acceptance.",
+  "authoring_constraints": {
+    "only_written_file": "docs/development/tickets/planning/validation-draft.json",
+    "implementation_runs_performed": false,
+    "test_runs_performed": false,
+    "source_edits_performed": false,
+    "commits_or_publication_performed": false
+  },
+  "integration_notes": [
+    "Root owns the final ticket DAG and all 406 capability rows. This draft directly assigns the 104 validation/performance/platform/documentation/upstream rows and contributes verification dependencies to other implementation rows.",
+    "Replace every X_* contract with actual bounded implementation, permission, source or environment blockers before publishing. These contracts are not additional omnibus implementation tickets.",
+    "A capability shared by multiple V tickets closes only after all applicable contributing obligations and its implementation owner are complete.",
+    "Every ticket is prospective. Creating this plan does not validate the paused FCD/replay edits, finish the locale run, run an experiment or alter remote service state.",
+    "All 73 upstream files have applicability, port and test responsibility. Family tickets retain ownership when an exact semantic assertion is delegated across families.",
+    "Six existing native research-crate jobs passed; those jobs do not establish complete-library, same-platform native-reference or performance acceptance.",
+    "The seven family sizes are 10, 8, 15, 9, 10, 7 and 14. V11 is a final source-completeness reconciliation, not a replacement for family ports.",
+    "Actual librime-rs integration, main-branch merge, release/package publishing, new paid provisioning and recurring automation are outside this draft."
+  ],
+  "source_refs": [
+    "AGENTS.md",
+    "GLOSSARY.md",
+    "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+    "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+    "docs/adr/0003-resource-contract-and-release-acceptance.md",
+    "docs/adr/0004-rust-api-and-input-positions.md",
+    "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+    "docs/development/capability-matrix.json",
+    "docs/agents/issue-tracker.md",
+    "docs/research/resource-and-validation-proposal.md",
+    "docs/research/performance-baseline.md",
+    "tools/quality/README.md",
+    "tools/regex-oracle/README.md"
+  ],
+  "capability_matrix": {
+    "path": "docs/development/capability-matrix.json",
+    "sha256": "05433b449303c5b03610aa23b5a6444b46ca1ceecd01ecf7be4d0325a374a9ac",
+    "row_count": 406,
+    "official_source_files": 92,
+    "status_counts": {
+      "not_implemented": 323,
+      "mapping_pending": 80,
+      "reference_passed": 3
+    },
+    "directly_assigned_validation_rows": [
+      "platform.windows_x64_msvc",
+      "platform.windows_arm64_msvc",
+      "platform.linux_x64_glibc",
+      "platform.linux_arm64_glibc",
+      "platform.macos_intel",
+      "platform.macos_arm64",
+      "performance.compile",
+      "performance.ordinary_search",
+      "performance.ordinary_captures",
+      "performance.ordinary_replace",
+      "performance.complex_syntax",
+      "performance.unicode",
+      "performance.short_inputs",
+      "performance.large_inputs",
+      "performance.backtracking_inputs",
+      "performance.engine_working_memory",
+      "validation.official_source_identity",
+      "validation.upstream_tests",
+      "validation.deterministic_generation",
+      "validation.fuzz_minimized_regressions",
+      "validation.all_option_interactions",
+      "validation.patched_consumer_reference",
+      "validation.sonar_quality_gate",
+      "validation.clean_checkout",
+      "documentation.public_api",
+      "documentation.examples",
+      "documentation.compatibility",
+      "documentation.approved_exceptions",
+      "documentation.build_test_instructions",
+      "documentation.performance_protocol",
+      "documentation.licenses",
+      "upstream_test.c_compiler_checks_posix_api_check_cpp",
+      "upstream_test.c_compiler_checks_wide_posix_api_check_cpp",
+      "upstream_test.captures_captures_test_cpp",
+      "upstream_test.collate_info_collate_info_cpp",
+      "upstream_test.concepts_concept_check_cpp",
+      "upstream_test.concepts_icu_concept_check_cpp",
+      "upstream_test.concepts_module_concept_check_cpp",
+      "upstream_test.concepts_range_concept_check_cpp",
+      "upstream_test.concepts_test_bug_11988_cpp",
+      "upstream_test.config_info_regex_config_info_cpp",
+      "upstream_test.config_info_cpp",
+      "upstream_test.de_fuzz_narrow_cpp",
+      "upstream_test.de_fuzz_wide_cpp",
+      "upstream_test.issue153_cpp",
+      "upstream_test.issue227_cpp",
+      "upstream_test.issue232_cpp",
+      "upstream_test.issue244_cpp",
+      "upstream_test.issue245_cpp",
+      "upstream_test.lookbehind_recursion_stress_test_cpp",
+      "upstream_test.module_credit_card_example_cpp",
+      "upstream_test.module_partial_regex_grep_cpp",
+      "upstream_test.module_partial_regex_iterate_cpp",
+      "upstream_test.module_partial_regex_match_cpp",
+      "upstream_test.module_regex_grep_example_1_cpp",
+      "upstream_test.module_regex_grep_example_2_cpp",
+      "upstream_test.module_regex_grep_example_3_cpp",
+      "upstream_test.module_regex_iterator_example_cpp",
+      "upstream_test.module_regex_match_example_cpp",
+      "upstream_test.module_regex_merge_example_cpp",
+      "upstream_test.module_regex_replace_example_cpp",
+      "upstream_test.module_regex_search_example_cpp",
+      "upstream_test.module_regex_split_example_1_cpp",
+      "upstream_test.module_regex_split_example_2_cpp",
+      "upstream_test.module_regex_token_iterator_eg_1_cpp",
+      "upstream_test.module_regex_token_iterator_eg_2_cpp",
+      "upstream_test.named_subexpressions_named_subexpressions_test_cpp",
+      "upstream_test.object_cache_object_cache_test_cpp",
+      "upstream_test.pathology_bad_expression_test_cpp",
+      "upstream_test.pathology_recursion_test_cpp",
+      "upstream_test.quick_cpp",
+      "upstream_test.quick_icu_cpp",
+      "upstream_test.regex_replace_overflow_cpp",
+      "upstream_test.regress_basic_tests_cpp",
+      "upstream_test.regress_main_cpp",
+      "upstream_test.regress_test_alt_cpp",
+      "upstream_test.regress_test_anchors_cpp",
+      "upstream_test.regress_test_asserts_cpp",
+      "upstream_test.regress_test_backrefs_cpp",
+      "upstream_test.regress_test_deprecated_cpp",
+      "upstream_test.regress_test_emacs_cpp",
+      "upstream_test.regress_test_escapes_cpp",
+      "upstream_test.regress_test_grep_cpp",
+      "upstream_test.regress_test_icu_cpp",
+      "upstream_test.regress_test_locale_cpp",
+      "upstream_test.regress_test_mfc_cpp",
+      "upstream_test.regress_test_non_greedy_repeats_cpp",
+      "upstream_test.regress_test_operators_cpp",
+      "upstream_test.regress_test_overloads_cpp",
+      "upstream_test.regress_test_perl_ex_cpp",
+      "upstream_test.regress_test_replace_cpp",
+      "upstream_test.regress_test_sets_cpp",
+      "upstream_test.regress_test_simple_repeats_cpp",
+      "upstream_test.regress_test_tricky_cases_cpp",
+      "upstream_test.regress_test_unicode_cpp",
+      "upstream_test.regress_wmain_cpp",
+      "upstream_test.test_consolidated_cpp",
+      "upstream_test.test_warnings_cpp",
+      "upstream_test.test_windows_defs_1_cpp",
+      "upstream_test.test_windows_defs_2_cpp",
+      "upstream_test.test_windows_defs_3_cpp",
+      "upstream_test.test_windows_defs_4_cpp",
+      "upstream_test.unicode_unicode_casefold_test_cpp",
+      "upstream_test.unicode_unicode_iterator_test_cpp"
+    ]
+  },
+  "checkpoint": {
+    "research_native_ci": {
+      "run_id": 39034545308,
+      "attempt": 1,
+      "commit": "1b0149efb649bcec7b5d6c4c0be2f7e403189cea",
+      "tree": "336cf9726cfafa75c3a18113e01da2f64e1fc74c",
+      "native_jobs_passed": 6,
+      "reported_rustc": "1.99.1",
+      "executable_tests_per_job": 19,
+      "actual_doctest_cases_per_job": 0,
+      "full_library_platform_acceptance": false,
+      "raw_path": "docs/research/assets/platforms/actions-39034545308-1/"
+    },
+    "locale_run": {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z",
+      "status": "differences_or_incomplete",
+      "completed_configurations": 451,
+      "planned_configurations": 538,
+      "ordinary_passed": 1416550,
+      "differences": 2,
+      "expected_rejections": 9922,
+      "true_empty_approved_exceptions": 9038,
+      "original_native_empty_reference_errors": 451,
+      "owner_scalar_context_long_groups_executed": 0,
+      "candidate_sha256": "22721fc23f6ff811b27291234871a4e230833c653dde5a59900437b69093d5a5",
+      "paused_fix_validation": "FCD guard/replay changes were written but not formatted, built or tested when development paused."
+    },
+    "new_checkpoint_archives": {
+      "provenance": "Parent checkpoint message during this planning task; exact archive paths/manifests to be linked during root integration.",
+      "source_and_data_files": 629,
+      "source_and_data_xz_bytes": 583536,
+      "selected_raw_evidence_files": 433,
+      "selected_raw_evidence_xz_bytes": 692808,
+      "remaining_gap": "Full failed-run archive completion and byte verification were pending at draft freeze. Confirm its complete coverage first; remaining exporter/public integration/full report obligations are distinct from historical raw preservation.",
+      "full_failed_locale_archive": {
+        "path": "docs/development/tickets/checkpoint/locale-failed-run",
+        "status_at_draft_freeze": "Parent is archiving the complete existing 2026-10-17T124321.329888Z raw run, without rerunning experiments. Final byte verification/transport publication was still pending in the last message.",
+        "validation_action": "Verify the final manifest and coverage before creating any additional raw archive."
+      }
+    },
+    "sonar": {
+      "known_historical_condition": "New Code Security Rating E, required A",
+      "observed_issue_snapshot": {
+        "open_issues": 89,
+        "security_flows": 18
+      },
+      "scope_warning": "Live-PR Sonar API responses are unpinned unless associated with a specific analysis/commit; read/authentication success does not establish issue-management permission.",
+      "evidence_path": "docs/research/assets/sonarcloud/"
+    },
+    "counts_are_not_acceptance": "Collector/generator row counts, exported data counts and zero-case doctest success are not complete-library passing results."
+  },
+  "fixed_acceptance": {
+    "reference": {
+      "boost_regex": "1.89.0",
+      "icu4c": "77.1",
+      "unicode": "16.0.0",
+      "cldr": "47",
+      "icu_data": "complete unfiltered original data"
+    },
+    "time_ratios": {
+      "ordinary_search": 1.5,
+      "ordinary_captures": 1.5,
+      "ordinary_replace": 1.5,
+      "compile": 2.0,
+      "complex_syntax": 2.0,
+      "unicode": 2.0
+    },
+    "engine_working_memory": {
+      "maximum": "2 * corresponding Boost engine working memory + 65536 bytes",
+      "cross_workload_averaging_allowed": false
+    },
+    "unconfirmed_details": [
+      "Specific fuzz run durations/budgets and recurring schedules",
+      "Detailed benchmark batch/statistical protocol until V27 freezes it",
+      "Historical additional +256 KiB output-memory proposal",
+      "Any added performance category threshold beyond the accepted ADR classes"
+    ],
+    "exception_scope": "ADR-0005 only: dynamic default-locale query behavior and truly empty IDENTICAL reference path, with original native reference errors preserved. No blanket NUL, locale or resource exception."
+  },
+  "external_blocker_contracts": {
+    "X_CORE_RUNTIME": {
+      "contract": "Root-owned public byte regex compiler and matching engine, all dialects, syntax and match options, errors and position semantics are available for the named ticket scope.",
+      "capability_groups": [
+        "syntax",
+        "syntax_option",
+        "match_format_option",
+        "error_category"
+      ],
+      "integration": "Replace with the actual bounded compiler/engine tickets required by each family; this is not a new omnibus implementation ticket."
+    },
+    "X_API_RESULTS": {
+      "contract": "Root-owned search/match/range/partial, indexed and named captures, capture histories and result accessors are implemented.",
+      "capability_groups": [
+        "api"
+      ],
+      "integration": "Map to result and capture API tickets."
+    },
+    "X_API_STREAM_FORMAT": {
+      "contract": "Root-owned iteration, token iteration, grep, split, format, replacement, callbacks and output sinks expose the specified observable behavior.",
+      "capability_groups": [
+        "api",
+        "format"
+      ],
+      "integration": "Map to the relevant API tickets, not every API ticket indiscriminately."
+    },
+    "X_UNICODE_COLLATION": {
+      "contract": "Fixed ICU77/Unicode16/CLDR47 classification and complete locale/type/settings collation mechanisms are integrated into public regex APIs, including the paused FCD/replay repair and locale resolver.",
+      "capability_groups": [
+        "unicode"
+      ],
+      "integration": "Root/rust_primary own implementation and the paused locale differential continuation. Isolated sort-key success cannot satisfy this contract."
+    },
+    "X_NATIVE_CUSTOM_TRAITS": {
+      "contract": "Root-owned native C/C++/Win32 traits, locale/codepage behavior and Rust custom traits are implemented for the target configurations under test.",
+      "capability_groups": [
+        "native_traits"
+      ],
+      "integration": "Map per target and trait. Do not replace native configurations by classic C locale."
+    },
+    "X_INPUT_POSITIONS": {
+      "contract": "Root-owned byte, UTF-8, UTF-16, UTF-32 and native-wide inputs, invalid-input behavior and original-unit positions are implemented.",
+      "capability_groups": [
+        "input"
+      ],
+      "integration": "Map to encoding and positions tickets."
+    },
+    "X_RESOURCE_THREAD_CONTRACT": {
+      "contract": "Root-owned resource limits, opt-in traversal/output budgets, explicit exhaustion outcomes, partial delivery and compiled-regex sharing contracts are implemented.",
+      "capability_groups": [
+        "resources"
+      ],
+      "integration": "Map to resource and thread tickets. Their own tests remain owned there."
+    },
+    "X_DEFAULT_FEATURE_SURFACE": {
+      "contract": "Root-owned standalone package exposes the complete default API and Unicode/locale data; supported explicit reduced configurations are declared.",
+      "capability_groups": [
+        "api",
+        "input",
+        "unicode"
+      ],
+      "integration": "Map to package/public-surface tickets. No permanent subset release is assumed."
+    },
+    "X_CONSUMER_SOURCE": {
+      "contract": "The actual consumer-patched Boost reference, patch identity, build macros and available consumer corpus are supplied in the authorized workspace.",
+      "capability_groups": [
+        "validation"
+      ],
+      "integration": "The historical D:/NewProgram/librime-rs path is a source locator, not evidence that this cloud workspace can read it."
+    },
+    "X_NATIVE_RUNNERS": {
+      "contract": "All six ADR-0002 native baseline environments can execute the work and publish raw artifacts.",
+      "capability_groups": [
+        "platform"
+      ],
+      "integration": "Existing research CI availability is evidence for those jobs only. Record any unavailable environment; no new paid provisioning is presumed."
+    },
+    "X_STABLE_BENCH_HOSTS": {
+      "contract": "The six native baselines have measurement environments satisfying the frozen noise and comparability protocol.",
+      "capability_groups": [
+        "performance"
+      ],
+      "integration": "A shared hosted CI runner is not automatically a qualified performance host."
+    },
+    "X_SONAR_ISSUE_CONTROL": {
+      "contract": "The project has the permissions necessary for documented issue dispositions when a disposition is required.",
+      "capability_groups": [
+        "validation"
+      ],
+      "integration": "Anonymous valid authentication/read responses do not prove issue-management authority."
+    },
+    "X_SONAR_ANALYSIS_CONTROL": {
+      "contract": "The project has a usable CI analysis credential and authorized configuration control for one deliberate migration to a Rust-capable analysis path.",
+      "capability_groups": [
+        "validation"
+      ],
+      "integration": "Do not invent credentials, bypass controls, or run competing automatic and CI analyses."
+    }
+  },
+  "tickets": [
+    {
+      "id": "V01",
+      "title": "Reproduce the pinned official native reference from a clean checkout",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Make one portable source-to-reference path produce an independently identified Boost 1.89.0 / ICU4C 77.1 oracle and a small complete-result smoke artifact.",
+      "blocked_by": [],
+      "capability_rows": [
+        "validation.official_source_identity"
+      ],
+      "deliverables": [
+        "Tracked build/reproduction commands and source manifest",
+        "One clean Linux x86-64 native reference build and complete raw smoke transcript"
+      ],
+      "acceptance_criteria": [
+        "Official archive URLs, archive and extracted-source hashes, patch set, build flags, compiler, linker, OS/libc, ICU data, Unicode 16.0.0 and CLDR 47 identities are recorded and checked before use.",
+        "A fresh source/cache path builds the development reference without relying on historical target contents; complete unfiltered ICU data is used.",
+        "The actual invoked binary and runtime libraries have hashes; each command, exit status and stdout/stderr is preserved.",
+        "A bounded compile/search/capture/replace plus PRIMARY/IDENTICAL smoke returns the declared complete schema, with byte/NUL and true-empty behavior identified.",
+        "The same tracked recipe describes all six native builds; other-platform acceptance remains in V21-V26."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "tools/icu-probe/cloud/prepare.py",
+        "tools/regex-oracle/README.md"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V02",
+      "title": "Preserve and verify the complete historical evidence ledger",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Finish durable preservation of existing evidence without rewriting history or repeating runs to manufacture missing past logs.",
+      "blocked_by": [],
+      "capability_rows": [],
+      "deliverables": [
+        "Versioned evidence index with source/run identities and coverage boundaries",
+        "Checkpoint coverage verification, plus any genuinely missing raw archives with per-file and transport-part SHA manifests",
+        "Tracked reproducers and reconstruction/verification commands"
+      ],
+      "acceptance_criteria": [
+        "Existing PRIMARY, IDENTICAL, Windows, ICU4X, independent 2048 replay, six research CI and Sonar records remain separately attributable and immutable.",
+        "First verify the 629-source-file/data checkpoint, the 433 selected-raw-evidence checkpoint, and completion/byte identity of the full failed-locale-run archive under docs/development/tickets/checkpoint/locale-failed-run. Reuse verified complete archives; inventory and archive only remaining gaps before claiming completeness.",
+        "Archive reconstruction reproduces the exact logical archive and each original file hash; no file exists only under target when it is necessary to reproduce or assess a claimed result.",
+        "PRIMARY 1160181 valid keys, IDENTICAL 1159652 ordinary keys, 696 true-empty exceptions, 11 rejects and the three original IDENTICAL native crashes are kept in their original categories and runs.",
+        "The locale run with 451 of 538 configurations complete, two differences and no owner scalar/context/long groups remains failed/incomplete; the paused unbuilt fix is not described as validated.",
+        "Captured tool transcripts are labeled as transcripts; a new replay is labeled as a new run, never recovered historical raw."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/research/root-primary-cloud-results.md",
+        "docs/research/assets/icu77-identical/",
+        "docs/research/assets/icu77-locales/",
+        "docs/research/assets/platforms/",
+        "docs/research/assets/sonarcloud/"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V03",
+      "title": "Make the differential protocol reject incomplete or misattributed results",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Deliver a strict independent comparator for full observable native/Rust results, including failure and evidence attribution paths.",
+      "blocked_by": [
+        "V01"
+      ],
+      "capability_rows": [
+        "validation.upstream_tests",
+        "validation.deterministic_generation"
+      ],
+      "deliverables": [
+        "Versioned input/output protocol and independent comparator",
+        "Small protocol fixtures exercising every result/status field and malformed-output rejection"
+      ],
+      "acceptance_criteria": [
+        "Comparison includes compile status and group count, indexed/named groups, matched/unmatched distinction, all original-unit ranges, histories, prefix/suffix, partial state, iteration order, replacement bytes and error category/position where the operation exposes them.",
+        "Collation compares every raw ICU byte and every Boost u32 element, including terminal handling, long keys, NUL and ADR-0005 true-empty identity.",
+        "Missing, duplicate, reordered-without-ID-mapping, truncated, malformed or extra rows, wrong input hashes and changed binary/data identities fail the run; totals reconcile independently.",
+        "Semantic pass, semantic difference, approved exception, expected rejection, reference error/resource outcome and not-covered are separate statuses. A timeout/crash is never an empty match or ordinary pass.",
+        "The comparator has bounded fixtures with deliberately changed fields and framing failures that it demonstrably rejects; candidate output is never used to generate its expected answers.",
+        "Every run records the exact reference configuration, candidate commit/tree/dirty state, binary/data hashes and raw commands."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "tools/regex-oracle/README.md",
+        "tools/icu-probe/primary/compare.py"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V04",
+      "title": "Port the basic grammar and matching upstream family",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Finish applicability, semantic port and reference comparison for basic grammars, alternation, anchors, escapes, sets, repeats and dialect-dependent selection.",
+      "blocked_by": [
+        "V03",
+        "X_CORE_RUNTIME",
+        "X_INPUT_POSITIONS"
+      ],
+      "capability_rows": [
+        "validation.upstream_tests",
+        "upstream_test.quick_cpp",
+        "upstream_test.regress_basic_tests_cpp",
+        "upstream_test.regress_test_alt_cpp",
+        "upstream_test.regress_test_anchors_cpp",
+        "upstream_test.regress_test_emacs_cpp",
+        "upstream_test.regress_test_escapes_cpp",
+        "upstream_test.regress_test_operators_cpp",
+        "upstream_test.regress_test_sets_cpp",
+        "upstream_test.regress_test_simple_repeats_cpp",
+        "upstream_test.regress_test_non_greedy_repeats_cpp"
+      ],
+      "deliverables": [
+        "Per-file applicability/conditional-build ledger",
+        "Tracked native and Rust semantic tests with original file/assertion IDs",
+        "Complete reference/candidate results and family summary"
+      ],
+      "acceptance_criteria": [
+        "Every assigned file is reviewed with its headers, fixtures, Jamfile conditions and macros; each original test obligation is mapped to a Rust test or a precise ADR-supported exclusion.",
+        "The official native tests are run in the configurations where they apply, and Rust equivalents compare the full observable results through V03.",
+        "Each file has named applicability, port and test responsibility, including cross-family dependencies; no status is left mapping_pending for this family.",
+        "No exclusion is based solely on unimplemented behavior, deprecated spelling, a disabled local macro or lack of a test host.",
+        "There are zero unexplained applicable semantic differences. Real upstream/documentation conflicts have an individual decision record rather than a blanket waiver."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Family acceptance establishes its source-backed semantic obligations. The same-platform six-target acceptance is separately required by V21-V26.",
+      "upstream_files": [
+        "quick.cpp",
+        "regress/basic_tests.cpp",
+        "regress/test_alt.cpp",
+        "regress/test_anchors.cpp",
+        "regress/test_emacs.cpp",
+        "regress/test_escapes.cpp",
+        "regress/test_operators.cpp",
+        "regress/test_sets.cpp",
+        "regress/test_simple_repeats.cpp",
+        "regress/test_non_greedy_repeats.cpp"
+      ]
+    },
+    {
+      "id": "V05",
+      "title": "Port advanced matching and malformed-pattern upstream regressions",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Finish applicability, semantic port and reference comparison for assertions, backreferences, control verbs, possessive behavior, partial outcomes and malformed patterns, including issue-specific crashes/errors.",
+      "blocked_by": [
+        "V03",
+        "X_CORE_RUNTIME",
+        "X_API_RESULTS",
+        "X_RESOURCE_THREAD_CONTRACT"
+      ],
+      "capability_rows": [
+        "validation.upstream_tests",
+        "upstream_test.regress_test_asserts_cpp",
+        "upstream_test.regress_test_backrefs_cpp",
+        "upstream_test.regress_test_perl_ex_cpp",
+        "upstream_test.regress_test_tricky_cases_cpp",
+        "upstream_test.issue227_cpp",
+        "upstream_test.issue232_cpp",
+        "upstream_test.issue244_cpp",
+        "upstream_test.issue245_cpp"
+      ],
+      "deliverables": [
+        "Per-file applicability/conditional-build ledger",
+        "Tracked native and Rust semantic tests with original file/assertion IDs",
+        "Complete reference/candidate results and family summary"
+      ],
+      "acceptance_criteria": [
+        "Every assigned file is reviewed with its headers, fixtures, Jamfile conditions and macros; each original test obligation is mapped to a Rust test or a precise ADR-supported exclusion.",
+        "The official native tests are run in the configurations where they apply, and Rust equivalents compare the full observable results through V03.",
+        "Each file has named applicability, port and test responsibility, including cross-family dependencies; no status is left mapping_pending for this family.",
+        "No exclusion is based solely on unimplemented behavior, deprecated spelling, a disabled local macro or lack of a test host.",
+        "There are zero unexplained applicable semantic differences. Real upstream/documentation conflicts have an individual decision record rather than a blanket waiver."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Family acceptance establishes its source-backed semantic obligations. The same-platform six-target acceptance is separately required by V21-V26.",
+      "upstream_files": [
+        "regress/test_asserts.cpp",
+        "regress/test_backrefs.cpp",
+        "regress/test_perl_ex.cpp",
+        "regress/test_tricky_cases.cpp",
+        "issue227.cpp",
+        "issue232.cpp",
+        "issue244.cpp",
+        "issue245.cpp"
+      ]
+    },
+    {
+      "id": "V06",
+      "title": "Port the result, capture and iteration upstream API family",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Finish applicability, semantic port and reference comparison for complete captures/history, named and partial matches, callback/iterator ordering, tokens, overload and range semantics.",
+      "blocked_by": [
+        "V03",
+        "X_CORE_RUNTIME",
+        "X_API_RESULTS",
+        "X_API_STREAM_FORMAT",
+        "X_INPUT_POSITIONS"
+      ],
+      "capability_rows": [
+        "validation.upstream_tests",
+        "upstream_test.captures_captures_test_cpp",
+        "upstream_test.named_subexpressions_named_subexpressions_test_cpp",
+        "upstream_test.module_partial_regex_grep_cpp",
+        "upstream_test.module_partial_regex_iterate_cpp",
+        "upstream_test.module_partial_regex_match_cpp",
+        "upstream_test.module_regex_grep_example_1_cpp",
+        "upstream_test.module_regex_grep_example_2_cpp",
+        "upstream_test.module_regex_grep_example_3_cpp",
+        "upstream_test.module_regex_iterator_example_cpp",
+        "upstream_test.module_regex_match_example_cpp",
+        "upstream_test.module_regex_search_example_cpp",
+        "upstream_test.module_regex_token_iterator_eg_1_cpp",
+        "upstream_test.module_regex_token_iterator_eg_2_cpp",
+        "upstream_test.regress_test_overloads_cpp",
+        "upstream_test.regress_test_grep_cpp"
+      ],
+      "deliverables": [
+        "Per-file applicability/conditional-build ledger",
+        "Tracked native and Rust semantic tests with original file/assertion IDs",
+        "Complete reference/candidate results and family summary"
+      ],
+      "acceptance_criteria": [
+        "Every assigned file is reviewed with its headers, fixtures, Jamfile conditions and macros; each original test obligation is mapped to a Rust test or a precise ADR-supported exclusion.",
+        "The official native tests are run in the configurations where they apply, and Rust equivalents compare the full observable results through V03.",
+        "Each file has named applicability, port and test responsibility, including cross-family dependencies; no status is left mapping_pending for this family.",
+        "No exclusion is based solely on unimplemented behavior, deprecated spelling, a disabled local macro or lack of a test host.",
+        "There are zero unexplained applicable semantic differences. Real upstream/documentation conflicts have an individual decision record rather than a blanket waiver."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Family acceptance establishes its source-backed semantic obligations. The same-platform six-target acceptance is separately required by V21-V26.",
+      "upstream_files": [
+        "captures/captures_test.cpp",
+        "named_subexpressions/named_subexpressions_test.cpp",
+        "module/partial_regex_grep.cpp",
+        "module/partial_regex_iterate.cpp",
+        "module/partial_regex_match.cpp",
+        "module/regex_grep_example_1.cpp",
+        "module/regex_grep_example_2.cpp",
+        "module/regex_grep_example_3.cpp",
+        "module/regex_iterator_example.cpp",
+        "module/regex_match_example.cpp",
+        "module/regex_search_example.cpp",
+        "module/regex_token_iterator_eg_1.cpp",
+        "module/regex_token_iterator_eg_2.cpp",
+        "regress/test_overloads.cpp",
+        "regress/test_grep.cpp"
+      ]
+    },
+    {
+      "id": "V07",
+      "title": "Port formatting, splitting and POSIX semantic upstream tests",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Finish applicability, semantic port and reference comparison for all observable format/replace/split/deprecated semantic equivalents and POSIX results/errors; literal C ABI is assessed separately.",
+      "blocked_by": [
+        "V03",
+        "X_CORE_RUNTIME",
+        "X_API_RESULTS",
+        "X_API_STREAM_FORMAT",
+        "X_INPUT_POSITIONS"
+      ],
+      "capability_rows": [
+        "validation.upstream_tests",
+        "upstream_test.module_credit_card_example_cpp",
+        "upstream_test.module_regex_merge_example_cpp",
+        "upstream_test.module_regex_replace_example_cpp",
+        "upstream_test.module_regex_split_example_1_cpp",
+        "upstream_test.module_regex_split_example_2_cpp",
+        "upstream_test.regress_test_replace_cpp",
+        "upstream_test.regress_test_deprecated_cpp",
+        "upstream_test.c_compiler_checks_posix_api_check_cpp",
+        "upstream_test.c_compiler_checks_wide_posix_api_check_cpp"
+      ],
+      "deliverables": [
+        "Per-file applicability/conditional-build ledger",
+        "Tracked native and Rust semantic tests with original file/assertion IDs",
+        "Complete reference/candidate results and family summary"
+      ],
+      "acceptance_criteria": [
+        "Every assigned file is reviewed with its headers, fixtures, Jamfile conditions and macros; each original test obligation is mapped to a Rust test or a precise ADR-supported exclusion.",
+        "The official native tests are run in the configurations where they apply, and Rust equivalents compare the full observable results through V03.",
+        "Each file has named applicability, port and test responsibility, including cross-family dependencies; no status is left mapping_pending for this family.",
+        "No exclusion is based solely on unimplemented behavior, deprecated spelling, a disabled local macro or lack of a test host.",
+        "There are zero unexplained applicable semantic differences. Real upstream/documentation conflicts have an individual decision record rather than a blanket waiver.",
+        "The two POSIX C compiler checks have separate compile-shape and observable semantic dispositions; an ABI-only exclusion cannot discard their regex behavior."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Family acceptance establishes its source-backed semantic obligations. The same-platform six-target acceptance is separately required by V21-V26.",
+      "upstream_files": [
+        "module/credit_card_example.cpp",
+        "module/regex_merge_example.cpp",
+        "module/regex_replace_example.cpp",
+        "module/regex_split_example_1.cpp",
+        "module/regex_split_example_2.cpp",
+        "regress/test_replace.cpp",
+        "regress/test_deprecated.cpp",
+        "c_compiler_checks/posix_api_check.cpp",
+        "c_compiler_checks/wide_posix_api_check.cpp"
+      ]
+    },
+    {
+      "id": "V08",
+      "title": "Port Unicode, locale and custom-traits upstream tests",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Finish applicability, semantic port and reference comparison for Unicode classes/casefold/iteration, native locale behavior, wide input and char32 custom-traits semantics.",
+      "blocked_by": [
+        "V03",
+        "X_CORE_RUNTIME",
+        "X_UNICODE_COLLATION",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_INPUT_POSITIONS"
+      ],
+      "capability_rows": [
+        "validation.upstream_tests",
+        "upstream_test.collate_info_collate_info_cpp",
+        "upstream_test.concepts_icu_concept_check_cpp",
+        "upstream_test.concepts_test_bug_11988_cpp",
+        "upstream_test.quick_icu_cpp",
+        "upstream_test.regress_test_icu_cpp",
+        "upstream_test.regress_test_locale_cpp",
+        "upstream_test.regress_test_unicode_cpp",
+        "upstream_test.regress_wmain_cpp",
+        "upstream_test.unicode_unicode_casefold_test_cpp",
+        "upstream_test.unicode_unicode_iterator_test_cpp"
+      ],
+      "deliverables": [
+        "Per-file applicability/conditional-build ledger",
+        "Tracked native and Rust semantic tests with original file/assertion IDs",
+        "Complete reference/candidate results and family summary"
+      ],
+      "acceptance_criteria": [
+        "Every assigned file is reviewed with its headers, fixtures, Jamfile conditions and macros; each original test obligation is mapped to a Rust test or a precise ADR-supported exclusion.",
+        "The official native tests are run in the configurations where they apply, and Rust equivalents compare the full observable results through V03.",
+        "Each file has named applicability, port and test responsibility, including cross-family dependencies; no status is left mapping_pending for this family.",
+        "No exclusion is based solely on unimplemented behavior, deprecated spelling, a disabled local macro or lack of a test host.",
+        "There are zero unexplained applicable semantic differences. Real upstream/documentation conflicts have an individual decision record rather than a blanket waiver.",
+        "test_bug_11988.cpp is treated as a real char32 custom-traits regression, not excluded merely because its original test uses C++ concepts."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Family acceptance establishes its source-backed semantic obligations. The same-platform six-target acceptance is separately required by V21-V26.",
+      "upstream_files": [
+        "collate_info/collate_info.cpp",
+        "concepts/icu_concept_check.cpp",
+        "concepts/test_bug_11988.cpp",
+        "quick_icu.cpp",
+        "regress/test_icu.cpp",
+        "regress/test_locale.cpp",
+        "regress/test_unicode.cpp",
+        "regress/wmain.cpp",
+        "unicode/unicode_casefold_test.cpp",
+        "unicode/unicode_iterator_test.cpp"
+      ]
+    },
+    {
+      "id": "V09",
+      "title": "Port stress, overflow and resource upstream regressions",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Finish applicability, semantic port and reference comparison for historical fuzz failures, pathological compile/match behavior, lookbehind recursion and replacement overflow.",
+      "blocked_by": [
+        "V03",
+        "X_CORE_RUNTIME",
+        "X_API_STREAM_FORMAT",
+        "X_RESOURCE_THREAD_CONTRACT",
+        "X_INPUT_POSITIONS"
+      ],
+      "capability_rows": [
+        "validation.upstream_tests",
+        "upstream_test.de_fuzz_narrow_cpp",
+        "upstream_test.de_fuzz_wide_cpp",
+        "upstream_test.issue153_cpp",
+        "upstream_test.lookbehind_recursion_stress_test_cpp",
+        "upstream_test.pathology_bad_expression_test_cpp",
+        "upstream_test.pathology_recursion_test_cpp",
+        "upstream_test.regex_replace_overflow_cpp"
+      ],
+      "deliverables": [
+        "Per-file applicability/conditional-build ledger",
+        "Tracked native and Rust semantic tests with original file/assertion IDs",
+        "Complete reference/candidate results and family summary"
+      ],
+      "acceptance_criteria": [
+        "Every assigned file is reviewed with its headers, fixtures, Jamfile conditions and macros; each original test obligation is mapped to a Rust test or a precise ADR-supported exclusion.",
+        "The official native tests are run in the configurations where they apply, and Rust equivalents compare the full observable results through V03.",
+        "Each file has named applicability, port and test responsibility, including cross-family dependencies; no status is left mapping_pending for this family.",
+        "No exclusion is based solely on unimplemented behavior, deprecated spelling, a disabled local macro or lack of a test host.",
+        "There are zero unexplained applicable semantic differences. Real upstream/documentation conflicts have an individual decision record rather than a blanket waiver.",
+        "Different documented resource-limit triggers follow ADR-0003. A reference limit, harness kill or Rust budget error is explicitly classified and never rewritten as a successful no-match."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Family acceptance establishes its source-backed semantic obligations. The same-platform six-target acceptance is separately required by V21-V26.",
+      "upstream_files": [
+        "de_fuzz/narrow.cpp",
+        "de_fuzz/wide.cpp",
+        "issue153.cpp",
+        "lookbehind_recursion_stress_test.cpp",
+        "pathology/bad_expression_test.cpp",
+        "pathology/recursion_test.cpp",
+        "regex_replace_overflow.cpp"
+      ]
+    },
+    {
+      "id": "V10",
+      "title": "Resolve host-language and build-specific upstream applicability",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Finish applicability, semantic port and reference comparison for C++ concept/build/macro/MFC/cache/driver checks and their actual Rust semantic or configuration equivalents.",
+      "blocked_by": [
+        "V03",
+        "X_API_RESULTS",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_DEFAULT_FEATURE_SURFACE"
+      ],
+      "capability_rows": [
+        "validation.upstream_tests",
+        "upstream_test.concepts_concept_check_cpp",
+        "upstream_test.concepts_module_concept_check_cpp",
+        "upstream_test.concepts_range_concept_check_cpp",
+        "upstream_test.config_info_regex_config_info_cpp",
+        "upstream_test.config_info_cpp",
+        "upstream_test.object_cache_object_cache_test_cpp",
+        "upstream_test.regress_main_cpp",
+        "upstream_test.regress_test_mfc_cpp",
+        "upstream_test.test_consolidated_cpp",
+        "upstream_test.test_warnings_cpp",
+        "upstream_test.test_windows_defs_1_cpp",
+        "upstream_test.test_windows_defs_2_cpp",
+        "upstream_test.test_windows_defs_3_cpp",
+        "upstream_test.test_windows_defs_4_cpp"
+      ],
+      "deliverables": [
+        "Per-file applicability/conditional-build ledger",
+        "Tracked native and Rust semantic tests with original file/assertion IDs",
+        "Complete reference/candidate results and family summary"
+      ],
+      "acceptance_criteria": [
+        "Every assigned file is reviewed with its headers, fixtures, Jamfile conditions and macros; each original test obligation is mapped to a Rust test or a precise ADR-supported exclusion.",
+        "The official native tests are run in the configurations where they apply, and Rust equivalents compare the full observable results through V03.",
+        "Each file has named applicability, port and test responsibility, including cross-family dependencies; no status is left mapping_pending for this family.",
+        "No exclusion is based solely on unimplemented behavior, deprecated spelling, a disabled local macro or lack of a test host.",
+        "There are zero unexplained applicable semantic differences. Real upstream/documentation conflicts have an individual decision record rather than a blanket waiver.",
+        "MFC/container examples are inspected for match/capture/search semantics; C++ spelling alone cannot justify dropping those assertions. Consolidated/driver duplicates point to retained assertions and are not counted twice."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Family acceptance establishes its source-backed semantic obligations. The same-platform six-target acceptance is separately required by V21-V26.",
+      "upstream_files": [
+        "concepts/concept_check.cpp",
+        "concepts/module_concept_check.cpp",
+        "concepts/range_concept_check.cpp",
+        "config_info/regex_config_info.cpp",
+        "config_info.cpp",
+        "object_cache/object_cache_test.cpp",
+        "regress/main.cpp",
+        "regress/test_mfc.cpp",
+        "test_consolidated.cpp",
+        "test_warnings.cpp",
+        "test_windows_defs_1.cpp",
+        "test_windows_defs_2.cpp",
+        "test_windows_defs_3.cpp",
+        "test_windows_defs_4.cpp"
+      ]
+    },
+    {
+      "id": "V11",
+      "title": "Close the upstream applicability and source-completeness audit",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Reconcile the seven finished test families against the whole pinned upstream test/build corpus and the public capability inventory.",
+      "blocked_by": [
+        "V04",
+        "V05",
+        "V06",
+        "V07",
+        "V08",
+        "V09",
+        "V10"
+      ],
+      "capability_rows": [
+        "validation.upstream_tests"
+      ],
+      "deliverables": [
+        "Complete upstream applicability ledger",
+        "Inventory corrections for any newly discovered public/test obligations"
+      ],
+      "acceptance_criteria": [
+        "All 73 currently inventoried test files have an explicit applicability, port and test owner and a closed assertion-level disposition.",
+        "Jamfiles, included headers, fixture files, generated tests and feature/platform conditions are audited; discovering obligations outside the 73 files adds them to the ledger and capability mapping.",
+        "All applicable native assertions link to an executable Rust equivalent and evidence; exclusions cite the specific behavioral-contract reason.",
+        "Duplicate driver/consolidation coverage is cross-linked without inflating counts; required platform-specific assertions remain scheduled for their native platform.",
+        "No entire family is represented only by a collector input count or a generic promise to complete upstream tests."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "This is the bounded closure audit after V04-V10. It does not replace those family ports or execute an unspecified catch-all suite."
+    },
+    {
+      "id": "V12",
+      "title": "Establish the consumer-patched Windows reference relationship",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Identify and reproduce the actual consumer patch, then compare its affected behavior with official Boost on the relevant Windows configurations.",
+      "blocked_by": [
+        "V01",
+        "V03",
+        "X_CONSUMER_SOURCE"
+      ],
+      "capability_rows": [
+        "validation.patched_consumer_reference"
+      ],
+      "deliverables": [
+        "Consumer source/patch/build manifest",
+        "Official-versus-patched reference delta report and retained consumer corpus results"
+      ],
+      "acceptance_criteria": [
+        "The actual consumer source revision, patch bytes/hash, build macros and dependencies are recorded; the reported ANSI classification initialization patch is verified from source.",
+        "Both native references are built with controlled comparable Windows settings and the affected locale/codepage initialization cases are exercised.",
+        "Available consumer examples are retained as supplemental coverage; their count never narrows the complete upstream behavior contract.",
+        "Each real official/patched semantic delta has an explicit compatibility decision before the corresponding Rust acceptance can close.",
+        "Missing consumer source or native execution is reported as blocked, never substituted by an assumed equivalent official build."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md"
+      ],
+      "scope_boundary": "This establishes reference provenance and differences. Actual librime-rs integration remains deferred."
+    },
+    {
+      "id": "V13",
+      "title": "Freeze bounded generation, fuzz and minimization execution profiles",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Make all subsequent campaigns reproducible with explicit budgets and replay identities before their results are observed.",
+      "blocked_by": [
+        "V03"
+      ],
+      "capability_rows": [
+        "validation.deterministic_generation",
+        "validation.fuzz_minimized_regressions",
+        "validation.all_option_interactions"
+      ],
+      "deliverables": [
+        "Versioned campaign profiles and seed corpus manifest",
+        "Tracked replay/minimizer commands and one bounded end-to-end protocol demonstration"
+      ],
+      "acceptance_criteria": [
+        "Each profile fixes exact seeds, input counts or execution budgets, grammar depth, input/expansion limits, per-case timeouts, mutator/tool versions, feature/trait/locale scope and termination rules.",
+        "All option families and legal/illegal interactions have a source-derived obligation map; exhaustive finite dimensions and bounded generated dimensions are distinguished.",
+        "The 5-minute/30-minute/6-hour historical fuzz proposals are not treated as approved requirements; the actual chosen numeric profile is committed before its campaign runs.",
+        "A failing sample can be replayed and minimized while preserving operation, options, locale/traits, encoding and original outcome class, with source and binary identities retained.",
+        "Schedule and host availability are explicit. No unrequested recurring automation or paid provisioning is assumed."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/resource-and-validation-proposal.md"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V14",
+      "title": "Run the deterministic byte grammar and option-interaction suite",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Execute a bounded complete-result byte suite derived from the full grammar/API option inventory.",
+      "blocked_by": [
+        "V03",
+        "V04",
+        "V05",
+        "V06",
+        "V07",
+        "V13",
+        "X_CORE_RUNTIME",
+        "X_API_RESULTS",
+        "X_API_STREAM_FORMAT",
+        "X_RESOURCE_THREAD_CONTRACT"
+      ],
+      "capability_rows": [
+        "validation.deterministic_generation",
+        "validation.all_option_interactions"
+      ],
+      "deliverables": [
+        "Tracked deterministic generator/profile",
+        "Raw byte reference/candidate outputs and capability/option coverage manifest"
+      ],
+      "acceptance_criteria": [
+        "The frozen profile covers each public grammar and option obligation, including legal and illegal combinations, priority, empty matches, invalid byte strings, embedded NUL, long input and partial/capture/replace/iteration behavior.",
+        "The same seed/profile/source identity regenerates the exact inputs; input counts are reported separately from executed and passing rows.",
+        "All outputs are compared through V03, with original byte ranges and every requested result field retained.",
+        "Every generated difference is minimized, linked to its owning capability ticket and fixed or individually accepted before this suite passes.",
+        "Uncovered interactions are listed explicitly; a representative or pairwise sample is not described as exhaustive coverage of all combinations."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V15",
+      "title": "Run deterministic Unicode and locale behavior through the public regex API",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Validate fixed-data Unicode/locale mechanisms in complete regex operations and every supported input-unit contract.",
+      "blocked_by": [
+        "V03",
+        "V08",
+        "V13",
+        "X_UNICODE_COLLATION",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_INPUT_POSITIONS",
+        "X_API_RESULTS",
+        "X_API_STREAM_FORMAT"
+      ],
+      "capability_rows": [
+        "validation.deterministic_generation",
+        "validation.all_option_interactions"
+      ],
+      "deliverables": [
+        "Unicode/locale public-API generation profile",
+        "Input-unit, locale/type/settings coverage ledger and complete raw differential results"
+      ],
+      "acceptance_criteria": [
+        "The profile derives its domain from the complete fixed locale/type/resource and Unicode inventory, with alias/fallback, settings, classification, folding and collation obligations explicitly mapped.",
+        "UTF-8/16/32 and native-wide cases check their original-unit positions; arbitrary-byte and invalid-input behavior is kept in its proper interface.",
+        "Context/FCD direction, supplementary marks, contractions, numeric/reordering, Han/Hangul, NUL, long input and the known paused locale differences are included as mechanism regressions.",
+        "Full compile/match/capture/iteration/replacement results are compared; isolated root sort-key research success cannot close public regex acceptance.",
+        "The actual finite exhaustive subsets and bounded fixed-seed subsets are identified, all failures are resolved or individually accepted, and no locale support boundary is inferred from representative samples."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/research/assets/icu77-locales/"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V16",
+      "title": "Run parser and diagnostic fuzzing with minimized regressions",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Complete the frozen bounded fuzz campaign for pattern parsing, numeric/name overflow, malformed syntax, option interactions and original-unit diagnostic positions.",
+      "blocked_by": [
+        "V03",
+        "V13",
+        "V14",
+        "X_CORE_RUNTIME",
+        "X_INPUT_POSITIONS"
+      ],
+      "capability_rows": [
+        "validation.fuzz_minimized_regressions"
+      ],
+      "deliverables": [
+        "Campaign input/corpus and raw execution manifest",
+        "Tracked minimized regression fixtures and exact replay commands"
+      ],
+      "acceptance_criteria": [
+        "The predeclared V13 execution budget and feature/configuration scope actually finish; early termination or missing shards is incomplete, not pass.",
+        "Seeds, mutations/tool versions, reference/candidate identities, outcomes and time/resource boundaries are retained sufficiently to replay every failure.",
+        "Each semantic divergence, unexpected crash, panic or nondeterminism is reduced without changing its failure class and linked to a mechanism-level fix or individual approved exception.",
+        "All minimized regressions pass after their fixes and remain in the ordinary test suite; no unexplained failure is waived merely because fuzz inputs are unusual.",
+        "The report separates reference limitations, candidate errors, expected rejects, completed cases and unexecuted coverage. It makes no arbitrary-string correctness claim."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V17",
+      "title": "Run match and capture fuzzing with minimized regressions",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Complete the frozen bounded fuzz campaign for match selection, backtracking/control flow, ranges, captures/history, partial matching and explicit resource outcomes.",
+      "blocked_by": [
+        "V03",
+        "V13",
+        "V14",
+        "X_CORE_RUNTIME",
+        "X_API_RESULTS",
+        "X_RESOURCE_THREAD_CONTRACT"
+      ],
+      "capability_rows": [
+        "validation.fuzz_minimized_regressions"
+      ],
+      "deliverables": [
+        "Campaign input/corpus and raw execution manifest",
+        "Tracked minimized regression fixtures and exact replay commands"
+      ],
+      "acceptance_criteria": [
+        "The predeclared V13 execution budget and feature/configuration scope actually finish; early termination or missing shards is incomplete, not pass.",
+        "Seeds, mutations/tool versions, reference/candidate identities, outcomes and time/resource boundaries are retained sufficiently to replay every failure.",
+        "Each semantic divergence, unexpected crash, panic or nondeterminism is reduced without changing its failure class and linked to a mechanism-level fix or individual approved exception.",
+        "All minimized regressions pass after their fixes and remain in the ordinary test suite; no unexplained failure is waived merely because fuzz inputs are unusual.",
+        "The report separates reference limitations, candidate errors, expected rejects, completed cases and unexecuted coverage. It makes no arbitrary-string correctness claim."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V18",
+      "title": "Run replacement and iteration fuzzing with minimized regressions",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Complete the frozen bounded fuzz campaign for replacement grammars, callback/sink outputs, zero-width progress, split/token/grep ordering and opt-in exhaustion delivery.",
+      "blocked_by": [
+        "V03",
+        "V13",
+        "V14",
+        "X_API_STREAM_FORMAT",
+        "X_RESOURCE_THREAD_CONTRACT"
+      ],
+      "capability_rows": [
+        "validation.fuzz_minimized_regressions"
+      ],
+      "deliverables": [
+        "Campaign input/corpus and raw execution manifest",
+        "Tracked minimized regression fixtures and exact replay commands"
+      ],
+      "acceptance_criteria": [
+        "The predeclared V13 execution budget and feature/configuration scope actually finish; early termination or missing shards is incomplete, not pass.",
+        "Seeds, mutations/tool versions, reference/candidate identities, outcomes and time/resource boundaries are retained sufficiently to replay every failure.",
+        "Each semantic divergence, unexpected crash, panic or nondeterminism is reduced without changing its failure class and linked to a mechanism-level fix or individual approved exception.",
+        "All minimized regressions pass after their fixes and remain in the ordinary test suite; no unexplained failure is waived merely because fuzz inputs are unusual.",
+        "The report separates reference limitations, candidate errors, expected rejects, completed cases and unexecuted coverage. It makes no arbitrary-string correctness claim."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V19",
+      "title": "Run Unicode, traits and data-boundary fuzzing with minimized regressions",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Complete the frozen bounded fuzz campaign for Unicode input decoding, locale/type/settings parsing, property/case/collation contexts, custom traits and public data-loader boundaries.",
+      "blocked_by": [
+        "V03",
+        "V13",
+        "V15",
+        "X_UNICODE_COLLATION",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_INPUT_POSITIONS"
+      ],
+      "capability_rows": [
+        "validation.fuzz_minimized_regressions"
+      ],
+      "deliverables": [
+        "Campaign input/corpus and raw execution manifest",
+        "Tracked minimized regression fixtures and exact replay commands"
+      ],
+      "acceptance_criteria": [
+        "The predeclared V13 execution budget and feature/configuration scope actually finish; early termination or missing shards is incomplete, not pass.",
+        "Seeds, mutations/tool versions, reference/candidate identities, outcomes and time/resource boundaries are retained sufficiently to replay every failure.",
+        "Each semantic divergence, unexpected crash, panic or nondeterminism is reduced without changing its failure class and linked to a mechanism-level fix or individual approved exception.",
+        "All minimized regressions pass after their fixes and remain in the ordinary test suite; no unexplained failure is waived merely because fuzz inputs are unusual.",
+        "The report separates reference limitations, candidate errors, expected rejects, completed cases and unexecuted coverage. It makes no arbitrary-string correctness claim."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V20",
+      "title": "Add a separate whole-library native-reference CI path",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Extend the existing native execution infrastructure with an explicit full-library/reference artifact contract and one native end-to-end tracer.",
+      "blocked_by": [
+        "V01",
+        "V03",
+        "X_DEFAULT_FEATURE_SURFACE",
+        "X_NATIVE_RUNNERS"
+      ],
+      "capability_rows": [
+        "validation.clean_checkout"
+      ],
+      "deliverables": [
+        "Tracked whole-library/native reference runner and workflow",
+        "Versioned job/artifact schema with scope and identity fields"
+      ],
+      "acceptance_criteria": [
+        "Existing six research-crate results remain labeled research scope; new jobs identify whole-library and native-reference scopes separately.",
+        "Each target job executes a native architecture probe, builds the actual standalone Rust library and the appropriate official native references, and emits all command exits and identities.",
+        "A bounded real compile/search/capture/replace tracer runs through the public Rust library and same-host Boost reference; a cross-compiled binary without native execution cannot pass.",
+        "Default complete features and any declared reduced configurations are separate jobs/results; unavailable runner/reference paths fail or remain blocked explicitly.",
+        "Raw artifacts have a durable collection/reconstruction path beyond temporary CI retention. Full platform acceptance remains in V21-V26."
+      ],
+      "source_refs": [
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        ".github/workflows/native-rust.yml",
+        "tools/ci/native_rust.py"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V21",
+      "title": "Accept the complete library on Windows Server 2025 x86-64 / MSVC",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close same-platform native functional acceptance for x86_64-pc-windows-msvc.",
+      "blocked_by": [
+        "V11",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_RESOURCE_THREAD_CONTRACT",
+        "X_DEFAULT_FEATURE_SURFACE",
+        "V12"
+      ],
+      "capability_rows": [
+        "platform.windows_x64_msvc"
+      ],
+      "deliverables": [
+        "Native full-library/reference execution bundle",
+        "Platform capability, trait/locale and configuration acceptance report"
+      ],
+      "acceptance_criteria": [
+        "The exact ADR-0002 OS/architecture/ABI executes natively; actual OS build, native compiler/runtime, stable rustc, source/tree, binary hashes, ICU data, locale and codepage identities are retained.",
+        "All applicable upstream-family tests, public capabilities, deterministic cases and retained minimized regressions run on this platform with default complete features.",
+        "Native C/C++/Win32/ICU trait configurations applicable to this target use same-host references; unavailable locale/codepage or feature coverage is explicit and prevents the affected obligation from closing.",
+        "All observable results, input-unit positions, error/resource outcomes and sharing contracts meet their ADRs, with zero unexplained semantic differences or unexecuted required obligations.",
+        "The native artifacts are durable and totals reconcile. Cross-platform equality is not imposed where the contract preserves platform semantics.",
+        "Research CI success, compilation-only, doctest zero cases or a development oracle alone is never substituted for this platform acceptance."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/research/assets/platforms/actions-39034545308-1/"
+      ],
+      "scope_boundary": "One native platform per ticket. Performance/memory thresholds are accepted separately by V31-V36; actual librime-rs integration and unpromised platforms remain outside this release scope.",
+      "target": "x86_64-pc-windows-msvc",
+      "baseline_os": "Windows Server 2025 x86-64 / MSVC"
+    },
+    {
+      "id": "V22",
+      "title": "Accept the complete library on Windows 11 ARM64 / MSVC",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close same-platform native functional acceptance for aarch64-pc-windows-msvc.",
+      "blocked_by": [
+        "V11",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_RESOURCE_THREAD_CONTRACT",
+        "X_DEFAULT_FEATURE_SURFACE",
+        "V12"
+      ],
+      "capability_rows": [
+        "platform.windows_arm64_msvc"
+      ],
+      "deliverables": [
+        "Native full-library/reference execution bundle",
+        "Platform capability, trait/locale and configuration acceptance report"
+      ],
+      "acceptance_criteria": [
+        "The exact ADR-0002 OS/architecture/ABI executes natively; actual OS build, native compiler/runtime, stable rustc, source/tree, binary hashes, ICU data, locale and codepage identities are retained.",
+        "All applicable upstream-family tests, public capabilities, deterministic cases and retained minimized regressions run on this platform with default complete features.",
+        "Native C/C++/Win32/ICU trait configurations applicable to this target use same-host references; unavailable locale/codepage or feature coverage is explicit and prevents the affected obligation from closing.",
+        "All observable results, input-unit positions, error/resource outcomes and sharing contracts meet their ADRs, with zero unexplained semantic differences or unexecuted required obligations.",
+        "The native artifacts are durable and totals reconcile. Cross-platform equality is not imposed where the contract preserves platform semantics.",
+        "Research CI success, compilation-only, doctest zero cases or a development oracle alone is never substituted for this platform acceptance."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/research/assets/platforms/actions-39034545308-1/"
+      ],
+      "scope_boundary": "One native platform per ticket. Performance/memory thresholds are accepted separately by V31-V36; actual librime-rs integration and unpromised platforms remain outside this release scope.",
+      "target": "aarch64-pc-windows-msvc",
+      "baseline_os": "Windows 11 ARM64 / MSVC"
+    },
+    {
+      "id": "V23",
+      "title": "Accept the complete library on Ubuntu 24.04 LTS x86-64 / glibc",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close same-platform native functional acceptance for x86_64-unknown-linux-gnu.",
+      "blocked_by": [
+        "V11",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_RESOURCE_THREAD_CONTRACT",
+        "X_DEFAULT_FEATURE_SURFACE"
+      ],
+      "capability_rows": [
+        "platform.linux_x64_glibc"
+      ],
+      "deliverables": [
+        "Native full-library/reference execution bundle",
+        "Platform capability, trait/locale and configuration acceptance report"
+      ],
+      "acceptance_criteria": [
+        "The exact ADR-0002 OS/architecture/ABI executes natively; actual OS build, native compiler/runtime, stable rustc, source/tree, binary hashes, ICU data, locale and codepage identities are retained.",
+        "All applicable upstream-family tests, public capabilities, deterministic cases and retained minimized regressions run on this platform with default complete features.",
+        "Native C/C++/Win32/ICU trait configurations applicable to this target use same-host references; unavailable locale/codepage or feature coverage is explicit and prevents the affected obligation from closing.",
+        "All observable results, input-unit positions, error/resource outcomes and sharing contracts meet their ADRs, with zero unexplained semantic differences or unexecuted required obligations.",
+        "The native artifacts are durable and totals reconcile. Cross-platform equality is not imposed where the contract preserves platform semantics.",
+        "Research CI success, compilation-only, doctest zero cases or a development oracle alone is never substituted for this platform acceptance."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/research/assets/platforms/actions-39034545308-1/"
+      ],
+      "scope_boundary": "One native platform per ticket. Performance/memory thresholds are accepted separately by V31-V36; actual librime-rs integration and unpromised platforms remain outside this release scope.",
+      "target": "x86_64-unknown-linux-gnu",
+      "baseline_os": "Ubuntu 24.04 LTS x86-64 / glibc"
+    },
+    {
+      "id": "V24",
+      "title": "Accept the complete library on Ubuntu 24.04 LTS ARM64 / glibc",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close same-platform native functional acceptance for aarch64-unknown-linux-gnu.",
+      "blocked_by": [
+        "V11",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_RESOURCE_THREAD_CONTRACT",
+        "X_DEFAULT_FEATURE_SURFACE"
+      ],
+      "capability_rows": [
+        "platform.linux_arm64_glibc"
+      ],
+      "deliverables": [
+        "Native full-library/reference execution bundle",
+        "Platform capability, trait/locale and configuration acceptance report"
+      ],
+      "acceptance_criteria": [
+        "The exact ADR-0002 OS/architecture/ABI executes natively; actual OS build, native compiler/runtime, stable rustc, source/tree, binary hashes, ICU data, locale and codepage identities are retained.",
+        "All applicable upstream-family tests, public capabilities, deterministic cases and retained minimized regressions run on this platform with default complete features.",
+        "Native C/C++/Win32/ICU trait configurations applicable to this target use same-host references; unavailable locale/codepage or feature coverage is explicit and prevents the affected obligation from closing.",
+        "All observable results, input-unit positions, error/resource outcomes and sharing contracts meet their ADRs, with zero unexplained semantic differences or unexecuted required obligations.",
+        "The native artifacts are durable and totals reconcile. Cross-platform equality is not imposed where the contract preserves platform semantics.",
+        "Research CI success, compilation-only, doctest zero cases or a development oracle alone is never substituted for this platform acceptance."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/research/assets/platforms/actions-39034545308-1/"
+      ],
+      "scope_boundary": "One native platform per ticket. Performance/memory thresholds are accepted separately by V31-V36; actual librime-rs integration and unpromised platforms remain outside this release scope.",
+      "target": "aarch64-unknown-linux-gnu",
+      "baseline_os": "Ubuntu 24.04 LTS ARM64 / glibc"
+    },
+    {
+      "id": "V25",
+      "title": "Accept the complete library on macOS 15 Intel",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close same-platform native functional acceptance for x86_64-apple-darwin.",
+      "blocked_by": [
+        "V11",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_RESOURCE_THREAD_CONTRACT",
+        "X_DEFAULT_FEATURE_SURFACE"
+      ],
+      "capability_rows": [
+        "platform.macos_intel"
+      ],
+      "deliverables": [
+        "Native full-library/reference execution bundle",
+        "Platform capability, trait/locale and configuration acceptance report"
+      ],
+      "acceptance_criteria": [
+        "The exact ADR-0002 OS/architecture/ABI executes natively; actual OS build, native compiler/runtime, stable rustc, source/tree, binary hashes, ICU data, locale and codepage identities are retained.",
+        "All applicable upstream-family tests, public capabilities, deterministic cases and retained minimized regressions run on this platform with default complete features.",
+        "Native C/C++/Win32/ICU trait configurations applicable to this target use same-host references; unavailable locale/codepage or feature coverage is explicit and prevents the affected obligation from closing.",
+        "All observable results, input-unit positions, error/resource outcomes and sharing contracts meet their ADRs, with zero unexplained semantic differences or unexecuted required obligations.",
+        "The native artifacts are durable and totals reconcile. Cross-platform equality is not imposed where the contract preserves platform semantics.",
+        "Research CI success, compilation-only, doctest zero cases or a development oracle alone is never substituted for this platform acceptance."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/research/assets/platforms/actions-39034545308-1/"
+      ],
+      "scope_boundary": "One native platform per ticket. Performance/memory thresholds are accepted separately by V31-V36; actual librime-rs integration and unpromised platforms remain outside this release scope.",
+      "target": "x86_64-apple-darwin",
+      "baseline_os": "macOS 15 Intel"
+    },
+    {
+      "id": "V26",
+      "title": "Accept the complete library on macOS 15 Apple Silicon",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close same-platform native functional acceptance for aarch64-apple-darwin.",
+      "blocked_by": [
+        "V11",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_RESOURCE_THREAD_CONTRACT",
+        "X_DEFAULT_FEATURE_SURFACE"
+      ],
+      "capability_rows": [
+        "platform.macos_arm64"
+      ],
+      "deliverables": [
+        "Native full-library/reference execution bundle",
+        "Platform capability, trait/locale and configuration acceptance report"
+      ],
+      "acceptance_criteria": [
+        "The exact ADR-0002 OS/architecture/ABI executes natively; actual OS build, native compiler/runtime, stable rustc, source/tree, binary hashes, ICU data, locale and codepage identities are retained.",
+        "All applicable upstream-family tests, public capabilities, deterministic cases and retained minimized regressions run on this platform with default complete features.",
+        "Native C/C++/Win32/ICU trait configurations applicable to this target use same-host references; unavailable locale/codepage or feature coverage is explicit and prevents the affected obligation from closing.",
+        "All observable results, input-unit positions, error/resource outcomes and sharing contracts meet their ADRs, with zero unexplained semantic differences or unexecuted required obligations.",
+        "The native artifacts are durable and totals reconcile. Cross-platform equality is not imposed where the contract preserves platform semantics.",
+        "Research CI success, compilation-only, doctest zero cases or a development oracle alone is never substituted for this platform acceptance."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/research/assets/platforms/actions-39034545308-1/"
+      ],
+      "scope_boundary": "One native platform per ticket. Performance/memory thresholds are accepted separately by V31-V36; actual librime-rs integration and unpromised platforms remain outside this release scope.",
+      "target": "aarch64-apple-darwin",
+      "baseline_os": "macOS 15 Apple Silicon"
+    },
+    {
+      "id": "V27",
+      "title": "Freeze the six-platform performance and memory measurement protocol",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Turn the approved thresholds into an executable predeclared workload, lifecycle and measurement specification.",
+      "blocked_by": [
+        "V03",
+        "X_DEFAULT_FEATURE_SURFACE"
+      ],
+      "capability_rows": [
+        "documentation.performance_protocol",
+        "performance.short_inputs",
+        "performance.large_inputs",
+        "performance.backtracking_inputs",
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "Versioned benchmark manifest and measurement/reporting protocol",
+        "Tracked timing harness with a bounded calibration tracer"
+      ],
+      "acceptance_criteria": [
+        "Every workload is assigned before results to compile, ordinary search, ordinary capture, ordinary replacement, complex syntax or Unicode; short, large and high-backtracking obligations have explicit applicable bins.",
+        "The accepted time gates remain 1.5x for ordinary search/capture/replacement and 2x for compile/complex/Unicode; engine working memory remains at most 2x corresponding Boost working memory plus 65536 bytes.",
+        "Inputs, requested outputs, compile/match lifecycle, reuse, result retention, memory domains, warmup, interleaving, batch count/duration, estimator, noise/outlier rules and timeout handling are fixed before acceptance measurements.",
+        "Input/output/shared-data allocations and native allocations are separately attributed; RSS or total host RAM alone is not labeled engine working memory.",
+        "Every platform/workload is judged separately; averaging cannot hide a failure and failed workloads cannot be reclassified after measurement.",
+        "Unapproved historical proposals, including a +256 KiB output-memory gate or particular fuzz/timing batch budgets, are not promoted to requirements. Any additional metric is clearly informational or separately decided."
+      ],
+      "source_refs": [
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md",
+        "docs/research/resource-and-validation-proposal.md"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V28",
+      "title": "Calibrate comparable engine working-memory measurement on Windows MSVC",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Deliver and calibrate the memory measurement path for both accepted native architectures of Windows MSVC.",
+      "blocked_by": [
+        "V27",
+        "V21",
+        "V22"
+      ],
+      "capability_rows": [
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "Tracked native/Rust allocation measurement adapter",
+        "Both-architecture calibration and allocation-domain evidence"
+      ],
+      "acceptance_criteria": [
+        "Both baseline architectures run allocation calibration cases with known allocation/free/reallocation/lifetime patterns, and the measured counters reconcile with the declared domain.",
+        "The same defined compiled-state and temporary-work domains are covered for Boost and Rust, including applicable native allocations and shared/cache treatment.",
+        "Peak engine working memory is reproducible under the frozen protocol; output/input/shared-data totals are reported separately where outside that domain.",
+        "Instrumentation overhead and unsupported allocation paths are measured and disclosed; an incomplete measurement path cannot produce a passing memory claim.",
+        "The adapter is usable by every V31-V36 workload and retains raw per-run memory observations."
+      ],
+      "source_refs": [
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md"
+      ],
+      "scope_boundary": "This accepts the measurement mechanism for one OS family, not the performance of the regex implementation."
+    },
+    {
+      "id": "V29",
+      "title": "Calibrate comparable engine working-memory measurement on Linux glibc",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Deliver and calibrate the memory measurement path for both accepted native architectures of Linux glibc.",
+      "blocked_by": [
+        "V27",
+        "V23",
+        "V24"
+      ],
+      "capability_rows": [
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "Tracked native/Rust allocation measurement adapter",
+        "Both-architecture calibration and allocation-domain evidence"
+      ],
+      "acceptance_criteria": [
+        "Both baseline architectures run allocation calibration cases with known allocation/free/reallocation/lifetime patterns, and the measured counters reconcile with the declared domain.",
+        "The same defined compiled-state and temporary-work domains are covered for Boost and Rust, including applicable native allocations and shared/cache treatment.",
+        "Peak engine working memory is reproducible under the frozen protocol; output/input/shared-data totals are reported separately where outside that domain.",
+        "Instrumentation overhead and unsupported allocation paths are measured and disclosed; an incomplete measurement path cannot produce a passing memory claim.",
+        "The adapter is usable by every V31-V36 workload and retains raw per-run memory observations."
+      ],
+      "source_refs": [
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md"
+      ],
+      "scope_boundary": "This accepts the measurement mechanism for one OS family, not the performance of the regex implementation."
+    },
+    {
+      "id": "V30",
+      "title": "Calibrate comparable engine working-memory measurement on macOS",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Deliver and calibrate the memory measurement path for both accepted native architectures of macOS.",
+      "blocked_by": [
+        "V27",
+        "V25",
+        "V26"
+      ],
+      "capability_rows": [
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "Tracked native/Rust allocation measurement adapter",
+        "Both-architecture calibration and allocation-domain evidence"
+      ],
+      "acceptance_criteria": [
+        "Both baseline architectures run allocation calibration cases with known allocation/free/reallocation/lifetime patterns, and the measured counters reconcile with the declared domain.",
+        "The same defined compiled-state and temporary-work domains are covered for Boost and Rust, including applicable native allocations and shared/cache treatment.",
+        "Peak engine working memory is reproducible under the frozen protocol; output/input/shared-data totals are reported separately where outside that domain.",
+        "Instrumentation overhead and unsupported allocation paths are measured and disclosed; an incomplete measurement path cannot produce a passing memory claim.",
+        "The adapter is usable by every V31-V36 workload and retains raw per-run memory observations."
+      ],
+      "source_refs": [
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md"
+      ],
+      "scope_boundary": "This accepts the measurement mechanism for one OS family, not the performance of the regex implementation."
+    },
+    {
+      "id": "V31",
+      "title": "Accept compilation time and working memory on all six native baselines",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close the fixed performance and memory gates for compile lifecycle, compiled state and compile temporary work.",
+      "blocked_by": [
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "V29",
+        "V30",
+        "X_STABLE_BENCH_HOSTS"
+      ],
+      "capability_rows": [
+        "performance.compile",
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "All-six-platform raw interleaved time/memory batches for this workload family",
+        "Per-workload/platform acceptance table and reproducible measurement commands"
+      ],
+      "acceptance_criteria": [
+        "All predeclared workloads and applicable short/large/adversarial bins execute with equal inputs, requested results and lifecycle on same-environment Rust and Boost.",
+        "Each platform/workload satisfies the frozen estimator time ratio <= 2.0 and engine working memory <= 2 * corresponding Boost engine working memory + 65536 bytes.",
+        "The measurement environments meet V27 qualification; incomplete, timed-out or invalid/noisy batches are retained and cannot yield acceptance.",
+        "Raw batches, calibration, binary/source/data identities and result checks are durable. Historical Boost-only timing CSVs are not used as Rust time or memory evidence.",
+        "No cross-platform or cross-workload average, output mismatch, altered workload or after-the-fact category change can close a failed cell; all required cells pass."
+      ],
+      "source_refs": [
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md"
+      ],
+      "scope_boundary": "One workload family across six established native measurement paths. If an optimization is needed, its capability ticket owns the code change and this acceptance remains open.",
+      "thresholds": {
+        "max_time_ratio": 2.0,
+        "max_working_memory_ratio": 2.0,
+        "working_memory_allowance_bytes": 65536
+      }
+    },
+    {
+      "id": "V32",
+      "title": "Accept ordinary search time and working memory on all six native baselines",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close the fixed performance and memory gates for ordinary search with the exact requested match/no-match result and reuse lifecycle.",
+      "blocked_by": [
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "V29",
+        "V30",
+        "X_STABLE_BENCH_HOSTS"
+      ],
+      "capability_rows": [
+        "performance.ordinary_search",
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "All-six-platform raw interleaved time/memory batches for this workload family",
+        "Per-workload/platform acceptance table and reproducible measurement commands"
+      ],
+      "acceptance_criteria": [
+        "All predeclared workloads and applicable short/large/adversarial bins execute with equal inputs, requested results and lifecycle on same-environment Rust and Boost.",
+        "Each platform/workload satisfies the frozen estimator time ratio <= 1.5 and engine working memory <= 2 * corresponding Boost engine working memory + 65536 bytes.",
+        "The measurement environments meet V27 qualification; incomplete, timed-out or invalid/noisy batches are retained and cannot yield acceptance.",
+        "Raw batches, calibration, binary/source/data identities and result checks are durable. Historical Boost-only timing CSVs are not used as Rust time or memory evidence.",
+        "No cross-platform or cross-workload average, output mismatch, altered workload or after-the-fact category change can close a failed cell; all required cells pass."
+      ],
+      "source_refs": [
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md"
+      ],
+      "scope_boundary": "One workload family across six established native measurement paths. If an optimization is needed, its capability ticket owns the code change and this acceptance remains open.",
+      "thresholds": {
+        "max_time_ratio": 1.5,
+        "max_working_memory_ratio": 2.0,
+        "working_memory_allowance_bytes": 65536
+      }
+    },
+    {
+      "id": "V33",
+      "title": "Accept ordinary capture time and working memory on all six native baselines",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close the fixed performance and memory gates for ordinary capture extraction with all requested captures and retention lifetimes.",
+      "blocked_by": [
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "V29",
+        "V30",
+        "X_STABLE_BENCH_HOSTS"
+      ],
+      "capability_rows": [
+        "performance.ordinary_captures",
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "All-six-platform raw interleaved time/memory batches for this workload family",
+        "Per-workload/platform acceptance table and reproducible measurement commands"
+      ],
+      "acceptance_criteria": [
+        "All predeclared workloads and applicable short/large/adversarial bins execute with equal inputs, requested results and lifecycle on same-environment Rust and Boost.",
+        "Each platform/workload satisfies the frozen estimator time ratio <= 1.5 and engine working memory <= 2 * corresponding Boost engine working memory + 65536 bytes.",
+        "The measurement environments meet V27 qualification; incomplete, timed-out or invalid/noisy batches are retained and cannot yield acceptance.",
+        "Raw batches, calibration, binary/source/data identities and result checks are durable. Historical Boost-only timing CSVs are not used as Rust time or memory evidence.",
+        "No cross-platform or cross-workload average, output mismatch, altered workload or after-the-fact category change can close a failed cell; all required cells pass."
+      ],
+      "source_refs": [
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md"
+      ],
+      "scope_boundary": "One workload family across six established native measurement paths. If an optimization is needed, its capability ticket owns the code change and this acceptance remains open.",
+      "thresholds": {
+        "max_time_ratio": 1.5,
+        "max_working_memory_ratio": 2.0,
+        "working_memory_allowance_bytes": 65536
+      }
+    },
+    {
+      "id": "V34",
+      "title": "Accept ordinary replacement time and working memory on all six native baselines",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close the fixed performance and memory gates for ordinary replacement with exact output semantics and the declared output accounting.",
+      "blocked_by": [
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "V29",
+        "V30",
+        "X_STABLE_BENCH_HOSTS"
+      ],
+      "capability_rows": [
+        "performance.ordinary_replace",
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "All-six-platform raw interleaved time/memory batches for this workload family",
+        "Per-workload/platform acceptance table and reproducible measurement commands"
+      ],
+      "acceptance_criteria": [
+        "All predeclared workloads and applicable short/large/adversarial bins execute with equal inputs, requested results and lifecycle on same-environment Rust and Boost.",
+        "Each platform/workload satisfies the frozen estimator time ratio <= 1.5 and engine working memory <= 2 * corresponding Boost engine working memory + 65536 bytes.",
+        "The measurement environments meet V27 qualification; incomplete, timed-out or invalid/noisy batches are retained and cannot yield acceptance.",
+        "Raw batches, calibration, binary/source/data identities and result checks are durable. Historical Boost-only timing CSVs are not used as Rust time or memory evidence.",
+        "No cross-platform or cross-workload average, output mismatch, altered workload or after-the-fact category change can close a failed cell; all required cells pass."
+      ],
+      "source_refs": [
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md"
+      ],
+      "scope_boundary": "One workload family across six established native measurement paths. If an optimization is needed, its capability ticket owns the code change and this acceptance remains open.",
+      "thresholds": {
+        "max_time_ratio": 1.5,
+        "max_working_memory_ratio": 2.0,
+        "working_memory_allowance_bytes": 65536
+      }
+    },
+    {
+      "id": "V35",
+      "title": "Accept complex syntax time and working memory on all six native baselines",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close the fixed performance and memory gates for preclassified complex/control-flow/backreference/assertion and applicable high-backtracking workloads.",
+      "blocked_by": [
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "V29",
+        "V30",
+        "X_STABLE_BENCH_HOSTS"
+      ],
+      "capability_rows": [
+        "performance.complex_syntax",
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "All-six-platform raw interleaved time/memory batches for this workload family",
+        "Per-workload/platform acceptance table and reproducible measurement commands"
+      ],
+      "acceptance_criteria": [
+        "All predeclared workloads and applicable short/large/adversarial bins execute with equal inputs, requested results and lifecycle on same-environment Rust and Boost.",
+        "Each platform/workload satisfies the frozen estimator time ratio <= 2.0 and engine working memory <= 2 * corresponding Boost engine working memory + 65536 bytes.",
+        "The measurement environments meet V27 qualification; incomplete, timed-out or invalid/noisy batches are retained and cannot yield acceptance.",
+        "Raw batches, calibration, binary/source/data identities and result checks are durable. Historical Boost-only timing CSVs are not used as Rust time or memory evidence.",
+        "No cross-platform or cross-workload average, output mismatch, altered workload or after-the-fact category change can close a failed cell; all required cells pass."
+      ],
+      "source_refs": [
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md"
+      ],
+      "scope_boundary": "One workload family across six established native measurement paths. If an optimization is needed, its capability ticket owns the code change and this acceptance remains open.",
+      "thresholds": {
+        "max_time_ratio": 2.0,
+        "max_working_memory_ratio": 2.0,
+        "working_memory_allowance_bytes": 65536
+      }
+    },
+    {
+      "id": "V36",
+      "title": "Accept Unicode and locale behavior time and working memory on all six native baselines",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close the fixed performance and memory gates for preclassified Unicode/locale operations, including complex Unicode capture/replacement where declared.",
+      "blocked_by": [
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "V29",
+        "V30",
+        "X_STABLE_BENCH_HOSTS"
+      ],
+      "capability_rows": [
+        "performance.unicode",
+        "performance.engine_working_memory"
+      ],
+      "deliverables": [
+        "All-six-platform raw interleaved time/memory batches for this workload family",
+        "Per-workload/platform acceptance table and reproducible measurement commands"
+      ],
+      "acceptance_criteria": [
+        "All predeclared workloads and applicable short/large/adversarial bins execute with equal inputs, requested results and lifecycle on same-environment Rust and Boost.",
+        "Each platform/workload satisfies the frozen estimator time ratio <= 2.0 and engine working memory <= 2 * corresponding Boost engine working memory + 65536 bytes.",
+        "The measurement environments meet V27 qualification; incomplete, timed-out or invalid/noisy batches are retained and cannot yield acceptance.",
+        "Raw batches, calibration, binary/source/data identities and result checks are durable. Historical Boost-only timing CSVs are not used as Rust time or memory evidence.",
+        "No cross-platform or cross-workload average, output mismatch, altered workload or after-the-fact category change can close a failed cell; all required cells pass."
+      ],
+      "source_refs": [
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/research/performance-baseline.md"
+      ],
+      "scope_boundary": "One workload family across six established native measurement paths. If an optimization is needed, its capability ticket owns the code change and this acceptance remains open.",
+      "thresholds": {
+        "max_time_ratio": 2.0,
+        "max_working_memory_ratio": 2.0,
+        "working_memory_allowance_bytes": 65536
+      }
+    },
+    {
+      "id": "V37",
+      "title": "Resolve Sonar findings at their actual trust and code boundaries",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Complete an evidence-backed disposition or source fix for the observed issue inventory, preserving real CLI authority and behavior.",
+      "blocked_by": [
+        "X_SONAR_ISSUE_CONTROL"
+      ],
+      "capability_rows": [
+        "validation.sonar_quality_gate"
+      ],
+      "deliverables": [
+        "Issue-by-issue rule/flow/source disposition ledger",
+        "Scoped code fixes or documented permitted false-positive dispositions with regression evidence"
+      ],
+      "acceptance_criteria": [
+        "The current full issue/rule/flow inventory is retrieved and attributed to its actual analysis; the observed 89-open-issue / 18-security-flow snapshot is retained as historical evidence, not assumed current forever.",
+        "Each issue records the actual source, sink, caller authority and rule rationale; same-permission developer CLI paths and argv-based subprocesses are assessed on their real boundaries.",
+        "Actual defects are fixed with a targeted behavior check; false positives have concrete flow/source justification and an authorized service disposition if one is needed.",
+        "No repository-only path jail, arbitrary compiler allowlist, NOSONAR blanket, test/source exclusion or weakened gate is introduced solely to silence generic annotations.",
+        "Missing rule detail or issue-management permission remains explicit. A read-only authentication response or local explanation is not presented as a completed remote disposition."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "tools/quality/README.md",
+        "docs/research/assets/sonarcloud/"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V38",
+      "title": "Establish whole-library Rust-capable quality analysis",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Deliver one correctly scoped quality path for the actual Rust library, reference C++ and Python tooling.",
+      "blocked_by": [
+        "X_DEFAULT_FEATURE_SURFACE",
+        "X_SONAR_ANALYSIS_CONTROL"
+      ],
+      "capability_rows": [
+        "validation.sonar_quality_gate"
+      ],
+      "deliverables": [
+        "Tracked full-library quality commands and one Sonar CI analysis configuration",
+        "Documented automatic-to-CI migration and coverage/import scope"
+      ],
+      "acceptance_criteria": [
+        "Formatting, warnings-as-errors linting, executable tests, documentation and applicable Python/C++ checks cover the whole implemented library and active tooling, not only the research crate.",
+        "The selected supported scanner actually analyzes Rust and uses the real C++17/Python/toolchain configuration; imported coverage, if required by the configured gate, has a reproducible source and correct file paths.",
+        "There is one deliberate project analysis mode; automatic analysis is not left racing CI analysis and credentials are handled by the authorized environment.",
+        "Source/test/data/fixture classification reflects their real purpose, and new functionality is not hidden by exclusions or a changed quality threshold.",
+        "A bounded real analysis produces identifiable project/branch/commit/analysis metadata and retained logs; inability to configure the project or execute analysis remains blocked."
+      ],
+      "source_refs": [
+        "tools/quality/README.md",
+        ".sonarcloud.properties",
+        "docs/research/assets/sonarcloud/"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V39",
+      "title": "Obtain and archive the remote quality gate for the exact candidate",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Close the real server-side gate with unambiguous source attribution after fixes and the analysis path are complete.",
+      "blocked_by": [
+        "V37",
+        "V38"
+      ],
+      "capability_rows": [
+        "validation.sonar_quality_gate"
+      ],
+      "deliverables": [
+        "Exact-candidate remote analysis/gate/check evidence",
+        "Complete issue/gate response archive and final quality status"
+      ],
+      "acceptance_criteria": [
+        "The actual remote analysis is associated with the exact candidate commit/tree and the matching GitHub check, with analysis/task identifiers and collection timestamps.",
+        "The server reports the configured gate passed, including required new-code Security Rating A and every other configured condition; local tests or a successful evidence-collection job are not substituted.",
+        "Live-PR unpinned API responses remain marked unverified for the requested historical commit unless a real analysis association is established.",
+        "The older Security Rating E failure, annotations and later observations remain intact. No existing failed snapshot is rewritten as a passed run.",
+        "The collected raw evidence and final report are durable and reproducible without exposing credentials."
+      ],
+      "source_refs": [
+        "tools/quality/README.md",
+        "docs/research/assets/sonarcloud/"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V40",
+      "title": "Complete public API documentation and executable examples",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Make the full standalone Rust interface usable from its published documentation and tested examples.",
+      "blocked_by": [
+        "X_CORE_RUNTIME",
+        "X_API_RESULTS",
+        "X_API_STREAM_FORMAT",
+        "X_INPUT_POSITIONS",
+        "X_UNICODE_COLLATION",
+        "X_NATIVE_CUSTOM_TRAITS",
+        "X_RESOURCE_THREAD_CONTRACT",
+        "X_DEFAULT_FEATURE_SURFACE"
+      ],
+      "capability_rows": [
+        "documentation.public_api",
+        "documentation.examples"
+      ],
+      "deliverables": [
+        "Complete public API documentation with Rust-native usage examples",
+        "Executed example/doctest results and public-capability links"
+      ],
+      "acceptance_criteria": [
+        "Every public capability has documentation for its inputs, options, outputs, error semantics, positions, ownership and any platform/feature requirements.",
+        "Examples exercise byte/UTF interfaces, captures, iteration, formatting/replacement, locale/custom traits and explicit resource handling as applicable.",
+        "Position units, half-open ranges, arbitrary-byte validity, partial delivery, sharing constraints, getloc/imbue behavior and the exact ADR-0005 exception are accurately described.",
+        "Examples compile and execute against the real default library; actual nonzero example/doctest cases are reported separately from build-only or zero-case doctest success.",
+        "No placeholder or research-only API is presented as the completed standalone implementation."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V41",
+      "title": "Complete source, data and dependency license attribution",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Make the distributable source/data package carry the actual required notices and a reviewable provenance inventory.",
+      "blocked_by": [
+        "V01",
+        "X_DEFAULT_FEATURE_SURFACE"
+      ],
+      "capability_rows": [
+        "documentation.licenses"
+      ],
+      "deliverables": [
+        "Source/data/dependency provenance and license inventory",
+        "Correct license/NOTICE files and package inclusion report"
+      ],
+      "acceptance_criteria": [
+        "All shipped copied/adapted Boost, ICU, Unicode/CLDR and other third-party material is identified with exact source/version and applicable license/notice text.",
+        "Generated full data artifacts link to their source identity and reproducible generation chain; runtime dependencies and development-only native references are clearly distinguished.",
+        "The actual package includes required notices and license files for every shipped component, including compressed/split data or evidence artifacts where applicable.",
+        "No unreviewed third-party material, unexplained provenance or missing required notice remains in the candidate distribution.",
+        "The check examines the assembled package contents, not only the repository README."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "AGENTS.md"
+      ],
+      "scope_boundary": "Evidence closes only this ticket and its explicitly mapped capability obligations; implementation fixes remain in the responsible capability tickets."
+    },
+    {
+      "id": "V42",
+      "title": "Publish the final compatibility and reproduction documentation in the repository",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Reconcile the full behavior claim, exceptions, build instructions and measured acceptance against the actual finished evidence.",
+      "blocked_by": [
+        "V02",
+        "V11",
+        "V12",
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V31",
+        "V32",
+        "V33",
+        "V34",
+        "V35",
+        "V36",
+        "V39",
+        "V40",
+        "V41"
+      ],
+      "capability_rows": [
+        "documentation.compatibility",
+        "documentation.approved_exceptions",
+        "documentation.build_test_instructions",
+        "documentation.performance_protocol"
+      ],
+      "deliverables": [
+        "Final compatibility and acceptance report",
+        "Complete source/data/build/test/benchmark reproduction instructions and evidence index"
+      ],
+      "acceptance_criteria": [
+        "All capability rows have their implementation, test, evidence and platform status reconciled; not-implemented, unverified or unavailable work is not relabeled an approved exception.",
+        "Every known semantic difference is fixed or has an individual authorized ADR/decision; default-locale querying and true-empty IDENTICAL are documented with their exact existing boundaries.",
+        "Historical failures, original native crashes, failed/incomplete locale runs and research-only passes remain attributable, separate from final full-library results.",
+        "Build, data regeneration, full-result comparison, native platform and measurement instructions reproduce the actual candidate with explicit dependencies and raw-artifact locations.",
+        "The report states the six platform and per-class time/memory results and residual validation limits; finite tests are not described as proof for arbitrary strings."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Repository documentation only. This does not authorize a release, merge to main, package publication or librime-rs integration."
+    },
+    {
+      "id": "V43",
+      "title": "Accept a clean checkout and the assembled standalone package",
+      "status": "planned",
+      "owner_lane": "validation",
+      "objective": "Perform the final bounded installation/package acceptance and reconcile all existing gate evidence to the exact candidate.",
+      "blocked_by": [
+        "V01",
+        "V02",
+        "V11",
+        "V12",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V31",
+        "V32",
+        "V33",
+        "V34",
+        "V35",
+        "V36",
+        "V39",
+        "V40",
+        "V41",
+        "V42",
+        "X_DEFAULT_FEATURE_SURFACE"
+      ],
+      "capability_rows": [
+        "validation.clean_checkout"
+      ],
+      "deliverables": [
+        "Clean-checkout and assembled-package acceptance transcript",
+        "Final candidate source/binary/data/evidence manifest"
+      ],
+      "acceptance_criteria": [
+        "A clean candidate checkout without historical target caches regenerates or verifies required data, builds the standalone library and executes the documented bounded public consumer examples.",
+        "The default package contains complete promised functionality/data; each declared reduced configuration has its own explicit supported behavior and verification.",
+        "The production dependency/build audit confirms stable Rust and no C/C++/ICU runtime library dependency; allowed OS APIs and development reference dependencies are accurately separated.",
+        "The assembled package contains required source, generated data, documentation and licenses and can be consumed by a separate minimal Rust client using the documented API.",
+        "All mandatory capability, upstream, fuzz, six-native-platform, time/memory and remote-quality evidence refers to the candidate or has a precise unchanged-source/binary/data applicability explanation; stale results never silently close changed code.",
+        "All required gates are passed or a specific already-authorized exception applies. Missing hosts, unexecuted coverage, inaccessible reference sources or unresolved differences keep acceptance open."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "docs/adr/0005-icu-locale-query-and-empty-sort-key.md",
+        "docs/development/capability-matrix.json"
+      ],
+      "scope_boundary": "Final integration and package verification only. Reuse valid immutable evidence; rerun only changed or concretely at-risk obligations. Do not merge, release or publish a package as part of this ticket."
+    }
+  ],
+  "upstream_assignments": [
+    {
+      "capability_id": "upstream_test.quick_cpp",
+      "source_path": "test/quick.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/quick.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_basic_tests_cpp",
+      "source_path": "test/regress/basic_tests.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/basic_tests.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_alt_cpp",
+      "source_path": "test/regress/test_alt.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_alt.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_anchors_cpp",
+      "source_path": "test/regress/test_anchors.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_anchors.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_emacs_cpp",
+      "source_path": "test/regress/test_emacs.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_emacs.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_escapes_cpp",
+      "source_path": "test/regress/test_escapes.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_escapes.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_operators_cpp",
+      "source_path": "test/regress/test_operators.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_operators.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_sets_cpp",
+      "source_path": "test/regress/test_sets.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_sets.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_simple_repeats_cpp",
+      "source_path": "test/regress/test_simple_repeats.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_simple_repeats.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_non_greedy_repeats_cpp",
+      "source_path": "test/regress/test_non_greedy_repeats.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_non_greedy_repeats.cpp",
+      "applicability_owner_ticket": "V04",
+      "port_owner_ticket": "V04",
+      "test_owner_ticket": "V04",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_asserts_cpp",
+      "source_path": "test/regress/test_asserts.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_asserts.cpp",
+      "applicability_owner_ticket": "V05",
+      "port_owner_ticket": "V05",
+      "test_owner_ticket": "V05",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_backrefs_cpp",
+      "source_path": "test/regress/test_backrefs.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_backrefs.cpp",
+      "applicability_owner_ticket": "V05",
+      "port_owner_ticket": "V05",
+      "test_owner_ticket": "V05",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_perl_ex_cpp",
+      "source_path": "test/regress/test_perl_ex.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_perl_ex.cpp",
+      "applicability_owner_ticket": "V05",
+      "port_owner_ticket": "V05",
+      "test_owner_ticket": "V05",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_tricky_cases_cpp",
+      "source_path": "test/regress/test_tricky_cases.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_tricky_cases.cpp",
+      "applicability_owner_ticket": "V05",
+      "port_owner_ticket": "V05",
+      "test_owner_ticket": "V05",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.issue227_cpp",
+      "source_path": "test/issue227.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/issue227.cpp",
+      "applicability_owner_ticket": "V05",
+      "port_owner_ticket": "V05",
+      "test_owner_ticket": "V05",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.issue232_cpp",
+      "source_path": "test/issue232.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/issue232.cpp",
+      "applicability_owner_ticket": "V05",
+      "port_owner_ticket": "V05",
+      "test_owner_ticket": "V05",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.issue244_cpp",
+      "source_path": "test/issue244.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/issue244.cpp",
+      "applicability_owner_ticket": "V05",
+      "port_owner_ticket": "V05",
+      "test_owner_ticket": "V05",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.issue245_cpp",
+      "source_path": "test/issue245.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/issue245.cpp",
+      "applicability_owner_ticket": "V05",
+      "port_owner_ticket": "V05",
+      "test_owner_ticket": "V05",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.captures_captures_test_cpp",
+      "source_path": "test/captures/captures_test.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/captures/captures_test.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.named_subexpressions_named_subexpressions_test_cpp",
+      "source_path": "test/named_subexpressions/named_subexpressions_test.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/named_subexpressions/named_subexpressions_test.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_partial_regex_grep_cpp",
+      "source_path": "test/module/partial_regex_grep.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/partial_regex_grep.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_partial_regex_iterate_cpp",
+      "source_path": "test/module/partial_regex_iterate.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/partial_regex_iterate.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_partial_regex_match_cpp",
+      "source_path": "test/module/partial_regex_match.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/partial_regex_match.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_grep_example_1_cpp",
+      "source_path": "test/module/regex_grep_example_1.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_grep_example_1.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_grep_example_2_cpp",
+      "source_path": "test/module/regex_grep_example_2.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_grep_example_2.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_grep_example_3_cpp",
+      "source_path": "test/module/regex_grep_example_3.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_grep_example_3.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_iterator_example_cpp",
+      "source_path": "test/module/regex_iterator_example.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_iterator_example.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_match_example_cpp",
+      "source_path": "test/module/regex_match_example.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_match_example.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_search_example_cpp",
+      "source_path": "test/module/regex_search_example.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_search_example.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_token_iterator_eg_1_cpp",
+      "source_path": "test/module/regex_token_iterator_eg_1.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_token_iterator_eg_1.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_token_iterator_eg_2_cpp",
+      "source_path": "test/module/regex_token_iterator_eg_2.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_token_iterator_eg_2.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_overloads_cpp",
+      "source_path": "test/regress/test_overloads.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_overloads.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_grep_cpp",
+      "source_path": "test/regress/test_grep.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_grep.cpp",
+      "applicability_owner_ticket": "V06",
+      "port_owner_ticket": "V06",
+      "test_owner_ticket": "V06",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_credit_card_example_cpp",
+      "source_path": "test/module/credit_card_example.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/credit_card_example.cpp",
+      "applicability_owner_ticket": "V07",
+      "port_owner_ticket": "V07",
+      "test_owner_ticket": "V07",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_merge_example_cpp",
+      "source_path": "test/module/regex_merge_example.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_merge_example.cpp",
+      "applicability_owner_ticket": "V07",
+      "port_owner_ticket": "V07",
+      "test_owner_ticket": "V07",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_replace_example_cpp",
+      "source_path": "test/module/regex_replace_example.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_replace_example.cpp",
+      "applicability_owner_ticket": "V07",
+      "port_owner_ticket": "V07",
+      "test_owner_ticket": "V07",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_split_example_1_cpp",
+      "source_path": "test/module/regex_split_example_1.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_split_example_1.cpp",
+      "applicability_owner_ticket": "V07",
+      "port_owner_ticket": "V07",
+      "test_owner_ticket": "V07",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.module_regex_split_example_2_cpp",
+      "source_path": "test/module/regex_split_example_2.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/module/regex_split_example_2.cpp",
+      "applicability_owner_ticket": "V07",
+      "port_owner_ticket": "V07",
+      "test_owner_ticket": "V07",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_replace_cpp",
+      "source_path": "test/regress/test_replace.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_replace.cpp",
+      "applicability_owner_ticket": "V07",
+      "port_owner_ticket": "V07",
+      "test_owner_ticket": "V07",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_deprecated_cpp",
+      "source_path": "test/regress/test_deprecated.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_deprecated.cpp",
+      "applicability_owner_ticket": "V07",
+      "port_owner_ticket": "V07",
+      "test_owner_ticket": "V07",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.c_compiler_checks_posix_api_check_cpp",
+      "source_path": "test/c_compiler_checks/posix_api_check.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/c_compiler_checks/posix_api_check.cpp",
+      "applicability_owner_ticket": "V07",
+      "port_owner_ticket": "V07",
+      "test_owner_ticket": "V07",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.c_compiler_checks_wide_posix_api_check_cpp",
+      "source_path": "test/c_compiler_checks/wide_posix_api_check.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/c_compiler_checks/wide_posix_api_check.cpp",
+      "applicability_owner_ticket": "V07",
+      "port_owner_ticket": "V07",
+      "test_owner_ticket": "V07",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.collate_info_collate_info_cpp",
+      "source_path": "test/collate_info/collate_info.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/collate_info/collate_info.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.concepts_icu_concept_check_cpp",
+      "source_path": "test/concepts/icu_concept_check.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/concepts/icu_concept_check.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.concepts_test_bug_11988_cpp",
+      "source_path": "test/concepts/test_bug_11988.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/concepts/test_bug_11988.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.quick_icu_cpp",
+      "source_path": "test/quick_icu.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/quick_icu.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_icu_cpp",
+      "source_path": "test/regress/test_icu.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_icu.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_locale_cpp",
+      "source_path": "test/regress/test_locale.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_locale.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_unicode_cpp",
+      "source_path": "test/regress/test_unicode.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_unicode.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_wmain_cpp",
+      "source_path": "test/regress/wmain.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/wmain.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.unicode_unicode_casefold_test_cpp",
+      "source_path": "test/unicode/unicode_casefold_test.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/unicode/unicode_casefold_test.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.unicode_unicode_iterator_test_cpp",
+      "source_path": "test/unicode/unicode_iterator_test.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/unicode/unicode_iterator_test.cpp",
+      "applicability_owner_ticket": "V08",
+      "port_owner_ticket": "V08",
+      "test_owner_ticket": "V08",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.de_fuzz_narrow_cpp",
+      "source_path": "test/de_fuzz/narrow.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/de_fuzz/narrow.cpp",
+      "applicability_owner_ticket": "V09",
+      "port_owner_ticket": "V09",
+      "test_owner_ticket": "V09",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.de_fuzz_wide_cpp",
+      "source_path": "test/de_fuzz/wide.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/de_fuzz/wide.cpp",
+      "applicability_owner_ticket": "V09",
+      "port_owner_ticket": "V09",
+      "test_owner_ticket": "V09",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.issue153_cpp",
+      "source_path": "test/issue153.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/issue153.cpp",
+      "applicability_owner_ticket": "V09",
+      "port_owner_ticket": "V09",
+      "test_owner_ticket": "V09",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.lookbehind_recursion_stress_test_cpp",
+      "source_path": "test/lookbehind_recursion_stress_test.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/lookbehind_recursion_stress_test.cpp",
+      "applicability_owner_ticket": "V09",
+      "port_owner_ticket": "V09",
+      "test_owner_ticket": "V09",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.pathology_bad_expression_test_cpp",
+      "source_path": "test/pathology/bad_expression_test.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/pathology/bad_expression_test.cpp",
+      "applicability_owner_ticket": "V09",
+      "port_owner_ticket": "V09",
+      "test_owner_ticket": "V09",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.pathology_recursion_test_cpp",
+      "source_path": "test/pathology/recursion_test.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/pathology/recursion_test.cpp",
+      "applicability_owner_ticket": "V09",
+      "port_owner_ticket": "V09",
+      "test_owner_ticket": "V09",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regex_replace_overflow_cpp",
+      "source_path": "test/regex_replace_overflow.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regex_replace_overflow.cpp",
+      "applicability_owner_ticket": "V09",
+      "port_owner_ticket": "V09",
+      "test_owner_ticket": "V09",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.concepts_concept_check_cpp",
+      "source_path": "test/concepts/concept_check.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/concepts/concept_check.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.concepts_module_concept_check_cpp",
+      "source_path": "test/concepts/module_concept_check.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/concepts/module_concept_check.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.concepts_range_concept_check_cpp",
+      "source_path": "test/concepts/range_concept_check.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/concepts/range_concept_check.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.config_info_regex_config_info_cpp",
+      "source_path": "test/config_info/regex_config_info.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/config_info/regex_config_info.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.config_info_cpp",
+      "source_path": "test/config_info.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/config_info.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.object_cache_object_cache_test_cpp",
+      "source_path": "test/object_cache/object_cache_test.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/object_cache/object_cache_test.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_main_cpp",
+      "source_path": "test/regress/main.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/main.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.regress_test_mfc_cpp",
+      "source_path": "test/regress/test_mfc.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/regress/test_mfc.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.test_consolidated_cpp",
+      "source_path": "test/test_consolidated.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/test_consolidated.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.test_warnings_cpp",
+      "source_path": "test/test_warnings.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/test_warnings.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.test_windows_defs_1_cpp",
+      "source_path": "test/test_windows_defs_1.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/test_windows_defs_1.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.test_windows_defs_2_cpp",
+      "source_path": "test/test_windows_defs_2.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/test_windows_defs_2.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.test_windows_defs_3_cpp",
+      "source_path": "test/test_windows_defs_3.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/test_windows_defs_3.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    },
+    {
+      "capability_id": "upstream_test.test_windows_defs_4_cpp",
+      "source_path": "test/test_windows_defs_4.cpp",
+      "source_url": "https://github.com/boostorg/regex/blob/boost-1.89.0/test/test_windows_defs_4.cpp",
+      "applicability_owner_ticket": "V10",
+      "port_owner_ticket": "V10",
+      "test_owner_ticket": "V10",
+      "cross_family_rule": "If a semantic port is delegated, retain this file owner and link the exact receiving ticket and assertions; do not remove the obligation."
+    }
+  ],
+  "structural_checks": {
+    "ticket_count": 43,
+    "unique_ids": true,
+    "known_dependency_ids": true,
+    "internal_dependency_graph_acyclic": true,
+    "upstream_files_assigned_exactly_once": 73,
+    "direct_validation_rows_covered": 104,
+    "checks_kind": "Document structure only; no implementation or project tests executed."
+  }
+}

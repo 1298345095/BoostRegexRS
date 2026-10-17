@@ -1,0 +1,995 @@
+{
+  "tickets": [
+    {
+      "id": "I01",
+      "title": "Expand the engine with an input and character-rule seam while preserving byte behavior",
+      "kind": "expand",
+      "workstream": "Input and native character rules",
+      "blocked_by": [],
+      "external_dependencies": [
+        "byte_checkpoint_replay_harness"
+      ],
+      "capabilities": [
+        "input.arbitrary_bytes",
+        "api.regex_traits.length"
+      ],
+      "problem": "The current VM and parser encode byte/classic-C assumptions. Unicode and platform rules need a shared mechanism without replacing the byte path in one broad refactor.",
+      "current_state": "The paused byte graph/typed-unwind implementation exists; no generic input or production traits seam has independent acceptance.",
+      "deliverables": [
+        "Introduce internal cursor/input-unit and character-rule interfaces beside the current byte entry points. Route one complete classic-C byte compile/search/capture path through them.",
+        "Record original backstop, search start, attempt start, previous context and public-unit conversion invariants. Preserve the old public path until adapters have parity."
+      ],
+      "acceptance": [
+        "The frozen checkpoint and the expanded path produce identical complete results on the same predeclared byte corpus, including NUL, arbitrary bytes, partial extents and histories. This preserves current behavior and does not close the separate B-series Boost compatibility obligations.",
+        "No Unicode normalization, UTF-8 requirement or changed byte error position is introduced.",
+        "The architecture document identifies the remaining migration batches and the eventual contract/removal gate."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/perl_matcher.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/perl_matcher_common.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "I02",
+      "title": "Implement the UTF-32 Unicode compile, search and capture adapter",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I01"
+      ],
+      "external_dependencies": [
+        "unicode_character_rules",
+        "unicode_traits_production"
+      ],
+      "capabilities": [
+        "input.utf32",
+        "input.invalid_utf32",
+        "input.original_positions"
+      ],
+      "problem": "Unicode execution must consume original u32 units while using the pinned ICU character rules.",
+      "current_state": "The sorting research CLI accepts UTF-32; the production regex API does not.",
+      "deliverables": [
+        "Connect the shared parser/VM and fixed Unicode rules to UTF-32 pattern and input APIs, with result ranges and errors measured in original u32 units.",
+        "Implement upstream acceptance/rejection of out-of-range values and surrogates at the correct operation boundary; retain literal NUL."
+      ],
+      "acceptance": [
+        "Native Boost u32 regex cases compare status, category, position, complete captures and histories for valid, malformed, supplementary and NUL inputs.",
+        "Pattern decoding errors and input traversal errors retain their separate source-defined locations.",
+        "Public documentation includes an executable UTF-32 search/capture example.",
+        "Boost icu.hpp passes 4-byte regex iterators directly while 1/2-byte entry points decode; do not impose sort-key UTF-32-to-UTF-16 input rejection on the distinct regex API without source and native evidence."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/icu.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/pending/unicode_iterator.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "I03",
+      "title": "Implement UTF-16 decoding and original-unit regex positions",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I02"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "input.utf16",
+        "input.invalid_utf16",
+        "input.original_positions"
+      ],
+      "problem": "A scalar cursor must preserve surrogate-pair and lone-surrogate behavior and UTF-16 public offsets.",
+      "current_state": "Sort-key input decoding exists only in the research tool; no accepted regex adapter exists.",
+      "deliverables": [
+        "Add UTF-16 pattern/input cursors and public compile/search/full-match operations over the shared Unicode engine.",
+        "Keep forward/backward traversal, lookbehind and partial extents in original UTF-16 units."
+      ],
+      "acceptance": [
+        "Compare full results and errors with Boost for every surrogate boundary class, supplementary matches, malformed patterns, malformed input, NUL and empty input.",
+        "Lookbehind, captures and search subranges retain exact original u16 offsets; no replacement-character repair or prenormalization occurs.",
+        "The same logical valid text agrees with UTF-32 semantic results after explicit independently checked unit mapping."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/icu.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/pending/unicode_iterator.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "I04",
+      "title": "Implement UTF-8 Unicode regex APIs without losing original byte positions",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I02"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "input.utf8",
+        "input.invalid_utf8",
+        "input.original_positions"
+      ],
+      "problem": "Unicode UTF-8 and arbitrary-byte regex are different APIs, and internal scalar positions must never leak.",
+      "current_state": "Byte APIs accept arbitrary bytes; production Unicode UTF-8 regex entry points are missing.",
+      "deliverables": [
+        "Add UTF-8 pattern/input cursors and safe Unicode compile/search/full-match entry points.",
+        "Preserve upstream forward/backward decoding behavior, invalid UTF-8 errors, previous context and original byte ranges."
+      ],
+      "acceptance": [
+        "Compare full results and error categories/positions for overlong, truncated, stray-continuation, surrogate and above-maximum encodings plus valid 1–4 byte sequences.",
+        "Capture histories, lookbehind, partial matches and range searches report exact byte offsets into the original input.",
+        "An invalid UTF-8 byte sequence remains usable by the distinct byte API."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/icu.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/pending/unicode_iterator.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "I05",
+      "title": "Expand native-wide input and positions through deterministic character rules",
+      "kind": "expand",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I01",
+        "N01"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "input.native_wide",
+        "input.original_positions"
+      ],
+      "problem": "Native wchar behavior follows the platform traits and width; it is not automatically identical to ICU Unicode mode.",
+      "current_state": "The current public engine is byte-only.",
+      "deliverables": [
+        "Expose native-wide compile/search/capture entry points through deterministic custom rules and the shared engine before wiring production platform backends. Preserve Windows 16-bit and Unix native 32-bit units and representation.",
+        "Keep native-wide, ICU UTF-16 and ICU UTF-32 semantics distinct. Backend integrations N03–N08/N11–N12 follow this seam; I10 is the contract/removal gate."
+      ],
+      "acceptance": [
+        "A deterministic custom-traits Boost reference and Rust tracer agree for wide compilation, matching, captures, NUL, code-unit boundaries and original ranges without depending on a completed native locale backend.",
+        "The API preserves each platform native unit representation and source-defined input domain; no global Unicode validation/repair policy is imposed.",
+        "The seam supports native C/C++/Win32 backends without implementing them in this ticket, and a public example exercises the full tracer."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/cpp_regex_traits.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/w32_regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: only the native-wide input seam, deterministic rule tracer, public positions and focused differential fixtures; each production backend has its own ticket."
+    },
+    {
+      "id": "I06",
+      "title": "Migrate replacement and iteration to UTF-32 inputs",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I02"
+      ],
+      "external_dependencies": [
+        "byte_formatter_acceptance",
+        "byte_iteration_acceptance"
+      ],
+      "capabilities": [
+        "input.utf32",
+        "input.original_positions",
+        "api.regex_replace.write_to",
+        "api.regex_iterator.iteration",
+        "api.regex_token_iterator.selected_groups"
+      ],
+      "problem": "Unicode search parity alone does not cover replacement, token iteration and output encoding.",
+      "current_state": "Only initial byte format/replace/iterator entry points exist.",
+      "deliverables": [
+        "Reuse accepted formatter and iteration mechanisms through encoding-aware input/output sinks. Preserve captures, callback views, replacement bytes/units and input consumption.",
+        "Cover UTF-32 selected-group/token and output paths without transcoding observable output into another encoding; other adapter batches remain separate tickets."
+      ],
+      "acceptance": [
+        "Complete native-reference results agree for empty progress, multiple groups, trailing unmatched input, conditional formats, callbacks and malformed input boundaries in each adapter.",
+        "Output and all ranges remain in the original input/output unit types; explicit sink failures obey ADR-0003.",
+        "Executable examples show each encoding using the same semantic operations."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/icu.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_replace.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_token_iterator.hpp"
+      ],
+      "sizing": "One fresh context: migrate only the UTF-32 high-level operations to the accepted generic formatter/iteration mechanism."
+    },
+    {
+      "id": "I07",
+      "title": "Migrate replacement and iteration to UTF-16 inputs",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I03"
+      ],
+      "external_dependencies": [
+        "byte_formatter_acceptance",
+        "byte_iteration_acceptance"
+      ],
+      "capabilities": [
+        "input.utf16",
+        "input.original_positions",
+        "api.regex_replace.write_to",
+        "api.regex_iterator.iteration",
+        "api.regex_token_iterator.selected_groups"
+      ],
+      "problem": "Unicode search parity alone does not cover replacement, token iteration and output encoding.",
+      "current_state": "Only initial byte format/replace/iterator entry points exist.",
+      "deliverables": [
+        "Reuse accepted formatter and iteration mechanisms through encoding-aware input/output sinks. Preserve captures, callback views, replacement bytes/units and input consumption.",
+        "Cover UTF-16 selected-group/token and output paths without transcoding observable output into another encoding; other adapter batches remain separate tickets."
+      ],
+      "acceptance": [
+        "Complete native-reference results agree for empty progress, multiple groups, trailing unmatched input, conditional formats, callbacks and malformed input boundaries in each adapter.",
+        "Output and all ranges remain in the original input/output unit types; explicit sink failures obey ADR-0003.",
+        "Executable examples show each encoding using the same semantic operations."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/icu.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_replace.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_token_iterator.hpp"
+      ],
+      "sizing": "One fresh context: migrate only the UTF-16 high-level operations to the accepted generic formatter/iteration mechanism."
+    },
+    {
+      "id": "I08",
+      "title": "Migrate replacement and iteration to UTF-8 inputs",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I04"
+      ],
+      "external_dependencies": [
+        "byte_formatter_acceptance",
+        "byte_iteration_acceptance"
+      ],
+      "capabilities": [
+        "input.utf8",
+        "input.original_positions",
+        "api.regex_replace.write_to",
+        "api.regex_iterator.iteration",
+        "api.regex_token_iterator.selected_groups"
+      ],
+      "problem": "Unicode search parity alone does not cover replacement, token iteration and output encoding.",
+      "current_state": "Only initial byte format/replace/iterator entry points exist.",
+      "deliverables": [
+        "Reuse accepted formatter and iteration mechanisms through encoding-aware input/output sinks. Preserve captures, callback views, replacement bytes/units and input consumption.",
+        "Cover UTF-8 selected-group/token and output paths without transcoding observable output into another encoding; other adapter batches remain separate tickets."
+      ],
+      "acceptance": [
+        "Complete native-reference results agree for empty progress, multiple groups, trailing unmatched input, conditional formats, callbacks and malformed input boundaries in each adapter.",
+        "Output and all ranges remain in the original input/output unit types; explicit sink failures obey ADR-0003.",
+        "Executable examples show each encoding using the same semantic operations."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/icu.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_replace.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_token_iterator.hpp"
+      ],
+      "sizing": "One fresh context: migrate only the UTF-8 high-level operations to the accepted generic formatter/iteration mechanism."
+    },
+    {
+      "id": "I09",
+      "title": "Migrate replacement and iteration to native-wide inputs",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I05"
+      ],
+      "external_dependencies": [
+        "byte_formatter_acceptance",
+        "byte_iteration_acceptance"
+      ],
+      "capabilities": [
+        "input.native_wide",
+        "input.original_positions",
+        "api.regex_replace.write_to",
+        "api.regex_iterator.iteration",
+        "api.regex_token_iterator.selected_groups"
+      ],
+      "problem": "Unicode search parity alone does not cover replacement, token iteration and output encoding.",
+      "current_state": "Only initial byte format/replace/iterator entry points exist.",
+      "deliverables": [
+        "Reuse accepted formatter and iteration mechanisms through encoding-aware input/output sinks. Preserve captures, callback views, replacement bytes/units and input consumption.",
+        "Cover native-wide selected-group/token and output paths without transcoding observable output into another encoding; other adapter batches remain separate tickets."
+      ],
+      "acceptance": [
+        "Complete native-reference results agree for empty progress, multiple groups, trailing unmatched input, conditional formats, callbacks and malformed input boundaries in each adapter.",
+        "Output and all ranges remain in the original input/output unit types; explicit sink failures obey ADR-0003.",
+        "Executable examples show each encoding using the same semantic operations."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/icu.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_replace.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_token_iterator.hpp"
+      ],
+      "sizing": "One fresh context: migrate only the native-wide high-level operations to the accepted generic formatter/iteration mechanism."
+    },
+    {
+      "id": "I10",
+      "title": "Contract the input migration after byte and Unicode parity",
+      "kind": "contract",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I06",
+        "I07",
+        "I08",
+        "I09",
+        "N03",
+        "N04",
+        "N05",
+        "N06",
+        "N07",
+        "N08",
+        "N11",
+        "N12"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "input.arbitrary_bytes",
+        "input.utf8",
+        "input.utf16",
+        "input.utf32",
+        "input.native_wide"
+      ],
+      "problem": "Parallel legacy and generic paths must not drift or leave public operations on byte-only assumptions.",
+      "current_state": "This is the removal gate for I01, not an instruction to remove the old path early.",
+      "deliverables": [
+        "Remove only superseded duplicate internal paths after all adapters have independent parity. Keep distinct public byte/Unicode/native semantics.",
+        "Audit all parser/VM/result/format position conversions and document the final shared architecture."
+      ],
+      "acceptance": [
+        "Every public operation routes through the accepted mechanism and the full default-feature regression suite remains equal to the pinned reference.",
+        "No public capability or accepted boundary is removed; captured input positions remain unchanged.",
+        "Dependency and linkage inspection confirms no Boost/ICU/C++ runtime backend."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/perl_matcher.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/icu.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "N01",
+      "title": "Implement custom character rules through compile, sets and matching",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I01"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "native_traits.custom_collation",
+        "native_traits.custom_classes",
+        "api.regex_traits.translate",
+        "api.regex_traits.translate_nocase",
+        "api.regex_traits.transform",
+        "api.regex_traits.transform_primary",
+        "api.regex_traits.lookup_classname",
+        "api.regex_traits.lookup_collatename",
+        "api.regex_traits.isctype",
+        "api.regex_traits.value",
+        "api.regex_traits.length",
+        "api.regex_traits.custom_single_thread"
+      ],
+      "problem": "The public custom-traits contract must control parser classifications and collation as well as single-character comparisons.",
+      "current_state": "Classic-C classification is hard-coded in the paused byte implementation.",
+      "deliverables": [
+        "Provide a safe Rust character-rule trait with source-mapped semantics for translation, masks, class/collating-name lookup, numeric parsing and complete collation keys.",
+        "Exercise custom rules end to end through literals, icase, bracket classes, ranges, equivalence and two-unit collating elements."
+      ],
+      "acceptance": [
+        "A deterministic custom reference trait and Rust trait produce identical compile errors, complete match results and trait return values on the predeclared corpus.",
+        "Single-thread traits can contain non-Send/non-Sync state without requiring unsafe user implementations.",
+        "No fixed built-in table or byte shortcut bypasses the selected custom rule."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/doc/regex_traits.qbk",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/basic_regex_creator.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/libs/regex/test/concepts/concept_check.cpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "N02",
+      "title": "Enforce compiled-regex sharing and per-invocation state ownership",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "N01",
+        "N09",
+        "N10"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "api.regex_traits.custom_send_sync",
+        "resources.independent_match_state",
+        "api.regex_traits.custom_single_thread"
+      ],
+      "problem": "Compiled built-in regexes must share safely, while custom traits determine whether sharing is permitted.",
+      "current_state": "The paused byte graph uses Arc and local state, but the full generic/custom boundary is unverified.",
+      "deliverables": [
+        "Carry Send/Sync bounds through compiled graphs, trait ownership, result iterators and callbacks. Preserve a non-shared custom-traits path.",
+        "Keep recursion, capture history, limits and temporary collation buffers invocation-local."
+      ],
+      "acceptance": [
+        "Positive compile-time examples share built-in and Send+Sync custom rules; negative compile tests reject non-thread-safe sharing without rejecting local use.",
+        "Parallel searches on the same compiled object match independently run full results across captures, recursion and budgets.",
+        "No internal mutable cache or global locale mutation introduces cross-call result contamination."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/doc/regex_traits.qbk",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/basic_regex.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/perl_matcher.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "N03",
+      "title": "Implement C-locale byte and wide character rules on Linux glibc",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I01",
+        "I05"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "native_traits.c_locale",
+        "api.regex_traits.imbue",
+        "api.regex_traits.getloc"
+      ],
+      "problem": "The C-locale backend has global-locale and character-unit semantics distinct from C++ and ICU traits.",
+      "current_state": "The cloud reference currently uses cpp_regex_traits<char> with classic C only.",
+      "deliverables": [
+        "Build a separately identified c_regex_traits byte/wide oracle and implement its classification, mapping, numeric, name and full transform behavior using pure Rust plus permitted system APIs.",
+        "Wire the backend into compilation and matching; isolate tests that change process-global locale."
+      ],
+      "acceptance": [
+        "An end-to-end locale matrix compares trait returns, full transform keys, range/equivalence matching, captures and errors against Boost C traits.",
+        "Every requested locale creation failure is recorded as reference-unavailable, implementation-error or unsupported-name with evidence.",
+        "Runtime dependencies contain no C++/ICU library; actual glibc and locale data identity are recorded."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/c_regex_traits.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_traits_defaults.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "N04",
+      "title": "Implement libstdc++ locale-traits behavior on Linux glibc",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "N03",
+        "I05"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "native_traits.cpp_locale",
+        "api.basic_regex.imbue",
+        "api.basic_regex.getloc"
+      ],
+      "problem": "Using a locale name with libc is insufficient proof of the observable C++ facets and Boost transformation wrapper.",
+      "current_state": "Classic C byte tests do not accept named libstdc++ locale behavior.",
+      "deliverables": [
+        "Map the pinned Boost cpp_regex_traits adaptation and actual libstdc++ facet behavior to pure Rust/system API operations for byte and wide inputs.",
+        "Integrate locale construction, imbue return/invalidated compiled state and getloc behavior into the native API."
+      ],
+      "acceptance": [
+        "Classifications, case mapping, names, complete PRIMARY/transform sequences, bracket ranges and full match results agree in all available required locale/codepage conditions.",
+        "C, C.UTF-8 and named locales remain distinct and every fallback matches the native reference.",
+        "No binding to std::locale or another C++ runtime backend is shipped."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/cpp_regex_traits.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/basic_regex.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "N05",
+      "title": "Implement Darwin C-locale character rules",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I01",
+        "I05"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "native_traits.c_locale",
+        "api.regex_traits.imbue",
+        "api.regex_traits.getloc"
+      ],
+      "problem": "macOS locale results must follow the actual Darwin/libc++ environment, not Linux or external ICU data.",
+      "current_state": "Only the Rust collation research crate has native macOS CI evidence.",
+      "deliverables": [
+        "Implement only Boost c_regex_traits byte and native-wide behavior on Darwin through pure Rust and permitted system APIs.",
+        "Connect locale lifecycle, classifications, translation, digits, names and full transforms to public regex operations; isolate global-locale tests."
+      ],
+      "acceptance": [
+        "The Darwin C-traits oracle and Rust backend agree for full trait values, keys, captures and errors on the declared available locale/codepage matrix.",
+        "C and named C locales remain distinct; failures and unavailable names are reported with native evidence.",
+        "No C++/ICU library is a runtime backend; libc++ behavior is implemented and accepted by N11, not assumed equal here."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/c_regex_traits.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/cpp_regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: only the Darwin C-traits backend and its end-to-end fixtures; the separate C++ backend has its own ticket."
+    },
+    {
+      "id": "N06",
+      "title": "Implement Windows MSVC C-locale character rules",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I01",
+        "I05"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "native_traits.c_locale",
+        "native_traits.code_pages",
+        "api.regex_traits.imbue",
+        "api.regex_traits.getloc"
+      ],
+      "problem": "MSVC CRT locale and Win32 NLS are separate observable backends.",
+      "current_state": "Historical Windows probes cover ICU and limited traits; the production Windows CRT backend is missing.",
+      "deliverables": [
+        "Implement only Boost c_regex_traits byte and native-wide behavior on Windows MSVC through pure Rust and permitted system APIs.",
+        "Connect locale lifecycle, classifications, translation, digits, names and full transforms to public regex operations; isolate global-locale tests."
+      ],
+      "acceptance": [
+        "The Windows MSVC C-traits oracle and Rust backend agree for full trait values, keys, captures and errors on the declared available locale/codepage matrix.",
+        "C and named C locales remain distinct; failures and unavailable names are reported with native evidence.",
+        "No C++/ICU library is a runtime backend; MSVC C++ behavior is implemented and accepted by N12, not assumed equal here."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/c_regex_traits.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/cpp_regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: only the Windows MSVC C-traits backend and its end-to-end fixtures; the separate C++ backend has its own ticket."
+    },
+    {
+      "id": "N07",
+      "title": "Implement Windows NLS wide-character traits and locale lifecycle",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "I01",
+        "I05"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "native_traits.win32_locale",
+        "api.regex_traits.imbue",
+        "api.regex_traits.getloc"
+      ],
+      "problem": "Windows default traits use source-specific NLS flags, buffers and locale identity.",
+      "current_state": "No production NLS backend has been implemented.",
+      "deliverables": [
+        "Port Boost w32_regex_traits wide behavior through permitted Windows APIs, including classification, translation, collation wrapping, names and locale changes.",
+        "Wire invariant, default and named locale conditions into the wide regex API."
+      ],
+      "acceptance": [
+        "Full trait values and keys plus bracket/equivalence/search/capture results agree on x64 and ARM64 for the fixed NLS matrix.",
+        "Actual LCID/default locale and NLS version are recorded; ICU root and Win32 invariant remain distinct.",
+        "All unsafe OS calls are confined behind safe slice and length checks with tested boundary behavior."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/w32_regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "N08",
+      "title": "Implement Windows NLS byte and codepage behavior",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "N07"
+      ],
+      "external_dependencies": [
+        "windows_reference_environment"
+      ],
+      "capabilities": [
+        "native_traits.win32_locale",
+        "native_traits.code_pages",
+        "input.arbitrary_bytes"
+      ],
+      "problem": "A byte regex in a Windows codepage must not be silently converted into a Unicode regex.",
+      "current_state": "No independently accepted Windows narrow NLS implementation exists.",
+      "deliverables": [
+        "Port the actual A/W conversion and table setup routes used by Boost narrow NLS traits.",
+        "Cover CP1252/1254/932/936 and UTF-8 environments where independently attainable, while tracking locale ANSI page, ACP and manifest state."
+      ],
+      "acceptance": [
+        "All 256 byte values, isolated lead/trail bytes, NUL, invalid sequences and mixed multibyte texts compare classification, mapping, full keys and complete regex results.",
+        "No global developer-machine region change or invented codepage parameter is required for the test API.",
+        "Missing process-codepage environments stay unverified and are listed as a concrete resource gap."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/w32_regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "N09",
+      "title": "Support custom character-rule locale ownership and lifecycle",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "N01"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "api.regex_traits.imbue",
+        "api.regex_traits.getloc",
+        "api.basic_regex.imbue",
+        "api.basic_regex.getloc",
+        "api.regex_traits.custom_single_thread"
+      ],
+      "problem": "The complete custom character-rule contract includes this observable extension; built-in locale support cannot discharge it.",
+      "current_state": "The paused engine hard-codes classic-C behavior; this custom extension/lifecycle path has not been implemented or accepted.",
+      "deliverables": [
+        "Define the Rust equivalent of the custom locale type and imbue/getloc ownership contract, including previous-locale return and source-defined compiled-object state changes.",
+        "Exercise caller-owned locale data and non-thread-safe local rules through compile, search, class lookup and full collation keys."
+      ],
+      "acceptance": [
+        "Deterministic native and Rust custom traits agree on current/previous locale values, failure behavior and results before/after rebinding.",
+        "The library does not substitute a built-in locale implementation or impose Send/Sync on single-thread custom rules.",
+        "Public examples demonstrate custom locale state; input and captured data retain their original ownership/position rules."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/doc/regex_traits.qbk",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/basic_regex_creator.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/libs/regex/test/concepts/concept_check.cpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/doc/concepts.qbk",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: only the named custom-rule extension or lifecycle path through the accepted trait seam, public API, reference and focused tests."
+    },
+    {
+      "id": "N10",
+      "title": "Support custom syntax, escape and numeric character-rule extensions",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "N01",
+        "B32",
+        "B34"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "api.regex_traits.custom_single_thread",
+        "api.regex_traits.value",
+        "api.regex_traits.translate",
+        "api.regex_traits.translate_nocase"
+      ],
+      "problem": "The complete custom character-rule contract includes this observable extension; built-in locale support cannot discharge it.",
+      "current_state": "The paused engine hard-codes classic-C behavior; this custom extension/lifecycle path has not been implemented or accepted.",
+      "deliverables": [
+        "Map Boost regex_traits extension dispatch, including syntax_type, escape_syntax_type, toi and lower/upper behavior, to safe Rust extension hooks/defaults.",
+        "Route real parser and formatter calls through the selected extension path; keep default/trivial format traits distinct from regex-provided traits."
+      ],
+      "acceptance": [
+        "A deterministic custom reference changes syntax, escape, numeric consumption and case results through public compile/match/format operations, and Rust agrees completely.",
+        "Default trait behavior remains unchanged when optional extensions are absent; no hard-coded byte table bypasses an enabled hook.",
+        "Iterator-consuming integer conversion preserves exact stopping position, radix/failure behavior and public error categories."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/doc/regex_traits.qbk",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/basic_regex_creator.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/libs/regex/test/concepts/concept_check.cpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/doc/concepts.qbk",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: only the named custom-rule extension or lifecycle path through the accepted trait seam, public API, reference and focused tests."
+    },
+    {
+      "id": "N11",
+      "title": "Implement libc++ locale character rules",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "N05"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "native_traits.cpp_locale",
+        "api.regex_traits.imbue",
+        "api.regex_traits.getloc"
+      ],
+      "problem": "macOS locale results must follow the actual Darwin/libc++ environment, not Linux or external ICU data.",
+      "current_state": "Only the Rust collation research crate has native macOS CI evidence.",
+      "deliverables": [
+        "Map the actual libc++ facets and Boost cpp_regex_traits adapter to pure Rust and permitted OS APIs; include byte and native-wide public regex operations.",
+        "Retain exact locale creation, numeric parsing, classification, case, names, full key wrapping and imbue/getloc behavior independently of the C backend."
+      ],
+      "acceptance": [
+        "The libc++ reference and Rust backend agree on trait values, full transform keys and complete regex results over the available required locale/codepage matrix.",
+        "Every locale creation or environmental failure is separately identified; there is no silent C/root substitution.",
+        "All runtime behavior uses Rust and permitted OS APIs, with actual Darwin runtime/data identities recorded."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/c_regex_traits.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/cpp_regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: the libc++ backend only, reusing the accepted input seam and separately verified C backend where source equivalence is demonstrated."
+    },
+    {
+      "id": "N12",
+      "title": "Implement MSVC C++ locale character rules",
+      "kind": "implementation",
+      "workstream": "Input and native character rules",
+      "blocked_by": [
+        "N06"
+      ],
+      "external_dependencies": [],
+      "capabilities": [
+        "native_traits.cpp_locale",
+        "native_traits.code_pages",
+        "api.regex_traits.imbue",
+        "api.regex_traits.getloc"
+      ],
+      "problem": "MSVC CRT locale and Win32 NLS are separate observable backends.",
+      "current_state": "Historical Windows probes cover ICU and limited traits; the production Windows CRT backend is missing.",
+      "deliverables": [
+        "Map the actual MSVC C++ facets and Boost cpp_regex_traits adapter to pure Rust and permitted OS APIs; include byte and native-wide public regex operations.",
+        "Retain exact locale creation, numeric parsing, classification, case, names, full key wrapping and imbue/getloc behavior independently of the C backend."
+      ],
+      "acceptance": [
+        "The MSVC C++ reference and Rust backend agree on trait values, full transform keys and complete regex results over the available required locale/codepage matrix.",
+        "Every locale creation or environmental failure is separately identified; there is no silent C/root substitution.",
+        "All runtime behavior uses Rust and permitted OS APIs, with actual Windows MSVC runtime/data identities recorded."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/c_regex_traits.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/cpp_regex_traits.hpp"
+      ],
+      "sizing": "One fresh context: the MSVC C++ backend only, reusing the accepted input seam and separately verified C backend where source equivalence is demonstrated."
+    },
+    {
+      "id": "R01",
+      "title": "Specify and implement independent compile-work and compile-memory limits",
+      "kind": "implementation",
+      "workstream": "Resources and sharing",
+      "blocked_by": [],
+      "external_dependencies": [
+        "byte_core_checkpoint"
+      ],
+      "capabilities": [
+        "resources.compile_work",
+        "resources.engine_memory",
+        "resources.explicit_limit_errors"
+      ],
+      "problem": "ADR-0003 permits independent necessary limits but requires precise errors and documented accounting; research budget proposals are not accepted defaults.",
+      "current_state": "The paused engine has provisional Limits fields and counters, without a complete public accounting contract or retained boundary evidence.",
+      "deliverables": [
+        "Document which parser/compiler operations and owned capacities are charged, allocation failure handling and default necessary engine limits.",
+        "Implement explicit compile-budget configuration and error propagation without changing ordinary pattern errors or adopting unconfirmed research values as requirements."
+      ],
+      "acceptance": [
+        "Boundary-minus-one, boundary and boundary-plus-one tests cover parsing, groups, ranges, recursion analysis and instruction/data allocation.",
+        "Limit rejection is an explicit resource error; a valid empty regex or no-match is never substituted.",
+        "Default calls add no output cap or traversal-total budget, and confirmed error category/position behavior stays unchanged."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/basic_regex_parser.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/basic_regex_creator.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "R02",
+      "title": "Implement execution-work and engine-memory budget accounting",
+      "kind": "implementation",
+      "workstream": "Resources and sharing",
+      "blocked_by": [
+        "R01"
+      ],
+      "external_dependencies": [
+        "byte_core_independent_acceptance"
+      ],
+      "capabilities": [
+        "resources.execution_work",
+        "resources.engine_memory",
+        "resources.explicit_limit_errors"
+      ],
+      "problem": "Typed rollback, recursion and retained histories need coherent budget accounting across every execution scope.",
+      "current_state": "Current counters and 35 local tests do not prove complete resource behavior or memory acceptance.",
+      "deliverables": [
+        "Charge the defined units across search attempts, recursion, assertions, single-state repeats and capture-history allocation.",
+        "Expose opt-in execution accounting with deterministic errors and preserve the independent-resource compatibility boundary."
+      ],
+      "acceptance": [
+        "Budget boundaries cover each allocation/transition family and nested scopes; failures never become successful truncated captures or no-match.",
+        "Default behavior does not acquire an unapproved cumulative traversal budget.",
+        "Compare native-reference resource failures separately from semantic differences; a Rust success within its budget is permitted and identified under ADR-0003."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/perl_matcher_common.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/perl_matcher_non_recursive.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "R03",
+      "title": "Implement explicit output and match-count budgets for high-level operations",
+      "kind": "implementation",
+      "workstream": "Resources and sharing",
+      "blocked_by": [
+        "R02"
+      ],
+      "external_dependencies": [
+        "byte_formatter_acceptance",
+        "byte_iteration_acceptance"
+      ],
+      "capabilities": [
+        "resources.output_budget",
+        "resources.match_count_budget",
+        "resources.result_atomicity"
+      ],
+      "problem": "Requested budgets need a documented counting scope without changing the default output/iteration contract.",
+      "current_state": "Public budget behavior for complete replacement and match collections has no independent acceptance.",
+      "deliverables": [
+        "Define and implement explicit caller-selected output-byte/unit, match-count and optional cumulative-work budget scope across replace, collect and traversal operations.",
+        "Keep compile budgets separate and make all counters checked for overflow."
+      ],
+      "acceptance": [
+        "Default operations impose no newly added output or total-traversal cap.",
+        "Opt-in limits count the documented units and lifecycle consistently across multiple matches and callbacks.",
+        "All-at-once APIs return an error on exhaustion and never return a success-shaped truncated value; boundary cases and counter overflow are tested."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_replace.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_iterator.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    },
+    {
+      "id": "R04",
+      "title": "Preserve streaming output and terminal iterator errors on exhaustion",
+      "kind": "implementation",
+      "workstream": "Resources and sharing",
+      "blocked_by": [
+        "R03"
+      ],
+      "external_dependencies": [
+        "byte_iteration_acceptance",
+        "byte_formatter_acceptance"
+      ],
+      "capabilities": [
+        "resources.streaming_partial_output",
+        "resources.iterator_terminal_error",
+        "api.regex_iterator.error_once_then_end",
+        "api.regex_replace.write_to"
+      ],
+      "problem": "Streaming consumers can already have observed output or matches when a budget or sink fails.",
+      "current_state": "Only initial byte iterator/replacement operations exist; error-once and written-prefix semantics are not accepted.",
+      "deliverables": [
+        "Apply limits and sink errors to write-to, callback and iterator APIs using a terminal error state.",
+        "Preserve previously returned items and already written output, and keep internal results independent between invocations."
+      ],
+      "acceptance": [
+        "An iterator returns every previously delivered match, exactly one error at exhaustion, then permanent end including repeated next calls.",
+        "An external sink retains precisely its written prefix when an error is reported; no rollback is promised.",
+        "One-shot, iterator and streaming tests exercise the same failure points and demonstrate their deliberately different result-delivery contracts."
+      ],
+      "source_refs": [
+        "docs/adr/0001-boost-regex-behavioral-compatibility.md",
+        "docs/adr/0002-native-dependencies-and-platform-semantics.md",
+        "docs/adr/0003-resource-contract-and-release-acceptance.md",
+        "docs/adr/0004-rust-api-and-input-positions.md",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_iterator.hpp",
+        "https://github.com/boostorg/regex/blob/boost-1.89.0/include/boost/regex/v5/regex_replace.hpp"
+      ],
+      "sizing": "One fresh context: implement and verify only the named input adapter, backend, or budget mechanism; reuse the independently accepted engine and do not combine other backends."
+    }
+  ]
+}

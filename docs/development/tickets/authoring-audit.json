@@ -1,0 +1,50 @@
+{
+  "schema": "boostregexrs.ticket-authoring-audit.v1",
+  "recorded_at": "2026-10-17T14:15:43.735581+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "counts": {
+    "tickets": 145,
+    "dependency_edges": 794,
+    "final_gate_reachable_tickets": 145,
+    "capability_rows": 406,
+    "capability_ownership_assignments": 617,
+    "shared_capability_rows": 110,
+    "upstream_test_rows": 73,
+    "published_ticket_body_hashes_verified": 145
+  },
+  "implementation_state": "paused",
+  "implementation_tests_run_during_ticket_authoring": false,
+  "paused_source_files_verified_unchanged": 629,
+  "capability_matrix_unchanged_from_base": true,
+  "capability_matrix_sha256": "05433b449303c5b03610aa23b5a6444b46ca1ceecd01ecf7be4d0325a374a9ac",
+  "canonical_reassembly_byte_identical": true,
+  "upstream_full_file_owners": 73,
+  "unblocked": [
+    "P01",
+    "P02",
+    "U01",
+    "U05",
+    "U15",
+    "V01",
+    "V02",
+    "V38"
+  ],
+  "files": {
+    "docs/development/tickets/backlog.json": "6f0c651963df9ceaa94d95251e1ee49a9cdf389834c53b4bd32806080b571004",
+    "docs/development/tickets/published.json": "17968894b721eda42e6913801d94efc6c7fc15877815ef565cf70475ec1b9ad8",
+    "docs/development/tickets/index.md": "90ea19528c69cfc4d1956e79de015e69e80272911ffaa4fdc950906ce3e0c67a",
+    "docs/development/tickets/coverage.json": "de2e8b6e2ae61b203678e81a4abd81527fbce1398af360379c9c30822dbf8c51",
+    "docs/development/tickets/publication-verification.json": "fd3a3af00a68997e82b26b209ac4467039e9c1f6b4a196d5d061b15bee92468b",
+    "tools/dev/assemble_ticket_backlog.py": "83e38c933cc54e54984d963c4d4c2b8f3520a9c578719f6d9e9f0c14b9db1d5b",
+    "tools/dev/ticket_backlog.py": "8e6fe2a86dc48322694b3a2a1fbad50d5968e4868cde6a713587e39fe93949dc"
+  },
+  "remote_verification": "publication-verification.json",
+  "archive_verification": "checkpoint/README.md",
+  "commands": [
+    "python3 -B tools/dev/assemble_ticket_backlog.py",
+    "python3 -B tools/dev/ticket_backlog.py check",
+    "python3 -B tools/dev/ticket_backlog.py render"
+  ],
+  "publication_rereads_match_current_hashes": 146,
+  "whitespace_cleanup_rereads": 5
+}

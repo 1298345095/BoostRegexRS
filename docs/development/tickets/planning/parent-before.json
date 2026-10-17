@@ -1,0 +1,36 @@
+{
+  "schema": "boostregexrs.ticket-parent-observation.v1",
+  "repository": "1298345095/BoostRegexRS",
+  "phase": "before_publication",
+  "observation_date": "2026-10-17",
+  "issue": {
+    "url": "https://github.com/1298345095/BoostRegexRS/issues/2",
+    "title": "Track complete Boost.Regex compatibility and release acceptance",
+    "issue_number": 2,
+    "body": "## Goal\n\nDeliver the complete standalone pure Rust implementation of Boost.Regex 1.89.0 under ADR-0001 through ADR-0005. The user expanded execution on 2026-10-17 beyond the completed root PRIMARY prototype. Stage completion and green tests do not close this issue. Do not merge main, publish a release, or integrate librime-rs.\n\n## Acceptance\n\n- [ ] Every applicable public syntax, option and API has an implementation, upstream reference and compatibility evidence.\n- [ ] Complete ICU77 PRIMARY/IDENTICAL keys, locale/tailoring, names, property aliases and character rules; preserve Unicode 16.0.0 / CLDR 47.\n- [ ] Parsing, compilation, execution, all captures, replacement and iteration.\n- [ ] Byte, UTF-8/16/32, native platform locale and custom-traits APIs with original input-unit positions.\n- [ ] Error categories/positions, explicit resource errors and thread-sharing contracts.\n- [ ] Applicable upstream tests, deterministic generation and fuzz regressions.\n- [ ] Actual Windows x64/ARM64 MSVC, Linux x64/ARM64 glibc, macOS Intel/ARM64 evidence.\n- [ ] Every ordinary search/capture/replacement workload <= 1.5x Boost; compile/complex/Unicode <= 2x; engine working memory <= 2x + 64 KiB under the fixed protocol.\n- [ ] Public documentation, examples, approved exceptions and clean-checkout reproduction.\n- [ ] SonarCloud and required format/lint/build/test gates pass without weakening thresholds.\n\n## Current verified baseline\n\nCommit b71b31e1345d4453273ba529574eea348c654613 records the root PRIMARY stage: 1,160,181 valid full keys, 11 expected invalid-input rejections, 28,108 full CE64 traces; complete Linux CI passed for source commit 9e57799. Historical Windows evidence is unchanged. The 145 ICU4X IDENTICAL differences and original empty IDENTICAL reference crashes remain recorded.\n\n## Working records\n\nCapability tracking: `docs/development/capability-matrix.json` and `docs/development/capability-matrix.md`.\nPersistent continuation: `docs/development/handoff.md`.\nImplementation branch: `work/root-primary-cloud`; PR #1 remains draft.\nAll scripts and durable non-build evidence are tracked outside target. Meaningful verified changes receive scoped English commit titles and bodies.\n\n## Execution\n\nContinue directly to the next ready capability after each verified commit. Ask only about an unavoidable change to an accepted contract or unavailable external permission/resource, and continue independent work.",
+    "state": "open",
+    "user": {
+      "login": "1298345095",
+      "name": "1298345095",
+      "email": null,
+      "avatar_url": "https://avatars.githubusercontent.com/u/30920958?v=4",
+      "id": 30920958
+    },
+    "assignees": null,
+    "labels": [
+      {
+        "name": "ready-for-agent",
+        "color": "ededed",
+        "description": null
+      }
+    ],
+    "milestone": null,
+    "state_reason": null,
+    "comments": 0,
+    "created_at": "2026-10-17T11:34:26Z",
+    "updated_at": "2026-10-17T11:34:26Z",
+    "closed_at": null,
+    "display_url": "https://github.com/1298345095/BoostRegexRS/issues/2",
+    "display_title": "Track complete Boost.Regex compatibility and release acceptance"
+  }
+}
