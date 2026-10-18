@@ -3941,18 +3941,27 @@
       "upstream": "docs/adr/",
       "status": "reference_passed",
       "implementation": [
-        "tools/icu-probe/cloud/prepare.py"
+        "tools/icu-probe/cloud/prepare.py",
+        "tools/regex-oracle/source_identity.py",
+        "tools/regex-oracle/build_reference.py"
       ],
       "tests": [
-        "tools/icu-probe/cloud/run.py"
+        "tools/icu-probe/cloud/run.py",
+        "tools/regex-oracle/test_source_identity.py",
+        "tools/regex-oracle/test_build_reference.py",
+        "tools/regex-oracle/smoke.py"
       ],
       "evidence": [
-        "docs/research/assets/icu77-cloud/github-actions/environment-manifest.json"
+        "docs/research/assets/icu77-cloud/github-actions/environment-manifest.json",
+        "docs/research/assets/regex-engine/v01-20261017T233138Z/README.md",
+        "docs/research/assets/regex-engine/v01-20261017T233138Z/summary.json",
+        "docs/research/assets/regex-engine/v01-20261017T233138Z/raw-run.tar.xz",
+        "docs/research/assets/regex-engine/v01-20261017T233138Z/derived-01/audit.json"
       ],
       "platforms_verified": [
         "linux_x64_glibc"
       ],
-      "notes": ""
+      "notes": "V01: fresh Linux x86-64 source/cache build verified all official archive and extracted-source identities before use, with no patches and complete ICU77 data. The original smoke and separately derived report audit are retained. This evidence does not establish whole-library, six-platform, performance or memory acceptance."
     },
     {
       "id": "validation.upstream_tests",

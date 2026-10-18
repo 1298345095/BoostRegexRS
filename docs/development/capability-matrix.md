@@ -388,7 +388,7 @@ Edit per-ID decisions in capability-matrix.json; regenerate with `python3 -B too
 
 | ID / capability | Status | Implementation / tests / evidence |
 | --- | --- | --- |
-| [validation.official_source_identity](../adr/) | reference_passed | `tools/icu-probe/cloud/prepare.py`; `tools/icu-probe/cloud/run.py`; `docs/research/assets/icu77-cloud/github-actions/environment-manifest.json` |
+| [validation.official_source_identity](../adr/) | reference_passed | `tools/icu-probe/cloud/prepare.py`; `tools/regex-oracle/source_identity.py`; `tools/regex-oracle/build_reference.py`; `tools/icu-probe/cloud/run.py`; `tools/regex-oracle/test_source_identity.py`; `tools/regex-oracle/test_build_reference.py`; `tools/regex-oracle/smoke.py`; `docs/research/assets/icu77-cloud/github-actions/environment-manifest.json`; `docs/research/assets/regex-engine/v01-20261017T233138Z/README.md`; `docs/research/assets/regex-engine/v01-20261017T233138Z/summary.json`; `docs/research/assets/regex-engine/v01-20261017T233138Z/raw-run.tar.xz`; `docs/research/assets/regex-engine/v01-20261017T233138Z/derived-01/audit.json` |
 | [validation.upstream_tests](../adr/) | not_implemented | Pending |
 | [validation.deterministic_generation](../adr/) | not_implemented | Pending |
 | [validation.fuzz_minimized_regressions](../adr/) | not_implemented | Pending |
