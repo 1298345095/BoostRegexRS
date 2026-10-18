@@ -255,6 +255,17 @@ keys to choose inputs. The full locale harness compares complete raw ICU bytes
 and Boost u32 sequences and retains each configuration's effective reference
 metadata. Its result report records actual tested counts and remaining gaps.
 
+`tests/locale_fixtures.rs` replays 938 complete native fixtures selected from the
+fully passed 538-configuration, two-strength, three-input-width run. The selected
+244 owner/settings/strength groups cover the source-defined setting interactions;
+they supplement the complete matrix rather than replace it. Both `Collator77`
+and the CLI with explicit root, owner and settings files must reproduce every
+raw ICU byte and Boost element. The CLI test clears its environment and keeps
+long input/output streams flowing concurrently. Fixture provenance is recorded
+in `tests/data/locales-v2.json`; the extractor uses only independent native
+`expected-keys.tsv` rows, never candidate output. The wrapping-order regression
+also checks all five strengths and rejects corrupted imported tables/ranges.
+
 The external harness supplies the decisive full-key oracle checks: the existing
 corpora, directed context and compression cases, generated cases with fixed
 randomness, and all Unicode scalar single-character inputs. Counts and hashes
