@@ -1,0 +1,16 @@
+test_absolute_and_subdirectory_relative_paths_keep_git_output_names (test_staged_git_payload.StagedPayloadTests.test_absolute_and_subdirectory_relative_paths_keep_git_output_names) ... ok
+test_chunks_preserve_indexed_bytes_and_executable_mode (test_staged_git_payload.StagedPayloadTests.test_chunks_preserve_indexed_bytes_and_executable_mode) ... ok
+test_directory_with_multiple_entries_is_rejected (test_staged_git_payload.StagedPayloadTests.test_directory_with_multiple_entries_is_rejected) ... ok
+test_directory_with_one_entry_is_rejected (test_staged_git_payload.StagedPayloadTests.test_directory_with_one_entry_is_rejected) ... ok
+test_gitlink_is_rejected_as_a_non_blob (test_staged_git_payload.StagedPayloadTests.test_gitlink_is_rejected_as_a_non_blob) ... ok
+test_glob_characters_and_pathspec_magic_are_literal_filenames (test_staged_git_payload.StagedPayloadTests.test_glob_characters_and_pathspec_magic_are_literal_filenames) ... ok
+test_no_path_retains_parent_tree_and_changed_path_interface (test_staged_git_payload.StagedPayloadTests.test_no_path_retains_parent_tree_and_changed_path_interface) ... ok
+test_single_and_multiple_conflict_stages_are_rejected (test_staged_git_payload.StagedPayloadTests.test_single_and_multiple_conflict_stages_are_rejected) ... ok
+test_symlink_entry_keeps_its_blob_and_mode (test_staged_git_payload.StagedPayloadTests.test_symlink_entry_keeps_its_blob_and_mode) ... ok
+test_tab_and_newline_in_filename_survive_nul_separated_index_output (test_staged_git_payload.StagedPayloadTests.test_tab_and_newline_in_filename_survive_nul_separated_index_output) ... ok
+test_unmatched_and_empty_paths_are_deliberately_rejected (test_staged_git_payload.StagedPayloadTests.test_unmatched_and_empty_paths_are_deliberately_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.925s
+
+OK
