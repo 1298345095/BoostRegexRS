@@ -1,0 +1,35 @@
+{
+  "status": "differences_or_unverified",
+  "records": 12,
+  "counts": {
+    "compile_error_matched": 1,
+    "operation_error_matched": 2,
+    "passed": 2,
+    "reference_resource_error": 7
+  },
+  "by_operation": {
+    "compile": {
+      "compile_error_matched": 1,
+      "passed": 2,
+      "reference_resource_error": 2
+    },
+    "format": {
+      "reference_resource_error": 1
+    },
+    "iterate": {
+      "reference_resource_error": 1
+    },
+    "match": {
+      "reference_resource_error": 1
+    },
+    "replace": {
+      "reference_resource_error": 1
+    },
+    "search": {
+      "operation_error_matched": 2,
+      "reference_resource_error": 1
+    }
+  },
+  "comparison": "Complete result fields including ordered ranges and capture histories",
+  "scope": "Byte traits in the classic C locale; full-library acceptance remains separately tracked"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "passed_for_recorded_inputs",
+  "records": 13,
+  "counts": {
+    "compile_error_matched": 1,
+    "passed": 12
+  },
+  "by_operation": {
+    "compile": {
+      "compile_error_matched": 1,
+      "passed": 2
+    },
+    "format": {
+      "passed": 1
+    },
+    "iterate": {
+      "passed": 1
+    },
+    "match": {
+      "passed": 1
+    },
+    "replace": {
+      "passed": 1
+    },
+    "search": {
+      "passed": 6
+    }
+  },
+  "comparison": "Complete result fields including ordered ranges and capture histories",
+  "scope": "Byte traits in the classic C locale; full-library acceptance remains separately tracked"
+}

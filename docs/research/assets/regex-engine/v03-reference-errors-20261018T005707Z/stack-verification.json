@@ -1,0 +1,41 @@
+{
+  "schema": "boostregexrs.native-resource-regression.v1",
+  "status": "passed",
+  "records": 1,
+  "repaired": [
+    {
+      "case_id": "match-stack-limit",
+      "schema": "boostregexrs.reference-failure.v1",
+      "phase": "match",
+      "kind": "regex_resource",
+      "code": 19,
+      "position": 0
+    }
+  ],
+  "unchanged": [],
+  "execution_complexity_cases": 0,
+  "compile_complexity_cases": 0,
+  "execution_stack_cases": 1,
+  "not_executed": [
+    "allocator exhaustion",
+    "catalog failure"
+  ],
+  "scope": "Native reference classification; not Rust resource-threshold equivalence",
+  "files": {
+    "cases": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/stack-cases.tsv",
+      "bytes": 120115,
+      "sha256": "5e08e19e02fc97e7c0071b7cb9b436dc0f006bba6918a4755bbe3a6e26911f4f"
+    },
+    "before": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/stack-before/results.tsv",
+      "bytes": 85,
+      "sha256": "a83f41e05cf01b218a5a0e0def237f5ed6317fccb5e97d271aaa44808a98407d"
+    },
+    "after": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/stack-after/results.tsv",
+      "bytes": 331,
+      "sha256": "3b637bd915b4e04e8a914b3d30a2c0df1bb458398881f84ad7c7ae1e1ec70219"
+    }
+  }
+}
