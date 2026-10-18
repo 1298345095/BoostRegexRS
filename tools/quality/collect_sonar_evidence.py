@@ -79,7 +79,7 @@ def annotations(check_id, count, token):
 
 
 def collect(commit, pull_request, output, github_only=False, inspect_access=False):
-    output.mkdir(parents=True, exist_ok=True)
+    output.mkdir(parents=True, exist_ok=False)
     github_token = os.environ.get("GITHUB_TOKEN")
     sonar_token = os.environ.get("SONAR_TOKEN")
     checks = fetch(f"{GITHUB_API}/commits/{commit}/check-runs?per_page=100", github_token)

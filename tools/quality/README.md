@@ -15,6 +15,13 @@ does not change issues, scanner configuration, or the gate conclusion. Use
 `--github-only` when SonarCloud is unavailable; the output marks those API
 requests as `not_requested`.
 
+Each observation requires a new output directory. An existing directory,
+including one left by a failed collection, is rejected before any network
+requests so that its responses remain intact. For another observation of the
+same commit, pass `--output` with a new directory; the default commit-named
+destination can be used only once. Caller-selected paths outside the checkout
+remain supported.
+
 GitHub check responses are pinned to `--commit`. Sonar's optional PR API requests
 return the live PR state without a commit/analysis identifier. Those responses
 are explicitly marked `live_pr_unpinned` and `associated_commit_verified: false`;
