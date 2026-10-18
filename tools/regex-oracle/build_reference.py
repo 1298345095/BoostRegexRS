@@ -97,6 +97,21 @@ def build_oracles(cache, cxx):
     return result
 
 
+def write_verified_environment(cache, environment, smoke, output):
+    """Bind the environment report to the metadata that passed the native smoke."""
+    paths = {}
+    for strength in ("primary", "identical"):
+        relative = Path("smoke") / (strength + "-metadata.json")
+        observed = json.loads((cache / relative).read_text(encoding="utf-8"))
+        if observed != smoke["keys"][strength]["metadata"]:
+            raise ValueError(f"Runtime metadata differs from the verified {strength} smoke")
+        paths[strength] = relative.as_posix()
+    corrected = dict(environment)
+    corrected["data"] = {**environment["data"], "runtime_versions_verified_by": paths}
+    prepare.write_json(output, corrected)
+    return corrected
+
+
 def snapshot(cache, output, manifest):
     raw = output / "raw-run.tar.xz"
     with tarfile.open(raw, "w:xz") as archive:
@@ -167,6 +182,8 @@ def run(cache, output, jobs, cc, cxx, sources_only=False):
         prepare.write_json(cache / "reference-manifest.json", manifest)
         from smoke import run_smoke
         manifest["smoke"] = run_smoke(cache, command, runtime_environment(cache))
+        manifest["environment"] = write_verified_environment(
+            cache, manifest["environment"], manifest["smoke"], cache / "environment-manifest.json")
         manifest["status"] = "passed_reference_reproduction"
     except BaseException as error:
         manifest["status"] = "failed"
