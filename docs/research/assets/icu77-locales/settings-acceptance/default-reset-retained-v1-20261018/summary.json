@@ -1,0 +1,29 @@
+{
+  "schema": "boostregexrs.native-diagnostic-retention.v1",
+  "status": "retained_actual_diagnostic",
+  "original_status": "reference_error",
+  "original_summary": {
+    "path": "docs/research/assets/icu77-locales/settings-acceptance/default-reset-native-v1-20261018/summary.json",
+    "bytes": 4127,
+    "sha256": "e02132592edade0a3b78afffbf08f50aee8eeb74d23e2ab4cdc0e61e24f250a9"
+  },
+  "binary": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/build/default-reset/default-reset-native-v1-20261018/default-reset",
+    "bytes": 33184288,
+    "sha256": "d8c52b143063a314c80909ccdc3ecfa69c5a1bacd5415e2f03b4da16ebcede30"
+  },
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "tools/icu-probe/primary/settings-probe/retain_diagnostic.py",
+    "--run",
+    "docs/research/assets/icu77-locales/settings-acceptance/default-reset-native-v1-20261018",
+    "--output",
+    "docs/research/assets/icu77-locales/settings-acceptance/default-reset-retained-v1-20261018"
+  ],
+  "cwd": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery",
+  "archive": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-retained-v1-20261018/raw.tar.gz",
+    "bytes": 12896245,
+    "sha256": "f1e03565e0c38658fc064073d13bd0687b4286cbce8d2712107a1cc046b81c11"
+  }
+}
