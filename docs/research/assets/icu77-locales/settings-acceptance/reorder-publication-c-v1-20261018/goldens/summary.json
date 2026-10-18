@@ -1,0 +1,236 @@
+{
+  "schema": "boostregexrs.icu77-settings-evidence-collection.v1",
+  "status": "retained_completed_execution_evidence",
+  "group": "goldens",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "tools/icu-probe/primary/settings-probe/package_evidence.py",
+    "--group",
+    "goldens",
+    "--output",
+    "docs/research/assets/icu77-locales/settings-acceptance/reorder-publication-c-v1-20261018/goldens"
+  ],
+  "cwd": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery",
+  "sources": [
+    {
+      "member": "binaries/icu77-root-primary-c-goldens",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/target/research/icu77-cloud/build/settings-probe/api-build-c-goldens-v1-20261018/debug/icu77-root-primary",
+      "bytes": 8439784,
+      "sha256": "1cc8d5862c38c07f2e6cde2ddaecf1d9bef8763defbfa0e99636fcde7fe8b3b9"
+    },
+    {
+      "member": "licenses/LICENSE-ICU.txt",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/data/LICENSE-ICU.txt",
+      "bytes": 26487,
+      "sha256": "451167c55c0fa447cc2d5632714f5e3c567fe4f1e1badefab2c1333852198aca"
+    },
+    {
+      "member": "licenses/NOTICE.md",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/data/NOTICE.md",
+      "bytes": 4225,
+      "sha256": "5707a68f1329d817fc04f1f0903ce0b373bf887f143d4e3f33eebf939d6d67a7"
+    },
+    {
+      "member": "retention-source/package_evidence.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/package_evidence.py",
+      "bytes": 6285,
+      "sha256": "ad80c192dfe34590c3d452dcc08c6e8ea595db552d6cefae43cea01f420113ab"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/clippy.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/clippy.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/clippy.process.json",
+      "bytes": 1074,
+      "sha256": "1285e404ac5760d0004fe37ff3815479535f59d1b56aa715b6feaac95cdc09c8"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/clippy.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/clippy.stderr.log",
+      "bytes": 332,
+      "sha256": "d651d6733ce85ea223872687f9bd3cfc876c0541000d76c84f7d7c3fa096d4c1"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/fmt.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/fmt.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/fmt.process.json",
+      "bytes": 1024,
+      "sha256": "0b8d7583ad5dd5ea8261abda3f70469f9a54faf8265e427fe07ceeae5a41aae7"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/fmt.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/fmt.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/library-clippy.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/library-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/library-clippy.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/library-clippy.process.json",
+      "bytes": 1080,
+      "sha256": "eeb50a49591c2bda6dccca34c4ac2be944a7a949c7410210d3d87c6a58191d4e"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/library-clippy.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/library-clippy.stderr.log",
+      "bytes": 196,
+      "sha256": "190d91e98c3a47c5cb68ddf93ef43d04f7bda8c2bc1aee81020fc50235dd1534"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/library-fmt.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/library-fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/library-fmt.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/library-fmt.process.json",
+      "bytes": 2861,
+      "sha256": "061793aa4d730fc69c058792bf2361464bf6797971cd3fbc46c5043644d72535"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/library-fmt.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/library-fmt.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/library-tests.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/library-tests.log",
+      "bytes": 3593,
+      "sha256": "57a44b6f805577569200f7494a30a60da999f0071d7bfff250ab0c216b10571a"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/library-tests.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/library-tests.process.json",
+      "bytes": 1075,
+      "sha256": "a9d8a0af7801e4ce2ca13bbe187bd4a5e65ce7022ca80e14761c67cfd648d339"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/library-tests.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/library-tests.stderr.log",
+      "bytes": 1645,
+      "sha256": "aa65bf82b7421c72ac978f14193b27a39eb398abdd1d3811e7a926d6f23c875a"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/native-build.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/native-build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/native-build.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/native-build.process.json",
+      "bytes": 1754,
+      "sha256": "cca7b0d6274dc03413402570bf3547f099244cdec950f6d1d8b80aae643c2ac0"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/native-build.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/native-build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/rust-build.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/rust-build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/rust-build.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/rust-build.process.json",
+      "bytes": 1077,
+      "sha256": "3084a5652e05ac51c3040172c1cf5757f80346d3c0c2e13f15443c113d46e016"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/rust-build.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/rust-build.stderr.log",
+      "bytes": 322,
+      "sha256": "ff7380f3b7478e6ee7b241a83f66abec9237bac9e270fd11b4a1a41ac8c52cef"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/rust-linkage.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/rust-linkage.log",
+      "bytes": 230,
+      "sha256": "1122b0b1e5a6d32c79c642eb13e7458fa14d0ae9c01c76449f099294d116435a"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/rust-linkage.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/rust-linkage.process.json",
+      "bytes": 948,
+      "sha256": "ce552fb1124520f9b6ffda9240f9f5ea886eca3014fc829f2e74e7f065c1b517"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/rust-linkage.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/rust-linkage.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/rust-toolchain-manifest.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/rust-toolchain-manifest.json",
+      "bytes": 3226,
+      "sha256": "728ed5c86b52176522fd16205f492d61507e9540af330f71c0ffd9eb890ef94f"
+    },
+    {
+      "member": "runs/api-build-c-goldens-v1-20261018/summary.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-goldens-v1-20261018/summary.json",
+      "bytes": 24628,
+      "sha256": "f385d1a1a68b7397c491924f44c1251aa8eb5a00b3d55fa3d59eb485f0fa7628"
+    },
+    {
+      "member": "runs/golden-extraction-v2-20261018/extract.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/golden-extraction-v2-20261018/extract.log",
+      "bytes": 169,
+      "sha256": "b7d763bdb45d1ccfb89520cf01be0869f50c180736d44dcb43993db9e27dfe6a"
+    },
+    {
+      "member": "runs/golden-extraction-v2-20261018/extract.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/golden-extraction-v2-20261018/extract.process.json",
+      "bytes": 982,
+      "sha256": "98285a322f5d9e3cbcd26174a33542e17b2d0a7d1fdb00d40e2628f54518bee6"
+    },
+    {
+      "member": "runs/golden-extraction-v2-20261018/extract.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/golden-extraction-v2-20261018/extract.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/tests/data/locales-v2.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/tests/data/locales-v2.json",
+      "bytes": 120237,
+      "sha256": "20e3fd006e69d1a47527c60fc8ed43c5fd4d28cd2c7c2a1b140632cce328e4be"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/tests/data/locales-v2.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/tests/data/locales-v2.tsv",
+      "bytes": 819468,
+      "sha256": "760533a8fee8408ad8c1bc9a953d8c661e242d88006cc671f8f2f45269d6bc0a"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/tests/locale_fixtures.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/tests/locale_fixtures.rs",
+      "bytes": 5892,
+      "sha256": "b6ad28f7e12eee028b0bc995e20a07616dcea544f3311c31a14021a820a2d64e"
+    }
+  ],
+  "preservation": "Original completed and failed records copied byte-for-byte; no native or Rust tests rerun",
+  "binary_identity_timing": "Recorded run hashes checked where present; the golden test CLI hash is first recorded during retention after its completed Cargo test",
+  "shared_failed_binaries": "The exact f7d034c8 native settings reference and B failed probe remain in reorder-failure-retained-v1-20261018; the native DEFAULT crash remains in default-reset-retained-v1-20261018",
+  "publication": "Archive is a separate retention package, not a new compatibility pass; original statuses and complete keys are unchanged"
+}
