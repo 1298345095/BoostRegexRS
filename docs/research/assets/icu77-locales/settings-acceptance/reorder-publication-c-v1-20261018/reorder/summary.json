@@ -1,0 +1,1412 @@
+{
+  "schema": "boostregexrs.icu77-settings-evidence-collection.v1",
+  "status": "retained_completed_execution_evidence",
+  "group": "reorder",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "tools/icu-probe/primary/settings-probe/package_evidence.py",
+    "--group",
+    "reorder",
+    "--output",
+    "docs/research/assets/icu77-locales/settings-acceptance/reorder-publication-c-v1-20261018/reorder"
+  ],
+  "cwd": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery",
+  "sources": [
+    {
+      "member": "binaries/icu77-settings-probe-c",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/target/research/icu77-cloud/build/settings-probe/api-build-c-v2-20261018/release/icu77-settings-probe",
+      "bytes": 639800,
+      "sha256": "78ce0dee563a738ddc58fb82c6d085bd84917a0fd97822748c59dd6ce1f1ad8a"
+    },
+    {
+      "member": "licenses/LICENSE-ICU.txt",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/data/LICENSE-ICU.txt",
+      "bytes": 26487,
+      "sha256": "451167c55c0fa447cc2d5632714f5e3c567fe4f1e1badefab2c1333852198aca"
+    },
+    {
+      "member": "licenses/NOTICE.md",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/data/NOTICE.md",
+      "bytes": 4225,
+      "sha256": "5707a68f1329d817fc04f1f0903ce0b373bf887f143d4e3f33eebf939d6d67a7"
+    },
+    {
+      "member": "retention-source/package_evidence.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/package_evidence.py",
+      "bytes": 6285,
+      "sha256": "ad80c192dfe34590c3d452dcc08c6e8ea595db552d6cefae43cea01f420113ab"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/clippy.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/clippy.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/clippy.process.json",
+      "bytes": 1057,
+      "sha256": "92bd86d16b4a3401fbfe4e05003068e97346bd712e0f84e30ed6c6cbb7105df4"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/clippy.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/clippy.stderr.log",
+      "bytes": 332,
+      "sha256": "257171ce91163dfe69338c29eec2d9268d7b0bfd91ad66514766c6f6a154c908"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/fmt.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/fmt.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/fmt.process.json",
+      "bytes": 1007,
+      "sha256": "a00562a40fb812fbb21634d77205567f6353c9731d71b4471afc31ae35d18a3a"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/fmt.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/fmt.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/library-clippy.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/library-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/library-clippy.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/library-clippy.process.json",
+      "bytes": 1067,
+      "sha256": "521e143ce72185720f45507a77dc6c18d69faac3ccf44f46c15b3a268d8287f9"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/library-clippy.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/library-clippy.stderr.log",
+      "bytes": 813,
+      "sha256": "f723963602ec6d7deb411b03cf77c474435e1381215cf802293e61609afbbd43"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/library-fmt.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/library-fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/library-fmt.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/library-fmt.process.json",
+      "bytes": 2730,
+      "sha256": "3102642d2cad4955f2a693fe94bde12a5c611bb295ddee0288107e7ff893c621"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/library-fmt.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/library-fmt.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v1-20261018/rust-toolchain-manifest.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v1-20261018/rust-toolchain-manifest.json",
+      "bytes": 3226,
+      "sha256": "728ed5c86b52176522fd16205f492d61507e9540af330f71c0ffd9eb890ef94f"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/clippy.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/clippy.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/clippy.process.json",
+      "bytes": 1057,
+      "sha256": "1764a906b14661b839e246c5b29e472b1cf97680283adb83414ba037a6856a6b"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/clippy.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/clippy.stderr.log",
+      "bytes": 332,
+      "sha256": "7da73704e05a87353115c70c9b6f4c865a8971710b2c0d7dfc02340c3a4d612d"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/fmt.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/fmt.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/fmt.process.json",
+      "bytes": 1007,
+      "sha256": "b555a2707b9dad11b9e16856f889a5405e649161d94dd12655261e36b23b3783"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/fmt.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/fmt.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/library-clippy.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/library-clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/library-clippy.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/library-clippy.process.json",
+      "bytes": 1063,
+      "sha256": "c3c048e51a8353347b1541f9ba50edc44c77324675a9a57f5e0eafd0f4fb40ec"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/library-clippy.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/library-clippy.stderr.log",
+      "bytes": 196,
+      "sha256": "7828566b515364d6c68ad5967d5f7977e1c05b0d39a998900c4d56db3c664226"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/library-fmt.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/library-fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/library-fmt.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/library-fmt.process.json",
+      "bytes": 2730,
+      "sha256": "3c863ce9b6bc4c3f653f9e48d6e60806b14a9044f27579878f927e4f73221870"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/library-fmt.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/library-fmt.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/library-tests.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/library-tests.log",
+      "bytes": 3337,
+      "sha256": "bc7831181722df3ebc57bbc30a68b9d708a90e76f2ca3f01073969fd6d6f558f"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/library-tests.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/library-tests.process.json",
+      "bytes": 1060,
+      "sha256": "dd32019234e85997d99e1f14105b6a2b5f34a6d7d1ee40d17d3f534a550d8127"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/library-tests.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/library-tests.stderr.log",
+      "bytes": 1416,
+      "sha256": "8f9dfa1ecddab8cb38b38d169f28e6ff566fe0538d01f5c6234854cbd8ecde37"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/native-build.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/native-build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/native-build.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/native-build.process.json",
+      "bytes": 1731,
+      "sha256": "889aaa81e5633bbf5e3c06f2fcf93a5460a3bac30a961a02aefea0b478329199"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/native-build.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/native-build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/rust-build.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/rust-build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/rust-build.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/rust-build.process.json",
+      "bytes": 1061,
+      "sha256": "7dee4369319c783abad47e47d99019c9708f148620f33fe8ec593f77afff939f"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/rust-build.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/rust-build.stderr.log",
+      "bytes": 322,
+      "sha256": "443f0f8b02b8caf85e6c30cc8be5924828c193bd897b1bcc42a68d7f1efa4650"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/rust-linkage.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/rust-linkage.log",
+      "bytes": 230,
+      "sha256": "5a9e18d4b51b1d2f8586dc4be44ab287e052764ed9c2e6c9d7dc1f6217c83f08"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/rust-linkage.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/rust-linkage.process.json",
+      "bytes": 924,
+      "sha256": "868b1fcd2f270f429866d160d7fad6af0c6080bd66efd61c0f1778d5a880c154"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/rust-linkage.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/rust-linkage.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/rust-toolchain-manifest.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/rust-toolchain-manifest.json",
+      "bytes": 3226,
+      "sha256": "728ed5c86b52176522fd16205f492d61507e9540af330f71c0ffd9eb890ef94f"
+    },
+    {
+      "member": "runs/api-build-c-v2-20261018/summary.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-c-v2-20261018/summary.json",
+      "bytes": 23666,
+      "sha256": "0f00ddf184fd785e54aa4453b154ccf30a083b6425e414f617cf164e6575c89f"
+    },
+    {
+      "member": "runs/reorder-fields-v1-20261018/build.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-fields-v1-20261018/build.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/build.process.json",
+      "bytes": 2033,
+      "sha256": "27dfac662e8a81710f846863672cb58be44f4a890708a2ba0cd858277a5fbc48"
+    },
+    {
+      "member": "runs/reorder-fields-v1-20261018/build.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-fields-v1-20261018/native-settings.bin",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/native-settings.bin",
+      "bytes": 432,
+      "sha256": "c37c6773793e0b789f3439244f43f44b972c37b7b614700f05f1d8c998fc0ee5"
+    },
+    {
+      "member": "runs/reorder-fields-v1-20261018/native.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/native.log",
+      "bytes": 13,
+      "sha256": "65353b8a0be06dbaa985903d7f3db7809ec8b1485d23a6b163218d9a3be1e993"
+    },
+    {
+      "member": "runs/reorder-fields-v1-20261018/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/native.process.json",
+      "bytes": 1124,
+      "sha256": "a4287a9c11b10c5d51b69bea84248e25509d74527f70b85f7e8e5a92722c1bea"
+    },
+    {
+      "member": "runs/reorder-fields-v1-20261018/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-fields-v1-20261018/settings.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/settings.json",
+      "bytes": 2843,
+      "sha256": "54fb1b46d54be30f67999d327da8d8c6f7490269d78a442894d3f322dcd1b530"
+    },
+    {
+      "member": "runs/reorder-fields-v1-20261018/summary.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/summary.json",
+      "bytes": 7467,
+      "sha256": "21d09d18e80876aac1822e020e9d148f4c4985c84cd6ab0619afcb817da39a19"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0000/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0000/candidate.process.json",
+      "bytes": 1656,
+      "sha256": "04b512d813c1598d16f4128ae57da77b708c6858ca9e6dcef9029d60b2382b26"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0000/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0000/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0000/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0000/candidate.tsv",
+      "bytes": 317,
+      "sha256": "10d7f0c08dc52747a8cd5255adbd7b53ef50f91eba9e3c4b4ca6e48adc4b31f6"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0000/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0000/inputs.tsv",
+      "bytes": 656,
+      "sha256": "4b2e2b837af31795374e4222ca0197439abfca8d2e5b6d3ca90cb6f80d68397f"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0000/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0000/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0000/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0000/native.process.json",
+      "bytes": 1258,
+      "sha256": "fc5caa1b97a23ec1c17e576e5f715dff79f8b88122b5206bed9efbba1de2c29b"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0000/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0000/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0000/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0000/native.tsv",
+      "bytes": 848,
+      "sha256": "8c466dda68d4997801c4d7ac6062478b0ce0b8565b9115faed4df02bc0130c3a"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0001/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0001/candidate.process.json",
+      "bytes": 1657,
+      "sha256": "4bb0c37a065b69ea8f665b971649140b9b23869b21fbd42e0f153193c858f85d"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0001/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0001/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0001/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0001/candidate.tsv",
+      "bytes": 493,
+      "sha256": "6d53f1ba3b9fb6af783f9ce2ce60e9bf5e6a6cbc0b4b3969748d9654db0ebd10"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0001/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0001/inputs.tsv",
+      "bytes": 674,
+      "sha256": "5327fed117ce3b23c96759c4feeafe27c30bf59c1a89ef80be986f710eb45982"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0001/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0001/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0001/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0001/native.process.json",
+      "bytes": 1257,
+      "sha256": "10cb37dd5f773c879be744d69cf2f947c238c655209bfbe298e150ad86d74653"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0001/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0001/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0001/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0001/native.tsv",
+      "bytes": 959,
+      "sha256": "dd1dc009b174788d9308f2cb6bb692b86558984a1aaeeeb5f141e686960938c0"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0002/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0002/candidate.process.json",
+      "bytes": 1657,
+      "sha256": "e9c4dd026298ebce2be7b4ff67ecf49dcf69280bdc8a0f975cc58e0d76970254"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0002/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0002/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0002/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0002/candidate.tsv",
+      "bytes": 493,
+      "sha256": "6d53f1ba3b9fb6af783f9ce2ce60e9bf5e6a6cbc0b4b3969748d9654db0ebd10"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0002/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0002/inputs.tsv",
+      "bytes": 379,
+      "sha256": "ddb6ed48996ecc1349b3813c9978d96769230d5969c74541d0bb85267dcc201f"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0002/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0002/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0002/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0002/native.process.json",
+      "bytes": 1256,
+      "sha256": "f0e86ea074bfc87f5224aba297ad3f3228c1e4c76b88d5c5e80c38a5238b2365"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0002/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0002/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0002/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0002/native.tsv",
+      "bytes": 664,
+      "sha256": "5993d8fc08154e6d443ead3a6945333a57a68434f591def577859bac97455984"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0003/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0003/candidate.process.json",
+      "bytes": 1657,
+      "sha256": "220de35ccc89565ccf5e368b3e02dc6935352d37cd488af2d3213ca1f061416c"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0003/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0003/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0003/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0003/candidate.tsv",
+      "bytes": 493,
+      "sha256": "6d53f1ba3b9fb6af783f9ce2ce60e9bf5e6a6cbc0b4b3969748d9654db0ebd10"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0003/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0003/inputs.tsv",
+      "bytes": 228,
+      "sha256": "9ea957a25dd877482becc65cfe6e13f3bb85e0a497f4c4f1bc9ec981233b2307"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0003/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0003/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0003/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0003/native.process.json",
+      "bytes": 1257,
+      "sha256": "eacf9241c837bac887556a640873c8a451fd9c567715cf7ee1f2f5185f4ac563"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0003/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0003/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0003/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0003/native.tsv",
+      "bytes": 513,
+      "sha256": "0619afb5e3bb8f02454d34a2d219f004a9ccb4b23be8db3330ba9afe8f6a3eda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0004/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0004/candidate.process.json",
+      "bytes": 1657,
+      "sha256": "c41067c30996c069949cc7f626327c121fa571fdc328e700e529fc41c857d0e3"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0004/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0004/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0004/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0004/candidate.tsv",
+      "bytes": 493,
+      "sha256": "6d53f1ba3b9fb6af783f9ce2ce60e9bf5e6a6cbc0b4b3969748d9654db0ebd10"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0004/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0004/inputs.tsv",
+      "bytes": 153,
+      "sha256": "549778abc895b549b96a5a8561f2f79e2c01d789d41a2a0ed35f1df5e6e94be3"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0004/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0004/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0004/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0004/native.process.json",
+      "bytes": 1258,
+      "sha256": "209f184d51eb2cdb1aba0e12817f01a4ea45645b441672dcde8f2d81efc4b256"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0004/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0004/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0004/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0004/native.tsv",
+      "bytes": 438,
+      "sha256": "78d34d8a99b80e387b0989fcb9a25c75004c48173e9d2670c81d153bbcc726be"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0005/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0005/candidate.process.json",
+      "bytes": 1656,
+      "sha256": "2c813e04462cad24191f6501d59049b020d83c6339c4a25245eadd6fd136bd0c"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0005/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0005/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0005/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0005/candidate.tsv",
+      "bytes": 399,
+      "sha256": "20b3ac8ad35485654d198c40946cc6ee5396ac582930bd9c0072bec0288cfacd"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0005/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0005/inputs.tsv",
+      "bytes": 114,
+      "sha256": "59ffc29078e1bcd41674d4e1dacf48bddfa98b3b7cf448fb1ada79eeef777c19"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0005/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0005/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0005/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0005/native.process.json",
+      "bytes": 1257,
+      "sha256": "abf80627d3b7c3f89399a07cd46ea27967c5fcfddbd1d69204db6cf95d195c6c"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0005/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0005/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0005/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0005/native.tsv",
+      "bytes": 399,
+      "sha256": "20b3ac8ad35485654d198c40946cc6ee5396ac582930bd9c0072bec0288cfacd"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0006/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0006/candidate.process.json",
+      "bytes": 1657,
+      "sha256": "d4726a594f1212de69ea59d58cdde1a4b43c6740c9bfff0d9b0b4d8aed8a0eaf"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0006/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0006/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0006/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0006/candidate.tsv",
+      "bytes": 772,
+      "sha256": "747f0e9b44659b34b8b96b3d10ad5816dadb19ca33ad418a317b8941eaa594c3"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0006/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0006/inputs.tsv",
+      "bytes": 222,
+      "sha256": "6636a15ead5601548bbd070cfc09f7b277f91edb140ee79ef31536b710e70a0a"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0006/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0006/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0006/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0006/native.process.json",
+      "bytes": 1256,
+      "sha256": "01fa417c1a3c9133435b570df346ffa1fa16407305472a94da5255fc91584806"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0006/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0006/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0006/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0006/native.tsv",
+      "bytes": 704,
+      "sha256": "f22b15ff6d79bf1321f08b1dcd31ed9a001a662dd56164897ad1d365c0d3aad7"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0007/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0007/candidate.process.json",
+      "bytes": 1656,
+      "sha256": "e1df77857176823bce6d47ebc8177dfcd12f8dacfc3b559a17e902eb7ac43cca"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0007/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0007/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0007/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0007/candidate.tsv",
+      "bytes": 1041,
+      "sha256": "b5239993dd10c937793115e62cd8822f8995c2dd1cac92c169b7704141d12fb0"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0007/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0007/inputs.tsv",
+      "bytes": 276,
+      "sha256": "9bd8b7246c44d933ff3f9503827bd87da4923000c0015db5f00ba4fa9fd02ce5"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0007/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0007/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0007/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0007/native.process.json",
+      "bytes": 1258,
+      "sha256": "f1dc844401acf3a4bc440b2a856d5376f3ec74f5c2c7cf38824fdfbc94b6b12d"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0007/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0007/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0007/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0007/native.tsv",
+      "bytes": 871,
+      "sha256": "66da38348a88093e69f08c3043465d2c098f3d3636e27e15780a5e16543adf60"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0008/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0008/candidate.process.json",
+      "bytes": 1657,
+      "sha256": "20f5a6cb7fb3c7dea7c02976db6bebb850ba6221a77e6b97d598b00edee6cd2c"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0008/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0008/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0008/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0008/candidate.tsv",
+      "bytes": 1933,
+      "sha256": "deb7366d54a1b6236a1bf7e9030dff088159546225ee2d6e4947ed57b4216535"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0008/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0008/inputs.tsv",
+      "bytes": 546,
+      "sha256": "d9152f165a5efe65ca0bfc853a9f01ca387b0412c7c55dd4f883b51485ea1356"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0008/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0008/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0008/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0008/native.process.json",
+      "bytes": 1257,
+      "sha256": "941b76833776c368de2f622b24ad42a15988933ddca4c4707937c051121714d4"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0008/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0008/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0008/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0008/native.tsv",
+      "bytes": 1596,
+      "sha256": "925fb5d8b34e9e13ac15a8a4ac0acccf0e611a857bdacc35bf75045a690d68d2"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0009/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0009/candidate.process.json",
+      "bytes": 1657,
+      "sha256": "be34cb6ef49466d1c7b0fd74fcf320c9a4469e3bf47e30aea64f7ae0ce187ca8"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0009/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0009/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0009/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0009/candidate.tsv",
+      "bytes": 1761,
+      "sha256": "9350609b80e5cf5e499d6bfc525cdb7c556a68cc6ed3374748f2b9c2e32db280"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0009/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0009/inputs.tsv",
+      "bytes": 460,
+      "sha256": "c7a3eeae967cfd2f54d890e8a8e150a7e3f3a06c9688da6736d79d9a4889a73a"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0009/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0009/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0009/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0009/native.process.json",
+      "bytes": 1257,
+      "sha256": "b05d29664ef75b5961950ebcd35f7bd48a8c9ca8f1a876291c6cc0502dbceabe"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0009/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0009/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0009/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0009/native.tsv",
+      "bytes": 1455,
+      "sha256": "a1e61115c63424018d0c5118bbabad77c2fd1e177030a213663c573aa67ca490"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0010/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0010/candidate.process.json",
+      "bytes": 1657,
+      "sha256": "92c36cefe6dfc861920ba1369ce84e769656afdbd83f7b2a17e84e2ba4110dc4"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0010/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0010/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0010/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0010/candidate.tsv",
+      "bytes": 1761,
+      "sha256": "9350609b80e5cf5e499d6bfc525cdb7c556a68cc6ed3374748f2b9c2e32db280"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0010/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0010/inputs.tsv",
+      "bytes": 460,
+      "sha256": "c7a3eeae967cfd2f54d890e8a8e150a7e3f3a06c9688da6736d79d9a4889a73a"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0010/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0010/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0010/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0010/native.process.json",
+      "bytes": 1257,
+      "sha256": "c6a19cd8b050d57504cef804013d8bad9509f11f4174ad14d15e74828cb33777"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0010/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0010/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/batch-0010/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0010/native.tsv",
+      "bytes": 1455,
+      "sha256": "a1e61115c63424018d0c5118bbabad77c2fd1e177030a213663c573aa67ca490"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/original.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/original.json",
+      "bytes": 33489,
+      "sha256": "3a60bc72d2b9f556445fad55c5abfa1e5f6657e8df2995eadc028ae5c49edd4f"
+    },
+    {
+      "member": "runs/reorder-reduced-v1-20261018/summary.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/summary.json",
+      "bytes": 45043,
+      "sha256": "62f4169fb9016d6e449e51b915905ad63e33cdaddb7ca50faa4745c7566ff932"
+    },
+    {
+      "member": "runs/reorder-root-classified-c-v1-20261018/original-driver-observation.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-classified-c-v1-20261018/original-driver-observation.json",
+      "bytes": 1808,
+      "sha256": "1b39ad47547cf080ec50e19f6b8a3b4075b76b0ebf82bdfb3f8fd4e83bd8a975"
+    },
+    {
+      "member": "runs/reorder-root-classified-c-v1-20261018/owner-0000-settings-0000.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-classified-c-v1-20261018/owner-0000-settings-0000.json",
+      "bytes": 27916,
+      "sha256": "0af7643fc545eff0534b9595cfec7c27869daec599638c3191c2ed279450aa11"
+    },
+    {
+      "member": "runs/reorder-root-classified-c-v1-20261018/run.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-classified-c-v1-20261018/run.py",
+      "bytes": 19838,
+      "sha256": "743a9ba178a655ce5c09087a42d1693f3a3e6388fd3d7109eac7c44713a9c592"
+    },
+    {
+      "member": "runs/reorder-root-classified-c-v1-20261018/summary.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-classified-c-v1-20261018/summary.json",
+      "bytes": 9755,
+      "sha256": "09a80e1c16d2e74a6a9e121a5c02c4762cbe632ac0a19e5a8d368271784f90c8"
+    },
+    {
+      "member": "runs/reorder-root-classified-c-v1-20261018/verify_reorder_run.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-classified-c-v1-20261018/verify_reorder_run.py",
+      "bytes": 7998,
+      "sha256": "ad9e0d8613260fccfab67d1bcc396a3e6001a130307708533b0b22ed0efe6471"
+    },
+    {
+      "member": "runs/reorder-root-driver-observation-v1-20261018.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-driver-observation-v1-20261018.json",
+      "bytes": 1808,
+      "sha256": "1b39ad47547cf080ec50e19f6b8a3b4075b76b0ebf82bdfb3f8fd4e83bd8a975"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/generation.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/generation.json",
+      "bytes": 50621,
+      "sha256": "7d00c04d4a526290a3b18459963da0987d5aaf5d5304bee3b6fb742bee0620f4"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/cloud/prepare.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/cloud/prepare.py",
+      "bytes": 17824,
+      "sha256": "88d68d41503f5676651510cd98be7f88ec67f0d6dc3409f4ce65240a256eefe9"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/compare.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/compare.py",
+      "bytes": 10977,
+      "sha256": "b6abd79fb43214270b03c2fad20aab2a88c3e1b3965fa8c88a2e4d784a1df2de"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/export/data_format.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/export/data_format.py",
+      "bytes": 5744,
+      "sha256": "0c858da2bf173517bc4c66b3e3e76ab21905867a55aa8ec6557eb8430408368a"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/export/locale_format.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/export/locale_format.py",
+      "bytes": 3477,
+      "sha256": "c89e08d1865323367a2c0933027f3f60e361e33d9ac831b1109be562d4d870d5"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/generate_cases.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/generate_cases.py",
+      "bytes": 11748,
+      "sha256": "6983c3f924a8d067aa9ac52daef8f81dd51186a153a149f9e9d00f5b0bc2f92e"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/run_locales.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/run_locales.py",
+      "bytes": 27608,
+      "sha256": "eb7cfde55ac995f67202a3572057f7f3ce874b260bdb5805dd2d54a39bb035db"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.lock",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.lock",
+      "bytes": 265,
+      "sha256": "cc4fa973d0995ef112bd28716455f230c6fb5a0269f02a4fbd280b0b9f52d2e0"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.toml",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.toml",
+      "bytes": 325,
+      "sha256": "c5a1091cffa1ba06253bbab513ed0ce0bafbcad8dfd36c62b08abcffef5cb997"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/build.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/build.py",
+      "bytes": 7120,
+      "sha256": "b6ae1885ed81b5e31b53dd244f90e3ea8c087eeffb615d21fd3d010e9a011751"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/cases.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/cases.py",
+      "bytes": 9062,
+      "sha256": "dda77f70e9e4417475119d1fd0fe128cc4fb8867cd0f2b56f77f93d59faa0488"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/reference.cpp",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/reference.cpp",
+      "bytes": 8095,
+      "sha256": "da7c9629eddaad213e27be82751887c525e1e2cc743578bafc5dc2f8544b8f65"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/run.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/run.py",
+      "bytes": 18676,
+      "sha256": "7f08b5877f6dd1a3785df65f4261615c5b88f8c3a6af6bf5793c87eefac071c2"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/src/main.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/src/main.rs",
+      "bytes": 5773,
+      "sha256": "0459dfc6f2ca1ebc39a01b9b4581a593b405c0ff71eac41ae6cb7e5078d755e5"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/inputs.tsv",
+      "bytes": 7278275,
+      "sha256": "208e2278a5848d90ff15d3c20df862e950ff25067587df9d80e17aafedb21f19"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/candidate.process.json",
+      "bytes": 1686,
+      "sha256": "61f3f9e4e2b5ef8df9f89ca9027f7d1689fc3a8691e63d80552f4621dc2e6211"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/candidate.tsv",
+      "bytes": 43124435,
+      "sha256": "45834dce5918d55e9f84b89271014e9eb22ea9d992eef210e5e10c430621f2a5"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/native.process.json",
+      "bytes": 1306,
+      "sha256": "065983ca334863654e481402e8599300163ad4259e84013cf34cf74066d9a621"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/owner-0000-settings-0000/native.tsv",
+      "bytes": 43102530,
+      "sha256": "c01b59c0755eb6866f4ee06abbdb588199ddbd22748ffb01759077df9edea106"
+    },
+    {
+      "member": "runs/reorder-root-full-c-v1-20261018/summary.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-root-full-c-v1-20261018/summary.json",
+      "bytes": 147887,
+      "sha256": "e9ece4fa7bb4570eb3352145327617486123eb3606e32c5f4b816b1ed86ff2ae"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/generation.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/generation.json",
+      "bytes": 50472,
+      "sha256": "9a73f6aca1d3ace19303e7a6d1cd64340182acf23fa7e301c92c2922cbf14e87"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/cloud/prepare.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/cloud/prepare.py",
+      "bytes": 17824,
+      "sha256": "88d68d41503f5676651510cd98be7f88ec67f0d6dc3409f4ce65240a256eefe9"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/compare.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/compare.py",
+      "bytes": 10977,
+      "sha256": "b6abd79fb43214270b03c2fad20aab2a88c3e1b3965fa8c88a2e4d784a1df2de"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/export/data_format.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/export/data_format.py",
+      "bytes": 5744,
+      "sha256": "0c858da2bf173517bc4c66b3e3e76ab21905867a55aa8ec6557eb8430408368a"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/export/locale_format.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/export/locale_format.py",
+      "bytes": 3477,
+      "sha256": "c89e08d1865323367a2c0933027f3f60e361e33d9ac831b1109be562d4d870d5"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/generate_cases.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/generate_cases.py",
+      "bytes": 11748,
+      "sha256": "6983c3f924a8d067aa9ac52daef8f81dd51186a153a149f9e9d00f5b0bc2f92e"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/run_locales.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/run_locales.py",
+      "bytes": 27608,
+      "sha256": "eb7cfde55ac995f67202a3572057f7f3ce874b260bdb5805dd2d54a39bb035db"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.lock",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.lock",
+      "bytes": 265,
+      "sha256": "cc4fa973d0995ef112bd28716455f230c6fb5a0269f02a4fbd280b0b9f52d2e0"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.toml",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.toml",
+      "bytes": 325,
+      "sha256": "c5a1091cffa1ba06253bbab513ed0ce0bafbcad8dfd36c62b08abcffef5cb997"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/build.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/build.py",
+      "bytes": 7120,
+      "sha256": "b6ae1885ed81b5e31b53dd244f90e3ea8c087eeffb615d21fd3d010e9a011751"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/cases.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/cases.py",
+      "bytes": 9062,
+      "sha256": "dda77f70e9e4417475119d1fd0fe128cc4fb8867cd0f2b56f77f93d59faa0488"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/reference.cpp",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/reference.cpp",
+      "bytes": 8095,
+      "sha256": "da7c9629eddaad213e27be82751887c525e1e2cc743578bafc5dc2f8544b8f65"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/run.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/run.py",
+      "bytes": 18044,
+      "sha256": "65caba6751f7ab29ac53f5904fe174040cffa244af2292f293df94b75d8b06d9"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/src/main.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/src/main.rs",
+      "bytes": 5773,
+      "sha256": "0459dfc6f2ca1ebc39a01b9b4581a593b405c0ff71eac41ae6cb7e5078d755e5"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/inputs.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/inputs.tsv",
+      "bytes": 213897,
+      "sha256": "b07ff5e1c502bd76b0266124fe22069606aef765d20c9e7635a4c1fd0818d94d"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/candidate.process.json",
+      "bytes": 1677,
+      "sha256": "746608a8f5125263ca4d6a9cf8ad1f6eb50609748324e63a0dd14b20a4b2b2e5"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/candidate.tsv",
+      "bytes": 1002319,
+      "sha256": "e210941b550bf1cd52011237503b14c6195ab9bc532f91a6e05abb5fab153415"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/native.process.json",
+      "bytes": 1291,
+      "sha256": "f7577f28d737276cb840f27228f5a217c01f736f2379774ebfc19f45a310f01d"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/native.tsv",
+      "bytes": 1001890,
+      "sha256": "465d5d0649664ac85f6f841c8ec11eda3d8e986556982c5517abc96e14bd613d"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/summary.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0000/summary.json",
+      "bytes": 4346,
+      "sha256": "acec7dbee40f8528780cd2aed4a74deb049d432db8f65ae2c64766f9d2a5c50d"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/candidate.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/candidate.process.json",
+      "bytes": 1677,
+      "sha256": "5b78e308382bedf8e75a242432e933abbcc35b4bc3f824079537ce205c8d922d"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/candidate.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/candidate.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/candidate.tsv",
+      "bytes": 1002505,
+      "sha256": "cbe3db22db503a08372191e7e7158743fe37c97f5b85e92db9b110301630f8d5"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/metadata.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/metadata.json",
+      "bytes": 223,
+      "sha256": "27307532a40e39cca48f3013b949a538cae6994ea9ab27989a16c7917b4ab8bf"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/native.process.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/native.process.json",
+      "bytes": 1294,
+      "sha256": "a679c3864ebe330a24650cdd593f86907220588bcf82d9f13fe1766b56b01ff1"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/native.stderr.log",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/native.tsv",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/owner-0000-settings-0002/native.tsv",
+      "bytes": 130558,
+      "sha256": "dda4a21f837d665da9a8787850aa7b2a4a981f54275633a750fbbda7b33b386c"
+    },
+    {
+      "member": "runs/reorder-smoke-c-v1-20261018/summary.json",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-c-v1-20261018/summary.json",
+      "bytes": 148163,
+      "sha256": "ca7740b6efcf1e1b3dfa2ca215706b8f6a02eecb380bece5027fa17a2624aba3"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/bocsu77.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/bocsu77.rs",
+      "bytes": 3301,
+      "sha256": "a7d8d4b08a7bde13f7177fa5b816219a3f38051a704719ba2a6ee15ecca1568a"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/ce77.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/ce77.rs",
+      "bytes": 20139,
+      "sha256": "6d0d467fe72a2cfc8092015a96325f964c8d7dabc0b901867097d2674e1c7e9a"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/cursor77.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/cursor77.rs",
+      "bytes": 12334,
+      "sha256": "a3814b4e342b65f5601df1cd75af2792477f7f741f3321b2ace7402060879e16"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/data77.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/data77.rs",
+      "bytes": 15520,
+      "sha256": "e32cd21f38cb393f306b85044e673d01334c7b7852cca8225dfe69db26613e5b"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/key77.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/key77.rs",
+      "bytes": 6043,
+      "sha256": "17b51fac7e1192d7dce277ec366003ba3cf16293de039eb10a4716a31738f6ea"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/levels77.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/levels77.rs",
+      "bytes": 11846,
+      "sha256": "df5abd670321e7436ff42c68d8127febf7ba5e7dc01cbbbd1aedf4e05f1a9f94"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/lib.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/lib.rs",
+      "bytes": 11166,
+      "sha256": "ab04e0a7426a3445be006ebb6cd3a356e76002d3abcea02d4a3c8039d7e3856e"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/main.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/main.rs",
+      "bytes": 12366,
+      "sha256": "86a05d066cd1d3ddb3a4f9cbbe0a724624f746273c16bc252909426dc8f7ebf0"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/nfd77.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/nfd77.rs",
+      "bytes": 4342,
+      "sha256": "76a65d76508117ca5e6add10c09edeb8a14546631aad52ff5d593b107ac302e3"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/numeric77.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/numeric77.rs",
+      "bytes": 3059,
+      "sha256": "83b91ca06e889afbc458fa0dc1c0db11621d4283a9b529f37980c9a5c0c57766"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/rust/src/settings77.rs",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/settings77.rs",
+      "bytes": 24175,
+      "sha256": "2a31b5e93689803ce2e8759ce0860da69542ca1b58c624cb33e11feac9f4f657"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/Cargo.lock",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/Cargo.lock",
+      "bytes": 265,
+      "sha256": "cc4fa973d0995ef112bd28716455f230c6fb5a0269f02a4fbd280b0b9f52d2e0"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/Cargo.toml",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/Cargo.toml",
+      "bytes": 325,
+      "sha256": "c5a1091cffa1ba06253bbab513ed0ce0bafbcad8dfd36c62b08abcffef5cb997"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/boost-locale-reset.cpp",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/boost-locale-reset.cpp",
+      "bytes": 3407,
+      "sha256": "9415158c93a3708c8e029b6eedf16343699b56aef2bf5e8878634eb829917a76"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/boost-reorder-keys.cpp",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/boost-reorder-keys.cpp",
+      "bytes": 5641,
+      "sha256": "572bb75a33540646731142e4ccbdff64a6a0f2ba87291336eb8fabde078e8ae4"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/build.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/build.py",
+      "bytes": 7120,
+      "sha256": "b6ae1885ed81b5e31b53dd244f90e3ea8c087eeffb615d21fd3d010e9a011751"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/cases.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/cases.py",
+      "bytes": 9062,
+      "sha256": "dda77f70e9e4417475119d1fd0fe128cc4fb8867cd0f2b56f77f93d59faa0488"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/default-reset.cpp",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/default-reset.cpp",
+      "bytes": 2015,
+      "sha256": "b2f4978f0659db84ae1c27b7768ccc734a710beba5e65bbe7206677837883236"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/diagnose_boost_reorder.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/diagnose_boost_reorder.py",
+      "bytes": 8217,
+      "sha256": "e4fa6fea1007e1347efee590037c00bce6f33846903d05040abdda0df34f445c"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/diagnose_boost_reset.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/diagnose_boost_reset.py",
+      "bytes": 3202,
+      "sha256": "88d510eb8318c07f2f79ebcac5d73e2313c85eca5342d70c31184fde20ad6a21"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/diagnose_default_reset.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/diagnose_default_reset.py",
+      "bytes": 2958,
+      "sha256": "9119d0092d5844cce39e9ece55b09cb86a554b133ce6f508179c494deeb8f7fc"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/import_regression.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/import_regression.py",
+      "bytes": 3496,
+      "sha256": "e924a004ac1be5939ae8d7bc85fb17a9fd0f000f3baf664c84b935e6e18d1595"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/inspect-reorder.cpp",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/inspect-reorder.cpp",
+      "bytes": 1850,
+      "sha256": "a02d5222e02ef4c55cc8cfb47a062e181eef162d2587055bb5d1927b70f6049d"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/inspect_reorder.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/inspect_reorder.py",
+      "bytes": 3744,
+      "sha256": "b0d7a693db4c8247bff3e64f59f7702e142f0343e8b34b72260890b8cc749cb9"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/reduce_reorder.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/reduce_reorder.py",
+      "bytes": 5927,
+      "sha256": "2033580bcc01282417e29f04eb09c9677bfae7ef3365fd738e9a2e13e27f1e36"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/reference.cpp",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/reference.cpp",
+      "bytes": 8095,
+      "sha256": "da7c9629eddaad213e27be82751887c525e1e2cc743578bafc5dc2f8544b8f65"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/retain_diagnostic.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/retain_diagnostic.py",
+      "bytes": 4259,
+      "sha256": "be57b96a6afef9074d87fad3c7929f5728f2f96f56d92917c0c6e24a14d0e146"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/retain_failure.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/retain_failure.py",
+      "bytes": 4111,
+      "sha256": "03373784b07b229879accd1f8e510832d645678f69a9651fef70a6d4cc2044f9"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/run.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/run.py",
+      "bytes": 19838,
+      "sha256": "743a9ba178a655ce5c09087a42d1693f3a3e6388fd3d7109eac7c44713a9c592"
+    },
+    {
+      "member": "source/tools/icu-probe/primary/settings-probe/verify_reorder_run.py",
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/verify_reorder_run.py",
+      "bytes": 7998,
+      "sha256": "ad9e0d8613260fccfab67d1bcc396a3e6001a130307708533b0b22ed0efe6471"
+    }
+  ],
+  "preservation": "Original completed and failed records copied byte-for-byte; no native or Rust tests rerun",
+  "binary_identity_timing": "Recorded run hashes checked where present; the golden test CLI hash is first recorded during retention after its completed Cargo test",
+  "shared_failed_binaries": "The exact f7d034c8 native settings reference and B failed probe remain in reorder-failure-retained-v1-20261018; the native DEFAULT crash remains in default-reset-retained-v1-20261018",
+  "publication": "Archive is a separate retention package, not a new compatibility pass; original statuses and complete keys are unchanged"
+}
