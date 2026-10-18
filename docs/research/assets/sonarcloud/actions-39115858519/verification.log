@@ -1,0 +1,25 @@
+{
+  "archive_bytes": 94765,
+  "archive_sha256": "b6b5f7abf49ac3ee39dcc8e931edfa1792279186425baebcda40250e9916ce62",
+  "verified_members": 26,
+  "check_id": 117641582514,
+  "check_status": "completed",
+  "check_completed_utc": "2026-10-18T09:35:24Z",
+  "gate_conclusion": "failure",
+  "token_supplied": false,
+  "associated_commit_verified": false,
+  "issues": 159,
+  "issue_types": {
+    "CODE_SMELL": 135,
+    "VULNERABILITY": 24
+  },
+  "delta": {
+    "unchanged": 159,
+    "changed": 0,
+    "added": [],
+    "absent": [
+      "AaFMpz_DDyq7mXZU9k75",
+      "AaFMpz_DDyq7mXZU9k76"
+    ]
+  }
+}
