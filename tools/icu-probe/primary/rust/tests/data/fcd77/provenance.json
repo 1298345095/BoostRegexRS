@@ -1,15 +1,65 @@
 {
-  "schema": "boostregexrs.icu77-fcd-history-fixtures.v1",
-  "status": "historical_cursor_subset_only",
-  "input_count": 6,
-  "cursor_rows": 120,
-  "native_execution_performed": false,
+  "schema": "boostregexrs.icu77-fcd-fixtures.v2",
+  "source": {
+    "archive_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/icu4c-77_1-src.tgz",
+    "checksum_manifest_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/SHASUM512.txt",
+    "algorithm": "sha512",
+    "published_digest": "a47d6d9c327d037a05ea43d1d1a06b2fd757cc02a94f7c1a238f35cfc3dfd4ab78d0612790f3a3cca0292c77412a9c2c15c8f24b718f79a857e007e66f07e7cd",
+    "actual_digest": "a47d6d9c327d037a05ea43d1d1a06b2fd757cc02a94f7c1a238f35cfc3dfd4ab78d0612790f3a3cca0292c77412a9c2c15c8f24b718f79a857e007e66f07e7cd",
+    "published_digest_matches": true,
+    "detached_signature_verified": false,
+    "checksum_manifest_sha256": "8a1d7a14c9e641ef07186180f10aba2338b5f53bccc845047344cd2ddd200b4d",
+    "archive_sha256": "588e431f77327c39031ffbb8843c0e3bc122c211374485fa87dc5f3faff24061",
+    "extracted_source_files_match_archive": true
+  },
+  "generation": {
+    "algorithm": "SplitMix64",
+    "seed": "0x0042494355464344",
+    "generated_inputs": 512,
+    "input_count": 1436,
+    "distinct_input_count": 1409,
+    "supplementary_boundary_points": 381,
+    "host_unicode_database_used": false,
+    "reference_keys_used_to_choose_inputs": false,
+    "generator_revision": 2
+  },
+  "recovery": "v1 generated rows/logs were pruned; this reconstructed generator and fresh native outputs have independent identities",
+  "profiles": [
+    {
+      "id": "root-off",
+      "locale": "root",
+      "owner": 0,
+      "normalization": false
+    },
+    {
+      "id": "root-on",
+      "locale": "root@colNormalization=yes",
+      "owner": 0,
+      "normalization": true
+    },
+    {
+      "id": "fo-off",
+      "locale": "fo@collation=search;colNormalization=no",
+      "owner": 43,
+      "normalization": false
+    },
+    {
+      "id": "fo-on",
+      "locale": "fo@collation=search",
+      "owner": 43,
+      "normalization": true
+    }
+  ],
+  "approved_empty_keys": 4,
+  "ordinary_key_rows": 11484,
+  "scope": "Native reference fixtures only; Rust acceptance is recorded separately",
   "generator": {
     "path": "tools/icu-probe/primary/rust/tests/refresh_fcd_fixtures.py",
     "bytes": 16244,
     "sha256": "98c27873bccde70e19e963053ad4b4c11083422bd8f8ff88ac7a11dbeffdbb95"
   },
-  "archived_sources": [
+  "output": "docs/research/assets/icu77-locales/fcd-repair/native-v2-20261017T234000Z",
+  "historical_inputs": [
     {
       "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/input-u16.tsv",
       "bytes": 142,
@@ -19,42 +69,106 @@
       "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/input-u16.tsv",
       "bytes": 168,
       "sha256": "3b6d7660139183fadce3ce45d6a99e55ed1bd93ccb9381e6b55281c304a43ee5"
-    },
-    {
-      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/native-fcd.tsv",
-      "bytes": 2471,
-      "sha256": "7d0634020d341d7291ca9a0aed5889571dc4516661f62d37f4d0146c12eb58f6"
-    },
-    {
-      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/native-fcd.tsv",
-      "bytes": 2285,
-      "sha256": "be0e08051fd051df51fa38ce74988b6e1176b02288a455aded43fd92656eb1c8"
-    },
-    {
-      "path": "docs/research/assets/icu77-locales/diagnostics/fcd-unit-flags/native-fcd-flags.bin",
-      "bytes": 65536,
-      "sha256": "11fa8680ed9a86ccfaf71bc286b7790226e2d129b3b5548ba376589a01bc4b24"
     }
   ],
   "fixtures": [
     {
-      "path": "docs/research/assets/icu77-locales/fcd-repair/recovered-2026-10-17-history-corrected/inputs-u16.tsv",
-      "bytes": 294,
-      "sha256": "f6fb6f44c7a1d548a89ba8240cd8ac6b6cbfcef3846c8aea6169ea3c8eeb2113"
+      "path": "docs/research/assets/icu77-locales/fcd-repair/native-v2-20261017T234000Z/inputs-u16.tsv",
+      "bytes": 72737,
+      "sha256": "41f79249f816493b01ad3683caff681630c394c2acf6805f5a893946b0795d6e"
     },
     {
-      "path": "docs/research/assets/icu77-locales/fcd-repair/recovered-2026-10-17-history-corrected/native-cursor.tsv",
-      "bytes": 4689,
-      "sha256": "f483b7724b630f51b89f7238af4acefa2e9fd39e485a2487139385d1efdee873"
-    },
-    {
-      "path": "docs/research/assets/icu77-locales/fcd-repair/recovered-2026-10-17-history-corrected/native-flags.bin",
+      "path": "docs/research/assets/icu77-locales/fcd-repair/native-v2-20261017T234000Z/native-flags.bin",
       "bytes": 65536,
       "sha256": "11fa8680ed9a86ccfaf71bc286b7790226e2d129b3b5548ba376589a01bc4b24"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/native-v2-20261017T234000Z/native-cursor.tsv",
+      "bytes": 1151862,
+      "sha256": "a3b6196a9e27615b104fd18674b88184b884601241c0adc9d95d3560398590fe"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/native-v2-20261017T234000Z/native-keys-ces.tsv",
+      "bytes": 4245313,
+      "sha256": "02457ffb7e32b14949daa3c5414630c3b3ebc5180cf2d7817e3e356ff1e1d879"
     }
   ],
-  "not_covered": [
-    "full native key/CE fixture regeneration",
-    "new Rust execution after recovery"
-  ]
+  "executables": [
+    {
+      "path": "../BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/build/fcd-fixtures/native-v2-20261017T234000Z/trace-fcd",
+      "bytes": 33200496,
+      "sha256": "51d013c2ee072cb9911f52bbb222152bd494c89ca51c36aed5b85656a23ae0a2"
+    },
+    {
+      "path": "../BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/build/fcd-fixtures/native-v2-20261017T234000Z/trace-locale",
+      "bytes": 33195560,
+      "sha256": "fbcc0c4a1aa6adb2cefa972511973818cd41d5d851321742be3d7be09d9363a6"
+    },
+    {
+      "path": "../BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/build/fcd-fixtures/native-v2-20261017T234000Z/oracle",
+      "bytes": 80544,
+      "sha256": "7ad6349eb5f883156762279f5a13b59ad820662adea32277e5246e193d7a8423"
+    }
+  ],
+  "data": [
+    {
+      "path": "tools/icu-probe/primary/data/root-icu77.bin",
+      "bytes": 751804,
+      "sha256": "7aefc773d90fc2006c236720cd4e9220720efb33c7b8274ffeb24b494de3034e"
+    },
+    {
+      "path": "tools/icu-probe/primary/data/root-icu77-nfd.bin",
+      "bytes": 255286,
+      "sha256": "45c59eca6b851ea843c8088343742f1ac706ca4bb657c807a981e1c708a337de"
+    },
+    {
+      "path": "tools/icu-probe/primary/data/locales/owner-0043.bin",
+      "bytes": 10596,
+      "sha256": "73a59bc455c16a2101c2bebc23d3942d678df771c522de39630062ac8eb258f0"
+    },
+    {
+      "path": "tools/icu-probe/primary/data/locales/settings-0001.bin",
+      "bytes": 60,
+      "sha256": "749caea9d2dc9770b98797b37265f34ad715f6f72715421935cbb984a764bdcc"
+    }
+  ],
+  "native_sources": [
+    {
+      "path": "tools/icu-probe/primary/oracle.cpp",
+      "bytes": 12295,
+      "sha256": "45520473b3c2e57e872e5f07b2f40cca19ba7f78fbbb9350d40351a21e3934f0"
+    },
+    {
+      "path": "tools/icu-probe/primary/export/trace-fcd.cpp",
+      "bytes": 6550,
+      "sha256": "4a8f2a66572391e8c95f94350b3cab8864a45dc0dfdf01a5f89116c81a97256f"
+    },
+    {
+      "path": "tools/icu-probe/primary/export/trace-locale.cpp",
+      "bytes": 3817,
+      "sha256": "3260f2c09856046618f0cfd6950c925ee39399105b88a8a4b32f5f9acddecbd6"
+    }
+  ],
+  "static_libraries": [
+    {
+      "path": "../BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu/lib/libicui18n.a",
+      "bytes": 9067020,
+      "sha256": "10a909da7ab544cc060f263df146bdcb67752a06b7a144a9ce05da591d77f4db"
+    },
+    {
+      "path": "../BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu/lib/libicuuc.a",
+      "bytes": 4319074,
+      "sha256": "cbfb95f63457f9545906c3e65cbc2de18582a65ef700d432f85041be98ecd382"
+    },
+    {
+      "path": "../BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu/lib/libicudata.a",
+      "bytes": 31896412,
+      "sha256": "d8cedc2b251b991c09790a59a04d6d4f81469d8f43b530a3f4605c7d7a791c81"
+    }
+  ],
+  "reference_environment": {
+    "path": "../BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/environment-manifest.json",
+    "bytes": 14467,
+    "sha256": "adb003e9c64d71376abd58b9f83d847b1b6a7fc3896ab2bdf038dafe244e09ca"
+  }
 }
