@@ -1,0 +1,60 @@
+{
+  "schema": "boostregexrs.icu77-fcd-history-fixtures.v1",
+  "status": "historical_cursor_subset_only",
+  "input_count": 6,
+  "cursor_rows": 120,
+  "native_execution_performed": false,
+  "generator": {
+    "path": "tools/icu-probe/primary/rust/tests/refresh_fcd_fixtures.py",
+    "bytes": 16244,
+    "sha256": "98c27873bccde70e19e963053ad4b4c11083422bd8f8ff88ac7a11dbeffdbb95"
+  },
+  "archived_sources": [
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/input-u16.tsv",
+      "bytes": 142,
+      "sha256": "e5d82a6abd199d049bdeef426748d44f3e100ecc191807a48d643b78944462a7"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/input-u16.tsv",
+      "bytes": 168,
+      "sha256": "3b6d7660139183fadce3ce45d6a99e55ed1bd93ccb9381e6b55281c304a43ee5"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/native-fcd.tsv",
+      "bytes": 2471,
+      "sha256": "7d0634020d341d7291ca9a0aed5889571dc4516661f62d37f4d0146c12eb58f6"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/native-fcd.tsv",
+      "bytes": 2285,
+      "sha256": "be0e08051fd051df51fa38ce74988b6e1176b02288a455aded43fd92656eb1c8"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fcd-unit-flags/native-fcd-flags.bin",
+      "bytes": 65536,
+      "sha256": "11fa8680ed9a86ccfaf71bc286b7790226e2d129b3b5548ba376589a01bc4b24"
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/recovered-2026-10-17-history-corrected/inputs-u16.tsv",
+      "bytes": 294,
+      "sha256": "f6fb6f44c7a1d548a89ba8240cd8ac6b6cbfcef3846c8aea6169ea3c8eeb2113"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/recovered-2026-10-17-history-corrected/native-cursor.tsv",
+      "bytes": 4689,
+      "sha256": "f483b7724b630f51b89f7238af4acefa2e9fd39e485a2487139385d1efdee873"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/recovered-2026-10-17-history-corrected/native-flags.bin",
+      "bytes": 65536,
+      "sha256": "11fa8680ed9a86ccfaf71bc286b7790226e2d129b3b5548ba376589a01bc4b24"
+    }
+  ],
+  "not_covered": [
+    "full native key/CE fixture regeneration",
+    "new Rust execution after recovery"
+  ]
+}
