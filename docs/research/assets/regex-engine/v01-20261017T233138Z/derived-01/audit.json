@@ -1,0 +1,160 @@
+{
+  "schema": "boostregexrs.v01-reporting-audit.v1",
+  "status": "passed_integrity_and_reporting_checks",
+  "native_commit": "fb159eeb4583727cc70db4b9e53f8329fd25d8b8",
+  "raw_archive_sha256": "bc37153b8e50400db0c25ab7bb6ba0b30d9bc194ebab63dcceabad98e09089b5",
+  "process_records": [
+    {
+      "record": "downloads/logs/SHASUM512.txt.process.json",
+      "returncode": 0,
+      "timeout_seconds": 660
+    },
+    {
+      "record": "downloads/logs/boost_1_89_0.tar.bz2.json.process.json",
+      "returncode": 0,
+      "timeout_seconds": 660
+    },
+    {
+      "record": "downloads/logs/boost_1_89_0.tar.bz2.process.json",
+      "returncode": 0,
+      "timeout_seconds": 660
+    },
+    {
+      "record": "downloads/logs/icu4c-77_1-src.tgz.process.json",
+      "returncode": 0,
+      "timeout_seconds": 660
+    },
+    {
+      "record": "logs/byte-metadata.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/byte-reference-build.process.json",
+      "returncode": 0,
+      "timeout_seconds": 300
+    },
+    {
+      "record": "logs/byte-reference-ldd.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/byte-smoke.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/cc-version.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/checkout-head.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/checkout-status.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/cxx-version.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/empty-adr0005-identical.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/empty-original-identical.process.json",
+      "returncode": -11,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/icu-build.process.json",
+      "returncode": 0,
+      "timeout_seconds": 1200
+    },
+    {
+      "record": "logs/icu-configure.process.json",
+      "returncode": 0,
+      "timeout_seconds": 180
+    },
+    {
+      "record": "logs/icu-install.process.json",
+      "returncode": 0,
+      "timeout_seconds": 180
+    },
+    {
+      "record": "logs/identical-smoke.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/linker-path.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/linker-version.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/make-version.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/primary-smoke.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    },
+    {
+      "record": "logs/sortkey-reference-build.process.json",
+      "returncode": 0,
+      "timeout_seconds": 300
+    },
+    {
+      "record": "logs/sortkey-reference-ldd.process.json",
+      "returncode": 0,
+      "timeout_seconds": 20
+    }
+  ],
+  "process_returncodes": {
+    "0": 23,
+    "-11": 1
+  },
+  "source_entries": {
+    "boost_1_89_0": 84369,
+    "icu": 2461
+  },
+  "native_identities_rechecked": {
+    "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/bin/byte-reference": "4ee12d76046bfd6da2dd58defdd33b3368386f61a5a2f3e31f15f14c111e3a30",
+    "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/tools/regex-oracle/oracle.cpp": "be647c091d17041818a601f0e0984a32433be8b40e38358f5f640aec52698886",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28",
+    "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/bin/sortkey-reference": "6712fdf819fde27a93e5e8e29f3b2aacda01c0dacefcb973cb82eb5dd4acf596",
+    "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/tools/icu-probe/primary/oracle.cpp": "a62404562da80c1f572024bd0ed70ffcb20d9384d0f33fe44a3e262e09075faf",
+    "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu/lib/libicudata.so.77.1": "eadfa96e07844c17547f8e9822f81b7cec16735b92f6f45776cfb0af8df13403",
+    "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu/lib/libicui18n.so.77.1": "5d7597ed5e8369fe194bb8df1468756808ea65008bc0182edeb1d2244fac7f21",
+    "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu/lib/libicuuc.so.77.1": "95a76c2d54c0bf35dbe4f01d1aa589ab4337b0370796d5bd7329bfc4c184f6f5"
+  },
+  "linker_version": "GNU ld (GNU Binutils for Ubuntu) 2.42",
+  "original_metadata_locator": "reference/metadata.json",
+  "verified_metadata_locators": {
+    "primary": "smoke/primary-metadata.json",
+    "identical": "smoke/identical-metadata.json"
+  },
+  "derived_environment_sha256": "6cd8f05543f5da4bde94bbce2166725a5f1e819a943b2a7ae8db7b7ee6969549",
+  "reporting_implementation_sha256": "31f1ecd5987ec42347ed6b5f0a1d72d7c019393a9ab0664f0784d6f0cb009380",
+  "original_evidence_unchanged": true,
+  "native_rebuild_performed": false
+}
