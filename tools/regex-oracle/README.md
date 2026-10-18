@@ -124,12 +124,70 @@ all indexed `groups` (unmatched groups are null), `histories`, `prefix`, and
 `suffix`. Histories are requested only with `match_extra` (524288); otherwise each
 history is empty. Replacement and formatting also record `output_hex`.
 
-Compile errors record the actual Boost error `code` and original pattern byte
-`position`. `reference_resource_error` and `protocol_error` are distinct from
-ordinary matching results. The harness must preserve a reference process failure,
-never convert it into an empty matches array.
+Ordinary compile errors record the actual Boost error `code` and original pattern
+byte `position`. With `no_except`, the successful compile API call instead records
+the invalid object's actual `compile_status` and `mark_count`; no missing error
+position is invented. A resource code (12, 15, 18, or 19) is a non-pass reference
+observation, including when it is reported through `compile_status`.
 
-`oracle --metadata` records the reference configuration. Native platform traits,
+For a noncompile operation, a returned nonzero compiled-object status is also
+retained as `preceding_compile`, with exactly `mark_count` and `compile_status`.
+The requested operation still executes. For example, `no_except` can return
+status 18 and the later matcher can throw `invalid_argument`; the row retains
+the real `operation_error` and its message, together with the preceding status.
+There is no invented compilation exception or error position. The common row
+writer retains this outcome for later successful results and failures alike.
+Successful compilation and compilation exceptions do not add this field.
+The validator requires the corresponding `no_except` input flag, exact integer
+fields and a nonzero preceding status. Ordinary nonresource preceding outcomes
+are compared along with the later operation-error category and position.
+
+The current native oracle preserves typed reference failures with this exact
+versioned envelope:
+
+```json
+{"schema":"boostregexrs.reference-failure.v1","phase":"search","kind":"regex_resource","code":18,"position":0,"message_hex":"426f6f7374"}
+```
+
+The illustrative message above encodes `Boost`; real observations preserve the
+complete original message. Its row status is `reference_failure`. `phase`
+identifies the native API that
+failed: `compile`, `search`, `match`, `iterate`, `format`, or `replace`; adapter
+serialization failures use `serialize`. For example, a search that fails before
+formatting retains phase `search`, and failures inside `boost::regex_replace`
+retain phase `replace`. `kind` distinguishes `regex_resource`, other runtime
+`regex` errors, `allocation`, container `capacity`, and plain C++ `runtime`
+failures. Native `boost::regex_error` code/position are preserved exactly; other
+exception types use null for both fields because they do not expose those Boost
+properties. All messages remain as raw byte hex.
+
+Boost uses `regex_error` for compilation and execution resource limits. Plain
+`std::runtime_error` can instead indicate a traits/catalog problem. These types
+must not automatically become ordinary syntax rejections or resource successes.
+The strict validator rejects missing fields, a resource code with the wrong
+kind, and a phase unrelated to the requested operation. The comparator keeps
+reference resource/error observations separate and never passes them because a
+candidate also exhausts its independently specified budget.
+
+Historical v1 artifacts precede this envelope: they can contain execution
+resource errors labeled `compile_error`, or message-only
+`reference_resource_error` rows. Their original bytes and original metadata are
+retained. The comparator recognizes resource codes and preserves historical
+resource labels as non-pass observations; those old rows do not acquire modern
+phase/code evidence retroactively. A historical noncompile `no_except` row with
+`operation_error` category `invalid_argument` and no `preceding_compile` is
+specifically unverified (`reference_error`): it cannot distinguish an ordinary
+invalid compiled object from one rejected by a resource guard. This rule does
+not reclassify ordinary match-policy errors or rows without `no_except`.
+`protocol_error` and process failures remain
+distinct from ordinary results and must never become empty `matches` arrays.
+The bounded generator and original/corrected native verification are
+`resource_cases.py` and `verify_resource_errors.py`; `--stack-only` selects the
+separate linear stack-block probe, and `--no-except-flow-only` selects the
+returned compilation plus subsequent-operation probes.
+
+`oracle --metadata` records the reference configuration and the current
+`reference_failure_schema` and `preceding_compile_outcome` support. Native platform traits,
 locale combinations and Unicode entry points will have their own explicit
 configurations and evidence; passing classic byte cases does not mark them passed.
 

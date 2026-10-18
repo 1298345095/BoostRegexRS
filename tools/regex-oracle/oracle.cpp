@@ -8,6 +8,7 @@
 #include <iomanip>
 #include <iostream>
 #include <locale>
+#include <new>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -122,7 +123,14 @@ Request parse(const std::vector<std::string>& row) {
     return {operation, unhex(row[4]), unhex(row[5]), unhex(row[6]), number(row[2]), number(row[3])};
 }
 
-std::string execute(const Request& request) {
+struct Observation {
+    const char* phase = "compile";
+    bool compile_returned = false;
+    Regex::size_type mark_count = 0;
+    int compile_status = 0;
+};
+
+std::string execute(const Request& request, Observation& observation) {
     const auto flags = static_cast<boost::match_flag_type>(request.flag_bits);
     const auto& pattern = request.pattern;
     const auto& input = request.input;
@@ -130,39 +138,96 @@ std::string execute(const Request& request) {
     Regex regex;
     regex.imbue(std::locale::classic());
     regex.assign(pattern.begin(), pattern.end(), request.syntax);
+    // no_except returns an invalid compiled object. Preserve that API outcome
+    // before a later matcher or serialization failure can obscure its status.
+    observation.mark_count = regex.mark_count();
+    observation.compile_status = regex.status();
+    observation.compile_returned = true;
+    observation.phase = "serialize";
     std::ostringstream out;
-    out << "{\"mark_count\":" << regex.mark_count();
+    out << "\"mark_count\":" << observation.mark_count;
     if (request.operation == "compile") {
-        out << ",\"compile_status\":" << regex.status() << '}';
+        out << ",\"compile_status\":" << observation.compile_status;
         return out.str();
     }
     if (request.operation == "replace") {
-        out << ",\"output_hex\":\"" << hex(boost::regex_replace(input, regex, format, flags)) << "\"}";
+        observation.phase = "replace";
+        const auto replaced = boost::regex_replace(input, regex, format, flags);
+        observation.phase = "serialize";
+        out << ",\"output_hex\":\"" << hex(replaced) << '"';
         return out.str();
     }
     const bool extra = (flags & boost::match_extra) != 0;
     out << ",\"matches\":[";
     if (request.operation == "iterate") {
+        observation.phase = "iterate";
         boost::regex_iterator<Iterator, char, boost::cpp_regex_traits<char>> current(input.begin(), input.end(), regex, flags), end;
         bool first = true;
         for (; current != end; ++current) {
+            observation.phase = "serialize";
             if (!first) out << ',';
             first = false;
             match_json(out, *current, input.begin(), extra);
+            observation.phase = "iterate";
         }
     } else {
         Matches match;
         bool found;
+        observation.phase = request.operation == "match" ? "match" : "search";
         if (request.operation == "match") found = boost::regex_match(input.begin(), input.end(), match, regex, flags);
         else found = boost::regex_search(input.begin(), input.end(), match, regex, flags);
+        observation.phase = "serialize";
         if (found) match_json(out, match, input.begin(), extra);
         if (request.operation == "format") {
-            out << "],\"output_hex\":\"" << (found ? hex(match.format(format, flags)) : "") << "\"}";
+            observation.phase = "format";
+            const auto formatted = found ? match.format(format, flags) : std::string();
+            observation.phase = "serialize";
+            out << "],\"output_hex\":\"" << hex(formatted) << '"';
             return out.str();
         }
     }
-    out << "]}";
+    observation.phase = "serialize";
+    out << ']';
     return out.str();
+}
+
+bool resource_code(boost::regex_constants::error_type code) {
+    using namespace boost::regex_constants;
+    return code == error_space || code == error_size || code == error_complexity || code == error_stack;
+}
+
+std::string reference_failure(const char* phase, const char* kind,
+                              const std::exception& error, const boost::regex_error* regex_error = nullptr) {
+    std::ostringstream out;
+    out << "\"schema\":\"boostregexrs.reference-failure.v1\",\"phase\":\""
+        << phase << "\",\"kind\":\"" << kind << "\",\"code\":";
+    if (regex_error) out << regex_error->code();
+    else out << "null";
+    out << ",\"position\":";
+    if (regex_error) out << regex_error->position();
+    else out << "null";
+    out << ",\"message_hex\":\"" << hex(error.what()) << '"';
+    return out.str();
+}
+
+std::string operation_error(const char* category, const std::exception& error) {
+    std::ostringstream out;
+    out << "\"category\":\"" << category << "\",\"position\":null,\"message_hex\":\""
+        << hex(error.what()) << '"';
+    return out.str();
+}
+
+void result_row(const std::string& id, const char* status, const std::string& members,
+                const Request& request, const Observation& observation) {
+    // Every executed result follows the same lifetime: assign may return, the
+    // requested operation still runs, and both outcomes survive its row writer.
+    // A returned status has no exception position; no such position is added.
+    std::cout << id << '\t' << status << "\t{" << members;
+    if (request.operation != "compile" && observation.compile_returned && observation.compile_status != 0) {
+        std::cout << ",\"preceding_compile\":{\"mark_count\":" << observation.mark_count
+                  << ",\"compile_status\":" << observation.compile_status << '}';
+    }
+    std::cout << '}' << std::endl;
 }
 
 void write_row(const std::vector<std::string>& row) {
@@ -174,23 +239,42 @@ void write_row(const std::vector<std::string>& row) {
         std::cout << id << "\tprotocol_error\t{\"message_hex\":\"" << hex(error.what()) << "\"}" << std::endl;
         return;
     }
+    Observation observation;
+    const auto emit = [&](const char* status, const std::string& members) {
+        result_row(id, status, members, request, observation);
+    };
     try {
-        const auto result = execute(request);
-        std::cout << id << "\tok\t" << result << std::endl;
+        const auto result = execute(request, observation);
+        emit("ok", result);
     } catch (const boost::regex_error& error) {
-        std::cout << id << "\tcompile_error\t{\"code\":" << error.code()
-                  << ",\"position\":" << error.position() << '}' << std::endl;
+        // pattern_except.hpp preserves this dynamic type at matcher guards as
+        // well as parser/creator failures. Resource limits are never ordinary
+        // syntax rejections, including when they occur during compilation.
+        if (resource_code(error.code())) {
+            emit("reference_failure", reference_failure(observation.phase, "regex_resource", error, &error));
+        } else if (std::string(observation.phase) == "compile") {
+            std::ostringstream out;
+            out << "\"code\":" << error.code() << ",\"position\":" << error.position();
+            emit("compile_error", out.str());
+        } else {
+            emit("reference_failure", reference_failure(observation.phase, "regex", error, &error));
+        }
+    } catch (const std::bad_alloc& error) {
+        emit("reference_failure", reference_failure(observation.phase, "allocation", error));
+    } catch (const std::length_error& error) {
+        // Container capacity failures are not incompatible match policies.
+        emit("reference_failure", reference_failure(observation.phase, "capacity", error));
     } catch (const std::invalid_argument& error) {
         // perl_matcher_common.hpp::construct_init checks the invalid object.
-        std::cout << id << "\toperation_error\t{\"category\":\"invalid_argument\",\"position\":null,\"message_hex\":\""
-                  << hex(error.what()) << "\"}" << std::endl;
+        emit("operation_error", operation_error("invalid_argument", error));
     } catch (const std::logic_error& error) {
         // verify_options / construct_init reject incompatible match policies.
         // This adapter accesses match_results only after successful matching.
-        std::cout << id << "\toperation_error\t{\"category\":\"invalid_match_options\",\"position\":null,\"message_hex\":\""
-                  << hex(error.what()) << "\"}" << std::endl;
+        emit("operation_error", operation_error("invalid_match_options", error));
     } catch (const std::runtime_error& error) {
-        std::cout << id << "\treference_resource_error\t{\"message_hex\":\"" << hex(error.what()) << "\"}" << std::endl;
+        // cpp_regex_traits.hpp uses plain runtime_error for catalog failures;
+        // the type alone does not identify resource exhaustion.
+        emit("reference_failure", reference_failure(observation.phase, "runtime", error));
     }
 }
 }  // namespace
@@ -199,7 +283,9 @@ int main(int argc, char** argv) {
     if (argc == 2 && std::string(argv[1]) == "--metadata") {
         std::cout << "{\"boost\":\"" << BOOST_LIB_VERSION
                   << "\",\"traits\":\"cpp_regex_traits<char>\",\"locale\":\"C\","
-                     "\"capture_history_compiled\":true,\"cxx_standard\":" << __cplusplus << "}\n";
+                     "\"capture_history_compiled\":true,\"cxx_standard\":" << __cplusplus
+                  << ",\"reference_failure_schema\":\"boostregexrs.reference-failure.v1\","
+                     "\"preceding_compile_outcome\":true}\n";
         return 0;
     }
     if (argc != 1) return 2;
