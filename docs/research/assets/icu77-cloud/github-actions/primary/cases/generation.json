@@ -1,0 +1,13 @@
+{
+  "algorithm": "SplitMix64",
+  "seed": "0x0042494355373701",
+  "host_unicode_database_used": false,
+  "counts": {
+    "directed": 12062,
+    "generated": 20000,
+    "contexts": 16046,
+    "u32": 10,
+    "u16": 10,
+    "all-scalars": 1112064
+  }
+}

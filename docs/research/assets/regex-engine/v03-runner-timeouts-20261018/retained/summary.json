@@ -1,0 +1,32 @@
+{
+  "schema": "boostregexrs.development-helper-regressions.v1",
+  "created_utc": "2026-10-18T10:08:22.343660+00:00",
+  "status": "regressions_verified",
+  "meaning": "Development helper validation; historical failed observations retained, no new library compatibility claim",
+  "executions": [
+    {
+      "record": "before/tests.process.json",
+      "sha256": "b15c52765e5da2020dc6c4a048b69377d9d217b148cff5df203dcdb355a6f649",
+      "actual_exit_status": 1,
+      "elapsed_seconds": 0.5160912360006478
+    },
+    {
+      "record": "after/targeted.process.json",
+      "sha256": "2c35ac37cd133f2138097215417e572efa0e6102bfc3154bf3e8e850996216e3",
+      "actual_exit_status": 0,
+      "elapsed_seconds": 0.5162537840078585
+    },
+    {
+      "record": "after/protocol-suite.process.json",
+      "sha256": "b16b4eff01402048907b638f98c3770111e7322f2b3642503d07a7e4e97ef28e",
+      "actual_exit_status": 1,
+      "elapsed_seconds": 0.5166302279976662
+    },
+    {
+      "record": "after-import-fix/protocol-suite.process.json",
+      "sha256": "f51a6f9b02683079a7c49c281bbddc68e054ea672edc0dfb6dbd47c45dd76191",
+      "actual_exit_status": 0,
+      "elapsed_seconds": 0.5671535010042135
+    }
+  ]
+}

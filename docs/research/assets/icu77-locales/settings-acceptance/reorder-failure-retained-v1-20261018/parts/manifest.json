@@ -1,0 +1,18 @@
+{
+  "schema": "boostregexrs.binary-parts.v1",
+  "filename": "raw.tar.gz",
+  "bytes": 14276175,
+  "sha256": "43dd9efd39df9cd65c0debbfb74b8d5fd0c1940f5e94c742f5f0072ca25e027d",
+  "parts": [
+    {
+      "path": "part-0000.bin",
+      "bytes": 8388608,
+      "sha256": "66e4ad93c4a7f780313dab5a8a5a2bb91ba55ceb0ca44874e6edcda37acaaa80"
+    },
+    {
+      "path": "part-0001.bin",
+      "bytes": 5887567,
+      "sha256": "27bfa97fd7331569fff49b3df8d8e1fd3bc74ed7c4d53e500c0d021d37cc2c0c"
+    }
+  ]
+}

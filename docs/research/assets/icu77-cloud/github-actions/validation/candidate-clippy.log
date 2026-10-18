@@ -1,0 +1,34 @@
+["cargo", "clippy", "--locked", "--all-targets", "--manifest-path", "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/rust/Cargo.toml", "--", "-D", "warnings"]
+    Checking stable_deref_trait v1.2.1
+    Checking writeable v0.6.4
+    Checking litemap v0.8.3
+    Checking zerofrom v0.1.8
+    Checking icu_properties_data v2.0.0
+    Checking yoke v0.8.3
+    Checking icu_locale_data v2.0.0
+    Checking icu_normalizer_data v2.0.0
+    Checking utf8_iter v1.0.4
+    Checking utf16_iter v1.0.5
+    Checking smallvec v1.16.3
+    Checking zerovec v0.11.8
+    Checking zerotrie v0.2.5
+    Checking write16 v1.0.0
+    Checking icu_collator_data v2.0.0
+    Checking icu_casemap_data v2.0.0
+    Checking zmij v1.0.23
+    Checking serde_core v1.0.229
+    Checking memchr v2.8.3
+    Checking itoa v1.0.18
+    Checking tinystr v0.8.4
+    Checking potential_utf v0.1.6
+    Checking icu_collections v2.0.0
+    Checking icu_locale_core v2.0.0
+    Checking icu_provider v2.0.0
+    Checking icu_properties v2.0.0
+    Checking icu_locale v2.0.0
+    Checking icu_normalizer v2.0.0
+    Checking serde_json v1.0.154
+    Checking icu_casemap v2.0.0
+    Checking icu_collator v2.0.0
+    Checking icu4x-compat-probe v0.0.0 (/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/rust)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.71s

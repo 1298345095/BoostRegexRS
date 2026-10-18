@@ -1,0 +1,30 @@
+test_command_arguments_are_literal_and_never_evaluated_by_a_shell (test_cli_trust_boundaries.CliTrustBoundaries.test_command_arguments_are_literal_and_never_evaluated_by_a_shell) ... [timeout 5s] /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -c 'import sys; print(repr(sys.argv[1]))' '; touch '"'"'/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpoolw5pwd/unexpected-shell-execution'"'"' ; $(touch '"'"'/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpoolw5pwd/unexpected-shell-execution'"'"')'
+  stdout: /workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpoolw5pwd/literal-arguments.log
+  stderr: /workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpoolw5pwd/literal-arguments.stderr.log
+ok
+test_explicit_output_paths_can_be_outside_the_checkout (test_cli_trust_boundaries.CliTrustBoundaries.test_explicit_output_paths_can_be_outside_the_checkout) ... ok
+test_failed_process_keeps_its_log_and_is_not_reported_as_success (test_cli_trust_boundaries.CliTrustBoundaries.test_failed_process_keeps_its_log_and_is_not_reported_as_success) ... [timeout 300s] /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -c 'print('"'"'failure evidence'"'"'); raise SystemExit(7)'
+  stdout: /workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpmkwfo979/failure.log
+  stderr: /workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpmkwfo979/failure.stderr.log
+ok
+test_completed_response_after_deadline_is_evidence_but_not_acceptance (test_sonar_collection.SonarCollectionTests.test_completed_response_after_deadline_is_evidence_but_not_acceptance) ... ok
+test_deadline_retains_pending_checks_and_prevents_sonar_reads (test_sonar_collection.SonarCollectionTests.test_deadline_retains_pending_checks_and_prevents_sonar_reads) ... ok
+test_issue_read_is_bracketed_without_inventing_analysis_identity (test_sonar_collection.SonarCollectionTests.test_issue_read_is_bracketed_without_inventing_analysis_identity) ... ok
+test_socket_deadline_is_preserved_as_unavailable_evidence (test_sonar_collection.SonarCollectionTests.test_socket_deadline_is_preserved_as_unavailable_evidence) ... ok
+test_unusable_wait_deadlines_do_not_create_evidence_or_contact_servers (test_sonar_collection.SonarCollectionTests.test_unusable_wait_deadlines_do_not_create_evidence_or_contact_servers) ... ok
+test_waits_for_newest_matching_check_and_preserves_failed_conclusion (test_sonar_collection.SonarCollectionTests.test_waits_for_newest_matching_check_and_preserves_failed_conclusion) ... ok
+test_existing_empty_directory_is_also_refused_before_network (test_sonar_output.SonarOutputTests.test_existing_empty_directory_is_also_refused_before_network) ... ok
+test_existing_observation_is_unchanged_and_never_contacts_server (test_sonar_output.SonarOutputTests.test_existing_observation_is_unchanged_and_never_contacts_server) ... ok
+test_new_external_output_retains_a_failed_first_response (test_sonar_output.SonarOutputTests.test_new_external_output_retains_a_failed_first_response) ... ok
+test_a_later_redirect_cannot_restore_stripped_credentials (test_sonar_redirects.SonarRedirectTests.test_a_later_redirect_cannot_restore_stripped_credentials) ... ok
+test_anonymous_redirects_do_not_add_credentials (test_sonar_redirects.SonarRedirectTests.test_anonymous_redirects_do_not_add_credentials) ... ok
+test_cross_host_removes_authentication (test_sonar_redirects.SonarRedirectTests.test_cross_host_removes_authentication) ... ok
+test_cross_port_removes_authentication (test_sonar_redirects.SonarRedirectTests.test_cross_port_removes_authentication) ... ok
+test_fetch_uses_the_scoped_handler_and_finite_http_timeout (test_sonar_redirects.SonarRedirectTests.test_fetch_uses_the_scoped_handler_and_finite_http_timeout) ... ok
+test_https_downgrade_removes_authentication (test_sonar_redirects.SonarRedirectTests.test_https_downgrade_removes_authentication) ... ok
+test_same_origin_preserves_authentication (test_sonar_redirects.SonarRedirectTests.test_same_origin_preserves_authentication) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.073s
+
+OK

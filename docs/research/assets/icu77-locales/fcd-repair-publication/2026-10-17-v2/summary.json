@@ -1,0 +1,112 @@
+{
+  "schema": "boostregexrs.icu77-fcd-evidence-collection.v2",
+  "status": "passed_for_recorded_inputs",
+  "scope": "U01 recovery, FCD cursor/contraction replay and prerequisite settings validation; no whole-library acceptance",
+  "a_snapshot": {
+    "summary": {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/a-snapshot-20261017T234332Z/summary.json",
+      "bytes": 2685,
+      "sha256": "ba8e41f769c0cdc74e344897194b25b66a2a7d535f846145008f66664a77e761"
+    },
+    "tree": "ebc3cedc41a75fac73f805e0d99d38570433c8dd",
+    "tests": {
+      "passed": 21,
+      "failed": 0,
+      "ignored": 0
+    },
+    "lint_environment_supplement": {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/a-snapshot-20261017T234332Z/execution-environments.json",
+      "bytes": 2638,
+      "sha256": "7f3eb1cdb48c05ca2482d5eecc984f7b0e130afb4df8aa919ceaaead9502a5aa"
+    }
+  },
+  "native_reference": {
+    "provenance": {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/native-v2-20261017T234000Z/provenance.json",
+      "bytes": 6868,
+      "sha256": "6af09e17465bbd6e58791e0eb16c5be8264ae420d87bf4b0f9762e86ad45bf77"
+    },
+    "environment": {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/native-reference-environment.json",
+      "bytes": 14467,
+      "sha256": "adb003e9c64d71376abd58b9f83d847b1b6a7fc3896ab2bdf038dafe244e09ca"
+    },
+    "generation": {
+      "algorithm": "SplitMix64",
+      "seed": "0x0042494355464344",
+      "generated_inputs": 512,
+      "input_count": 1436,
+      "distinct_input_count": 1409,
+      "supplementary_boundary_points": 381,
+      "host_unicode_database_used": false,
+      "reference_keys_used_to_choose_inputs": false,
+      "generator_revision": 2
+    }
+  },
+  "rust_candidate": {
+    "summary": {
+      "path": "docs/research/assets/icu77-locales/fcd-repair/rust-v2-20261017T234800Z/summary.json",
+      "bytes": 117262,
+      "sha256": "0c4605326444aae90003661a6f9f09c29f181a247138f1ec4047863a818efefb"
+    },
+    "binary": {
+      "path": "target/research/icu77-cloud/build/fcd-repair/rust-v2-20261017T234800Z/release/icu77-root-primary",
+      "bytes": 1659856,
+      "sha256": "3fbe753614aba5fbd346fcdc0002f0a278859bfe3dc8e8657e3de89a9fc2afb4"
+    },
+    "tests": {
+      "passed": 31,
+      "failed": 0,
+      "ignored": 0
+    },
+    "totals": {
+      "passed": 11484,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 0,
+      "rejected_as_expected": 0,
+      "approved_exception_passed": 4
+    },
+    "ce64_rows_passed": 11488
+  },
+  "historical_availability": {
+    "path": "docs/research/assets/icu77-locales/fcd-repair/historical-availability.json",
+    "bytes": 2820,
+    "sha256": "4a6b55c9f0188afe32fa74ed8a7d16cdc60c040367fa21fb48f63a44e1d5797a"
+  },
+  "published_tool_sources": [
+    {
+      "path": "tools/icu-probe/primary/rust/tests/refresh_fcd_fixtures.py",
+      "bytes": 16244,
+      "sha256": "98c27873bccde70e19e963053ad4b4c11083422bd8f8ff88ac7a11dbeffdbb95"
+    },
+    {
+      "path": "tools/icu-probe/primary/rust/tests/verify_fcd_repair.py",
+      "bytes": 11427,
+      "sha256": "9fdf19f124517ece80dfb6d2429b047bce591a8188a5b84f00963227f0db2592"
+    },
+    {
+      "path": "tools/icu-probe/primary/rust/tests/record_fcd_environments.py",
+      "bytes": 2740,
+      "sha256": "93220ce9c47f301d428dfe78b43a8cc1f64f7dbe2bc92ec1ade1d64222788517"
+    },
+    {
+      "path": "tools/icu-probe/primary/rust/tests/package_fcd_evidence.py",
+      "bytes": 8027,
+      "sha256": "1f274ae008afcfebdf315a09cea74181c74e5d77ba4e3563843f3a7e817dcd61"
+    },
+    {
+      "path": "tools/icu-probe/primary/archive_evidence.py",
+      "bytes": 4842,
+      "sha256": "f97e7d0e4856b1d673f260d1b228fa0e32731b490e0f103216bd80f4c8a0d54c"
+    }
+  ],
+  "publication": "Track this compressed collection and its manifest, plus required frozen test fixtures and authored tools; leave expanded raw execution directories unstaged",
+  "not_covered": [
+    "U02 complete tailoring owner sweeps",
+    "U03 all settings configurations",
+    "production regex integration",
+    "six-platform release acceptance",
+    "release performance and memory"
+  ]
+}

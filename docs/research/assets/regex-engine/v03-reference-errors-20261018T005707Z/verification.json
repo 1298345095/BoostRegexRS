@@ -1,0 +1,88 @@
+{
+  "schema": "boostregexrs.native-resource-regression.v1",
+  "status": "passed",
+  "records": 12,
+  "repaired": [
+    {
+      "case_id": "compile-nesting-limit",
+      "schema": "boostregexrs.reference-failure.v1",
+      "phase": "compile",
+      "kind": "regex_resource",
+      "code": 18,
+      "position": 400
+    },
+    {
+      "case_id": "search-state-limit",
+      "schema": "boostregexrs.reference-failure.v1",
+      "phase": "search",
+      "kind": "regex_resource",
+      "code": 18,
+      "position": 0
+    },
+    {
+      "case_id": "match-state-limit",
+      "schema": "boostregexrs.reference-failure.v1",
+      "phase": "match",
+      "kind": "regex_resource",
+      "code": 18,
+      "position": 0
+    },
+    {
+      "case_id": "iterate-state-limit",
+      "schema": "boostregexrs.reference-failure.v1",
+      "phase": "iterate",
+      "kind": "regex_resource",
+      "code": 18,
+      "position": 0
+    },
+    {
+      "case_id": "format-state-limit",
+      "schema": "boostregexrs.reference-failure.v1",
+      "phase": "search",
+      "kind": "regex_resource",
+      "code": 18,
+      "position": 0
+    },
+    {
+      "case_id": "replace-state-limit",
+      "schema": "boostregexrs.reference-failure.v1",
+      "phase": "replace",
+      "kind": "regex_resource",
+      "code": 18,
+      "position": 0
+    }
+  ],
+  "unchanged": [
+    "ordinary-compile-error",
+    "ordinary-no-except",
+    "compile-nesting-no-except",
+    "compile-backtracking-pattern",
+    "invalid-no-except-search",
+    "invalid-match-policies"
+  ],
+  "execution_complexity_cases": 5,
+  "compile_complexity_cases": 1,
+  "not_executed": [
+    "allocator exhaustion",
+    "stack block exhaustion",
+    "catalog failure"
+  ],
+  "scope": "Native reference classification; not Rust resource-threshold equivalence",
+  "files": {
+    "cases": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/cases.tsv",
+      "bytes": 4203,
+      "sha256": "6addd3cb25d5565324a343c6ff97063e2aceca8f22cd9b167ffacbb54647376c"
+    },
+    "before": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/before/results.tsv",
+      "bytes": 1184,
+      "sha256": "a5835e2074756a0a2e0607e7ea3cbeb269145ba757ebe916aa900b3f6abe17a5"
+    },
+    "after": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/after/results.tsv",
+      "bytes": 4962,
+      "sha256": "c396b6864f5b24d841f517da2cd8c98f3aec7ad3fe67e4e6937df4a9348f68d5"
+    }
+  }
+}

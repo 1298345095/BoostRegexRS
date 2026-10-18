@@ -1,0 +1,38 @@
+{
+  "schema": "boostregexrs.development-helper-regressions.v1",
+  "created_utc": "2026-10-18T10:08:22.344477+00:00",
+  "status": "regressions_verified",
+  "meaning": "Development helper validation; historical failed observations retained, no new library compatibility claim",
+  "executions": [
+    {
+      "record": "before/cache-writes.process.json",
+      "sha256": "6dcfac2c7dc3c19964cff3f1f9ed770af9dbfd025a8f843f432fb52a24ded9bb",
+      "actual_exit_status": 1,
+      "elapsed_seconds": 0.11502558900974691
+    },
+    {
+      "record": "before/deadlines.process.json",
+      "sha256": "d907175a757366be2e5b88c96296bf0e9b7a944204bb9b7aae7368e81d17cbe0",
+      "actual_exit_status": 1,
+      "elapsed_seconds": 0.11513969099905808
+    },
+    {
+      "record": "after/tests.process.json",
+      "sha256": "05fcae02328af2e859a2cdb550459f6e9b19b9e996a1a4551520a80d3c431014",
+      "actual_exit_status": 0,
+      "elapsed_seconds": 0.9676494439918315
+    },
+    {
+      "record": "wrapper-overlap/cargo-0.process.json",
+      "sha256": "56f1eea11f0724fadb4a583158e93bb251afcb4bd02cef162bd1e54f00d67609",
+      "actual_exit_status": 0,
+      "elapsed_seconds": 0.36880697100423276
+    },
+    {
+      "record": "wrapper-overlap/cargo-1.process.json",
+      "sha256": "6e014fe59e87f29891418552728ae25c4c2edf73ffa4d9642b2d94796371f549",
+      "actual_exit_status": 0,
+      "elapsed_seconds": 0.36938454599294346
+    }
+  ]
+}

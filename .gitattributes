@@ -3,3 +3,4 @@
 docs/research/assets/** -text -whitespace
 # The empty-string case intentionally ends with an empty TSV field.
 tools/icu-probe/reference/cases.tsv whitespace=-blank-at-eol
+tools/icu-probe/primary/rust/tests/data/fcd77/inputs-u16.tsv whitespace=-blank-at-eol

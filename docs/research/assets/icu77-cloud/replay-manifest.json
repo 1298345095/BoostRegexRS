@@ -1,0 +1,134 @@
+{
+  "schema": "boostregexrs.icu77-cloud-replay.v1",
+  "generated_utc": "2026-10-17T10:40:43.819916+00:00",
+  "candidate_binary": {
+    "path": "target/research/icu77-cloud/build/candidate/release/icu4x-compat-probe",
+    "bytes": 2042416,
+    "sha256": "ad3d96e005128206c2d3d3b15cdac485497fdcde862b82f9ea5d3a0d6f365395"
+  },
+  "candidate_cargo_lock": {
+    "path": "tools/icu-probe/rust/Cargo.lock",
+    "bytes": 10848,
+    "sha256": "377c16c57a7329aff9bdd93d0d8b71e181ee804bbae93533ee9d137a5a3dc5f1"
+  },
+  "candidate_sources": [
+    {
+      "path": "tools/icu-probe/rust/src/main.rs",
+      "bytes": 9198,
+      "sha256": "a8eda0b8d2211cef9f8bb91d3ea4e3ae49278527aa8cd88648032450f22b1656"
+    },
+    {
+      "path": "tools/icu-probe/rust/Cargo.toml",
+      "bytes": 740,
+      "sha256": "9a6c3b8813326fd85ecf297cac6fb192ba13f160be8ebee451d251d13745b8cb"
+    }
+  ],
+  "commands": [
+    [
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/candidate/release/icu4x-compat-probe",
+      "--reference",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/reference/baseline/codepoints.bin",
+      "--summary",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/replay/baseline/codepoint-summary.json",
+      "--cases",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/reference/cases.tsv",
+      "--ordering-output",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/replay/baseline/candidate-ordering.tsv"
+    ],
+    [
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/build/candidate/release/icu4x-compat-probe",
+      "--reference",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/reference/baseline/codepoints.bin",
+      "--summary",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/replay/non-fcd/codepoint-summary.json",
+      "--cases",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/non-fcd-cases.tsv",
+      "--ordering-output",
+      "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/replay/non-fcd/candidate-ordering.tsv"
+    ]
+  ],
+  "result_totals": {
+    "baseline": {
+      "passed": 5290,
+      "mismatched": 0,
+      "unsupported": 0,
+      "reference_error": 230
+    },
+    "non-fcd": {
+      "passed": 1415,
+      "mismatched": 145,
+      "unsupported": 0,
+      "reference_error": 0
+    }
+  },
+  "sort_key_bytes_from_icu4x": "unsupported; only the separate PRIMARY prototype provides complete keys",
+  "scripts": [
+    {
+      "path": "tools/icu-probe/cloud/replay.py",
+      "bytes": 14954,
+      "sha256": "96951e3886e77b86b8ec064979c123c5d3b230d1269314443e4cf187db141481"
+    },
+    {
+      "path": "tools/icu-probe/compare_ordering.py",
+      "bytes": 6252,
+      "sha256": "726dc633b7a1542a3eee1fc27dd0ccfbb2f66559a45786957e16066061c28e14"
+    }
+  ],
+  "files": [
+    {
+      "path": "target/research/icu77-cloud/replay/baseline/candidate-ordering.tsv",
+      "bytes": 222618,
+      "sha256": "56fa40c4b395387b95d0037f70eac3856909896e15f61eca0127b6e6915469f2"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/baseline/candidate-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/baseline/candidate-stdout.log",
+      "bytes": 118,
+      "sha256": "d0df9895f187f2dc80830b563c41479402b1958058d4e99a0931bbce345d193e"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/baseline/codepoint-summary.json",
+      "bytes": 4351,
+      "sha256": "ef63b59bf7228d5a0d11626df8e9b1efdd452714dcea0ad34bb47545b7ff5fb6"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/baseline/ordering-summary.json",
+      "bytes": 10481,
+      "sha256": "8244dd3d4485018355504db9ba82d9ab7481ea15d091eb4fdec6cb935f2a8725"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/cross-platform-summary.json",
+      "bytes": 7659,
+      "sha256": "2425707b522e1cf0822b816fc46f492378afe2345b1fd944342956ee8f72e75e"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/non-fcd/candidate-ordering.tsv",
+      "bytes": 69926,
+      "sha256": "b15a50bf2c73f1a3477f0ef8e3bac42a9b0fbe8876174f26d06a62df9139df3b"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/non-fcd/candidate-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/non-fcd/candidate-stdout.log",
+      "bytes": 117,
+      "sha256": "e2d4e3453bb117a8421483108748f8201c4250fa340dc3809ab9aa7a0522eca3"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/non-fcd/codepoint-summary.json",
+      "bytes": 4351,
+      "sha256": "28e9f1bdddbffabe2ab3d16eab71201e830b4b7817a490c503f8f48e8b652fcc"
+    },
+    {
+      "path": "target/research/icu77-cloud/replay/non-fcd/ordering-summary.json",
+      "bytes": 10437,
+      "sha256": "3347de873b07f91d418c1278efd02c53f28b6b53669a08078379d48c3e069be2"
+    }
+  ]
+}

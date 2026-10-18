@@ -1,0 +1,641 @@
+{
+  "schema": "boostregexrs.native-reference.v1",
+  "status": "passed_reference_reproduction",
+  "started_utc": "2026-10-17T23:31:57.277052+00:00",
+  "entry_command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "tools/regex-oracle/build_reference.py",
+    "--cache",
+    "target/research/regex-reference-fresh-network",
+    "--output",
+    "docs/research/assets/regex-engine/v01-20261017T233138Z",
+    "--jobs",
+    "4"
+  ],
+  "cache": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "architecture": "x86_64",
+  "libc": [
+    "glibc",
+    "2.39"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "full_library_compatibility_verified": false,
+  "other_platforms_verified": false,
+  "scripts": [
+    {
+      "path": "tools/regex-oracle/build_reference.py",
+      "bytes": 9823,
+      "sha256": "9cf1d88d2aebefa7f604bdfb5f438e77fcaeb86c0e1149038ccc494b07d6d5ea"
+    },
+    {
+      "path": "tools/regex-oracle/source_identity.py",
+      "bytes": 2758,
+      "sha256": "95cf28248cac275d8691370b316cef07074d6f7d2340bb2782c9a4141630f5b9"
+    },
+    {
+      "path": "tools/regex-oracle/smoke.py",
+      "bytes": 8096,
+      "sha256": "1b665017e0615f8856f1ba42b48a0b636acf205aeed0f3f8f0fe34373b26a572"
+    },
+    {
+      "path": "tools/regex-oracle/protocol.py",
+      "bytes": 6915,
+      "sha256": "8ebce6af8633436f62accdffe398809eae46f5e72da30b2b2003f93dfad1c2cd"
+    },
+    {
+      "path": "tools/icu-probe/cloud/prepare.py",
+      "bytes": 17824,
+      "sha256": "88d68d41503f5676651510cd98be7f88ec67f0d6dc3409f4ce65240a256eefe9"
+    }
+  ],
+  "checkout": {
+    "commit": "fb159eeb4583727cc70db4b9e53f8329fd25d8b8",
+    "clean_at_start": true
+  },
+  "official_archives": [
+    {
+      "archive_url": "https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2",
+      "checksum_manifest_url": "https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2.json",
+      "algorithm": "sha256",
+      "published_digest": "85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a",
+      "actual_digest": "85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a",
+      "published_digest_matches": true,
+      "archive": {
+        "path": "target/research/regex-reference-fresh-network/downloads/boost_1_89_0.tar.bz2",
+        "bytes": 154699732,
+        "sha256": "85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a"
+      },
+      "checksum_manifest": {
+        "path": "target/research/regex-reference-fresh-network/downloads/boost_1_89_0.tar.bz2.json",
+        "bytes": 201,
+        "sha256": "95cf03a74ca504c1e31464884e51c4ee40c2b9ea9898c5707f3ce5141a8b5cd2"
+      },
+      "detached_signature_verified": false
+    },
+    {
+      "archive_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/icu4c-77_1-src.tgz",
+      "checksum_manifest_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/SHASUM512.txt",
+      "algorithm": "sha512",
+      "published_digest": "a47d6d9c327d037a05ea43d1d1a06b2fd757cc02a94f7c1a238f35cfc3dfd4ab78d0612790f3a3cca0292c77412a9c2c15c8f24b718f79a857e007e66f07e7cd",
+      "actual_digest": "a47d6d9c327d037a05ea43d1d1a06b2fd757cc02a94f7c1a238f35cfc3dfd4ab78d0612790f3a3cca0292c77412a9c2c15c8f24b718f79a857e007e66f07e7cd",
+      "published_digest_matches": true,
+      "archive": {
+        "path": "target/research/regex-reference-fresh-network/downloads/icu4c-77_1-src.tgz",
+        "bytes": 27384265,
+        "sha256": "588e431f77327c39031ffbb8843c0e3bc122c211374485fa87dc5f3faff24061"
+      },
+      "checksum_manifest": {
+        "path": "target/research/regex-reference-fresh-network/downloads/SHASUM512.txt",
+        "bytes": 1718,
+        "sha256": "8a1d7a14c9e641ef07186180f10aba2338b5f53bccc845047344cd2ddd200b4d"
+      },
+      "detached_signature_verified": false
+    }
+  ],
+  "extracted_sources": [
+    {
+      "archive": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/downloads/boost_1_89_0.tar.bz2",
+      "root": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/boost_1_89_0",
+      "entries": 84369,
+      "manifest": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/source-manifests/boost_1_89_0.tsv.xz",
+      "manifest_sha256": "8bb01b3a59407e1a2ce50cf9e6bff960a1f5ff4329951b371980b59b1f59eec5",
+      "uncompressed_manifest_sha256": "15b1a5d05e8b4e2fde62c6c92d40c8f3e520e5a5ea9b92e8df3266fbaa85244b",
+      "all_extracted_contents_match_archive": true,
+      "patch_set": []
+    },
+    {
+      "archive": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/downloads/icu4c-77_1-src.tgz",
+      "root": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/icu",
+      "entries": 2461,
+      "manifest": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/source-manifests/icu.tsv.xz",
+      "manifest_sha256": "cf869b447eeb9c4356ca21f0e6ed44ba8ae8b22f0b7160627640c830ef0352b6",
+      "uncompressed_manifest_sha256": "591b46ab92d11bb82db35c7a2bd11492b0bca27dc3b27b255a0c1d92365fbb8f",
+      "all_extracted_contents_match_archive": true,
+      "patch_set": []
+    }
+  ],
+  "environment": {
+    "schema": "boostregexrs.icu77-cloud-environment.v1",
+    "generated_utc": "2026-10-17T23:35:59.379791+00:00",
+    "os": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "uname": [
+      "Linux",
+      "1287b00bad57",
+      "6.18.55",
+      "#1 SMP Wed Oct 14 19:45:18 UTC 2026",
+      "x86_64",
+      "x86_64"
+    ],
+    "os_release": "PRETTY_NAME=\"Ubuntu 24.04.3 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.3 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "architecture": "x86_64",
+    "libc": [
+      "glibc",
+      "2.39"
+    ],
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "make": "GNU Make 4.3\nBuilt for x86_64-pc-linux-gnu\nCopyright (C) 1988-2020 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.",
+    "compiler": {
+      "cc": "cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "cxx": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    },
+    "versions": {
+      "boost": "1.89.0",
+      "icu": "77.1",
+      "unicode": "16.0.0",
+      "cldr": "47"
+    },
+    "compiler_executables": [
+      {
+        "command": "cc",
+        "resolved_path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "bytes": 1023032,
+        "sha256": "6117c52522997d2aaccb2b52b3c6bf42c0a6c5edb1d718431fed6b2fc5fec234"
+      },
+      {
+        "command": "c++",
+        "resolved_path": "/usr/bin/x86_64-linux-gnu-g++-13",
+        "bytes": 1027128,
+        "sha256": "52f1ddb33fe78b9441e0f42e9cd22c571f1101938e046c8a26582494e041cc73"
+      }
+    ],
+    "data": {
+      "packaging": "library",
+      "source": "unfiltered source-release icudt77l.dat",
+      "source_filters": [],
+      "runtime_versions_verified_by": "reference/metadata.json"
+    },
+    "sources": [
+      {
+        "archive_url": "https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2",
+        "checksum_manifest_url": "https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2.json",
+        "algorithm": "sha256",
+        "published_digest": "85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a",
+        "actual_digest": "85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a",
+        "published_digest_matches": true,
+        "archive": {
+          "path": "target/research/regex-reference-fresh-network/downloads/boost_1_89_0.tar.bz2",
+          "bytes": 154699732,
+          "sha256": "85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a"
+        },
+        "checksum_manifest": {
+          "path": "target/research/regex-reference-fresh-network/downloads/boost_1_89_0.tar.bz2.json",
+          "bytes": 201,
+          "sha256": "95cf03a74ca504c1e31464884e51c4ee40c2b9ea9898c5707f3ce5141a8b5cd2"
+        },
+        "detached_signature_verified": false
+      },
+      {
+        "archive_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/icu4c-77_1-src.tgz",
+        "checksum_manifest_url": "https://github.com/unicode-org/icu/releases/download/release-77-1/SHASUM512.txt",
+        "algorithm": "sha512",
+        "published_digest": "a47d6d9c327d037a05ea43d1d1a06b2fd757cc02a94f7c1a238f35cfc3dfd4ab78d0612790f3a3cca0292c77412a9c2c15c8f24b718f79a857e007e66f07e7cd",
+        "actual_digest": "a47d6d9c327d037a05ea43d1d1a06b2fd757cc02a94f7c1a238f35cfc3dfd4ab78d0612790f3a3cca0292c77412a9c2c15c8f24b718f79a857e007e66f07e7cd",
+        "published_digest_matches": true,
+        "archive": {
+          "path": "target/research/regex-reference-fresh-network/downloads/icu4c-77_1-src.tgz",
+          "bytes": 27384265,
+          "sha256": "588e431f77327c39031ffbb8843c0e3bc122c211374485fa87dc5f3faff24061"
+        },
+        "checksum_manifest": {
+          "path": "target/research/regex-reference-fresh-network/downloads/SHASUM512.txt",
+          "bytes": 1718,
+          "sha256": "8a1d7a14c9e641ef07186180f10aba2338b5f53bccc845047344cd2ddd200b4d"
+        },
+        "detached_signature_verified": false
+      }
+    ],
+    "source_files": [
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/boost_1_89_0/boost/version.hpp",
+        "bytes": 1117,
+        "sha256": "24fc8cb1636e0fa167c8f7e1cfef99f3642e5928918e1671fe5585bbffe02b07"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/boost_1_89_0/boost/regex/v5/icu.hpp",
+        "bytes": 61875,
+        "sha256": "b6975381220ff2429eb4aae9a958908fdfc1dbd97830de07eca7d368e26c58d0"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/boost_1_89_0/LICENSE_1_0.txt",
+        "bytes": 1338,
+        "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/LICENSE",
+        "bytes": 26487,
+        "sha256": "451167c55c0fa447cc2d5632714f5e3c567fe4f1e1badefab2c1333852198aca"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/configure",
+        "bytes": 281812,
+        "sha256": "e6bd27445129967fb6969915829fe7257246f248b71b08d7ffd98778d19feadd"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/common/unicode/uvernum.h",
+        "bytes": 6480,
+        "sha256": "ede6d900f95bee0f775ff2c7bc4bc3d0e29126870f48dfef4cf3a71256d52184"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/data/in/icudt77l.dat",
+        "bytes": 31895376,
+        "sha256": "310d9b2cb42947fad7f388b09d2ae574e2adeb60ca76abf280438908f20b2d7b"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collation.cpp",
+        "bytes": 5524,
+        "sha256": "92a5ad1238f92ca16724acc309679cc4b301efa95d4af006dd59b814567700ce"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collation.h",
+        "bytes": 19435,
+        "sha256": "7a857ce64b2a765847743e9312872c5169ed9807dd3d5555150eb1cf2c5a1227"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationdata.h",
+        "bytes": 9278,
+        "sha256": "7439df5ff2603150ec2285be1e560df9778b103d054bdac775f2933d5308eb90"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationdatareader.cpp",
+        "bytes": 19538,
+        "sha256": "f4f55d74568c1c17860312ccc769b9a87606eca5810c566b8bf0cd919e62ea56"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationiterator.cpp",
+        "bytes": 37683,
+        "sha256": "6ef4cf0b197f7910fdb2210144af01ede968e36302c9a6a9548de70d0e9bb4f3"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationkeys.cpp",
+        "bytes": 28052,
+        "sha256": "6465ccc70eb18e267bb809c7846ba79e40724eca4db6431e1335f96888c41e42"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationsettings.h",
+        "bytes": 10412,
+        "sha256": "9361e467568048cee572cbcc1423c78fe1bceede472ec8b563849f22af2d3201"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/rulebasedcollator.cpp",
+        "bytes": 61988,
+        "sha256": "7754501e64c13b19de170ea17a234d6c8d8220b7614e6eefbead70a5f4b9cc53"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/utf16collationiterator.cpp",
+        "bytes": 15766,
+        "sha256": "15b368884e282d3a6fdc20947ace79cee2fb63910160f3a73b5948399a1f950b"
+      }
+    ],
+    "build_recipe": {
+      "configure": [
+        "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/icu/source/configure",
+        "--prefix=/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu",
+        "--enable-shared",
+        "--enable-static",
+        "--disable-tests",
+        "--disable-samples",
+        "--with-data-packaging=library"
+      ],
+      "compiler": {
+        "cc": "cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+        "cxx": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+      },
+      "source_files": [
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/boost_1_89_0/boost/version.hpp",
+          "bytes": 1117,
+          "sha256": "24fc8cb1636e0fa167c8f7e1cfef99f3642e5928918e1671fe5585bbffe02b07"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/boost_1_89_0/boost/regex/v5/icu.hpp",
+          "bytes": 61875,
+          "sha256": "b6975381220ff2429eb4aae9a958908fdfc1dbd97830de07eca7d368e26c58d0"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/boost_1_89_0/LICENSE_1_0.txt",
+          "bytes": 1338,
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/LICENSE",
+          "bytes": 26487,
+          "sha256": "451167c55c0fa447cc2d5632714f5e3c567fe4f1e1badefab2c1333852198aca"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/configure",
+          "bytes": 281812,
+          "sha256": "e6bd27445129967fb6969915829fe7257246f248b71b08d7ffd98778d19feadd"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/common/unicode/uvernum.h",
+          "bytes": 6480,
+          "sha256": "ede6d900f95bee0f775ff2c7bc4bc3d0e29126870f48dfef4cf3a71256d52184"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/data/in/icudt77l.dat",
+          "bytes": 31895376,
+          "sha256": "310d9b2cb42947fad7f388b09d2ae574e2adeb60ca76abf280438908f20b2d7b"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collation.cpp",
+          "bytes": 5524,
+          "sha256": "92a5ad1238f92ca16724acc309679cc4b301efa95d4af006dd59b814567700ce"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collation.h",
+          "bytes": 19435,
+          "sha256": "7a857ce64b2a765847743e9312872c5169ed9807dd3d5555150eb1cf2c5a1227"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationdata.h",
+          "bytes": 9278,
+          "sha256": "7439df5ff2603150ec2285be1e560df9778b103d054bdac775f2933d5308eb90"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationdatareader.cpp",
+          "bytes": 19538,
+          "sha256": "f4f55d74568c1c17860312ccc769b9a87606eca5810c566b8bf0cd919e62ea56"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationiterator.cpp",
+          "bytes": 37683,
+          "sha256": "6ef4cf0b197f7910fdb2210144af01ede968e36302c9a6a9548de70d0e9bb4f3"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationkeys.cpp",
+          "bytes": 28052,
+          "sha256": "6465ccc70eb18e267bb809c7846ba79e40724eca4db6431e1335f96888c41e42"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationsettings.h",
+          "bytes": 10412,
+          "sha256": "9361e467568048cee572cbcc1423c78fe1bceede472ec8b563849f22af2d3201"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/rulebasedcollator.cpp",
+          "bytes": 61988,
+          "sha256": "7754501e64c13b19de170ea17a234d6c8d8220b7614e6eefbead70a5f4b9cc53"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/deps/icu/source/i18n/utf16collationiterator.cpp",
+          "bytes": 15766,
+          "sha256": "15b368884e282d3a6fdc20947ace79cee2fb63910160f3a73b5948399a1f950b"
+        }
+      ],
+      "environment": {
+        "CC": "cc",
+        "CXX": "c++",
+        "CFLAGS": "-O2 -fPIC",
+        "CXXFLAGS": "-O2 -fPIC",
+        "TMPDIR": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/build/tmp"
+      }
+    },
+    "installed_libraries": [
+      {
+        "path": "target/research/regex-reference-fresh-network/install/icu/lib/libicuuc.so.77.1",
+        "bytes": 2617776,
+        "sha256": "95a76c2d54c0bf35dbe4f01d1aa589ab4337b0370796d5bd7329bfc4c184f6f5"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/install/icu/lib/libicui18n.so.77.1",
+        "bytes": 4903992,
+        "sha256": "5d7597ed5e8369fe194bb8df1468756808ea65008bc0182edeb1d2244fac7f21"
+      },
+      {
+        "path": "target/research/regex-reference-fresh-network/install/icu/lib/libicudata.so.77.1",
+        "bytes": 31904728,
+        "sha256": "eadfa96e07844c17547f8e9822f81b7cec16735b92f6f45776cfb0af8df13403"
+      }
+    ],
+    "scripts": [
+      {
+        "path": "tools/icu-probe/cloud/prepare.py",
+        "bytes": 17824,
+        "sha256": "88d68d41503f5676651510cd98be7f88ec67f0d6dc3409f4ce65240a256eefe9"
+      }
+    ],
+    "paths": {
+      "cache": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network",
+      "boost": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/boost_1_89_0",
+      "icu_source": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/icu",
+      "icu_prefix": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu"
+    }
+  },
+  "linker": {
+    "path": "../../../../usr/bin/x86_64-linux-gnu-ld.bfd",
+    "bytes": 1359128,
+    "sha256": "5b674ea1d7017c2929f3c52c43487478bb240ecdd7197a25cce3813a70329a5c"
+  },
+  "references": {
+    "byte-reference": {
+      "executable": {
+        "path": "target/research/regex-reference-fresh-network/bin/byte-reference",
+        "bytes": 330848,
+        "sha256": "4ee12d76046bfd6da2dd58defdd33b3368386f61a5a2f3e31f15f14c111e3a30"
+      },
+      "source": {
+        "path": "tools/regex-oracle/oracle.cpp",
+        "bytes": 8640,
+        "sha256": "be647c091d17041818a601f0e0984a32433be8b40e38358f5f640aec52698886"
+      },
+      "compile_command": [
+        "c++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-pedantic",
+        "-I/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/boost_1_89_0",
+        "-DBOOST_REGEX_NO_LIB",
+        "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/tools/regex-oracle/oracle.cpp",
+        "-o",
+        "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/bin/byte-reference"
+      ],
+      "runtime_libraries": [
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/libc.so.6",
+          "bytes": 2125328,
+          "sha256": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0"
+        },
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+          "bytes": 183024,
+          "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb"
+        },
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/libm.so.6",
+          "bytes": 952616,
+          "sha256": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7"
+        },
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33",
+          "bytes": 2592224,
+          "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11"
+        },
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "bytes": 236616,
+          "sha256": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+        }
+      ]
+    },
+    "sortkey-reference": {
+      "executable": {
+        "path": "target/research/regex-reference-fresh-network/bin/sortkey-reference",
+        "bytes": 71640,
+        "sha256": "6712fdf819fde27a93e5e8e29f3b2aacda01c0dacefcb973cb82eb5dd4acf596"
+      },
+      "source": {
+        "path": "tools/icu-probe/primary/oracle.cpp",
+        "bytes": 10211,
+        "sha256": "a62404562da80c1f572024bd0ed70ffcb20d9384d0f33fe44a3e262e09075faf"
+      },
+      "compile_command": [
+        "c++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-pedantic",
+        "-I/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/boost_1_89_0",
+        "-I/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu/include",
+        "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/tools/icu-probe/primary/oracle.cpp",
+        "-L/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu/lib",
+        "-Wl,-rpath,/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/install/icu/lib",
+        "-licui18n",
+        "-licuuc",
+        "-licudata",
+        "-o",
+        "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/bin/sortkey-reference"
+      ],
+      "runtime_libraries": [
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/libc.so.6",
+          "bytes": 2125328,
+          "sha256": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0"
+        },
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+          "bytes": 183024,
+          "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb"
+        },
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/libm.so.6",
+          "bytes": 952616,
+          "sha256": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7"
+        },
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33",
+          "bytes": 2592224,
+          "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11"
+        },
+        {
+          "path": "../../../../usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "bytes": 236616,
+          "sha256": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/install/icu/lib/libicudata.so.77.1",
+          "bytes": 31904728,
+          "sha256": "eadfa96e07844c17547f8e9822f81b7cec16735b92f6f45776cfb0af8df13403"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/install/icu/lib/libicui18n.so.77.1",
+          "bytes": 4903992,
+          "sha256": "5d7597ed5e8369fe194bb8df1468756808ea65008bc0182edeb1d2244fac7f21"
+        },
+        {
+          "path": "target/research/regex-reference-fresh-network/install/icu/lib/libicuuc.so.77.1",
+          "bytes": 2617776,
+          "sha256": "95a76c2d54c0bf35dbe4f01d1aa589ab4337b0370796d5bd7329bfc4c184f6f5"
+        }
+      ]
+    }
+  },
+  "smoke": {
+    "byte": {
+      "records": 13,
+      "result_counts": {
+        "compile_error": 1,
+        "ok": 12
+      },
+      "metadata": {
+        "boost": "1_89",
+        "traits": "cpp_regex_traits<char>",
+        "locale": "C",
+        "capture_history_compiled": true,
+        "cxx_standard": 201703
+      },
+      "operations": [
+        "compile",
+        "format",
+        "iterate",
+        "match",
+        "replace",
+        "search"
+      ],
+      "schema": "complete byte results: ranges, all groups/history, prefix/suffix, output or error"
+    },
+    "keys": {
+      "primary": {
+        "valid_full_keys": 9,
+        "metadata": {
+          "boost": "1.89.0",
+          "icu": "77.1",
+          "unicode": "16.0.0",
+          "cldr": "47.0",
+          "locale": "root",
+          "strength": "primary",
+          "approved_empty_exception": false,
+          "attributes": {
+            "strength": 0,
+            "normalization": 16,
+            "numeric": 16,
+            "alternate": 21,
+            "case_level": 16,
+            "case_first": 16,
+            "french_secondary": 16,
+            "hiragana_quaternary": 16
+          }
+        }
+      },
+      "identical": {
+        "valid_full_keys": 8,
+        "metadata": {
+          "boost": "1.89.0",
+          "icu": "77.1",
+          "unicode": "16.0.0",
+          "cldr": "47.0",
+          "locale": "root",
+          "strength": "identical",
+          "approved_empty_exception": false,
+          "attributes": {
+            "strength": 15,
+            "normalization": 16,
+            "numeric": 16,
+            "alternate": 21,
+            "case_level": 16,
+            "case_first": 16,
+            "french_secondary": 16,
+            "hiragana_quaternary": 16
+          }
+        }
+      },
+      "true_empty_identical": {
+        "original_status": "reference_error",
+        "original_exit_code": -11,
+        "approved_exception_references": 1,
+        "original_failure_preserved": true
+      }
+    },
+    "candidate_comparison_performed": false,
+    "meaning": "Reference build/protocol smoke; not whole-library or six-platform compatibility"
+  },
+  "finished_utc": "2026-10-17T23:36:07.116744+00:00",
+  "raw_evidence_archive": {
+    "path": "docs/research/assets/regex-engine/v01-20261017T233138Z/raw-run.tar.xz",
+    "bytes": 3547716,
+    "sha256": "bc37153b8e50400db0c25ab7bb6ba0b30d9bc194ebab63dcceabad98e09089b5"
+  }
+}

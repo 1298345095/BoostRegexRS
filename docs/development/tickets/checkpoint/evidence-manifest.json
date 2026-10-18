@@ -1,0 +1,2175 @@
+{
+  "schema": "boostregexrs.paused-evidence-selection.v1",
+  "created_utc": "2026-10-17T13:23:57.831721+00:00",
+  "selection": "Historical 433-file selection: complete retained byte reference run, six native CI original ZIPs and metadata, second Sonar observation, ICU resource export, all locale diagnostics, complete first failed locale configuration output, its input and full run summary. The complete retained locale raw run, including the other recorded successful groups, is now preserved separately in locale-failed-run/raw.tar.xz.parts with compressed metadata. This selection is not the complete raw-run archive. No new experiment was run.",
+  "archive": "selected-evidence.tar.xz",
+  "archive_sha256": "3e454475be840b0d9afb43cda51e8397d530dbc6607c2b80a54b79a7d300c6bb",
+  "archive_bytes": 692808,
+  "files": [
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fcd-unit-flags/build.log",
+      "size": 944,
+      "sha256": "3e49818080210c290810b72c199c3f5d509e03a15cca0a26358b7b3734c2e71d"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fcd-unit-flags/generator-snapshot/diagnose_fcd_cursor.py",
+      "size": 4138,
+      "sha256": "b3e7b8d046f02259e20c90cc5ca66d296dc2895d6f11df8e6ccb7d150d8eb28b"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fcd-unit-flags/generator-snapshot/trace-fcd.cpp",
+      "size": 6550,
+      "sha256": "4a8f2a66572391e8c95f94350b3cab8864a45dc0dfdf01a5f89116c81a97256f"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fcd-unit-flags/input-u16.tsv",
+      "size": 168,
+      "sha256": "3b6d7660139183fadce3ce45d6a99e55ed1bd93ccb9381e6b55281c304a43ee5"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fcd-unit-flags/native-fcd-flags.bin",
+      "size": 65536,
+      "sha256": "11fa8680ed9a86ccfaf71bc286b7790226e2d129b3b5548ba376589a01bc4b24"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fcd-unit-flags/native-fcd-flags.stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fcd-unit-flags/summary.json",
+      "size": 8254,
+      "sha256": "8c8bc73d2cfa19c4ae3d17629a249e0968fae6a48e767d86d29054eae909348b"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-22721fc2/build.log",
+      "size": 950,
+      "sha256": "df8fc4564a3d7ff8772dc2e32421cc1b90ef3899c9b59abc75a31ddd073d042a"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-22721fc2/candidate-keys.stderr.log",
+      "size": 4750,
+      "sha256": "5ad00725429191d0fcf8241f1243f4f60ae42787c23815d462c4e8f8eb1df8bc"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-22721fc2/candidate-keys.tsv",
+      "size": 904,
+      "sha256": "6c493b052a28c44a2f40c22035dae56be999a4b14eb479700e06d62fa93e1ca8"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-22721fc2/expected-keys.tsv",
+      "size": 904,
+      "sha256": "a3a0f53dd892b3795ca333493717026c88fc843a9b0a5c994fda2d2bdaea695f"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-22721fc2/input-u16.tsv",
+      "size": 142,
+      "sha256": "e5d82a6abd199d049bdeef426748d44f3e100ecc191807a48d643b78944462a7"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-22721fc2/input-utf8.tsv",
+      "size": 123,
+      "sha256": "6c7a71496463525f7b3640f1a85def3b29b00006a5e1fb5659b23193497fa75d"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-22721fc2/native-ces.stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-22721fc2/native-ces.tsv",
+      "size": 360,
+      "sha256": "2d80f87a4bd28e2f65721aa6a8beef83f745ac9adcb40d8762f25f33564c297b"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-22721fc2/summary.json",
+      "size": 15547,
+      "sha256": "e065821ed79673ff1105acd0eb66c8c034258e7a88c753dd78ca4681ea2940bf"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/build.log",
+      "size": 944,
+      "sha256": "3e49818080210c290810b72c199c3f5d509e03a15cca0a26358b7b3734c2e71d"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/generator-snapshot/diagnose_fcd_cursor.py",
+      "size": 2869,
+      "sha256": "91c5c8467b29a47c5a7f8808283838ab02a87f3eb8ed254c60b5765cb759bb24"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/generator-snapshot/trace-fcd.cpp",
+      "size": 4329,
+      "sha256": "fc25cdcc95115ef2187cc03aee1816a80cd1594bb48d48f9a45e29dfc98a7371"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/generator-snapshot.json",
+      "size": 738,
+      "sha256": "9ce07e46c251c070b60c9927737a0f687883f6de7f5b2b49029dbb4e296f4935"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/input-u16.tsv",
+      "size": 142,
+      "sha256": "e5d82a6abd199d049bdeef426748d44f3e100ecc191807a48d643b78944462a7"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/native-fcd.stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/native-fcd.tsv",
+      "size": 2471,
+      "sha256": "7d0634020d341d7291ca9a0aed5889571dc4516661f62d37f4d0146c12eb58f6"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-cursor/summary.json",
+      "size": 7838,
+      "sha256": "fb3f95c9ac6d8a56de7e47b2932d8a7ceea7cbfcd01076eacf1e50b302062b61"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/build.log",
+      "size": 944,
+      "sha256": "3e49818080210c290810b72c199c3f5d509e03a15cca0a26358b7b3734c2e71d"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/generator-snapshot/diagnose_fcd_cursor.py",
+      "size": 3048,
+      "sha256": "75dd9146d09f4e8e69250ef05ece0d6ea072c1cb202733ab42997ba9e37fce71"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/generator-snapshot/trace-fcd.cpp",
+      "size": 5835,
+      "sha256": "7f36ab7b16e3ead64cc75da310a8ef51371a098c11d9830424a4f372419f279d"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/generator-snapshot.json",
+      "size": 738,
+      "sha256": "01030c533c31764c895b0129070d4b67ad8bc2d263bfdd1834fda0dd353ac3bc"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/input-u16.tsv",
+      "size": 168,
+      "sha256": "3b6d7660139183fadce3ce45d6a99e55ed1bd93ccb9381e6b55281c304a43ee5"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/native-fcd-values.stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/native-fcd-values.tsv",
+      "size": 718,
+      "sha256": "0f065aa9da21440a1a7cb0ec8895d9317708561dfa3ffadd403a30e2863d8c77"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/native-fcd.stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/native-fcd.tsv",
+      "size": 2285,
+      "sha256": "be0e08051fd051df51fa38ce74988b6e1176b02288a455aded43fd92656eb1c8"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/fo-search-fcd-reduced/summary.json",
+      "size": 9048,
+      "sha256": "87235f0d0fbe772869164686338b8803ed46662e66dfd89462c256bc4eb35d46"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/oracle-build.log",
+      "size": 686,
+      "sha256": "cb45a4f810331ad9519530f52db38530311cbe70868460c4969764a20dc03998"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/Lao_-keys.tsv",
+      "size": 51,
+      "sha256": "65542c794be984c39348d9596ce2424659686cae17b6e165fec9a9c7d5f20e09"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/Lao_-metadata.json",
+      "size": 663,
+      "sha256": "6e4c5fc516ea79ea818418474f80ba15d033cb0de9a43e9a94dc9145aafe5da1"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/Lao_-stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/Qaac-keys.tsv",
+      "size": 51,
+      "sha256": "65542c794be984c39348d9596ce2424659686cae17b6e165fec9a9c7d5f20e09"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/Qaac-metadata.json",
+      "size": 662,
+      "sha256": "f2fd566955922bf4af3554bcaff87b718d2b1d4f7e06b7361598517d0b660a5b"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/Qaac-stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/Yi__-keys.tsv",
+      "size": 51,
+      "sha256": "65542c794be984c39348d9596ce2424659686cae17b6e165fec9a9c7d5f20e09"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/Yi__-metadata.json",
+      "size": 663,
+      "sha256": "717c5c839952413c39d73766dfb16da76acf22d8be3b87804557b161e8d5892a"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/Yi__-stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/_Han-keys.tsv",
+      "size": 51,
+      "sha256": "a7813b1b5635c44465c2fd70e02739bba3ac26a11c4760088fcbda4956e636a0"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/_Han-metadata.json",
+      "size": 663,
+      "sha256": "0c9753304170c45c019e057ddbf18278ab2f8f3e58af914defeea684e52216e4"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/_Han-stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/input.tsv",
+      "size": 22,
+      "sha256": "855fa480ab8e2005c24b672a399a684bf579160c764c14394bee8a843541b9e1"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/diagnostics/script-alias-shapes/summary.json",
+      "size": 4078,
+      "sha256": "9e9adabb7bf34f44401cf882abd525de61498afc868c979e0c66b14c51e139db"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/build.log",
+      "size": 958,
+      "sha256": "6dfdd3a184c477e054ab5d06d7e197e5ab452c3a0fe90cce5ba5c287efef04e5"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/default-scripts.bin",
+      "size": 15746,
+      "sha256": "02b5e8e7be9f76edb5cd9e0ec8c495f200165d2b701a9446d455f23d2bb83b12"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/default-scripts.json",
+      "size": 61730,
+      "sha256": "71e58f16c1232c4d3386e2fd32e27143231556ca877010f61bad35146a02081b"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/native-1.json",
+      "size": 59590,
+      "sha256": "cf74843269bd072bed193f98731cb5934604fce884d4dbe20a814dceb998bb72"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/native-1.log",
+      "size": 511,
+      "sha256": "125e66b5ca594f175619ee69b7445e5dabcec7be4d16b385bb3a607b8b15e4f7"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/native-2.json",
+      "size": 59590,
+      "sha256": "cf74843269bd072bed193f98731cb5934604fce884d4dbe20a814dceb998bb72"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/native-2.log",
+      "size": 511,
+      "sha256": "1018be320c5775c9838f5d1d9d74fb48180dbb7c3c5cd954fbc710542920de79"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/package-list.stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/package-list.txt",
+      "size": 58925,
+      "sha256": "ef44045bd6e2b8cf2d7d74cf9e31c8af66c90ceaa6841bd1c164ce1ff9e609b1"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/resource-locales.txt",
+      "size": 787,
+      "sha256": "82b10cb66e3bb50bec5cdbdfe07452dc4097e4f5a33aadcd52e9b28eeb0ddfb8"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/resources.bin",
+      "size": 9863,
+      "sha256": "295296efa8464ee4b7fe876c61bc5c69c1248ca7215e11918d1a922bdb16406e"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/resources.json",
+      "size": 208199,
+      "sha256": "7be4d47d1ca72c687dc88e716bdd7bedf7f74ead1ea0d9caebacbd27d58017c9"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/script-aliases.bin",
+      "size": 2637,
+      "sha256": "833faa0f3b155b6cac429ba827cd1bd1c85de600709104b7e2506cc962df4b35"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/script-aliases.json",
+      "size": 11494,
+      "sha256": "f6e5f6ef53664bb7f68b80aaa9a94d61498256bc547154e97075bc0492260c2a"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/resources/2026-10-17T130153.162384Z/summary.json",
+      "size": 12993,
+      "sha256": "f79feed29a57e7e1823696b145e2ab029dabbf4970522349a3e293d5c1e150e2"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z/common/owner-0043-settings-0001/identical/utf8/candidate-keys.stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z/common/owner-0043-settings-0001/identical/utf8/candidate-keys.tsv",
+      "size": 2145543,
+      "sha256": "1f06281dff4bc79aeacf2ae7ae9ec0ee5012471a3e0d75070af7d2ecfa18edf0"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z/common/owner-0043-settings-0001/identical/utf8/expected-keys.reference-process.json",
+      "size": 2158,
+      "sha256": "25cd327801767390da81a622423afe4c1d1eea6e07a1949abeef59b996da0f31"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z/common/owner-0043-settings-0001/identical/utf8/expected-keys.stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z/common/owner-0043-settings-0001/identical/utf8/expected-keys.tsv",
+      "size": 2145543,
+      "sha256": "601560d766ca2667894a6dfc2af70216479bedb742cfb1c6fa93b72fab5b1ccf"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z/common/owner-0043-settings-0001/identical/utf8/oracle-metadata.json",
+      "size": 699,
+      "sha256": "75a70745f4611be4c35c4f9595b1535bf4f718fe896e628a9ec77cee58daa9d5"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z/common/owner-0043-settings-0001/identical/utf8/summary.json",
+      "size": 10006,
+      "sha256": "142485a78fa10e0a5ae9b9ba63aac0668065af5f1b7ecc675371c22ca908a86e"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z/inputs/common-utf8.tsv",
+      "size": 198476,
+      "sha256": "087c52fcb654eaa2e86fa5c1ceff51dbfc6ede0c1baa5326aef8b5f8115e2782"
+    },
+    {
+      "path": "docs/research/assets/icu77-locales/runs/2026-10-17T124321.329888Z/summary.json",
+      "size": 3054391,
+      "sha256": "9b2fcc06a4293982493f44cbfade7782db9df782caee0e50942e32ea97d464eb"
+    },
+    {
+      "path": "docs/research/assets/platforms/actions-39034545308-1/artifacts/native-rust-aarch64-apple-darwin-39034545308-1.zip",
+      "size": 12519,
+      "sha256": "e4346b59a2e2c95aac03b8694640e9a6f8924a4b5c59e624078ed49a3e893969"
+    },
+    {
+      "path": "docs/research/assets/platforms/actions-39034545308-1/artifacts/native-rust-aarch64-pc-windows-msvc-39034545308-1.zip",
+      "size": 12667,
+      "sha256": "a28b302c84d42cc40493e80cbf1f4b4bfe494b3f4827d590c045c16adde3ece7"
+    },
+    {
+      "path": "docs/research/assets/platforms/actions-39034545308-1/artifacts/native-rust-aarch64-unknown-linux-gnu-39034545308-1.zip",
+      "size": 12811,
+      "sha256": "fe07a8ed7983f5424003bf22bf86a41b6c9d67f8a0a1b0703e705527f3ebe1d9"
+    },
+    {
+      "path": "docs/research/assets/platforms/actions-39034545308-1/artifacts/native-rust-x86_64-apple-darwin-39034545308-1.zip",
+      "size": 12453,
+      "sha256": "d1dafb8902cd0e47c0acc64090f60881972459ab0c2c457333fdc7219fbb9c5f"
+    },
+    {
+      "path": "docs/research/assets/platforms/actions-39034545308-1/artifacts/native-rust-x86_64-pc-windows-msvc-39034545308-1.zip",
+      "size": 12523,
+      "sha256": "9de23e5c44dd7dccd442ec2fc020af8d220cda3263c546753be7d774cbc7279f"
+    },
+    {
+      "path": "docs/research/assets/platforms/actions-39034545308-1/artifacts/native-rust-x86_64-unknown-linux-gnu-39034545308-1.zip",
+      "size": 12711,
+      "sha256": "18e46633f194e4c780f9ff012951bf9c6a49b63094296d9f5d8088d394e9f609"
+    },
+    {
+      "path": "docs/research/assets/platforms/actions-39034545308-1/github-artifacts.json",
+      "size": 5131,
+      "sha256": "9b7d979a61667657e66f7191b0fd4260cd918bd1d48d21e6a67f38210ed74c92"
+    },
+    {
+      "path": "docs/research/assets/platforms/actions-39034545308-1/github-jobs.json",
+      "size": 8106,
+      "sha256": "bd0f10b42a069cde301b2c008219fffce61f6820d11fa2cdba466d67b604ddae"
+    },
+    {
+      "path": "docs/research/assets/platforms/actions-39034545308-1/github-run.json",
+      "size": 14804,
+      "sha256": "540235a36f6c63313928f915fdd46280858147e9fd23f903635326877671c588"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-cases.tsv",
+      "size": 798841,
+      "sha256": "98dcd6afb8c6ee6b9ad2bb81f20b6abd80ac77e4a0da77785b7ae486b5e8f112"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/cases.tsv",
+      "size": 798841,
+      "sha256": "98dcd6afb8c6ee6b9ad2bb81f20b6abd80ac77e4a0da77785b7ae486b5e8f112"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/metadata/process.json",
+      "size": 314,
+      "sha256": "541408ac1723a153d109a08a6fa4046fb9ff15a440bdbc692804e76a5198b668"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/metadata/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/metadata/stdout.tsv",
+      "size": 118,
+      "sha256": "53249be6ab9f2c1d0c95283686bf3ce1cffb3d3b170b598eca02e7ced5f784ef"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000000/input.tsv",
+      "size": 12580,
+      "sha256": "7ec41e76d476588620c6481aceabb69ff23a686a192db32a005d3a480ed445e3"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000000/process.json",
+      "size": 381,
+      "sha256": "6b833088d6b5e490c48fb753df0fa336ef8be6d807da5ad0de7457b010491919"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000000/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000000/stdout.tsv",
+      "size": 20598,
+      "sha256": "851bb2ac76d179a84318887ff82d30663f3ff7695937304b4297b8c2e751f69d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000001/input.tsv",
+      "size": 15162,
+      "sha256": "9ed39520c0000695dc9c52bcbd82851f8ceaa14c8c070d5b83ab9887a84631a6"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000001/process.json",
+      "size": 381,
+      "sha256": "9d0b4ff79f2375dbc06bad90cf39c895d0c645642b9de3762145943a92958b1c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000001/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000001/stdout.tsv",
+      "size": 27265,
+      "sha256": "48dda2a3fb5b61a491cd4161e076c27e4e2f7ead98d47e3169e6200f9f2b1d98"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000002/input.tsv",
+      "size": 13076,
+      "sha256": "57d32951533b4ceed121916c252757cf6cf592110335ad6e0edf33fbda3f0807"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000002/process.json",
+      "size": 381,
+      "sha256": "06309d06545de2c73211d2c1680ad5a3d3fe94f7d113e339e130c3c8b382d74a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000002/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000002/stdout.tsv",
+      "size": 27451,
+      "sha256": "28206d4c0793fc263a59e34888f7d4c65964de38532778598a544b3ece7a06b8"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000003/input.tsv",
+      "size": 15326,
+      "sha256": "688e8176b91d675f48b00ccbb8ee67e6385e2117e94f69ac75d3257a1ac73438"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000003/process.json",
+      "size": 381,
+      "sha256": "29ba211a221b839e84d7a746718ab82dd842a89621f6371c2eff45d99bfab239"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000003/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000003/stdout.tsv",
+      "size": 26635,
+      "sha256": "8ffe16133c57bff8f6224fa3c948e5c9842d87e2719416c1d231bcad38fc826a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000004/input.tsv",
+      "size": 17240,
+      "sha256": "fee99eb4494e16f374533e17485393d73c916027f6ae3583a92c0bc90fe35f73"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000004/process.json",
+      "size": 381,
+      "sha256": "e3c52430f94462722d34e30f1bf3b8429407a82855b8eefcd7ae512e99380b80"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000004/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000004/stdout.tsv",
+      "size": 20330,
+      "sha256": "6c6ff513eaf5d6adbb9f94962bf3e66fa0bc59b9b029333d5a73838124664319"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000005/input.tsv",
+      "size": 14412,
+      "sha256": "7f576caf8f15c0f7ec2142459a94e17f8782f91eb253cc03c8d5c35909cdac27"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000005/process.json",
+      "size": 380,
+      "sha256": "a50be272353829c79241cd28d6defb4bfeb40d317509ff8ee8ef836840b2b875"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000005/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000005/stdout.tsv",
+      "size": 22387,
+      "sha256": "b3d1a822efb7f4ac47bf87e0348e9ecf8d88aa7dfc818a8b99e1dda63bb09f88"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000006/input.tsv",
+      "size": 14942,
+      "sha256": "8afa374c1f56f174a264962d3e162e2eca3de78bb99a3d612bd9db0d516c1565"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000006/process.json",
+      "size": 381,
+      "sha256": "72ea83c9382ea534fde322b8470cfaa02b340a96b406eb947c29be7bc14bd46e"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000006/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000006/stdout.tsv",
+      "size": 23135,
+      "sha256": "c3d294d9fcefa729625b22d3f2b55e606a91fbc08d63e2eb0bc13e8cbf2284ab"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000007/input.tsv",
+      "size": 14640,
+      "sha256": "7a8bde0bec4c6b2b9a3b0fe36baebae7ee2d573e881fb71b4ddce1ffce359b2f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000007/process.json",
+      "size": 381,
+      "sha256": "5f0c2ab121548c717dbdd2dc6053569aa12dd63dfb80fc4a8a1febd9e7123e68"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000007/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000007/stdout.tsv",
+      "size": 24692,
+      "sha256": "0b76387cd71249204cf148c85a532939f675bf96dfc40c7f0ea0c46ddb446695"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000008/input.tsv",
+      "size": 12382,
+      "sha256": "e2c06d5d26e79a568466c1ed8d1114d156f127e80d332a69033b6e8a2e9957d5"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000008/process.json",
+      "size": 381,
+      "sha256": "fb9bd713b2992ded516161b3e50de8d7e2cf5ae46c513b630443d6efe22a204c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000008/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000008/stdout.tsv",
+      "size": 21054,
+      "sha256": "7250bb1cb72ac1ce5a51cceebdc529a068bd31a07092f52b8b46f63fc2b6d2bd"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000009/input.tsv",
+      "size": 15052,
+      "sha256": "ca9ad75837a5440a97ef8804abc337002acfa01425dd8634905dcbcc46a8dfea"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000009/process.json",
+      "size": 381,
+      "sha256": "64335095bd9d53a73fac2422fe76219daebce010f6270e0ba3e93ea50629d289"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000009/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000009/stdout.tsv",
+      "size": 22430,
+      "sha256": "bb518a2237a7d3ea67337976ade1df66231d419851e087767676994990b426ba"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000010/input.tsv",
+      "size": 16226,
+      "sha256": "bfdda1e5ec46208da694cdb48054da155d92858500600b019408d4ecdd605e9d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000010/process.json",
+      "size": 381,
+      "sha256": "c69d6a64c694f7c2088d91eafebe61a550f3cf827efc86c2ee058e86050b87a6"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000010/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000010/stdout.tsv",
+      "size": 16784,
+      "sha256": "42638cc906f0ac84d2af2da88214591c63dfadeb6535f66d874b6c845aa662c5"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000011/input.tsv",
+      "size": 17276,
+      "sha256": "619003c1dbd865045b347d903fd597d1408112851bbd636d3d9276b7a1f65f40"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000011/process.json",
+      "size": 381,
+      "sha256": "a6ec8bbcbaea95ddfbe56918ab1380c5c009274db4b14fc04d8e90f9e7c0275e"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000011/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000011/stdout.tsv",
+      "size": 21542,
+      "sha256": "80ca22963db1aaa58424588791c0f9425ebf0d3d9c6e5a0529e6688ad05c93f7"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000012/input.tsv",
+      "size": 10918,
+      "sha256": "0c495ebaa3bf9aaf690c9a011d271116e600132c44caa78c7f416082d3ab1fd5"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000012/process.json",
+      "size": 381,
+      "sha256": "37acd6eb40bf90c7c24f61661df1674a7d533ee481191148d6eae990f8d8b11d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000012/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000012/stdout.tsv",
+      "size": 23853,
+      "sha256": "f820e6c1945b10e7b5204fde6be49468afaebb95abc3f18e96810a99f1ef5531"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000013/input.tsv",
+      "size": 9536,
+      "sha256": "8239d24e7d4028d2691f08b526e2e68d12dda619c1ca65577953c5ed5abcb01d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000013/process.json",
+      "size": 381,
+      "sha256": "cd171399f1f5b3303a1f1f95cca9d1e0a8f9e0ba042909d88751363b5560f0e8"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000013/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000013/stdout.tsv",
+      "size": 24598,
+      "sha256": "250614d4a96b61be24f1b032e26944a662532ff4a3f18114583a4b5dd8a15874"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000014/input.tsv",
+      "size": 12127,
+      "sha256": "a589cdaa5759a9b237e12b803105c66a6828b61a6f6e77a114756ad73bf5b69f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000014/process.json",
+      "size": 380,
+      "sha256": "8e77c9d9aad76c9d7b8b469f4343eb86ec9e054a9f753d0c2232e5045ece0e8d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000014/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000014/stdout.tsv",
+      "size": 31112,
+      "sha256": "60d97ff63c3803e4d6a2801fec3f5b6e668c323eb229c25b5bb6a1f62c351cf5"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000015/input.tsv",
+      "size": 18738,
+      "sha256": "211e8997e6eb27c57ac0d8da3aedc2f8779fb91748d2a31cc9b13f3c408f6deb"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000015/process.json",
+      "size": 381,
+      "sha256": "376662566bc4ca627f2a9e0710377fe1a129d54c925923dab89fa011f00126c1"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000015/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000015/stdout.tsv",
+      "size": 26651,
+      "sha256": "ccd9a207c815fb025f500b14506bcd75ce499227997896088057c722ee1c746f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000016/input.tsv",
+      "size": 14842,
+      "sha256": "753f8e9d5d68e22f79189273dc5903495273bf2fd9532bd825d06b663407e0bc"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000016/process.json",
+      "size": 381,
+      "sha256": "5dfba126dbd01e26f7eb4cbeb118cb0083daf8a33972d838a258ca400fb2c101"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000016/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000016/stdout.tsv",
+      "size": 26078,
+      "sha256": "68cdb59031e0b1694204e01073282f647b7a9e7d8bcd701b0316f6a36d46ae4d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000017/input.tsv",
+      "size": 14542,
+      "sha256": "c12ee080b37931c255c7d1441542c6412f41f0bd86ac486a4d38097c318a5285"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000017/process.json",
+      "size": 381,
+      "sha256": "64e9cf7942b9efcd7682f8363df221957a10ce4feefe061bd9518832081b94c8"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000017/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000017/stdout.tsv",
+      "size": 24471,
+      "sha256": "0e10c9ccf680e4e4619da1795db8ecf985540e820d4b46194c416bd2575ae9be"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000018/input.tsv",
+      "size": 14430,
+      "sha256": "c812499581f40e19e6890a7cd9d61de4944381e156c3bf2a58dc850348b8a71c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000018/process.json",
+      "size": 381,
+      "sha256": "8a2ee7ed7f745a2649161e5c03d22d0cdcb0892f6f91b87d689b13e9d03eb8c2"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000018/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000018/stdout.tsv",
+      "size": 25609,
+      "sha256": "df7ab4b6ac3fae5e75c9961e9f4d4000c116a4f70098f4fb26191a34625994bb"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000019/input.tsv",
+      "size": 14841,
+      "sha256": "9a59c508b69db4abacde11509cbcb6789e64e493e48fd3f9228ebbb3eb79b890"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000019/process.json",
+      "size": 381,
+      "sha256": "a38504a6d06ee3aca3d49eae8320a40a476186e76272ff7e859eb910a65abcb1"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000019/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000019/stdout.tsv",
+      "size": 24125,
+      "sha256": "2116b983cf2e74c2b811ec46ee3fdb9e17b8216c41ad75627ff55f4610c5dc30"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000020/input.tsv",
+      "size": 14560,
+      "sha256": "253b0fa57b5801b053088ac796d7e358f7e2c9262757d67f9b804dacbbec62c9"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000020/process.json",
+      "size": 381,
+      "sha256": "220edc71692b3a4fb41ffd2c901055ef260f840808484ee8a61ad3941da0d71c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000020/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000020/stdout.tsv",
+      "size": 24125,
+      "sha256": "6ca74fb3beeac75fd4631348581c4a8626badd55a0bafeb2abb589c206b78aab"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000021/input.tsv",
+      "size": 14633,
+      "sha256": "4b73730f9874bedcd094e50c42062b50f53155fa3038f1037ef39a52b8e4dc0b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000021/process.json",
+      "size": 380,
+      "sha256": "c4da76556dd07935b48a73684832e8ad7d5a2cca5d2f08c2a89f919e121b7516"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000021/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000021/stdout.tsv",
+      "size": 24914,
+      "sha256": "d4375eb573734d5d9f4c03b5918549799ce98a169ca337440e218fcfc1846dd3"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000022/input.tsv",
+      "size": 15011,
+      "sha256": "196b36d76ac3b6e7196619ea44eb6459f2aa7069dbdcf1964450a85fcd872803"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000022/process.json",
+      "size": 381,
+      "sha256": "30279879d948bbe71985a3f41f5a39245a833387e47d7593a45ab0cb716ae873"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000022/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000022/stdout.tsv",
+      "size": 26236,
+      "sha256": "400d399d6900437af10c47f2651700a6d1986dae3c7db9071be5c82e8e53c1dc"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000023/input.tsv",
+      "size": 15043,
+      "sha256": "47bfb26d9ffa4084c2007a3e8cca11c4d20642acd6a8fe96edf05ead26494844"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000023/process.json",
+      "size": 381,
+      "sha256": "d57f83182a0fe65cfe70630ebfaa3b8323393057bb9cd64cc2a4fd4d55ce641b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000023/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000023/stdout.tsv",
+      "size": 26401,
+      "sha256": "89fc68752cbaf5987f049a10edff35c02100619428d80ddd8977e843940fdfc6"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000024/input.tsv",
+      "size": 15308,
+      "sha256": "ba89eb88924ccf805d55d2bc4e43c0fbf781ddb77a61b3eb74f06b440d02533e"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000024/process.json",
+      "size": 381,
+      "sha256": "1b22c171ec298e0b5eef0376ebc03f6360a4362bf313bd63dc57ba71e83f31b2"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000024/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000024/stdout.tsv",
+      "size": 27134,
+      "sha256": "73f7ca6ff9637748d7dc529f815b319a67b5dd58d707dffea0028feb43fb46b0"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000025/input.tsv",
+      "size": 15071,
+      "sha256": "a3ba2a55847db20dc1222b1965be7163a887c14dfed585f55bba17ea4e522f2e"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000025/process.json",
+      "size": 381,
+      "sha256": "89b6b014c4d2f3ab25a3b94f42b2ac5ee38aece9e45195bffd4ca140487a3e9a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000025/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000025/stdout.tsv",
+      "size": 24829,
+      "sha256": "ef8717d964f7d4a622a7c24da42d9d9745f941880a638849f1a02cc610d26f78"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000026/input.tsv",
+      "size": 15149,
+      "sha256": "e5e2c3b56e7ebc5bee327911e0dabf054c00b51b08e03d64b25a89410e2073a5"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000026/process.json",
+      "size": 381,
+      "sha256": "c594853181d9fd81b271275afe2e0e25428298cd41a21ad0399c42100d74e731"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000026/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000026/stdout.tsv",
+      "size": 24483,
+      "sha256": "715b59bb3de9df20cf83033a920ead337aa544d7d134ec2b8f45b78d2577cc39"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000027/input.tsv",
+      "size": 14776,
+      "sha256": "86f6d4312197cdd406ae5800b0f59b23fb326823b070796bce294ccb34f4a2a2"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000027/process.json",
+      "size": 380,
+      "sha256": "ff68a037393e24be645650b5bdfa2df91a79911a82d59fb161883468437572ae"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000027/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000027/stdout.tsv",
+      "size": 26534,
+      "sha256": "e217c63b27229e0c25fa5992e0e8667d7efa93ca1137a692ff5ce0bc75a4aed1"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000028/input.tsv",
+      "size": 14591,
+      "sha256": "e68e6340ad89e94b1ba686a03919935d09fdaae9fcead2439cd5709feda88d3d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000028/process.json",
+      "size": 381,
+      "sha256": "835b1d40c298d882c20a671d4c6214e3c4bdf74909934d7f52c530e066d63001"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000028/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000028/stdout.tsv",
+      "size": 26782,
+      "sha256": "442dfe1157f5f20f00b7b98644ea991a1cd1bfedce0c946dd9c76398944c6308"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000029/input.tsv",
+      "size": 14952,
+      "sha256": "d0b7556f5b3e55bd80b238179650ee21e758a04c3ae8a09ef6b5290edb959fea"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000029/process.json",
+      "size": 380,
+      "sha256": "e64fcc4f7e9bca63a4f98a24ee65c84d0d06306decf1f7f6fb79a5e3433a699f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000029/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000029/stdout.tsv",
+      "size": 26225,
+      "sha256": "7a7e120772dea5db366e136ceca969b032df08b3d57411ec5380881eeabcc26b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000030/input.tsv",
+      "size": 14892,
+      "sha256": "9cc7186da9b72366a4cbd7bb382a49d5411ed7087fa6f3912422d88edc5bd293"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000030/process.json",
+      "size": 379,
+      "sha256": "72875e213b05230ffd4d4844470efdeb1f528b3511f6496a363a592a17f574fd"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000030/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000030/stdout.tsv",
+      "size": 24687,
+      "sha256": "b2fe8e8302a426050fa5cf0321718824558c63f7f92ef577f541ee4820d5c91f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000031/input.tsv",
+      "size": 15028,
+      "sha256": "47b6393d3ab596a9d689dd9e029e6e35e5f1b84a291182754efab891f4abd354"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000031/process.json",
+      "size": 381,
+      "sha256": "6a57cba8b0d97c28e15df5bd9010317cf1d9f4393c39886693f0e39c73ce9f89"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000031/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000031/stdout.tsv",
+      "size": 26152,
+      "sha256": "9496ca8c1a09ed0135638b679a172b17cd680126cfa034a02ef079a1cdec01e0"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000032/input.tsv",
+      "size": 14660,
+      "sha256": "f9ddbedb9c98aba27d28ebf6490cb115ef19b4651bf7db818bb901b4ca3943fe"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000032/process.json",
+      "size": 381,
+      "sha256": "f58349fc3708773f61251fbe356c0cf4437c3f673bff194b632430a934680007"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000032/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000032/stdout.tsv",
+      "size": 25508,
+      "sha256": "be9586a3f9c27fe485404f604caac839a0c1555cb1c6752b4361084e7833693f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000033/input.tsv",
+      "size": 14638,
+      "sha256": "b85af9caac45c49daa560b3ff1b108d93273affb57f337c555fa0c94478b425c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000033/process.json",
+      "size": 381,
+      "sha256": "71026ea216a5a2f786c4e9bd521ccb950603af7a5da30b221019d457cc018f2f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000033/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000033/stdout.tsv",
+      "size": 26564,
+      "sha256": "1daf6f2925fe17726e58ce0ebaea411774900326528ec84eb6a5ec73a8ccb86a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000034/input.tsv",
+      "size": 14656,
+      "sha256": "dd4d7d67f5ee879adc59b22c943fcbef829d113fec4ab54258f58ef96237cbdd"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000034/process.json",
+      "size": 381,
+      "sha256": "8e483356a0731ceb0a5527a468d7d5e4b7a959374480dc3eeb8df8d4f8e1f4ce"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000034/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000034/stdout.tsv",
+      "size": 25765,
+      "sha256": "555033b2423982a4f58aadb9f33a5ea10fce25bca541e9bb66617970408f4834"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000035/input.tsv",
+      "size": 14801,
+      "sha256": "85262631ace009235e2a1816e11cdaa2057b298d129dcac308edd34475bf6bd6"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000035/process.json",
+      "size": 381,
+      "sha256": "f60b503d05c9eef04cace64a4dbfafda4332b72b21dd2a6c33f3aee5fc057113"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000035/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000035/stdout.tsv",
+      "size": 24839,
+      "sha256": "15ed745b5328b93d84bde933a05c528f767cd34c3c74e7b91bf71665ceaf7156"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000036/input.tsv",
+      "size": 15096,
+      "sha256": "d304ff6dc3cbbbda107633d87f4ba682b626a607d5f0301c0755bccfe8645b5f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000036/process.json",
+      "size": 381,
+      "sha256": "63b270e2edc5592041310ecc28056751e35766a76c611e6dc03dbf0c7a486582"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000036/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000036/stdout.tsv",
+      "size": 25920,
+      "sha256": "c61485bd41b09ad7cb659479c339168bf7da90f5fc37cc6ad400978f783de977"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000037/input.tsv",
+      "size": 14883,
+      "sha256": "21632b0383977898fbbe931dfffe1d919e08f47b749696384cab0777df3c1972"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000037/process.json",
+      "size": 381,
+      "sha256": "764911c97f3a7e65ef2082159337bb5aa4dbf872d5540716109c953baacf2f12"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000037/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000037/stdout.tsv",
+      "size": 26360,
+      "sha256": "c864957a672f5057052bd5ba7d92b95ad1cdd62fe3116e1b9e60c48f8472c810"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000038/input.tsv",
+      "size": 15131,
+      "sha256": "f8628283d2038466cf13dbe77e9ee020fe37be6febcb859f83641883610d19a6"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000038/process.json",
+      "size": 381,
+      "sha256": "d59fc3a37bc73eb5465e9e7e5c352d76501ed2c51a6ea6d3c51681abe1eefb53"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000038/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000038/stdout.tsv",
+      "size": 25991,
+      "sha256": "c106431dfdd97603662dcd20368b9a2e21917d9bc854ca7d8633c4f613109495"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000039/input.tsv",
+      "size": 15239,
+      "sha256": "794b1e6e631dbdd7646bd080456830f59496ffe939efb4b828b44996261efae1"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000039/process.json",
+      "size": 381,
+      "sha256": "2cafe739c458972c3c10f507a6e6c5b2e0f94f55e15a07fcd51d8e1a48d9a459"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000039/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000039/stdout.tsv",
+      "size": 25646,
+      "sha256": "4af1b3689d576230663b5c71cb33336e7fbefbbedd0346a46eb46d4d349f1cca"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000040/input.tsv",
+      "size": 14740,
+      "sha256": "a297f4d1f96cf3da16ea51e45212219463acb38b613312d3fef7b2e7fcb32acc"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000040/process.json",
+      "size": 381,
+      "sha256": "09cc1e20827dc219800b800947bfe7cd1dbaf531ac98177a9e2c7a2488ec39c1"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000040/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000040/stdout.tsv",
+      "size": 25608,
+      "sha256": "be85c05916b7ddc899447a5c28b2172445b49d3b968570aff5fa2ab7f2d643f9"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000041/input.tsv",
+      "size": 15019,
+      "sha256": "511a3a66194b7472af22f734f09c8479380ccfc6db6b8a5e271dd09995db85af"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000041/process.json",
+      "size": 381,
+      "sha256": "02a30c8cb50c62643ab107c8de5ab77163e71a2b770d9f84925b48da78f568bf"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000041/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000041/stdout.tsv",
+      "size": 26337,
+      "sha256": "0ea1436814c515d024d045c5857eab8710827e04d60048da848427c9199ce7be"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000042/input.tsv",
+      "size": 14824,
+      "sha256": "7c7e3e80fb11e68dc37ac979adbba43d7b3c57b54c70c10cdfb18d2e4598634b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000042/process.json",
+      "size": 381,
+      "sha256": "96b313f9e03b46cfadadd07003b0a26cebb8ee7192a518a16bdf530aa0e949d7"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000042/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000042/stdout.tsv",
+      "size": 24166,
+      "sha256": "9e17ba25d79ce33cc938783b9260a19bfec29e8efcf333b322eddfd027f30679"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000043/input.tsv",
+      "size": 14376,
+      "sha256": "5c03e505869de5ca4df805309d6229ab5268e39e89040cc1dd881c334f2cee23"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000043/process.json",
+      "size": 382,
+      "sha256": "6aca581773f6c32ad113b12d71deefa692add4c390d84d262fed6265f0fe36cc"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000043/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000043/stdout.tsv",
+      "size": 24971,
+      "sha256": "76320faa5033c8b29912de792f914590d5e553ce2f16c037cdb2fe17e21a3091"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000044/input.tsv",
+      "size": 15128,
+      "sha256": "167f087cfe60ded7ca291f1e3e889d3bf26754738ec994d65e536e56e89fa671"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000044/process.json",
+      "size": 382,
+      "sha256": "8cc28fb7de19793b8537318a0ee6d0912793b61af93d6237c158755f65ce7019"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000044/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000044/stdout.tsv",
+      "size": 25600,
+      "sha256": "8c631627b833ccd4ed1393c0450721bd872e30eeb0062e49aede1e0e4cbd0ab2"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000045/input.tsv",
+      "size": 15073,
+      "sha256": "0c6d71aa52eb18f23b24b7f792534427349a02858c7f609da4e73eae56f02dce"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000045/process.json",
+      "size": 381,
+      "sha256": "6b1542906a5e67438b337f055ee0b9de359c354be06111550fd7f7695a1cd94f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000045/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000045/stdout.tsv",
+      "size": 25775,
+      "sha256": "ae50b2f0984b753e1472cf5e84a649afbcaf20bb45a55ba925355da1cc41e8a4"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000046/input.tsv",
+      "size": 15025,
+      "sha256": "ca33856296d5102f6ec09492f5e9d7166f7a1b168aaa36f86fc91b0134436377"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000046/process.json",
+      "size": 381,
+      "sha256": "b78fe1680d1767be35a4f18090ae5f5e2fd253e63dd48844f79362e44bae48cb"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000046/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000046/stdout.tsv",
+      "size": 25409,
+      "sha256": "cffc13e785c7b5fa1c2cd884c8555fe82e7c89469cab7889c323db89491544f3"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000047/input.tsv",
+      "size": 15000,
+      "sha256": "69234e576825739921bf242d9f9f5de1b526fa93e943925f19ba8ad1604f014a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000047/process.json",
+      "size": 381,
+      "sha256": "68a8fa91b8c78ca981eb5775dceb10c4e6e51bf916f1ba5c5bc9b9e127b760aa"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000047/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000047/stdout.tsv",
+      "size": 26122,
+      "sha256": "2a6ced5128b22d649175842ed297cccfa65b31d957dafe0225f796a0206a6b1b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000048/input.tsv",
+      "size": 14441,
+      "sha256": "a9793b86f211a6914a622273583407b7e795b1d489d716a6c160701e3262803b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000048/process.json",
+      "size": 382,
+      "sha256": "c976a85d6ed4e89d200db4c5aac52b1c124a11617a6731e0b05601ea4e0049eb"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000048/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000048/stdout.tsv",
+      "size": 24871,
+      "sha256": "dbf8d4daa09836159d42113d7c34be3c7fb9241179d8c19138a57895d466623b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000049/input.tsv",
+      "size": 15146,
+      "sha256": "8c291bdf8d71cae9b1a3036bb4a103f8a5cc35d6f5ab9094bf7d6ec9852a8ab0"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000049/process.json",
+      "size": 381,
+      "sha256": "8df7814e0b7d8db83ee9e2f0b2d3d8628903b8ee385a09295fa81d6411bd0fcf"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000049/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000049/stdout.tsv",
+      "size": 26049,
+      "sha256": "2dd43291dcfa459687be181ee709fb445654a7ef16c1345e013f084803430beb"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000050/input.tsv",
+      "size": 14858,
+      "sha256": "77208efd09306db61102421a85f4a9eefe77fd489241d03465124733af48ebc3"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000050/process.json",
+      "size": 381,
+      "sha256": "ed43ffb7032aec809e3de3a5870a72ff27623d5d7b278e7ed080afc620c36ed4"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000050/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000050/stdout.tsv",
+      "size": 26489,
+      "sha256": "1c855fee806a62bec009dfde4ea04c5c2d3c161c4fccd05cf3e1de26b44d5247"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000051/input.tsv",
+      "size": 15138,
+      "sha256": "a2a88f9d07b85869fefd8d8520ed21ce82c186412c294f0e295f72e33af3b4e1"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000051/process.json",
+      "size": 381,
+      "sha256": "a2d7165c1bd5afeab4a0ffe936bae7b200bbc7511f0a53d80fd2c3bb85273dab"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000051/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000051/stdout.tsv",
+      "size": 26445,
+      "sha256": "e932894a4e3de9a156a34b0d1bdef9297de15004996bbcfd1b3d3cf80499256b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000052/input.tsv",
+      "size": 14721,
+      "sha256": "bc3225cc261b55d9252644c1ae4ddad0186066b18a84daecb56f3f61ca5db58b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000052/process.json",
+      "size": 381,
+      "sha256": "f3fd384b98c0c3be615af8eedd0b262b7dc50920d53acfc70849ca753bfe7901"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000052/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000052/stdout.tsv",
+      "size": 25191,
+      "sha256": "5b8ffa5203d6621649186673900d7a346bbb7e448a221c7a856038411d582160"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000053/input.tsv",
+      "size": 14675,
+      "sha256": "c4778b48beb6c667ed3b20cde52a1eccbc2e430c851d13ea0d233392c429021a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000053/process.json",
+      "size": 381,
+      "sha256": "d29914d661fe4565cd055246a4f78159c19612eff7fa745ae4ceabf282df5cc6"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000053/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000053/stdout.tsv",
+      "size": 26323,
+      "sha256": "7bd1f0870106e4568c2c79d2b3bdb3d8e9191e1c07c499f814dc8157a8d503a3"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000054/input.tsv",
+      "size": 7727,
+      "sha256": "7f0024eb90606961cc68858a41f7a786afabf1d341d9bda267e867e2cd55581f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000054/process.json",
+      "size": 381,
+      "sha256": "11cf73f8bedfa5d948d6f9363c8581219a2030e62b98e049ac92ae2ad5b5fb7c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000054/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/processes/batch-000054/stdout.tsv",
+      "size": 12701,
+      "sha256": "5925f409e72f59eacd51056b69b787c6bdfa054a65c22427b132af306be7662c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/results.tsv",
+      "size": 1529532,
+      "sha256": "935ea020a6655cf452e8a5d0d0910a2abdc9e751255521e432b2ec72f8e69c06"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/generated-reference/summary.json",
+      "size": 3632,
+      "sha256": "6aa3e7a5cfb08b317617df091d79b0a4843edd7a0d4dd8b79d3114f601aeb767"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/oracle-build.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-assertion-verification/differences.json",
+      "size": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-assertion-verification/summary.json",
+      "size": 1763,
+      "sha256": "e67a9d11c5e96f73d470875c3462db28b9b9c7461c9935d042ba48dfefd7dc9a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-assertions.tsv",
+      "size": 133043,
+      "sha256": "e9843d4b987e9e6a4940da190e5a310c7fcb60b4344294ad97f8b60c4a25ea8c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-build.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-cases.tsv",
+      "size": 1000900,
+      "sha256": "81378a070ad9a1113e9b03976da4717ee23020befef368af9b857e5ac3dc9bff"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/cases.tsv",
+      "size": 1000900,
+      "sha256": "81378a070ad9a1113e9b03976da4717ee23020befef368af9b857e5ac3dc9bff"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/metadata/process.json",
+      "size": 314,
+      "sha256": "89b9adbd010fd81971e3747a9d3c678843352cffef523d41a253f67114f03187"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/metadata/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/metadata/stdout.tsv",
+      "size": 118,
+      "sha256": "53249be6ab9f2c1d0c95283686bf3ce1cffb3d3b170b598eca02e7ced5f784ef"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000000/input.tsv",
+      "size": 17890,
+      "sha256": "b95dfc84152370ed47f845a62af1c768029fb0290c3a2329a0f0cca78659cbb7"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000000/process.json",
+      "size": 380,
+      "sha256": "ec7fef1ddbb526bb3af9088a78e8527b8631f4355a148ec732b701373e90b97e"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000000/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000000/stdout.tsv",
+      "size": 33338,
+      "sha256": "ac7ff68e6458c2e7046bcbadb64b3259804ec46ec04e4ae804c31a1682bedacd"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000001/input.tsv",
+      "size": 20774,
+      "sha256": "8dda3db68b90714efb4aba8ae19da6fdad97a85580f9ba92fea13b666ea0b449"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000001/process.json",
+      "size": 381,
+      "sha256": "0d2d746fd6f5393544dbbe6fe761756e87e0904836ce58a72cfc29011686658a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000001/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000001/stdout.tsv",
+      "size": 40137,
+      "sha256": "a7d031086fd8a5494a97a8506dd16630428bb41b9483905d6b69f770794e9714"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000002/input.tsv",
+      "size": 19147,
+      "sha256": "a9a5d263a5514c78af004360b07d2c809ea05df19bbd2f0d1b0dfe122a1cb78c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000002/process.json",
+      "size": 381,
+      "sha256": "082698a3c19ec378e97478d3a791ca90ce4744a699476fe817ad3b7f442f2d98"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000002/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000002/stdout.tsv",
+      "size": 36218,
+      "sha256": "de775dec0660f74ba3972c71556d81ccf2b7f00790a7579fa00ff4d393272212"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000003/input.tsv",
+      "size": 19389,
+      "sha256": "40477cc10ef08c5421cb86bc258b8d89500fc43bef6fb84308b49cc8e65a3152"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000003/process.json",
+      "size": 381,
+      "sha256": "515ff8c4d2f55ed57ac5283d0032c8aaf5fb4a2064880cac1164124119961eb7"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000003/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000003/stdout.tsv",
+      "size": 36681,
+      "sha256": "7416ee74f6d0a62d5169777677288d8ec1f194076ddaacd635b98ddb8c51b6a5"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000004/input.tsv",
+      "size": 20080,
+      "sha256": "463e1b82bd334b7d6447f45e176716a36cdb4e2b79331cfe722fb9a7a5f952e5"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000004/process.json",
+      "size": 381,
+      "sha256": "04f6b79a693dd04bf47cc9749d3ed37017738ca4e5cfdc1c5006f45624b57529"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000004/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000004/stdout.tsv",
+      "size": 35723,
+      "sha256": "3b5b9397ac7f4bbeb6943730045eeb0927ab67441ef6e8cfc366439accc6b4bc"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000005/input.tsv",
+      "size": 20298,
+      "sha256": "13f3cef4bd269bf175321dc708e54c3cacd5a117528601330dc30f2e050db686"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000005/process.json",
+      "size": 381,
+      "sha256": "271828013355faa68a492d2fbadefdb52f4d08ad47ea9112e56833b868f2772e"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000005/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000005/stdout.tsv",
+      "size": 32638,
+      "sha256": "ce7c6eb5c74112ecb1d895c5a582651fe541d1cf18b51118ca5f27111a482064"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000006/input.tsv",
+      "size": 27317,
+      "sha256": "1119e732b2384876791476fe3246eeb6bb38ab6ebd7ee19318499d02e687e098"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000006/process.json",
+      "size": 381,
+      "sha256": "44925ad92d78436564492b37a0d0ccf358f6be942389bea7bb805186c83041ef"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000006/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000006/stdout.tsv",
+      "size": 36647,
+      "sha256": "91731efd174b769537bca807bc7dcfa2011797962dfe29fbce2e458155fc5df0"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000007/input.tsv",
+      "size": 18128,
+      "sha256": "a3ea5a2b38d0e4ecc0fb6dd6df9823380d013c6d32275200395fe315c1fba63d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000007/process.json",
+      "size": 381,
+      "sha256": "7266d3b5cbcac92c07aa3a30d97719906106604d9b8c0fe4e6eb9b58d45b958b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000007/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000007/stdout.tsv",
+      "size": 33791,
+      "sha256": "2310ba5556d43b6dbaa757969428035550d02953c8d25c814cce918df998df73"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000008/input.tsv",
+      "size": 23824,
+      "sha256": "f9062ac84914320d5c5a7140efd36be7b46242cdd6b3041ef590cbe3a9a19ad6"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000008/process.json",
+      "size": 380,
+      "sha256": "c755912ffa9d871952351e0576e28e435e964addc041c407cefe9f8c52230b3f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000008/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000008/stdout.tsv",
+      "size": 34781,
+      "sha256": "f75b2dca66e521bc26cc428c6de8598ba2f79fa4898b082c7a3ce979367e83a6"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000009/input.tsv",
+      "size": 31472,
+      "sha256": "d6f7f82c4bae91f064c7a794f1e24b47e6c2d4d3b48965461d9ab4fa6fa16548"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000009/process.json",
+      "size": 381,
+      "sha256": "620d279aaca0cddb92dacbf86d1f52df2a039006f10dcaf8fb14f64735fb7e06"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000009/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000009/stdout.tsv",
+      "size": 49971,
+      "sha256": "860408881712e2b79b41793c7f729d12df8c57f7178f1a7e5f0fe04b1bb604e3"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000010/input.tsv",
+      "size": 29768,
+      "sha256": "5a2f97897a1d45bd7dfa9f31c580042c91f28f47a139616dfbd2d9e4d6b462e4"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000010/process.json",
+      "size": 381,
+      "sha256": "2fab121d89161dc750e398ca15c57813b86369e653f4be6f0524bb2dc4ea8a24"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000010/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000010/stdout.tsv",
+      "size": 46678,
+      "sha256": "862cabd59cfa8a63b35a1b15920344af09864385fced29701c29f562c173d609"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000011/input.tsv",
+      "size": 38575,
+      "sha256": "26f83e870d693fe61111f7acf67dd8eb092ee5e92ba8b743f78d409ef4558021"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000011/process.json",
+      "size": 380,
+      "sha256": "28c2b03adb7b75b01ac80cf670a42b8c41c021c1ddb22a2d0095ef649d18d88c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000011/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000011/stdout.tsv",
+      "size": 44008,
+      "sha256": "45b4e5e9de01bc9ea7029106ebc131d36b3cc822a9bd068b3817997915245508"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000012/input.tsv",
+      "size": 26742,
+      "sha256": "1222487b7d1be92588f3c9e003aaf75943b7b74b5f3c6ac3b2245a0962f7af37"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000012/process.json",
+      "size": 382,
+      "sha256": "ef1a6714db7dd754dfb8fb48399e511d3558ec203065265c29c253d6ecaa2098"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000012/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000012/stdout.tsv",
+      "size": 33975,
+      "sha256": "8995832f88e29f19f1fdd678f9fc9cf078c0998ec1a06f8a7690c740108cfec1"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000013/input.tsv",
+      "size": 26876,
+      "sha256": "7b56d6df30ff92ffb41ece5af6afe70dba008357653fe74c34e4ce57b2d2fd7d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000013/process.json",
+      "size": 381,
+      "sha256": "8504a98cdca2dc2d409e65c42a662ccf6540684bce4afeda224b04705449c142"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000013/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000013/stdout.tsv",
+      "size": 36898,
+      "sha256": "021e616d471e32dc0cd9c21c27b25b9f773f538511cb6719b3b16d6673b0655d"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000014/input.tsv",
+      "size": 23834,
+      "sha256": "efc3e12a47ff2ee00b927c636be5fea702aa83116fc62848666be32e148d23f0"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000014/process.json",
+      "size": 380,
+      "sha256": "c6fc9ea9214da29b28f22121a78e57ea033df14e31d5355e184f18719c7b710b"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000014/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000014/stdout.tsv",
+      "size": 37555,
+      "sha256": "6befac17dbd6e171ac59b9c008b3ec9fc0d8bf22459e39a16a086113d0fd241a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000015/input.tsv",
+      "size": 27896,
+      "sha256": "3889f49ba318f8931c329fc996b6dfd2a7b965c63e7512abaa39512d1b82ccda"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000015/process.json",
+      "size": 382,
+      "sha256": "b2b212570495674267b1bef773f60dfabdf3666c67db4a6c5a85e10f97006679"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000015/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000015/stdout.tsv",
+      "size": 38391,
+      "sha256": "60038cbac6c49e48c37cb90047c8bd4c6b6aaa8249292a6f0be62e2b86982d45"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000016/input.tsv",
+      "size": 26883,
+      "sha256": "6e21f9c65ad59a06323488d6760315ddc4badb61605ceaec9875afb3fb9334c2"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000016/process.json",
+      "size": 381,
+      "sha256": "eca5226aaff3c8782e1292ceb48c082a4e8678852d1b4138d1c8ee80b57cceb3"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000016/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000016/stdout.tsv",
+      "size": 43777,
+      "sha256": "616f4b7a3b2b0f2d9b3db2bfb04d28f5bdd054db6bd7a8df60ec3e206f9271a1"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000017/input.tsv",
+      "size": 31125,
+      "sha256": "3b6146cdf61616c22b11a0b83075f4f0f88cb3d3604d1f99ca7049f824b077c1"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000017/process.json",
+      "size": 382,
+      "sha256": "55a13e56b5c78683deba7b46e15bdadcc23fa0a33b1a9f4ce367c2d652150937"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000017/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000017/stdout.tsv",
+      "size": 34407,
+      "sha256": "c298c11e774af2e44798c98c3d275fb893d8a9ac02f2074dffd68984769597db"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000018/input.tsv",
+      "size": 25740,
+      "sha256": "e271a370c0d70b66eae37f6833e738e492ab12734d1992a012cf0e4fb007656a"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000018/process.json",
+      "size": 381,
+      "sha256": "abd271296ecd4be03d42a936d3409559a71b7af4c883990540aa1a626f47b522"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000018/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000018/stdout.tsv",
+      "size": 31300,
+      "sha256": "a0198fb51e5599fab7eed5b0b55bdda6274abc52c0008ea7b196029dc5c0c4d2"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000019/input.tsv",
+      "size": 389753,
+      "sha256": "841d00aeee8d8523cdd53629fdf765cd89716efe721a101e941332bbe966acee"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000019/process.json",
+      "size": 380,
+      "sha256": "4a8108cf79c23f973e5995835a8af84ce0a2ff92f1af585162a2ad913dd0dee2"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000019/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000019/stdout.tsv",
+      "size": 35533,
+      "sha256": "c2184186384fa75aad3e1efecf00c1ea73c6b25080aab2826fd61908674a1173"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000020/input.tsv",
+      "size": 21393,
+      "sha256": "82e6daa27e68b0bbb512b8ca9726e1b46f7cd39a214a77b3b1391722fbcf5322"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000020/process.json",
+      "size": 381,
+      "sha256": "619cb88474f5caaf7dbed44e7e5bc7feb4daee75802611faa54304a1ec8ca960"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000020/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000020/stdout.tsv",
+      "size": 35943,
+      "sha256": "a601f42c92b39ed9e5780cb4a9d2e5e8046a25a8852f8984dde46e0df5225695"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000021/input.tsv",
+      "size": 28377,
+      "sha256": "d8e54045f3f40620cebb31bab3ae031f12421e578b2c83d5bda5cfae840567ac"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000021/process.json",
+      "size": 378,
+      "sha256": "81fa339c35aee24aa8e32d62850e02464653ba373274a8c81cfe2d327905eb9e"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000021/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000021/stdout.tsv",
+      "size": 39741,
+      "sha256": "47f0785e45d29be2fa87f2bbf5a5d26401f411617b6970dd8e3051b42b4394ae"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000022/input.tsv",
+      "size": 33394,
+      "sha256": "bd4a75da89cc7fe2ca3b55b6da24d6f72fc2e87e6b1665054c4888872bd22069"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000022/process.json",
+      "size": 381,
+      "sha256": "96b05c7ab58a5d0328d2aef449f9edaa8821b3ff27fbe781af7156307979eea0"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000022/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000022/stdout.tsv",
+      "size": 39885,
+      "sha256": "0e9dddac0c53e0063023640ef2bbfb8dcee5bafa4c3cf9aa0e1cbec34e607c72"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000023/input.tsv",
+      "size": 37941,
+      "sha256": "654607b0cc5477164c70bf40339a2076329775d8a624425930bacaa0e933351f"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000023/process.json",
+      "size": 381,
+      "sha256": "ce9c743345ddb1b744f113a2c42e7af4303135baac03428e0aa12df0f14960fe"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000023/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000023/stdout.tsv",
+      "size": 38939,
+      "sha256": "d1199d243a93f63ac4bd0fbbd5a11e649b5ccca6dca930b792490e6d9353e3c7"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000024/input.tsv",
+      "size": 15820,
+      "sha256": "2e64ef0bd0079cbefcdfb61a952ba013be589efe60fb0c29ef9b7ee96467149c"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000024/process.json",
+      "size": 381,
+      "sha256": "9696c64e8066a75546846a23ba7f3cbb7243ade1902f15fa647188079df7be38"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000024/stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/processes/batch-000024/stdout.tsv",
+      "size": 13069,
+      "sha256": "c9a531f69adc990e06b61f4ba7629953611fab46a17726a8213c6621ec303585"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/results.tsv",
+      "size": 1009370,
+      "sha256": "bc5088f8400c9f452e95ea5fb82a70166c7c842f95377efae4637d727a50d072"
+    },
+    {
+      "path": "docs/research/assets/regex-engine/reference-byte-20261017/upstream-reference/summary.json",
+      "size": 3847,
+      "sha256": "b4d481efb965ac37c6d4ee00c9998265f675bd5a5a43936a7bf6da54c8540c81"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/evidence.zip",
+      "size": 28165,
+      "sha256": "d823da3d3b3ed42dc22bc92fadeaedaa934b762ef4850971220953227d3f4624"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/github-annotations.json",
+      "size": 33617,
+      "sha256": "a12b82e5a756c345403ac89b1f84b6589ede1881500f463af7260e2d7b6c89e9"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/github-check-runs.json",
+      "size": 18974,
+      "sha256": "317d5b394fab722dceb3fe14eff4a91f31c27d682588ce292b31df4be73f815f"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/sonar-authentication.json",
+      "size": 212,
+      "sha256": "6f4a09125aa2f4596d8afebcff18e1b7305d8271787d052826b6ba537bfcc29e"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/sonar-issue-api.json",
+      "size": 301,
+      "sha256": "4c9c1f2c484aca25d773fafada69145e60582f16f507df3ca6e7a1d8c5e294e0"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/sonar-issues.json",
+      "size": 332987,
+      "sha256": "ff521d4f488c421c426d8dbaa4384da41609fa268847a3d02288789d4a2589d6"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/sonar-quality-gate.json",
+      "size": 1490,
+      "sha256": "4ce9a97bfda9c3c102fdb0b04a0f5e9115f289efe67fcd190a8e21ae90f402f3"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/sonar-rule-S2083.json",
+      "size": 302,
+      "sha256": "62d3519da1685645dbfe24133a259de3b20c8d016743f59df8c787882519e254"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/sonar-rule-S8701.json",
+      "size": 302,
+      "sha256": "9524d899b7a4fa6964fa6679d2898e8f8a903f440330510c095d3b3432bccb37"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/sonar-rule-S8705.json",
+      "size": 302,
+      "sha256": "01fdfe77ad5229d14bbdf976146b514ced0401b5c70d3776b4ef7e89b03eb38b"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/sonar-rule-S8707.json",
+      "size": 302,
+      "sha256": "a35caf2f7acb6fe85043d41551b24975e6eab2eb3d6d241ebe550775738709db"
+    },
+    {
+      "path": "docs/research/assets/sonarcloud/actions-39033057246/summary.json",
+      "size": 1956,
+      "sha256": "03b1216f10143113b18c6b7bc9903bc5f5331044fc75011f1c1b5f53012f186d"
+    }
+  ]
+}

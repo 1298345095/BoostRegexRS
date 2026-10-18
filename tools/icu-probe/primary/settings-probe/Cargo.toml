@@ -1,0 +1,18 @@
+[package]
+name = "icu77-settings-probe"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "Unicode-3.0"
+description = "Development-only public settings API differential driver"
+
+[workspace]
+
+[dependencies]
+icu77-root-primary = { path = "../rust" }
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "warn"

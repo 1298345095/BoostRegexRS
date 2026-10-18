@@ -1,0 +1,11 @@
+requested	imbue_previous	getloc	second_imbue_previous
+root	en_US_POSIX	en_US_POSIX	
+en_US	en_US_POSIX	en_US_POSIX	en_US
+tr_TR	en_US_POSIX	en_US_POSIX	tr_TR
+de_DE	en_US_POSIX	en_US_POSIX	de_DE
+sv_SE	en_US_POSIX	en_US_POSIX	sv_SE
+fr_CA	en_US_POSIX	en_US_POSIX	fr_CA
+es_ES@collation=traditional	en_US_POSIX	en_US_POSIX	es_ES@collation=traditional
+zh_CN	en_US_POSIX	en_US_POSIX	zh_CN
+ja_JP	en_US_POSIX	en_US_POSIX	ja_JP
+th_TH	en_US_POSIX	en_US_POSIX	th_TH

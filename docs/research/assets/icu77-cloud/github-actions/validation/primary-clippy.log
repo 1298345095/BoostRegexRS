@@ -1,0 +1,3 @@
+["cargo", "clippy", "--locked", "--all-targets", "--manifest-path", "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust/Cargo.toml", "--", "-D", "warnings"]
+    Checking icu77-root-primary v0.1.0 (/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.22s

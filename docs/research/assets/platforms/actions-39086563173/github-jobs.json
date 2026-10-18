@@ -1,0 +1,510 @@
+{
+  "total_count": 6,
+  "jobs": [
+    {
+      "id": 117554272385,
+      "run_id": 39086563173,
+      "workflow_name": "Native Rust collation checks",
+      "head_branch": "work/root-primary-cloud",
+      "run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/runs/39086563173",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVLBKvs8AAAAbXsfYgQ",
+      "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d",
+      "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/jobs/117554272385",
+      "html_url": "https://github.com/1298345095/BoostRegexRS/actions/runs/39086563173/job/117554272385",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-18T01:27:39Z",
+      "started_at": "2026-10-18T01:27:41Z",
+      "completed_at": "2026-10-18T01:28:02Z",
+      "name": "x86_64-unknown-linux-gnu on ubuntu-24.04",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-18T01:27:42Z",
+          "completed_at": "2026-10-18T01:27:42Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-18T01:27:42Z",
+          "completed_at": "2026-10-18T01:27:46Z"
+        },
+        {
+          "name": "Install the current stable native toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-18T01:27:46Z",
+          "completed_at": "2026-10-18T01:27:54Z"
+        },
+        {
+          "name": "Execute native Rust checks and preserve exact versions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-18T01:27:54Z",
+          "completed_at": "2026-10-18T01:27:58Z"
+        },
+        {
+          "name": "Preserve platform evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-18T01:27:58Z",
+          "completed_at": "2026-10-18T01:27:59Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-18T01:27:59Z",
+          "completed_at": "2026-10-18T01:27:59Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-18T01:27:59Z",
+          "completed_at": "2026-10-18T01:27:59Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/check-runs/117554272385",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000000442,
+      "runner_name": "GitHub Actions 1000000442",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117554272502,
+      "run_id": 39086563173,
+      "workflow_name": "Native Rust collation checks",
+      "head_branch": "work/root-primary-cloud",
+      "run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/runs/39086563173",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVLBKvs8AAAAbXsfY9g",
+      "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d",
+      "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/jobs/117554272502",
+      "html_url": "https://github.com/1298345095/BoostRegexRS/actions/runs/39086563173/job/117554272502",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-18T01:27:39Z",
+      "started_at": "2026-10-18T01:27:41Z",
+      "completed_at": "2026-10-18T01:28:22Z",
+      "name": "x86_64-apple-darwin on macos-15-intel",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-18T01:27:41Z",
+          "completed_at": "2026-10-18T01:27:42Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-18T01:27:42Z",
+          "completed_at": "2026-10-18T01:27:47Z"
+        },
+        {
+          "name": "Install the current stable native toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-18T01:27:47Z",
+          "completed_at": "2026-10-18T01:28:03Z"
+        },
+        {
+          "name": "Execute native Rust checks and preserve exact versions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-18T01:28:03Z",
+          "completed_at": "2026-10-18T01:28:17Z"
+        },
+        {
+          "name": "Preserve platform evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-18T01:28:17Z",
+          "completed_at": "2026-10-18T01:28:19Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-18T01:28:19Z",
+          "completed_at": "2026-10-18T01:28:20Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-18T01:28:20Z",
+          "completed_at": "2026-10-18T01:28:21Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/check-runs/117554272502",
+      "labels": [
+        "macos-15-intel"
+      ],
+      "runner_id": 1000000443,
+      "runner_name": "GitHub Actions 1000000443",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117554272503,
+      "run_id": 39086563173,
+      "workflow_name": "Native Rust collation checks",
+      "head_branch": "work/root-primary-cloud",
+      "run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/runs/39086563173",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVLBKvs8AAAAbXsfY9w",
+      "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d",
+      "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/jobs/117554272503",
+      "html_url": "https://github.com/1298345095/BoostRegexRS/actions/runs/39086563173/job/117554272503",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-18T01:27:39Z",
+      "started_at": "2026-10-18T01:27:40Z",
+      "completed_at": "2026-10-18T01:28:41Z",
+      "name": "aarch64-pc-windows-msvc on windows-11-arm",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-18T01:27:41Z",
+          "completed_at": "2026-10-18T01:27:43Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-18T01:27:43Z",
+          "completed_at": "2026-10-18T01:28:02Z"
+        },
+        {
+          "name": "Install the current stable native toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-18T01:28:02Z",
+          "completed_at": "2026-10-18T01:28:20Z"
+        },
+        {
+          "name": "Execute native Rust checks and preserve exact versions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-18T01:28:20Z",
+          "completed_at": "2026-10-18T01:28:34Z"
+        },
+        {
+          "name": "Preserve platform evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-18T01:28:34Z",
+          "completed_at": "2026-10-18T01:28:35Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-18T01:28:35Z",
+          "completed_at": "2026-10-18T01:28:40Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-18T01:28:40Z",
+          "completed_at": "2026-10-18T01:28:40Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/check-runs/117554272503",
+      "labels": [
+        "windows-11-arm"
+      ],
+      "runner_id": 1000000445,
+      "runner_name": "GitHub Actions 1000000445",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117554272506,
+      "run_id": 39086563173,
+      "workflow_name": "Native Rust collation checks",
+      "head_branch": "work/root-primary-cloud",
+      "run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/runs/39086563173",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVLBKvs8AAAAbXsfY-g",
+      "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d",
+      "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/jobs/117554272506",
+      "html_url": "https://github.com/1298345095/BoostRegexRS/actions/runs/39086563173/job/117554272506",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-18T01:27:39Z",
+      "started_at": "2026-10-18T01:27:45Z",
+      "completed_at": "2026-10-18T01:28:11Z",
+      "name": "aarch64-apple-darwin on macos-15",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-18T01:27:46Z",
+          "completed_at": "2026-10-18T01:27:47Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-18T01:27:47Z",
+          "completed_at": "2026-10-18T01:27:51Z"
+        },
+        {
+          "name": "Install the current stable native toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-18T01:27:51Z",
+          "completed_at": "2026-10-18T01:27:58Z"
+        },
+        {
+          "name": "Execute native Rust checks and preserve exact versions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-18T01:27:58Z",
+          "completed_at": "2026-10-18T01:28:07Z"
+        },
+        {
+          "name": "Preserve platform evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-18T01:28:07Z",
+          "completed_at": "2026-10-18T01:28:08Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-18T01:28:08Z",
+          "completed_at": "2026-10-18T01:28:08Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-18T01:28:08Z",
+          "completed_at": "2026-10-18T01:28:08Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/check-runs/117554272506",
+      "labels": [
+        "macos-15"
+      ],
+      "runner_id": 1000000444,
+      "runner_name": "GitHub Actions 1000000444",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117554272554,
+      "run_id": 39086563173,
+      "workflow_name": "Native Rust collation checks",
+      "head_branch": "work/root-primary-cloud",
+      "run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/runs/39086563173",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVLBKvs8AAAAbXsfZKg",
+      "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d",
+      "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/jobs/117554272554",
+      "html_url": "https://github.com/1298345095/BoostRegexRS/actions/runs/39086563173/job/117554272554",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-18T01:27:39Z",
+      "started_at": "2026-10-18T01:27:43Z",
+      "completed_at": "2026-10-18T01:27:58Z",
+      "name": "aarch64-unknown-linux-gnu on ubuntu-24.04-arm",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-18T01:27:43Z",
+          "completed_at": "2026-10-18T01:27:44Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-18T01:27:44Z",
+          "completed_at": "2026-10-18T01:27:47Z"
+        },
+        {
+          "name": "Install the current stable native toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-18T01:27:47Z",
+          "completed_at": "2026-10-18T01:27:53Z"
+        },
+        {
+          "name": "Execute native Rust checks and preserve exact versions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-18T01:27:53Z",
+          "completed_at": "2026-10-18T01:27:56Z"
+        },
+        {
+          "name": "Preserve platform evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-18T01:27:56Z",
+          "completed_at": "2026-10-18T01:27:57Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-18T01:27:57Z",
+          "completed_at": "2026-10-18T01:27:57Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-18T01:27:57Z",
+          "completed_at": "2026-10-18T01:27:57Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/check-runs/117554272554",
+      "labels": [
+        "ubuntu-24.04-arm"
+      ],
+      "runner_id": 1000000446,
+      "runner_name": "GitHub Actions 1000000446",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117554272575,
+      "run_id": 39086563173,
+      "workflow_name": "Native Rust collation checks",
+      "head_branch": "work/root-primary-cloud",
+      "run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/runs/39086563173",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVLBKvs8AAAAbXsfZPw",
+      "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d",
+      "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/jobs/117554272575",
+      "html_url": "https://github.com/1298345095/BoostRegexRS/actions/runs/39086563173/job/117554272575",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-18T01:27:39Z",
+      "started_at": "2026-10-18T01:27:41Z",
+      "completed_at": "2026-10-18T01:28:32Z",
+      "name": "x86_64-pc-windows-msvc on windows-2025",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-18T01:27:42Z",
+          "completed_at": "2026-10-18T01:27:43Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-18T01:27:43Z",
+          "completed_at": "2026-10-18T01:27:58Z"
+        },
+        {
+          "name": "Install the current stable native toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-18T01:27:58Z",
+          "completed_at": "2026-10-18T01:28:17Z"
+        },
+        {
+          "name": "Execute native Rust checks and preserve exact versions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-18T01:28:17Z",
+          "completed_at": "2026-10-18T01:28:27Z"
+        },
+        {
+          "name": "Preserve platform evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-18T01:28:27Z",
+          "completed_at": "2026-10-18T01:28:28Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-18T01:28:28Z",
+          "completed_at": "2026-10-18T01:28:30Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-18T01:28:30Z",
+          "completed_at": "2026-10-18T01:28:30Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/1298345095/BoostRegexRS/check-runs/117554272575",
+      "labels": [
+        "windows-2025"
+      ],
+      "runner_id": 1000000447,
+      "runner_name": "GitHub Actions 1000000447",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}
+

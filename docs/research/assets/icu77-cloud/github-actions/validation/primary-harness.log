@@ -1,0 +1,6 @@
+["/usr/bin/python3", "-B", "-m", "unittest", "discover", "-s", "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary", "-p", "test_*.py"]
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.948s
+
+OK

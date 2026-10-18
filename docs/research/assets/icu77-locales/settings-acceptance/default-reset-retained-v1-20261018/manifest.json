@@ -1,0 +1,163 @@
+{
+  "schema": "boostregexrs.probe-evidence-archive.v1",
+  "archive": {
+    "path": "raw.tar.gz",
+    "bytes": 12896245,
+    "sha256": "f1e03565e0c38658fc064073d13bd0687b4286cbce8d2712107a1cc046b81c11",
+    "compression": "gz"
+  },
+  "files": [
+    {
+      "path": "binaries/native-diagnostic",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/build/default-reset/default-reset-native-v1-20261018/default-reset",
+      "bytes": 33184288,
+      "sha256": "d8c52b143063a314c80909ccdc3ecfa69c5a1bacd5415e2f03b4da16ebcede30",
+      "mode": 493
+    },
+    {
+      "path": "original-run/build.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-native-v1-20261018/build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "original-run/build.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-native-v1-20261018/build.process.json",
+      "bytes": 1761,
+      "sha256": "42d142b222dcf8da27d5595417815918366049b362298fb3da811e5c76b5df65",
+      "mode": 420
+    },
+    {
+      "path": "original-run/build.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-native-v1-20261018/build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "original-run/native.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-native-v1-20261018/native.log",
+      "bytes": 270,
+      "sha256": "35181ee3e5b316bd3bf899654cc6754ddbcab1c3a0dc1916d2b64f87786915d3",
+      "mode": 420
+    },
+    {
+      "path": "original-run/native.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-native-v1-20261018/native.process.json",
+      "bytes": 936,
+      "sha256": "d7939308aff76b73b1c19ff069cdd1e55150d8e4e5e0cea7f323f7a0cd4a592f",
+      "mode": 420
+    },
+    {
+      "path": "original-run/native.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-native-v1-20261018/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "original-run/summary.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-native-v1-20261018/summary.json",
+      "bytes": 4127,
+      "sha256": "e02132592edade0a3b78afffbf08f50aee8eeb74d23e2ab4cdc0e61e24f250a9",
+      "mode": 420
+    },
+    {
+      "path": "retention-observations/compiler.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-retained-v1-20261018/compiler.log",
+      "bytes": 244,
+      "sha256": "d1587c99dacaf2619bba832ebf1d927d92d493f29fbef197f0636922de4ee952",
+      "mode": 420
+    },
+    {
+      "path": "retention-observations/compiler.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-retained-v1-20261018/compiler.process.json",
+      "bytes": 793,
+      "sha256": "1c1dbacda78160e116ae0d98aca2f80cc52e12d0710f5ce281ce67de582b29cb",
+      "mode": 420
+    },
+    {
+      "path": "retention-observations/compiler.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-retained-v1-20261018/compiler.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "retention-observations/execution-environment.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-retained-v1-20261018/execution-environment.json",
+      "bytes": 742,
+      "sha256": "51a8391cf6047ab083ddca7893e4cfceb3eb07d8831daf29e8bd0a4e396a6814",
+      "mode": 420
+    },
+    {
+      "path": "retention-observations/linkage.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-retained-v1-20261018/linkage.log",
+      "bytes": 374,
+      "sha256": "3aa0ff5992b4bb5f05133fb76cbbd3522022a2376548b9faa3e4f702b3df248d",
+      "mode": 420
+    },
+    {
+      "path": "retention-observations/linkage.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-retained-v1-20261018/linkage.process.json",
+      "bytes": 949,
+      "sha256": "ea547556340209292a58891f8dd5b0f62f03f3d678b7c2b519fa99ad4e037376",
+      "mode": 420
+    },
+    {
+      "path": "retention-observations/linkage.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/default-reset-retained-v1-20261018/linkage.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "retention-source/retain_diagnostic.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/retain_diagnostic.py",
+      "bytes": 4259,
+      "sha256": "be57b96a6afef9074d87fad3c7929f5728f2f96f56d92917c0c6e24a14d0e146",
+      "mode": 420
+    },
+    {
+      "path": "source/00-default-reset.cpp",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/default-reset.cpp",
+      "bytes": 2015,
+      "sha256": "b2f4978f0659db84ae1c27b7768ccc734a710beba5e65bbe7206677837883236",
+      "mode": 420
+    },
+    {
+      "path": "source/01-diagnose_default_reset.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/diagnose_default_reset.py",
+      "bytes": 2958,
+      "sha256": "9119d0092d5844cce39e9ece55b09cb86a554b133ce6f508179c494deeb8f7fc",
+      "mode": 420
+    },
+    {
+      "path": "source/02-rulebasedcollator.cpp",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/icu/source/i18n/rulebasedcollator.cpp",
+      "bytes": 61988,
+      "sha256": "7754501e64c13b19de170ea17a234d6c8d8220b7614e6eefbead70a5f4b9cc53",
+      "mode": 420
+    },
+    {
+      "path": "source/03-collationsettings.cpp",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationsettings.cpp",
+      "bytes": 13073,
+      "sha256": "4e43c3e6f5ba1ae246b26ef95222056afe6a30b91d543d1b844b626b2e0a2a96",
+      "mode": 420
+    },
+    {
+      "path": "source/04-collationsettings.h",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-v01-fresh/target/research/regex-reference-fresh-network/deps/icu/source/i18n/collationsettings.h",
+      "bytes": 10412,
+      "sha256": "9361e467568048cee572cbcc1423c78fe1bceede472ec8b563849f22af2d3201",
+      "mode": 420
+    }
+  ],
+  "archiver": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/retain_diagnostic.py",
+    "bytes": 4259,
+    "sha256": "be57b96a6afef9074d87fad3c7929f5728f2f96f56d92917c0c6e24a14d0e146"
+  }
+}

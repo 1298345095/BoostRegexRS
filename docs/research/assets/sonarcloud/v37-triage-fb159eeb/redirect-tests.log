@@ -1,0 +1,12 @@
+test_a_later_redirect_cannot_restore_stripped_credentials (test_sonar_redirects.SonarRedirectTests.test_a_later_redirect_cannot_restore_stripped_credentials) ... ok
+test_anonymous_redirects_do_not_add_credentials (test_sonar_redirects.SonarRedirectTests.test_anonymous_redirects_do_not_add_credentials) ... ok
+test_cross_host_removes_authentication (test_sonar_redirects.SonarRedirectTests.test_cross_host_removes_authentication) ... ok
+test_cross_port_removes_authentication (test_sonar_redirects.SonarRedirectTests.test_cross_port_removes_authentication) ... ok
+test_fetch_uses_the_scoped_handler_and_finite_http_timeout (test_sonar_redirects.SonarRedirectTests.test_fetch_uses_the_scoped_handler_and_finite_http_timeout) ... ok
+test_https_downgrade_removes_authentication (test_sonar_redirects.SonarRedirectTests.test_https_downgrade_removes_authentication) ... ok
+test_same_origin_preserves_authentication (test_sonar_redirects.SonarRedirectTests.test_same_origin_preserves_authentication) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK

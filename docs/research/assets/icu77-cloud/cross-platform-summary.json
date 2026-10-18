@@ -1,0 +1,225 @@
+{
+  "schema": "boostregexrs.icu77-cloud-cross-platform.v1",
+  "corpora": {
+    "baseline": {
+      "comparison": "all u32 key elements and lengths; original error markers remain distinct evidence",
+      "totals": {
+        "requested_keys": 480,
+        "equal_valid_keys": 470,
+        "different_valid_keys": 0,
+        "reference_error_keys": 10,
+        "uncovered_keys": 0
+      },
+      "error_categories": {
+        "historical_windows": {
+          "ERROR:ACCESS_VIOLATION": 10
+        },
+        "cloud_linux": {
+          "ERROR:SIGNAL_11": 10
+        }
+      },
+      "reference_errors": [
+        {
+          "locale": "de_DE",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        },
+        {
+          "locale": "en_US",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        },
+        {
+          "locale": "es_ES@collation=traditional",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        },
+        {
+          "locale": "fr_CA",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        },
+        {
+          "locale": "ja_JP",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        },
+        {
+          "locale": "root",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        },
+        {
+          "locale": "sv_SE",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        },
+        {
+          "locale": "th_TH",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        },
+        {
+          "locale": "tr_TR",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        },
+        {
+          "locale": "zh_CN",
+          "case_id": "empty",
+          "strength": "identical",
+          "historical_windows": "ERROR:ACCESS_VIOLATION",
+          "cloud_linux": "ERROR:SIGNAL_11"
+        }
+      ],
+      "valid_key_differences": [],
+      "source_files": [
+        {
+          "path": "docs/research/assets/icu-probe/reference-sortkeys.tsv",
+          "bytes": 89708,
+          "sha256": "ed0465cc9583e10f07f497574d00f20997401518231170b515aad2eb8341fff4"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/sortkeys.tsv",
+          "bytes": 89397,
+          "sha256": "a66d7e18b6f7b9efd6266b42f128ea7bd3d844574490b5c1b52450d38b8211cb"
+        }
+      ],
+      "candidate_sign_rows": {
+        "historical_windows": 5520,
+        "cloud_linux": 5520,
+        "same_rows_in_same_order": true
+      }
+    },
+    "non-fcd": {
+      "comparison": "all u32 key elements and lengths; original error markers remain distinct evidence",
+      "totals": {
+        "requested_keys": 260,
+        "equal_valid_keys": 260,
+        "different_valid_keys": 0,
+        "reference_error_keys": 0,
+        "uncovered_keys": 0
+      },
+      "error_categories": {
+        "historical_windows": {},
+        "cloud_linux": {}
+      },
+      "reference_errors": [],
+      "valid_key_differences": [],
+      "source_files": [
+        {
+          "path": "docs/research/assets/icu-probe/non-fcd/reference-sortkeys.tsv",
+          "bytes": 18850,
+          "sha256": "e031bb6801cbaf0ea6057045078bafea817b8263c3706f60249383f6bc4f39ab"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/non-fcd/sortkeys.tsv",
+          "bytes": 18719,
+          "sha256": "70fe2c606f145564819ae585a061613047caab8e46a3a00dd83555a2f528bff1"
+        }
+      ],
+      "candidate_sign_rows": {
+        "historical_windows": 1560,
+        "cloud_linux": 1560,
+        "same_rows_in_same_order": true
+      }
+    }
+  },
+  "codepoint_reference": {
+    "historical_binary_available": false,
+    "comparison": "regenerated cloud bytes against the preserved historical SHA256 and byte length",
+    "historical_windows": {
+      "path": "D:\\MyProgram\\BoostRegexRS\\target\\research\\icu-probe\\reference\\output\\codepoints.bin",
+      "bytes": 44564480,
+      "sha256": "09d765de08abdebdfd554e4a0d65c843480d231bb87f8cfd9d728e76efd80e14"
+    },
+    "cloud_linux": {
+      "path": "target/research/icu77-cloud/reference/baseline/codepoints.bin",
+      "bytes": 44564480,
+      "sha256": "09d765de08abdebdfd554e4a0d65c843480d231bb87f8cfd9d728e76efd80e14"
+    },
+    "sha256_equal": true,
+    "byte_length_equal": true,
+    "historical_manifest": {
+      "path": "docs/research/assets/icu-probe/reference-manifest.json",
+      "bytes": 6209,
+      "sha256": "322df04ed0a0838c988984862202656a14eca5311fa3ca56b53adafa639209fa"
+    }
+  },
+  "locale_query": {
+    "contract": "ADR-0005: getloc queries the process default; the actual imbued sorting locale is preserved",
+    "platform_default_difference_is_a_key_mismatch": false,
+    "historical_windows": {
+      "default_locale": "en_US",
+      "rows": 10,
+      "getloc_equals_process_default": 10,
+      "first_imbue_returns_process_default": 10,
+      "second_imbue_returns_actual_requested_locale": 10,
+      "files": [
+        {
+          "path": "docs/research/assets/icu-probe/reference-metadata.json",
+          "bytes": 217,
+          "sha256": "6e6d75b77e0fb561207abad60ae00267cf69b392ff74df4bcc663ebe5ec2a3ff"
+        },
+        {
+          "path": "docs/research/assets/icu-probe/locales.tsv",
+          "bytes": 343,
+          "sha256": "dbffe9ef1276f844c6766b3ae08d44db0fc9130275d76c3f34b317e87f55efb9"
+        }
+      ]
+    },
+    "cloud_linux": {
+      "default_locale": "en_US_POSIX",
+      "rows": 10,
+      "getloc_equals_process_default": 10,
+      "first_imbue_returns_process_default": 10,
+      "second_imbue_returns_actual_requested_locale": 10,
+      "files": [
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/metadata.json",
+          "bytes": 213,
+          "sha256": "4ef5dd153e66288459111c194f955002011ebb1e142ee9422dfdbc3d6f62bad0"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/locales.tsv",
+          "bytes": 452,
+          "sha256": "30c7d5ba198a8be071fab1b22737db57b02c1da483a109a8c6b6ff227f53da41"
+        }
+      ]
+    }
+  },
+  "empty_exception": {
+    "basis": "ADR-0005; valid-pointer expected values are separate from original-reference errors",
+    "cloud_expected_values": {
+      "path": "target/research/icu77-cloud/reference/empty-keys/keys.tsv",
+      "bytes": 1016,
+      "sha256": "b1a37a32d1fa0ef28c3abdd8f800168542280c30f17021157ef8b40c66b8b697"
+    },
+    "historical_expected_values": {
+      "path": "docs/research/assets/icu-probe/empty-keys/keys.tsv",
+      "bytes": 1037,
+      "sha256": "9b17dbdc5d401bbe41ced62c1ae99164297acca340bd8c9ce1dec9026b6e8f6f"
+    },
+    "same_rows": true,
+    "rust_identical_verified": false
+  },
+  "primary_stage_repairs_145_identical_differences": false
+}

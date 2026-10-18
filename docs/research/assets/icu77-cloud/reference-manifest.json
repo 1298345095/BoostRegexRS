@@ -1,0 +1,277 @@
+{
+  "schema": "boostregexrs.icu77-cloud-reference-run.v1",
+  "generated_utc": "2026-10-17T10:40:42.676246+00:00",
+  "environment_manifest": {
+    "path": "target/research/icu77-cloud/environment-manifest.json",
+    "bytes": 13569,
+    "sha256": "21216d0278adac1d5dc95c51e76e3c0c8c9972382f8c5ab7ba09549d765bc05c"
+  },
+  "build_manifest": {
+    "path": "target/research/icu77-cloud/reference-build-manifest.json",
+    "bytes": 4044,
+    "sha256": "7e2b50ca38a785e156e39dc3331c4be8e05750990f599d7ada99f931334616e3"
+  },
+  "corpora": {
+    "baseline": {
+      "cases": {
+        "path": "tools/icu-probe/reference/cases.tsv",
+        "bytes": 839,
+        "sha256": "8f7e1cca3ee2b759269c02243168a9a195f2045a8cdf38c79af7e019d7458db5"
+      },
+      "counts": {
+        "requested": 480,
+        "valid_keys": 470,
+        "reference_error": 10,
+        "errors": [
+          {
+            "locale": "root",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          },
+          {
+            "locale": "en_US",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          },
+          {
+            "locale": "tr_TR",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          },
+          {
+            "locale": "de_DE",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          },
+          {
+            "locale": "sv_SE",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          },
+          {
+            "locale": "fr_CA",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          },
+          {
+            "locale": "es_ES@collation=traditional",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          },
+          {
+            "locale": "zh_CN",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          },
+          {
+            "locale": "ja_JP",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          },
+          {
+            "locale": "th_TH",
+            "case_id": "empty",
+            "strength": "identical",
+            "marker": "ERROR:SIGNAL_11"
+          }
+        ]
+      },
+      "metadata": {
+        "boost": "1_89",
+        "icu": "77.1",
+        "unicode": "16.0",
+        "cldr": "47.0",
+        "data": "77.1",
+        "default_locale": "en_US_POSIX",
+        "compiler": "GCC 13.3.0",
+        "codepoint_records": 1114112,
+        "record_bytes": 40
+      },
+      "files": [
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/codepoints.bin",
+          "bytes": 44564480,
+          "sha256": "09d765de08abdebdfd554e4a0d65c843480d231bb87f8cfd9d728e76efd80e14"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/locales.tsv",
+          "bytes": 452,
+          "sha256": "30c7d5ba198a8be071fab1b22737db57b02c1da483a109a8c6b6ff227f53da41"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/metadata.json",
+          "bytes": 213,
+          "sha256": "4ef5dd153e66288459111c194f955002011ebb1e142ee9422dfdbc3d6f62bad0"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/names.tsv",
+          "bytes": 344,
+          "sha256": "828777312dceaee11b4cc866c0cb9c8071961646f10fcc735cd60b455b947dae"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/sortkeys.tsv",
+          "bytes": 89397,
+          "sha256": "a66d7e18b6f7b9efd6266b42f128ea7bd3d844574490b5c1b52450d38b8211cb"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/baseline/stdout.log",
+          "bytes": 85,
+          "sha256": "4b01643a4a64f0673ef4a8c6b0d71e82eed677ef4715885ea3f379777f8b786d"
+        }
+      ]
+    },
+    "non-fcd": {
+      "cases": {
+        "path": "tools/icu-probe/non-fcd-cases.tsv",
+        "bytes": 312,
+        "sha256": "7139c4f662b73c661404049c791e3cd10c2d34a96682a71df30d324afa9d7701"
+      },
+      "counts": {
+        "requested": 260,
+        "valid_keys": 260,
+        "reference_error": 0,
+        "errors": []
+      },
+      "metadata": {
+        "boost": "1_89",
+        "icu": "77.1",
+        "unicode": "16.0",
+        "cldr": "47.0",
+        "data": "77.1",
+        "default_locale": "en_US_POSIX",
+        "compiler": "GCC 13.3.0",
+        "codepoint_records": 1114112,
+        "record_bytes": 40
+      },
+      "files": [
+        {
+          "path": "target/research/icu77-cloud/reference/non-fcd/codepoints.bin",
+          "bytes": 44564480,
+          "sha256": "09d765de08abdebdfd554e4a0d65c843480d231bb87f8cfd9d728e76efd80e14"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/non-fcd/locales.tsv",
+          "bytes": 452,
+          "sha256": "30c7d5ba198a8be071fab1b22737db57b02c1da483a109a8c6b6ff227f53da41"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/non-fcd/metadata.json",
+          "bytes": 213,
+          "sha256": "4ef5dd153e66288459111c194f955002011ebb1e142ee9422dfdbc3d6f62bad0"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/non-fcd/names.tsv",
+          "bytes": 344,
+          "sha256": "828777312dceaee11b4cc866c0cb9c8071961646f10fcc735cd60b455b947dae"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/non-fcd/sortkeys.tsv",
+          "bytes": 18719,
+          "sha256": "70fe2c606f145564819ae585a061613047caab8e46a3a00dd83555a2f528bff1"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/non-fcd/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "target/research/icu77-cloud/reference/non-fcd/stdout.log",
+          "bytes": 85,
+          "sha256": "21846b7fb4369adf7fddcd04dbaa3e65843755547a7e04d009c0de6890532470"
+        }
+      ]
+    }
+  },
+  "empty_original_diagnostics": [
+    {
+      "mode": "boost_primary",
+      "exit_code": 0,
+      "outcome": "valid_reference_result",
+      "signal": null,
+      "stdout": "length=1 key=00000000,",
+      "stderr": ""
+    },
+    {
+      "mode": "boost_identical",
+      "exit_code": -11,
+      "outcome": "reference_error",
+      "signal": "SIGSEGV",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "mode": "icu_null",
+      "exit_code": -11,
+      "outcome": "reference_error",
+      "signal": "SIGSEGV",
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "mode": "icu_nonnull",
+      "exit_code": 0,
+      "outcome": "valid_reference_result",
+      "signal": null,
+      "stdout": "length=5 key=01,01,01,01,00,",
+      "stderr": ""
+    }
+  ],
+  "empty_exception": {
+    "basis": "ADR-0005 valid-pointer ICU call; not original Boost results",
+    "rust_implementation_verified": false,
+    "files": [
+      {
+        "path": "target/research/icu77-cloud/reference/empty-keys/collator-settings.tsv",
+        "bytes": 1057,
+        "sha256": "80ed9f2b2f93378caf9054afb3e680c45d48fd3dd9befa29861bf85bfaaf5336"
+      },
+      {
+        "path": "target/research/icu77-cloud/reference/empty-keys/keys.tsv",
+        "bytes": 1016,
+        "sha256": "b1a37a32d1fa0ef28c3abdd8f800168542280c30f17021157ef8b40c66b8b697"
+      },
+      {
+        "path": "target/research/icu77-cloud/reference/empty-keys/metadata.json",
+        "bytes": 337,
+        "sha256": "558f2e31147107653c2fdf3188b9509f666907d1c3066db89d4e941b0928af00"
+      },
+      {
+        "path": "target/research/icu77-cloud/reference/empty-keys/stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "target/research/icu77-cloud/reference/empty-keys/stdout.log",
+        "bytes": 70,
+        "sha256": "d3efd4f12271c6a505558a65ddbe3d416c044c2bd6eebf2e8477aec6aed2764f"
+      }
+    ]
+  },
+  "locale_environment": {
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "LC_COLLATE": null
+  },
+  "scripts": [
+    {
+      "path": "tools/icu-probe/cloud/reference.py",
+      "bytes": 8122,
+      "sha256": "48f2fa541037f760c3c201e3e1a984a00872de5ba0ddc8f1d487f57ea15a0764"
+    }
+  ],
+  "historical_evidence_modified": false
+}

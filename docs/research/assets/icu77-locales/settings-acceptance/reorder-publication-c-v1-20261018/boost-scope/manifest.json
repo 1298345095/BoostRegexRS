@@ -1,0 +1,345 @@
+{
+  "schema": "boostregexrs.probe-evidence-archive.v1",
+  "created_utc": "2026-10-18T09:40:49.518226+00:00",
+  "source_directory": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-publication-c-v1-20261018/icu77-collection-ibtso6f8",
+  "source_summary_sha256": "7c8e55e0c629b2cf3e746e9e41633ab746fb3ae0473f834bdfd6d1bf7305e885",
+  "archive": {
+    "path": "raw.tar.xz",
+    "bytes": 16501756,
+    "sha256": "ecd7418c59d4db6452dea01645076175dfb4df77700b7fd1b1ee7025134b40cf",
+    "compression": "xz"
+  },
+  "uncompressed_file_bytes": 69439035,
+  "files": [
+    {
+      "path": "binaries/boost-locale-reset",
+      "bytes": 33199208,
+      "sha256": "699c659ae4bd89c4a9f925ec9e329140bbc5e1bf475e5864c931f3b76ca17ba5"
+    },
+    {
+      "path": "binaries/boost-reorder-keys",
+      "bytes": 33223968,
+      "sha256": "e04ecdc7deab52760cc2379356a7d5b5441a05de598a13c0ce8a6b1ef0ee1286"
+    },
+    {
+      "path": "binaries/icu77-settings-probe-boost-fields",
+      "bytes": 643928,
+      "sha256": "9cbe2d53a454d241b0937c6891023166395bfc01a2511126daeaff0e4ee6c49d"
+    },
+    {
+      "path": "licenses/LICENSE-ICU.txt",
+      "bytes": 26487,
+      "sha256": "451167c55c0fa447cc2d5632714f5e3c567fe4f1e1badefab2c1333852198aca"
+    },
+    {
+      "path": "licenses/NOTICE.md",
+      "bytes": 4225,
+      "sha256": "5707a68f1329d817fc04f1f0903ce0b373bf887f143d4e3f33eebf939d6d67a7"
+    },
+    {
+      "path": "retention-source/package_evidence.py",
+      "bytes": 6285,
+      "sha256": "ad80c192dfe34590c3d452dcc08c6e8ea595db552d6cefae43cea01f420113ab"
+    },
+    {
+      "path": "runs/api-build-c-boost-v1-20261018/fmt.log",
+      "bytes": 510,
+      "sha256": "a228a7d1eba27081791114f6d856a9200cbcbb4e1b9686d0b063032a363b99db"
+    },
+    {
+      "path": "runs/api-build-c-boost-v1-20261018/fmt.process.json",
+      "bytes": 1019,
+      "sha256": "2080763b47ab708ed2616c166af6adc12e11e6ead92ec5ddcaed049d4b5a3404"
+    },
+    {
+      "path": "runs/api-build-c-boost-v1-20261018/fmt.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/api-build-c-boost-v1-20261018/rust-toolchain-manifest.json",
+      "bytes": 3226,
+      "sha256": "728ed5c86b52176522fd16205f492d61507e9540af330f71c0ffd9eb890ef94f"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/clippy.process.json",
+      "bytes": 1069,
+      "sha256": "256775a332f5a324aa1861c4a1b26f0fca148b72f31292612196f599024e96f0"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/clippy.stderr.log",
+      "bytes": 332,
+      "sha256": "57868d4948d7825284c47e21b5a3bdbf1b3ad062f180fd9f83734e208045af40"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/fmt.process.json",
+      "bytes": 1017,
+      "sha256": "9f15819f7bc8ad0557de3e780f1b010a87b8d31e269c4315f6094b0872f4a04a"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/fmt.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/native-build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/native-build.process.json",
+      "bytes": 1749,
+      "sha256": "d7ea7f808a51ca763a8f4f686d8a16025809786a004336cf45960ea0ea11f1e8"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/native-build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/rust-build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/rust-build.process.json",
+      "bytes": 1072,
+      "sha256": "c598c497d0365a14f101ced380d7e3484e0307f6d7f6e5d9d6ee1d48a80d21ba"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/rust-build.stderr.log",
+      "bytes": 322,
+      "sha256": "4ec7998011def32b14f0953a4c634f53d2a16ad3cbffd3395f83b505394b4df1"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/rust-linkage.log",
+      "bytes": 230,
+      "sha256": "eacf2bba86dd980da1c76e6c6916f8a72f77809d2f69603c4136fe30a6a911cc"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/rust-linkage.process.json",
+      "bytes": 943,
+      "sha256": "e254ecdaf84195a87f17096f6088416ea62ea8423cd70b87c585d910ba48ee9a"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/rust-linkage.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/rust-toolchain-manifest.json",
+      "bytes": 3226,
+      "sha256": "728ed5c86b52176522fd16205f492d61507e9540af330f71c0ffd9eb890ef94f"
+    },
+    {
+      "path": "runs/api-build-c-boost-v2-20261018/summary.json",
+      "bytes": 11860,
+      "sha256": "63b817d1c8f90a56dd506e85d0d96e858bd601ae4feb8783eecde9130609c01c"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/build.process.json",
+      "bytes": 1908,
+      "sha256": "b836548bff6d56eb913539b7641e10b0faf55901cb3f6257d1feea19425fc4cf"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/candidate.process.json",
+      "bytes": 1665,
+      "sha256": "a8d15e7f45cdb849d316698ff55dfe5b2f2918e4ee42d1532d3eeaec8059a93f"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/candidate.tsv",
+      "bytes": 1107396,
+      "sha256": "b8f956d47f421558578ff729193e2f83b5c430ff7560219608fa5b541bdeaf8e"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/inputs.tsv",
+      "bytes": 94528,
+      "sha256": "233e0c9391f7e7f0a64160bb1b419a9622b0149ab8572411b3d3d4cfa393f600"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/native.process.json",
+      "bytes": 1087,
+      "sha256": "b558bf738ef5219307663ffb17a4b3130f1b6324f52e91a1e8211cad6aafaef5"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/native.tsv",
+      "bytes": 821511,
+      "sha256": "aa6732bc279a8514782b3207eefbea3aefccd2d8aa583ba83f05e67a6c6a9212"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/source/00-diagnose_boost_reorder.py",
+      "bytes": 8217,
+      "sha256": "e4fa6fea1007e1347efee590037c00bce6f33846903d05040abdda0df34f445c"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/source/01-boost-reorder-keys.cpp",
+      "bytes": 5641,
+      "sha256": "572bb75a33540646731142e4ccbdff64a6a0f2ba87291336eb8fabde078e8ae4"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/source/02-main.rs",
+      "bytes": 6669,
+      "sha256": "e2f2cdd5294e406fdcefa7aba02d8b4531d87c46e503b5b8b8eeb59cdc44fdb4"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/source/03-icu.hpp",
+      "bytes": 61875,
+      "sha256": "b6975381220ff2429eb4aae9a958908fdfc1dbd97830de07eca7d368e26c58d0"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/source/04-coll.cpp",
+      "bytes": 32771,
+      "sha256": "092938db12fdf8789a4da0268e0163084af755073f09f2f1cc8f0ff7609f13b6"
+    },
+    {
+      "path": "runs/boost-reorder-scope-v2-20261018/summary.json",
+      "bytes": 8380,
+      "sha256": "8e837b6cc7949738223ba019ef9e4917381ec5975bb0323e07cb1bba645117da"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/build.process.json",
+      "bytes": 1903,
+      "sha256": "4da77397c163b0007a79a4a0efeb9a19d2321f342f0d343c7d0d0ce46ae5b90c"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/compiler.log",
+      "bytes": 244,
+      "sha256": "d1587c99dacaf2619bba832ebf1d927d92d493f29fbef197f0636922de4ee952"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/compiler.process.json",
+      "bytes": 783,
+      "sha256": "01b4f0e3cf44679a5fa0a85482ee117c023253f9253ff214023eddd7d1d0092b"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/compiler.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/linkage.log",
+      "bytes": 374,
+      "sha256": "6fb0bbdac6bd03110f25ad46a450545b5159f7e4c9a29a49ca0591a261caa910"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/linkage.process.json",
+      "bytes": 946,
+      "sha256": "596b2e1625f118b4f86ce89ac1226f6de370681dc9b5cf08b45a32f0ed2ccba4"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/linkage.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/native.log",
+      "bytes": 465,
+      "sha256": "f34f8202b5cdfaaff5e16e03ad542f50d068bc3d966f58857b4597520a706a5a"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/native.process.json",
+      "bytes": 933,
+      "sha256": "ef93d1e16e5c17aeaadc5f88fe92e513d03865ea5b6602a9f3356e8afdd10f50"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/boost-reset-scope-v1-20261018/summary.json",
+      "bytes": 4466,
+      "sha256": "748f08392e24d84c3df434d850670f845d8f19ff6d5eac4299d4338f12a7e923"
+    },
+    {
+      "path": "source/092938db12fdf8789a4da0268e0163084af755073f09f2f1cc8f0ff7609f13b6/coll.cpp",
+      "bytes": 32771,
+      "sha256": "092938db12fdf8789a4da0268e0163084af755073f09f2f1cc8f0ff7609f13b6"
+    },
+    {
+      "path": "source/572bb75a33540646731142e4ccbdff64a6a0f2ba87291336eb8fabde078e8ae4/boost-reorder-keys.cpp",
+      "bytes": 5641,
+      "sha256": "572bb75a33540646731142e4ccbdff64a6a0f2ba87291336eb8fabde078e8ae4"
+    },
+    {
+      "path": "source/88d510eb8318c07f2f79ebcac5d73e2313c85eca5342d70c31184fde20ad6a21/diagnose_boost_reset.py",
+      "bytes": 3202,
+      "sha256": "88d510eb8318c07f2f79ebcac5d73e2313c85eca5342d70c31184fde20ad6a21"
+    },
+    {
+      "path": "source/9415158c93a3708c8e029b6eedf16343699b56aef2bf5e8878634eb829917a76/boost-locale-reset.cpp",
+      "bytes": 3407,
+      "sha256": "9415158c93a3708c8e029b6eedf16343699b56aef2bf5e8878634eb829917a76"
+    },
+    {
+      "path": "source/b6975381220ff2429eb4aae9a958908fdfc1dbd97830de07eca7d368e26c58d0/icu.hpp",
+      "bytes": 61875,
+      "sha256": "b6975381220ff2429eb4aae9a958908fdfc1dbd97830de07eca7d368e26c58d0"
+    },
+    {
+      "path": "source/e2f2cdd5294e406fdcefa7aba02d8b4531d87c46e503b5b8b8eeb59cdc44fdb4/main.rs",
+      "bytes": 6669,
+      "sha256": "e2f2cdd5294e406fdcefa7aba02d8b4531d87c46e503b5b8b8eeb59cdc44fdb4"
+    },
+    {
+      "path": "source/e4fa6fea1007e1347efee590037c00bce6f33846903d05040abdda0df34f445c/diagnose_boost_reorder.py",
+      "bytes": 8217,
+      "sha256": "e4fa6fea1007e1347efee590037c00bce6f33846903d05040abdda0df34f445c"
+    },
+    {
+      "path": "source/faba17da04c7a20462a6ca16ceb7457a734f537722b0f420ad5e1bfebb688280/icu.hpp",
+      "bytes": 601,
+      "sha256": "faba17da04c7a20462a6ca16ceb7457a734f537722b0f420ad5e1bfebb688280"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 24214,
+      "sha256": "7c8e55e0c629b2cf3e746e9e41633ab746fb3ae0473f834bdfd6d1bf7305e885"
+    }
+  ],
+  "archiver": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/archive_evidence.py",
+    "sha256": "f97e7d0e4856b1d673f260d1b228fa0e32731b490e0f103216bd80f4c8a0d54c"
+  },
+  "preservation": "All source files retained byte-for-byte; source directory was not changed"
+}

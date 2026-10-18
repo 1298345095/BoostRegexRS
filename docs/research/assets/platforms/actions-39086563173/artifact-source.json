@@ -1,0 +1,1197 @@
+{
+  "schema": 1,
+  "repository": "1298345095/BoostRegexRS",
+  "run_id": 39086563173,
+  "commit": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d",
+  "metadata_transport": "GitHub connector normalized response",
+  "artifacts": [
+    {
+      "target": "aarch64-pc-windows-msvc",
+      "archive": "aarch64-pc-windows-msvc.zip",
+      "bytes": 37803,
+      "sha256": "d1044b316a87098e7e0d1daf1e5d77a99dd5634b7833e5a6bd7622c368c1b0b7",
+      "github_artifact": {
+        "id": 12121460082,
+        "name": "native-rust-aarch64-pc-windows-msvc-39086563173-1",
+        "size_in_bytes": 37803,
+        "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12121460082",
+        "archive_download_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12121460082/zip",
+        "expired": false,
+        "created_at": "2026-10-18T01:28:35Z",
+        "expires_at": "2026-11-01T01:28:34Z",
+        "updated_at": "2026-10-18T01:28:35Z",
+        "digest": "sha256:d1044b316a87098e7e0d1daf1e5d77a99dd5634b7833e5a6bd7622c368c1b0b7",
+        "workflow_run": {
+          "id": 39086563173,
+          "repository_id": 1420839614,
+          "head_repository_id": 1420839614,
+          "head_branch": "work/root-primary-cloud",
+          "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d"
+        }
+      },
+      "retrieved_at": "2026-10-18T02:19:26.984764+00:00",
+      "members": [
+        {
+          "path": "aarch64-pc-windows-msvc/cargo-version.stdout",
+          "bytes": 320,
+          "sha256": "53424a3cfea5ed6961577012e217feff63768b26a74c95e63b6e768ef3810246"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/cargo-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/clippy.json",
+          "bytes": 439,
+          "sha256": "70a94e6d7724a65bc8fa1d575dd44556b8d35396d9ab3db51275a397efea86ec"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/cargo-version.json",
+          "bytes": 224,
+          "sha256": "9f096a8b22d1e7ea41f8af96f0e2f8684ab19d17844faca5fe0e067957dcbba0"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/clippy.stderr",
+          "bytes": 173,
+          "sha256": "6112c9a3f57c6893f788e2ed89cd9cca16828603c8d2a8d69c73b8014461a9f5"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/clippy.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/compile-host-probe.json",
+          "bytes": 441,
+          "sha256": "74ec5ecf6e5687bc4880e9c58caafbd111f5471668d6f20c8a935c0b764781f0"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/compile-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/compile-host-probe.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/doctests.stderr",
+          "bytes": 105,
+          "sha256": "cdc28c5b0c82ba50d4abdf0dddaae30270e20655d5809a2cb2e26bd6a28a2f17"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/doctests.json",
+          "bytes": 391,
+          "sha256": "a92a54eaa0431d780f8d6fd67f44ca14602a2acd9ddb1bf65c5ffdf409ac7b7a"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/doctests.stdout",
+          "bytes": 113,
+          "sha256": "df166913f47ff1f04202cae9b31df67ed272d692d99a0023a8117dc3029100dd"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/documentation.json",
+          "bytes": 394,
+          "sha256": "f2d8e9bd9dcc93c8605722ddb5b44fbcba09c949736a222756f654909573a5fb"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/documentation.stderr",
+          "bytes": 318,
+          "sha256": "fe10781f7b24fe44214f043b4dc0a624d221707f6369c38bdd344c6aa4c31418"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/documentation.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/format.json",
+          "bytes": 336,
+          "sha256": "3ee7c9d74d46be4670903c99859f2c2c9b9cc8ac548f03b2e0baa14aeb926af8"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/format.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/format.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/git-commit.json",
+          "bytes": 151,
+          "sha256": "05ac00b675cdb8194c6690f85f5d4e5c388414e6f1c0db6335f134d210f26477"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/git-commit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/git-commit.stdout",
+          "bytes": 41,
+          "sha256": "467d1dd64f268d7ea9f22bc96c9ceba06d51578bd266b8efbe68663022fc2316"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/git-tree.json",
+          "bytes": 158,
+          "sha256": "e2faf232091d8f878c2a133e9da11ee5ea0ae5ad8b46d7b6f912360fbd8dd860"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/git-tree.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/git-tree.stdout",
+          "bytes": 41,
+          "sha256": "31748bd0485c7149d32642a51ddda6a0f23a20d1ec306b29173a8630b315e7c1"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/run-host-probe.json",
+          "bytes": 211,
+          "sha256": "2e096dfe801fc7566d44f4e22a442cc87ed7adf39c6dc8328c50107eead41449"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/run-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/rustc-version.json",
+          "bytes": 223,
+          "sha256": "dcb8b9df7778de236bf8196f2b2b37b59c2b3f8492d23a827550d68a18a1df40"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/rustc-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/run-host-probe.stdout",
+          "bytes": 60,
+          "sha256": "54aaef2599c0e05364deb8c0fab30dd84e4c8d02e536dccf6b6e95d5e3ac81be"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/rustc-version.stdout",
+          "bytes": 195,
+          "sha256": "0400e842b69023487d35975ececcd0edec4f13d84d2fc9a87a2de331b2df2d2f"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/summary.json",
+          "bytes": 120927,
+          "sha256": "8fa254ab4a86634b48fc47326bf05f8392b4bc1a91cc4d487961b303f1b5e1ce"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/tests.json",
+          "bytes": 398,
+          "sha256": "1f8188938a176aa498f74d4c3b0eb64a55b9098dc299d59ffdbb8309caf277d4"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/tests.stderr",
+          "bytes": 1220,
+          "sha256": "40060eb8c69a83d9782fe0fa1d1cbe05e521a94e6fd264c4cd26c1001f16a3fb"
+        },
+        {
+          "path": "aarch64-pc-windows-msvc/tests.stdout",
+          "bytes": 3067,
+          "sha256": "ee1dbd1d848bfd8882fd2e2782cc0c323b91c4a0313f9c01dbc89e41a51a9dcd"
+        }
+      ]
+    },
+    {
+      "target": "x86_64-unknown-linux-gnu",
+      "archive": "x86_64-unknown-linux-gnu.zip",
+      "bytes": 37771,
+      "sha256": "b4c5acda7e76d2b2294b1945ecaf3f6102e726d68c37c73d4ded4399a4e63de2",
+      "github_artifact": {
+        "id": 12121062191,
+        "name": "native-rust-x86_64-unknown-linux-gnu-39086563173-1",
+        "size_in_bytes": 37771,
+        "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12121062191",
+        "archive_download_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12121062191/zip",
+        "expired": false,
+        "created_at": "2026-10-18T01:27:59Z",
+        "expires_at": "2026-11-01T01:27:58Z",
+        "updated_at": "2026-10-18T01:27:59Z",
+        "digest": "sha256:b4c5acda7e76d2b2294b1945ecaf3f6102e726d68c37c73d4ded4399a4e63de2",
+        "workflow_run": {
+          "id": 39086563173,
+          "repository_id": 1420839614,
+          "head_repository_id": 1420839614,
+          "head_branch": "work/root-primary-cloud",
+          "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d"
+        }
+      },
+      "retrieved_at": "2026-10-18T02:19:26.862515+00:00",
+      "members": [
+        {
+          "path": "x86_64-unknown-linux-gnu/cargo-version.json",
+          "bytes": 212,
+          "sha256": "b0c75f7db34d9bf05f6bdb35063fe9ecb7fe3d9de06842c7fc8f9abf35d12e05"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/cargo-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/cargo-version.stdout",
+          "bytes": 335,
+          "sha256": "4265e22043d855cb3fc78365fbf272d2b2158881fe23035a18a92f0b0743dee8"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/clippy.json",
+          "bytes": 425,
+          "sha256": "f92e40c84395e9482cd3099e1eb3c888524fc3ac7c1405528853fba55e1f255d"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/clippy.stderr",
+          "bytes": 186,
+          "sha256": "4e4e2025d0d874ca06124683ac67d4b21f3bb938648dce4e06f9c4848e880cc5"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/clippy.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/compile-host-probe.json",
+          "bytes": 437,
+          "sha256": "e96dab5a6a03b842a0e333cd99285215c962786cfa830a0d8d5a918b0a3fb8b3"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/compile-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/compile-host-probe.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/doctests.json",
+          "bytes": 380,
+          "sha256": "c7c7ffdc388a3bb6f1c0b388963da7530f635a1b8c19c7486ae042dd6c04e3d4"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/doctests.stderr",
+          "bytes": 105,
+          "sha256": "43068130c769e371239973a5f45378200c2aa4aee7dd875b7b27fe94f06a8fbd"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/doctests.stdout",
+          "bytes": 113,
+          "sha256": "df166913f47ff1f04202cae9b31df67ed272d692d99a0023a8117dc3029100dd"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/documentation.json",
+          "bytes": 383,
+          "sha256": "31f0dcd898d2c2844d99c3c74c0ce5dd827c7e452eed88df51cf8c7b2a150ea6"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/documentation.stderr",
+          "bytes": 346,
+          "sha256": "c7aaf00153fcbb9043f3210a24739e99553d1ae783a60819c616e2f6380fec32"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/documentation.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/format.json",
+          "bytes": 326,
+          "sha256": "d182496b66602cbc5b404fff5f6e3d638d6cd0ba2bfaf54e80c09414eef7583e"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/format.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/format.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/git-commit.json",
+          "bytes": 140,
+          "sha256": "87e4307f625d71b046f823a92c76a176e845205896051ed6bd29936d1f451627"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/git-commit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/git-commit.stdout",
+          "bytes": 41,
+          "sha256": "467d1dd64f268d7ea9f22bc96c9ceba06d51578bd266b8efbe68663022fc2316"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/git-tree.json",
+          "bytes": 148,
+          "sha256": "00229004cc11eb1bef45e3cdc2f5ac02ebb07b92c18a0773fb01735ae63192d2"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/git-tree.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/git-tree.stdout",
+          "bytes": 41,
+          "sha256": "31748bd0485c7149d32642a51ddda6a0f23a20d1ec306b29173a8630b315e7c1"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/run-host-probe.json",
+          "bytes": 208,
+          "sha256": "fcd91778e231c30596906b8cdbc5b84b529533408e4cc64c61db472e7e5d857c"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/run-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/run-host-probe.stdout",
+          "bytes": 57,
+          "sha256": "27a63665a5ebd519ea6e66438e0c8b4ee2ae04d68282227854bddaddabba3787"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/rustc-version.json",
+          "bytes": 212,
+          "sha256": "95eeac104c424db71ffa22cf9e79efd778971922697de3777a52887c43e17e17"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/rustc-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/rustc-version.stdout",
+          "bytes": 196,
+          "sha256": "f22d5e4e9ced367e774ce5bc140d9e6b1235c1882fec80d011044851f3ae6369"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/summary.json",
+          "bytes": 117728,
+          "sha256": "b2f16012f7235c73202c1878f5677e2e522ecb517223ce4c26963fa1d8304809"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/tests.stderr",
+          "bytes": 1219,
+          "sha256": "f555689f35ab9e4ec596628656c14df15f53667b5c14db14ee6790577caedff8"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/tests.json",
+          "bytes": 386,
+          "sha256": "02c635a734ce9b75a4a6dbfce7ef6cd73a4939e754acc8120168b9295fc064a8"
+        },
+        {
+          "path": "x86_64-unknown-linux-gnu/tests.stdout",
+          "bytes": 3067,
+          "sha256": "3789c3d2178cadf3ea023a945843ab15bbddb6b17e434996f7d992a4c2e18e80"
+        }
+      ]
+    },
+    {
+      "target": "x86_64-apple-darwin",
+      "archive": "x86_64-apple-darwin.zip",
+      "bytes": 37527,
+      "sha256": "9f94ec16d3ef4d215e1fa37191ff3ed898ce43266beaa3651f02820ddb37cbfe",
+      "github_artifact": {
+        "id": 12120773739,
+        "name": "native-rust-x86_64-apple-darwin-39086563173-1",
+        "size_in_bytes": 37527,
+        "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12120773739",
+        "archive_download_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12120773739/zip",
+        "expired": false,
+        "created_at": "2026-10-18T01:28:19Z",
+        "expires_at": "2026-11-01T01:28:18Z",
+        "updated_at": "2026-10-18T01:28:19Z",
+        "digest": "sha256:9f94ec16d3ef4d215e1fa37191ff3ed898ce43266beaa3651f02820ddb37cbfe",
+        "workflow_run": {
+          "id": 39086563173,
+          "repository_id": 1420839614,
+          "head_repository_id": 1420839614,
+          "head_branch": "work/root-primary-cloud",
+          "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d"
+        }
+      },
+      "retrieved_at": "2026-10-18T02:19:26.861666+00:00",
+      "members": [
+        {
+          "path": "x86_64-apple-darwin/cargo-version.json",
+          "bytes": 206,
+          "sha256": "af74b816537a5a0a0d076d96d4e98a58f718f0fee1648877ff189a714666b6a1"
+        },
+        {
+          "path": "x86_64-apple-darwin/cargo-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/cargo-version.stdout",
+          "bytes": 334,
+          "sha256": "0cea2daedff000d61c8dc542dc6b8ae9fca042a9570d4dbf0615d88f35e01d0b"
+        },
+        {
+          "path": "x86_64-apple-darwin/clippy.json",
+          "bytes": 416,
+          "sha256": "f01ef49c45709401ac22e1f8863fcf2642ba93d657cf785f9fd5a9aaf7cce762"
+        },
+        {
+          "path": "x86_64-apple-darwin/clippy.stderr",
+          "bytes": 187,
+          "sha256": "4f91f799b6520e181a63de39514d8f0d3917d97d5fd96cbe3e5806c6e49be488"
+        },
+        {
+          "path": "x86_64-apple-darwin/clippy.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/compile-host-probe.json",
+          "bytes": 422,
+          "sha256": "eb7797008d54f541ee8c0ed50d1d0c87d9e8ca0ad400bdd964a197aee4d1203a"
+        },
+        {
+          "path": "x86_64-apple-darwin/compile-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/compile-host-probe.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/doctests.json",
+          "bytes": 369,
+          "sha256": "c3cf51ed9cb61b0a5b8e69f5d84a8b72710d2b8266fe7eb868da78e13d9251ff"
+        },
+        {
+          "path": "x86_64-apple-darwin/doctests.stderr",
+          "bytes": 105,
+          "sha256": "43068130c769e371239973a5f45378200c2aa4aee7dd875b7b27fe94f06a8fbd"
+        },
+        {
+          "path": "x86_64-apple-darwin/doctests.stdout",
+          "bytes": 113,
+          "sha256": "df166913f47ff1f04202cae9b31df67ed272d692d99a0023a8117dc3029100dd"
+        },
+        {
+          "path": "x86_64-apple-darwin/documentation.json",
+          "bytes": 373,
+          "sha256": "eddebe5d7ca6290a7f4623208400e9770ec5cdfecad279a14b983a995eeef577"
+        },
+        {
+          "path": "x86_64-apple-darwin/documentation.stderr",
+          "bytes": 338,
+          "sha256": "7e4163c151a740752fce66daf78e9fca4d93ceaa047c47e85c3dca725744b421"
+        },
+        {
+          "path": "x86_64-apple-darwin/documentation.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/format.json",
+          "bytes": 322,
+          "sha256": "246cce61daee59d94c3f573d200ee13ffa311841815ee28e69cf273d4516289c"
+        },
+        {
+          "path": "x86_64-apple-darwin/format.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/format.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/git-commit.json",
+          "bytes": 140,
+          "sha256": "560a42ea8cfdd96ae610bc9f102ee9568a3cdbe85d8ed11190d2361da55dd7c3"
+        },
+        {
+          "path": "x86_64-apple-darwin/git-commit.stdout",
+          "bytes": 41,
+          "sha256": "467d1dd64f268d7ea9f22bc96c9ceba06d51578bd266b8efbe68663022fc2316"
+        },
+        {
+          "path": "x86_64-apple-darwin/git-commit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/git-tree.json",
+          "bytes": 148,
+          "sha256": "8cae73aab1543535225008744662a06b88d51e94f56c6b22fcfa7be553b95675"
+        },
+        {
+          "path": "x86_64-apple-darwin/git-tree.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/git-tree.stdout",
+          "bytes": 41,
+          "sha256": "31748bd0485c7149d32642a51ddda6a0f23a20d1ec306b29173a8630b315e7c1"
+        },
+        {
+          "path": "x86_64-apple-darwin/run-host-probe.json",
+          "bytes": 203,
+          "sha256": "aaddfe96e784f83d2ac25f96d904ea5d64cf1129bc7d049dc65931ef3a472d19"
+        },
+        {
+          "path": "x86_64-apple-darwin/run-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/run-host-probe.stdout",
+          "bytes": 57,
+          "sha256": "803fa000590b230a181110393eee6409427b6bc6c169f51e803b3bd598349b84"
+        },
+        {
+          "path": "x86_64-apple-darwin/rustc-version.json",
+          "bytes": 206,
+          "sha256": "493225dc6bc8b332f8069b50d63a71953073de5786963d7ad493201f525ff243"
+        },
+        {
+          "path": "x86_64-apple-darwin/rustc-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-apple-darwin/rustc-version.stdout",
+          "bytes": 191,
+          "sha256": "bf1658636877f9403ad0a32419fc3b0da3d3164f3585a184108063f8499d7434"
+        },
+        {
+          "path": "x86_64-apple-darwin/summary.json",
+          "bytes": 117746,
+          "sha256": "9a2a13eb99c2e99fc5f62b1d1f51071d02d4ff88eeb9a2deb5518523f7f92c8e"
+        },
+        {
+          "path": "x86_64-apple-darwin/tests.json",
+          "bytes": 377,
+          "sha256": "0152ac674f120d68dbf62aecf6a7eae7d7190033fb11b073173b94f9537759ad"
+        },
+        {
+          "path": "x86_64-apple-darwin/tests.stderr",
+          "bytes": 1150,
+          "sha256": "d13c360a6d9a7b5b5c61579b4048df284091af7b17109a4ee7d6e327ec4a09d3"
+        },
+        {
+          "path": "x86_64-apple-darwin/tests.stdout",
+          "bytes": 3067,
+          "sha256": "a5fa4c2e089f3c9a8cf69c73ea12d2df0dada6392337f1ed431119b0d3cbd491"
+        }
+      ]
+    },
+    {
+      "target": "x86_64-pc-windows-msvc",
+      "archive": "x86_64-pc-windows-msvc.zip",
+      "bytes": 37636,
+      "sha256": "3dd636bafcb1342c06dd692e2530a8d2b5265fbff6774e4fbd150f2bee56e15e",
+      "github_artifact": {
+        "id": 12120499585,
+        "name": "native-rust-x86_64-pc-windows-msvc-39086563173-1",
+        "size_in_bytes": 37636,
+        "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12120499585",
+        "archive_download_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12120499585/zip",
+        "expired": false,
+        "created_at": "2026-10-18T01:28:28Z",
+        "expires_at": "2026-11-01T01:28:27Z",
+        "updated_at": "2026-10-18T01:28:28Z",
+        "digest": "sha256:3dd636bafcb1342c06dd692e2530a8d2b5265fbff6774e4fbd150f2bee56e15e",
+        "workflow_run": {
+          "id": 39086563173,
+          "repository_id": 1420839614,
+          "head_repository_id": 1420839614,
+          "head_branch": "work/root-primary-cloud",
+          "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d"
+        }
+      },
+      "retrieved_at": "2026-10-18T02:19:27.318664+00:00",
+      "members": [
+        {
+          "path": "x86_64-pc-windows-msvc/cargo-version.json",
+          "bytes": 222,
+          "sha256": "afeb0e08de71b5125f12f1482b0eb5e29ebdfa7a7e4ef97c14f30f2a147908f9"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/cargo-version.stdout",
+          "bytes": 325,
+          "sha256": "e569e17e69d1abc27efd9ab072a32f4fbad521e3ae1d77a462226786d3d39972"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/cargo-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/clippy.json",
+          "bytes": 437,
+          "sha256": "a9c2da7e1075c5962ed1fd9ce7e45ca045607e91c7f3a1a0c1d985284aeafa82"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/clippy.stderr",
+          "bytes": 173,
+          "sha256": "988847f581a778509c656fa923671ae0f8d82376f353303f13a67ce0f8925036"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/clippy.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/compile-host-probe.json",
+          "bytes": 437,
+          "sha256": "39993eb86e192fdfd08f899c63d377bd0c04d38459452348101b4caaa41eabc4"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/compile-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/compile-host-probe.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/doctests.json",
+          "bytes": 388,
+          "sha256": "66d31b34a905a605f361856b48dbe7d482fe3667ebc673201c08af7064c5657e"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/doctests.stderr",
+          "bytes": 105,
+          "sha256": "bf3679d5761034014fd486b993495306ce61bdd49c34198dde353522269028af"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/doctests.stdout",
+          "bytes": 113,
+          "sha256": "df166913f47ff1f04202cae9b31df67ed272d692d99a0023a8117dc3029100dd"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/documentation.json",
+          "bytes": 392,
+          "sha256": "ab30623b00a8a64d70524432e81e59f845d3a6646d0456b7baabad1d85afbd1b"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/documentation.stderr",
+          "bytes": 316,
+          "sha256": "28fe70f0769fdba518e6d67a7c0c76a3b138982a15947abf34a9771ed00973c3"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/documentation.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/format.json",
+          "bytes": 335,
+          "sha256": "5630f56292ad58e33c00a4c2ba45a24030a7dad35a95b5c7d392435c48bac44f"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/format.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/format.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/git-commit.json",
+          "bytes": 150,
+          "sha256": "8f13045e6b516c1bf27381cf5f35c0237b1cd9e29d98058b17bcad67f578c88a"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/git-commit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/git-commit.stdout",
+          "bytes": 41,
+          "sha256": "467d1dd64f268d7ea9f22bc96c9ceba06d51578bd266b8efbe68663022fc2316"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/git-tree.json",
+          "bytes": 157,
+          "sha256": "7489c7f288229b1fe8b03e6945227ca2ccdb6cbebe5d1c0ab99d35ef86d982bb"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/git-tree.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/git-tree.stdout",
+          "bytes": 41,
+          "sha256": "31748bd0485c7149d32642a51ddda6a0f23a20d1ec306b29173a8630b315e7c1"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/run-host-probe.json",
+          "bytes": 194,
+          "sha256": "6dcff5d071dd9d010adc13a52c80d232c461e3a276e17f41bf4ead68dc580958"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/run-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/run-host-probe.stdout",
+          "bytes": 59,
+          "sha256": "43f56226583b5dd564931c7df8dc87f15c43efb9588a4bb91dd38742dbdcf1b6"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/rustc-version.json",
+          "bytes": 222,
+          "sha256": "bfe38f3afea72a9d9712665f9a72ed1f7a62b74f5fcd8732466d259d32b6ffe9"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/rustc-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/rustc-version.stdout",
+          "bytes": 194,
+          "sha256": "341fed434cf52bd9ba5ab2f3507dbd943a2062212028574e529fc3e7e5ecd7a8"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/summary.json",
+          "bytes": 120875,
+          "sha256": "6fe4c8580aef939f133d65102dd648a5d34e4a20031bbb23b4fc8894690c2c3b"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/tests.json",
+          "bytes": 396,
+          "sha256": "c93b88ed97f05d6e0261cbc1b6c3856f6a504323aa44c994176f405fdf42341b"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/tests.stderr",
+          "bytes": 1206,
+          "sha256": "7f9da0fd0c8dc6b5610e7900fb3d1f1a23f9cc768bb6eb8be86455ff2c99951c"
+        },
+        {
+          "path": "x86_64-pc-windows-msvc/tests.stdout",
+          "bytes": 3067,
+          "sha256": "7afb79a74ad5d3f1ec0ffd029bfb6f2be7134d3e07e0bb8513883d5292274bff"
+        }
+      ]
+    },
+    {
+      "target": "aarch64-apple-darwin",
+      "archive": "aarch64-apple-darwin.zip",
+      "bytes": 37580,
+      "sha256": "9c1647d1f16a7c4d7f4dfaadd0a1c868a16451f972f66f7bd428e7aa6f05dd42",
+      "github_artifact": {
+        "id": 12120389741,
+        "name": "native-rust-aarch64-apple-darwin-39086563173-1",
+        "size_in_bytes": 37580,
+        "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12120389741",
+        "archive_download_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12120389741/zip",
+        "expired": false,
+        "created_at": "2026-10-18T01:28:08Z",
+        "expires_at": "2026-11-01T01:28:07Z",
+        "updated_at": "2026-10-18T01:28:08Z",
+        "digest": "sha256:9c1647d1f16a7c4d7f4dfaadd0a1c868a16451f972f66f7bd428e7aa6f05dd42",
+        "workflow_run": {
+          "id": 39086563173,
+          "repository_id": 1420839614,
+          "head_repository_id": 1420839614,
+          "head_branch": "work/root-primary-cloud",
+          "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d"
+        }
+      },
+      "retrieved_at": "2026-10-18T02:19:27.456233+00:00",
+      "members": [
+        {
+          "path": "aarch64-apple-darwin/cargo-version.json",
+          "bytes": 207,
+          "sha256": "dec396a04bfc816cb092608a45550fd4db6f37e4fc7f85f27c21c8224a015f9c"
+        },
+        {
+          "path": "aarch64-apple-darwin/cargo-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/cargo-version.stdout",
+          "bytes": 335,
+          "sha256": "6b62f3cb98accd92794afcdc55bc0d15b6e8301d164494901329aac600d37b77"
+        },
+        {
+          "path": "aarch64-apple-darwin/clippy.json",
+          "bytes": 418,
+          "sha256": "2ac0fe8794ccf2c40a2dd9c69ea6fe0abc36f20b4fb99f60e1ff24fb488d7114"
+        },
+        {
+          "path": "aarch64-apple-darwin/clippy.stderr",
+          "bytes": 187,
+          "sha256": "02428a663978f0b91bc9c8ffb1782398cd4d77d1836c40fc9bee217af11cf661"
+        },
+        {
+          "path": "aarch64-apple-darwin/clippy.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/compile-host-probe.json",
+          "bytes": 426,
+          "sha256": "915ec1d810cc879c4be33a46bb359a8288b16a6eada0109301aa7fe350f1984c"
+        },
+        {
+          "path": "aarch64-apple-darwin/compile-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/compile-host-probe.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/doctests.json",
+          "bytes": 373,
+          "sha256": "c820dae58aabb263be85f6aea90bd9855e69211439db711ed545e1be91917225"
+        },
+        {
+          "path": "aarch64-apple-darwin/doctests.stderr",
+          "bytes": 105,
+          "sha256": "43068130c769e371239973a5f45378200c2aa4aee7dd875b7b27fe94f06a8fbd"
+        },
+        {
+          "path": "aarch64-apple-darwin/doctests.stdout",
+          "bytes": 113,
+          "sha256": "df166913f47ff1f04202cae9b31df67ed272d692d99a0023a8117dc3029100dd"
+        },
+        {
+          "path": "aarch64-apple-darwin/documentation.json",
+          "bytes": 376,
+          "sha256": "14b8b65db506c081a9c0976d26d17f29a3d3bdd1d770c8d0ef2900788ef8b356"
+        },
+        {
+          "path": "aarch64-apple-darwin/documentation.stderr",
+          "bytes": 340,
+          "sha256": "ce9217948b8634d2ecea76ba3b46990378a0fd64de104b10a8c597edc9b51641"
+        },
+        {
+          "path": "aarch64-apple-darwin/documentation.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/format.json",
+          "bytes": 323,
+          "sha256": "5bc5524458de23c673f32a7ec33c8670f9516bd3bf6d1ae98fa5625f41b1ea10"
+        },
+        {
+          "path": "aarch64-apple-darwin/format.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/format.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/git-commit.json",
+          "bytes": 140,
+          "sha256": "3efde5f9b3c9bb48e76e32b283c65cd80f4e9821906b6049316dd7acc4015a45"
+        },
+        {
+          "path": "aarch64-apple-darwin/git-commit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/git-commit.stdout",
+          "bytes": 41,
+          "sha256": "467d1dd64f268d7ea9f22bc96c9ceba06d51578bd266b8efbe68663022fc2316"
+        },
+        {
+          "path": "aarch64-apple-darwin/git-tree.json",
+          "bytes": 148,
+          "sha256": "87f3ecf88ca02d67a7ac99dcb53b2d84db0cf3a5c4349fe0c18a5a4d247df590"
+        },
+        {
+          "path": "aarch64-apple-darwin/git-tree.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/git-tree.stdout",
+          "bytes": 41,
+          "sha256": "31748bd0485c7149d32642a51ddda6a0f23a20d1ec306b29173a8630b315e7c1"
+        },
+        {
+          "path": "aarch64-apple-darwin/run-host-probe.json",
+          "bytes": 203,
+          "sha256": "fb8a7bf2db84391fa143b7a2f2df7f952ba5a499d5dff31522a4193486ad97a8"
+        },
+        {
+          "path": "aarch64-apple-darwin/run-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/run-host-probe.stdout",
+          "bytes": 58,
+          "sha256": "66045baa142bf8f90467092b3b96a9086ca5382c69128712efa1a1d44bbbced7"
+        },
+        {
+          "path": "aarch64-apple-darwin/rustc-version.json",
+          "bytes": 207,
+          "sha256": "ba8d29ddd5bab37f733055516820d1dc866da92410d5935a329de6084d384f0a"
+        },
+        {
+          "path": "aarch64-apple-darwin/rustc-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-apple-darwin/rustc-version.stdout",
+          "bytes": 192,
+          "sha256": "e003fd3d385fcd0de16bc6b049124efb20207831dd810fd4ab39ff079bbb12a5"
+        },
+        {
+          "path": "aarch64-apple-darwin/summary.json",
+          "bytes": 117774,
+          "sha256": "9106150739f8befd122075f5be9c2470631a29da5eb7c99325f87df2715a4b3d"
+        },
+        {
+          "path": "aarch64-apple-darwin/tests.json",
+          "bytes": 380,
+          "sha256": "2f877f1c6de68f0f45b41a92639500c04fb0ad761fd8f01dda170474a0f56243"
+        },
+        {
+          "path": "aarch64-apple-darwin/tests.stderr",
+          "bytes": 1164,
+          "sha256": "52783702144844a7013c07c6ad4401ec8f542899e849c64cff7b6d8310d353c0"
+        },
+        {
+          "path": "aarch64-apple-darwin/tests.stdout",
+          "bytes": 3067,
+          "sha256": "ee112e7507b89cb412eeffc6909c240cf0bd68786a9cbfecd412e36f1ab6381b"
+        }
+      ]
+    },
+    {
+      "target": "aarch64-unknown-linux-gnu",
+      "archive": "aarch64-unknown-linux-gnu.zip",
+      "bytes": 37849,
+      "sha256": "5f781ac050712f0b4294d68042b36ed7c72e2df540450206597d350e20565ca1",
+      "github_artifact": {
+        "id": 12120124871,
+        "name": "native-rust-aarch64-unknown-linux-gnu-39086563173-1",
+        "size_in_bytes": 37849,
+        "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12120124871",
+        "archive_download_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12120124871/zip",
+        "expired": false,
+        "created_at": "2026-10-18T01:27:57Z",
+        "expires_at": "2026-11-01T01:27:56Z",
+        "updated_at": "2026-10-18T01:27:57Z",
+        "digest": "sha256:5f781ac050712f0b4294d68042b36ed7c72e2df540450206597d350e20565ca1",
+        "workflow_run": {
+          "id": 39086563173,
+          "repository_id": 1420839614,
+          "head_repository_id": 1420839614,
+          "head_branch": "work/root-primary-cloud",
+          "head_sha": "c4a161c0650b4b5433f5c437692cde3f5cb42a4d"
+        }
+      },
+      "retrieved_at": "2026-10-18T02:19:27.551784+00:00",
+      "members": [
+        {
+          "path": "aarch64-unknown-linux-gnu/cargo-version.json",
+          "bytes": 213,
+          "sha256": "fca06f30b8af4ac7f78e43ce5e7a4bc02263d613131e2285f0555b622afea6bb"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/cargo-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/cargo-version.stdout",
+          "bytes": 336,
+          "sha256": "4abdb4a3c86c7a147ab8cf453d293d391e58dd5d4cff68868d1aa8316189ea6a"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/clippy.json",
+          "bytes": 428,
+          "sha256": "9d62e662ac11d00505b8a5dec1d3674e9681eab37294f8c43c68b0fdbe8c3a45"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/clippy.stderr",
+          "bytes": 186,
+          "sha256": "b8360f427c6b15f4f9f67ed8642bd069a8f3ee91b2a8fa164be1f4cc627e1f1d"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/clippy.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/compile-host-probe.json",
+          "bytes": 440,
+          "sha256": "ae7ef0642d7f2f1335237f959c375f871dcb283d9d909ca0dc760c86424dc45b"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/compile-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/compile-host-probe.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/doctests.json",
+          "bytes": 382,
+          "sha256": "fadff25355d2f0dfcddba1eea9dba79161b3a061cf770d297be485aa534f2f6e"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/doctests.stderr",
+          "bytes": 105,
+          "sha256": "43068130c769e371239973a5f45378200c2aa4aee7dd875b7b27fe94f06a8fbd"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/doctests.stdout",
+          "bytes": 113,
+          "sha256": "df166913f47ff1f04202cae9b31df67ed272d692d99a0023a8117dc3029100dd"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/documentation.json",
+          "bytes": 382,
+          "sha256": "c1db0a397ff6d3f538d88f38068dbdc2cf05e69127b005f00d3c0582b21f7d71"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/documentation.stderr",
+          "bytes": 348,
+          "sha256": "5a3df7e3aa6bbf190d80478163e981ae4f309076333388d3077c91ba14c37bad"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/documentation.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/format.json",
+          "bytes": 328,
+          "sha256": "3d09fd2f856d1421deb62c96d7073d64400373b76fd4be400e2492245f8c763c"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/format.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/format.stdout",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/git-commit.json",
+          "bytes": 142,
+          "sha256": "46fa1039300cbb849ad8fd3aaaa8cd4c24f006287343fbddbc591c0b60ef79d7"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/git-commit.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/git-commit.stdout",
+          "bytes": 41,
+          "sha256": "467d1dd64f268d7ea9f22bc96c9ceba06d51578bd266b8efbe68663022fc2316"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/git-tree.json",
+          "bytes": 149,
+          "sha256": "4ed6027bea0b2b67a3a07d1384e65c6bfbaaa352af98c7fd1b03b0a05b6c148a"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/git-tree.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/git-tree.stdout",
+          "bytes": 41,
+          "sha256": "31748bd0485c7149d32642a51ddda6a0f23a20d1ec306b29173a8630b315e7c1"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/run-host-probe.json",
+          "bytes": 209,
+          "sha256": "e90d4125eb654a66f37ae5c18afdbc67b843909d1aa6a7ab740c1cedce49e764"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/run-host-probe.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/run-host-probe.stdout",
+          "bytes": 58,
+          "sha256": "01f1dd2d829d390d9f01e9111bb8263cc59a26521c1971c040dc665078c37911"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/rustc-version.json",
+          "bytes": 213,
+          "sha256": "fa6608e75bc36ff57d2e7ebd7d400e42ebd34829856c48576b61be20a098d018"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/rustc-version.stderr",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/rustc-version.stdout",
+          "bytes": 197,
+          "sha256": "ba203e33fe4a5b8e05147bb6e57fb1ddace26d9f799f357420b666887dd7e2f1"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/summary.json",
+          "bytes": 117761,
+          "sha256": "780bd1b50b2e2481ef8cf960c3a8628b80f8356e913f9762c8d2a900e405af85"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/tests.json",
+          "bytes": 389,
+          "sha256": "359c158c1c450336ad47c80132b1f1d3dbfaf2d8a7ab43c4245f55a7c18f5eb6"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/tests.stderr",
+          "bytes": 1233,
+          "sha256": "b73e9e8def185d3d61b9d23b545bac5ce44411a8a5769b66b5b5bffa6dc1f5a3"
+        },
+        {
+          "path": "aarch64-unknown-linux-gnu/tests.stdout",
+          "bytes": 3067,
+          "sha256": "f63bba349144fa031b17b3ad66feef1ca0fa40d9034264f1e28cc4928090ad88"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+Reproduction command from README.md:
+timeout --signal=TERM --kill-after=2s 20s python3 -B - <<'PY'
+import hashlib
+import json
+from pathlib import Path
+from zipfile import ZipFile
+
+root = Path('docs/research/assets/sonarcloud/actions-39081773775')
+source = json.loads((root / 'artifact-source.json').read_text())
+raw = (root / source['archive']).read_bytes()
+assert len(raw) == source['archive_size_bytes']
+assert hashlib.sha256(raw).hexdigest() == source['archive_sha256']
+assert source['artifact']['digest'] == 'sha256:' + source['archive_sha256']
+with ZipFile(root / source['archive']) as archive:
+    assert archive.testzip() is None
+    assert set(archive.namelist()) == {item['path'] for item in source['members']}
+    for item in source['members']:
+        body = archive.read(item['path'])
+        assert len(body) == item['size']
+        assert hashlib.sha256(body).hexdigest() == item['sha256']
+for item in source['supplemental_responses']:
+    body = (root / item['path']).read_bytes()
+    assert len(body) == item['size_bytes']
+    assert hashlib.sha256(body).hexdigest() == item['sha256']
+print('Original ZIP, 11 members and supplemental GitHub response verified')
+PY
+Original ZIP, 11 members and supplemental GitHub response verified
+README.md: exit 0
+Reproduction command from triage-delta.md:
+timeout --signal=TERM --kill-after=2s 20s python3 -B - <<'PY'
+import json
+from pathlib import Path
+import re
+from zipfile import ZipFile
+
+root = Path('docs/research/assets/sonarcloud')
+def issues(directory):
+    with ZipFile(root / directory / 'raw.zip') as archive:
+        response = json.loads(archive.read('sonar-issues.json'))
+    items = response['payload']['issues']
+    result = {item['key']: item for item in items}
+    assert len(items) == len(result) == response['payload']['paging']['total']
+    return result
+
+old = issues('actions-39066906674')
+new = issues('actions-39081773775')
+unchanged = {key for key in old.keys() & new.keys() if old[key] == new[key]}
+changed = old.keys() & new.keys() - unchanged
+added = new.keys() - old.keys()
+removed = old.keys() - new.keys()
+assert (len(old), len(new), len(unchanged), len(changed), len(added), len(removed)) == (91, 115, 86, 3, 26, 2)
+original_rows = re.findall(r'^\| `(Aa[^`]+)` \|', (root / 'v37-triage-fb159eeb/ledger.md').read_text(), re.MULTILINE)
+delta_rows = re.findall(r'^\| `(Aa[^`]+)` \|', (root / 'actions-39081773775/triage-delta.md').read_text(), re.MULTILINE)
+assert len(original_rows) == len(set(original_rows)) == 91
+assert set(original_rows) == old.keys()
+assert len(delta_rows) == len(set(delta_rows)) == 31
+assert set(delta_rows) == changed | added | removed
+assert unchanged | (set(delta_rows) - removed) == new.keys()
+assert sum(item['rule'].startswith('pythonsecurity:') for item in new.values()) == 23
+print('115 keys reconciled: 86 unchanged, 3 updated, 26 added; 2 historical keys absent; all 23 security issues accounted for')
+PY
+115 keys reconciled: 86 unchanged, 3 updated, 26 added; 2 historical keys absent; all 23 security issues accounted for
+triage-delta.md: exit 0

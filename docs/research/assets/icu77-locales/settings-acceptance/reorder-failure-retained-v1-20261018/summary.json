@@ -1,0 +1,50 @@
+{
+  "schema": "boostregexrs.icu77-reorder-failure-retention.v1",
+  "status": "retained_failure_evidence",
+  "build": {
+    "path": "docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/summary.json",
+    "bytes": 10778,
+    "sha256": "a7a09f4597d83e7be08974c37c6e13b3e63d8f514202fd5e7ff999bd7c8ad680"
+  },
+  "failed_run": {
+    "path": "docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/summary.json",
+    "bytes": 148144,
+    "sha256": "28787e1632f81e579bf469b8844cd0a3c5f344ff78fd919434760526b4831bf5"
+  },
+  "binaries": {
+    "failed-settings-probe": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/target/research/icu77-cloud/build/settings-probe/api-build-v1-20261018/release/icu77-settings-probe",
+      "bytes": 644032,
+      "sha256": "875e5cee3c137b2d8bdb0878728a7000baa2e38e67090e9c07e88ac546ffec2c"
+    },
+    "native-reference": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/target/research/icu77-cloud/build/settings-probe/api-build-v1-20261018/settings-reference",
+      "bytes": 33860192,
+      "sha256": "f7d034c8d40bf8a2d0d0a5681dae0f483176f17d30353b5e1147297e20bf6f8d"
+    },
+    "frozen-main-cli": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/target/research/icu77-cloud/build/fcd-repair/rust-v2-20261017T234800Z/release/icu77-root-primary",
+      "bytes": 1659856,
+      "sha256": "3fbe753614aba5fbd346fcdc0002f0a278859bfe3dc8e8657e3de89a9fc2afb4"
+    }
+  },
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "tools/icu-probe/primary/settings-probe/retain_failure.py",
+    "--build",
+    "docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/summary.json",
+    "--run",
+    "docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018",
+    "--main-candidate",
+    "target/research/icu77-cloud/build/fcd-repair/rust-v2-20261017T234800Z/release/icu77-root-primary",
+    "--main-provenance",
+    "docs/research/assets/icu77-locales/fcd-repair/rust-v2-20261017T234800Z/summary.json",
+    "--output",
+    "docs/research/assets/icu77-locales/settings-acceptance/reorder-failure-retained-v1-20261018"
+  ],
+  "archive": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-failure-retained-v1-20261018/raw.tar.gz",
+    "bytes": 14276175,
+    "sha256": "43dd9efd39df9cd65c0debbfb74b8d5fd0c1940f5e94c742f5f0072ca25e027d"
+  }
+}

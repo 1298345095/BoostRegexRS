@@ -1,0 +1,8 @@
+test_existing_empty_directory_is_also_refused_before_network (test_sonar_output.SonarOutputTests.test_existing_empty_directory_is_also_refused_before_network) ... ok
+test_existing_observation_is_unchanged_and_never_contacts_server (test_sonar_output.SonarOutputTests.test_existing_observation_is_unchanged_and_never_contacts_server) ... ok
+test_new_external_output_retains_a_failed_first_response (test_sonar_output.SonarOutputTests.test_new_external_output_retains_a_failed_first_response) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

@@ -1,0 +1,21 @@
+locale	strength	requested_locale	valid_locale	actual_locale	normalization_mode	normalization_raw
+root	PRIMARY				UCOL_OFF	16
+root	IDENTICAL				UCOL_OFF	16
+en_US	PRIMARY	en_US	en_US		UCOL_OFF	16
+en_US	IDENTICAL	en_US	en_US		UCOL_OFF	16
+tr_TR	PRIMARY	tr_TR	tr	tr	UCOL_OFF	16
+tr_TR	IDENTICAL	tr_TR	tr	tr	UCOL_OFF	16
+de_DE	PRIMARY	de_DE	de		UCOL_OFF	16
+de_DE	IDENTICAL	de_DE	de		UCOL_OFF	16
+sv_SE	PRIMARY	sv_SE	sv	sv	UCOL_OFF	16
+sv_SE	IDENTICAL	sv_SE	sv	sv	UCOL_OFF	16
+fr_CA	PRIMARY	fr_CA	fr_CA	fr_CA	UCOL_OFF	16
+fr_CA	IDENTICAL	fr_CA	fr_CA	fr_CA	UCOL_OFF	16
+es_ES@collation=traditional	PRIMARY	es_ES@collation=traditional	es@collation=traditional	es@collation=traditional	UCOL_OFF	16
+es_ES@collation=traditional	IDENTICAL	es_ES@collation=traditional	es@collation=traditional	es@collation=traditional	UCOL_OFF	16
+zh_CN	PRIMARY	zh_CN	zh_Hans_CN	zh	UCOL_OFF	16
+zh_CN	IDENTICAL	zh_CN	zh_Hans_CN	zh	UCOL_OFF	16
+ja_JP	PRIMARY	ja_JP	ja	ja	UCOL_OFF	16
+ja_JP	IDENTICAL	ja_JP	ja	ja	UCOL_OFF	16
+th_TH	PRIMARY	th_TH	th	th	UCOL_ON	17
+th_TH	IDENTICAL	th_TH	th	th	UCOL_ON	17

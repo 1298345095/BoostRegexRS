@@ -1,0 +1,3 @@
+Artifact digest, ZIP CRC and all 26 member hashes verified.
+Completed check: exact requested SHA; conclusion failure; live PR inventory remains unpinned.
+161 unique issues, 24 security issues; delta 86 unchanged / 27 changed / 48 added / 2 absent.

@@ -1,0 +1,74 @@
+{
+  "schema": "boostregexrs.probe-evidence-archive.v1",
+  "created_utc": "2026-10-17T11:51:18.617653+00:00",
+  "source_directory": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/target/research/icu77-cloud/primary/review-contexts-2048",
+  "source_summary_sha256": "f2de2e680ce421f93f6f31d7b846d55382c96318fcb343706fa13500406184b0",
+  "archive": {
+    "path": "raw.tar.gz",
+    "bytes": 357971,
+    "sha256": "2b87854dc115f111ac6a538f484446354a49d3d8640c5db3f5c7e722c6418c45"
+  },
+  "uncompressed_file_bytes": 4106192,
+  "files": [
+    {
+      "path": "candidate-keys.tsv",
+      "bytes": 248832,
+      "sha256": "8434f8cdfb0a5a06143af40e9f284c8ec86223fb2bdc49ae9fef7d30283e7d19"
+    },
+    {
+      "path": "candidate-traces.jsonl",
+      "bytes": 2626728,
+      "sha256": "00b864aa64169f8f8ba0cd8e1e37a4c7a2326db54167e6eb12d7b1bd967b4cc7"
+    },
+    {
+      "path": "contexts-source.json",
+      "bytes": 199136,
+      "sha256": "e57e7c3ee3d0997f2ee2eb79d7b5fdda710fda78864d7ac6b458d5bfa59a38a2"
+    },
+    {
+      "path": "inputs-u16.tsv",
+      "bytes": 84461,
+      "sha256": "2530dd745d8311e1ffb336e7e87595be2bf807eaf6773aea3655f4477a33c31b"
+    },
+    {
+      "path": "inputs-utf8.tsv",
+      "bytes": 90895,
+      "sha256": "40bbd8e0e176a695da5e7cf1e11e524d2f6f1da2f4621bd4340d2d8e18b5723a"
+    },
+    {
+      "path": "oracle-keys.tsv",
+      "bytes": 248832,
+      "sha256": "8434f8cdfb0a5a06143af40e9f284c8ec86223fb2bdc49ae9fef7d30283e7d19"
+    },
+    {
+      "path": "oracle-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reference-ce-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reference-ces.tsv",
+      "bytes": 249143,
+      "sha256": "7fc0ff4b78bab191c03373789a6491c4de14620d994e07196e1edead2c9a865a"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 9031,
+      "sha256": "20e1eeaa009ab9fda369ebf6fd4dd0587295cc61dc96250421260db7797d377e"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 349134,
+      "sha256": "f2de2e680ce421f93f6f31d7b846d55382c96318fcb343706fa13500406184b0"
+    }
+  ],
+  "archiver": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS/tools/icu-probe/primary/archive_evidence.py",
+    "sha256": "70126361b4dfc5b04671206d8629ea5453f6bc6044091f75946980b1372ba166"
+  },
+  "preservation": "All source files retained byte-for-byte; source directory was not changed"
+}

@@ -1,0 +1,346 @@
+{
+  "schema": "boostregexrs.no-except-flow-retention.v1",
+  "scope": "Returned compilation and later native operation; V03 remains open",
+  "native_binary_sha256": "05301742f19863fa8bd7ee328983e2df5924de1da0aa37e99fce1ffb8e45a97e",
+  "validation_sources": {
+    "oracle.cpp": "e0c3794de5c1aef8f004a0a9b930c25281653ec02ff3e5bd31523d66547f0d3f",
+    "protocol.py": "08bfca6c996e1449df8f099b0a879d0e0dd65284a733185bda11995d80eec675",
+    "compare.py": "d884e3747711c7d7a27fc400d4f8eb45735f8faa75d37a8162f77c38c6a252e9",
+    "test_comparison.py": "059e049856a94c00f207f966c2a6df4c52a287345335c1f8dd37f81614a59e8b",
+    "run.py": "5db4cb22b413b8722067742cbf66f513edebeb21771946e0d3c1f4e861260e85",
+    "resource_cases.py": "ca16393ee3424de21b20a8f75e265713a8295dd318e1fa43e0f3b8dd00c7ec16",
+    "verify_resource_errors.py": "bd15c29cc52dcf6ac2b99e301cd3da53ea9459ef9c381c6df052138c942a41c3",
+    "test_reference_failures.py": "db0006ce8cec7382a0ec8e79c4583aecb318d094f2c6e48152081ba36757ee69",
+    "README.md": "1f2c9febfe73918ca94eea18ac1fecb84dff94f910aedbd78e59b67d10a6b06c",
+    "source_identity.py": "95cf28248cac275d8691370b316cef07074d6f7d2340bb2782c9a4141630f5b9",
+    "NOTICE.md": "86ca95a317a3824d7c98ea5c6011c281e2a63ce1527d04bf5856887ab1213a13",
+    "LICENSE_1_0.txt": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+  },
+  "original_archive_unchanged": true,
+  "legacy_dependency_supplement": {
+    "schema": "boostregexrs.legacy-collector-supplement.v1",
+    "original_archive": {
+      "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/retained/raw.tar.xz",
+      "sha256": "c5e1317d7f658fd8c6f72c1ad93b02ab441521dd8bcc6ab4be7bb9dcc94671b2"
+    },
+    "collector_member": "validation-source/tools/regex-oracle/run.py",
+    "collector_sha256": "b53891a48e8c7eadaee979f24aac984de9f74bc68d57e93caea077a7bf6c16a1",
+    "dependency": {
+      "path": "generate_cases.py",
+      "bytes": 7922,
+      "sha256": "feef3d0beb6e391386a2bfe7956e4abd3c20744ee384efd45fec3c76bbfc5c14"
+    },
+    "verification_basis": "Current unmodified generator equals original before/summary.json source identity",
+    "original_archive_modified": false
+  },
+  "observations": {
+    "flow": {
+      "schema": "boostregexrs.no-except-flow-regression.v1",
+      "status": "passed",
+      "records": 18,
+      "enriched": [
+        "no-except-resource-search",
+        "no-except-resource-match",
+        "no-except-resource-iterate",
+        "no-except-resource-format",
+        "no-except-resource-replace",
+        "no-except-syntax-search",
+        "no-except-syntax-match",
+        "no-except-syntax-iterate",
+        "no-except-syntax-format",
+        "no-except-syntax-replace"
+      ],
+      "unchanged": [
+        "no-except-resource-compile",
+        "no-except-syntax-compile",
+        "no-except-valid-search",
+        "no-except-valid-match",
+        "no-except-valid-iterate",
+        "no-except-valid-format",
+        "no-except-valid-replace",
+        "no-except-valid-invalid-policies"
+      ],
+      "observed_compiled_objects": {
+        "resource": {
+          "mark_count": 18446744073709551615,
+          "compile_status": 18
+        },
+        "syntax": {
+          "mark_count": 18446744073709551615,
+          "compile_status": 8
+        }
+      },
+      "later_native_errors_preserved": 10,
+      "compile_exception_or_position_invented": false,
+      "scope": "Native returned compilation and subsequent operation observations; not Rust resource thresholds",
+      "files": {
+        "cases": {
+          "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-no-except-flow-20261018T015213Z/cases.tsv",
+          "bytes": 10735,
+          "sha256": "e3dbb1bbd43ae5bc7dca583801287e09f20e6e99a2d21f6577afa18262233815"
+        },
+        "before": {
+          "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-no-except-flow-20261018T015213Z/before/results.tsv",
+          "bytes": 3151,
+          "sha256": "3e82f0dd86230557afe7d4406dc6f809bcd8b40c02f8348dcec30ecf06d17206"
+        },
+        "after": {
+          "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-no-except-flow-20261018T015213Z/after/results.tsv",
+          "bytes": 3966,
+          "sha256": "d527af3c6e5370185c1e4839215eec8c4d67348f62b298eddb4a81513e82094f"
+        }
+      }
+    },
+    "base": {
+      "schema": "boostregexrs.native-resource-regression.v1",
+      "status": "passed",
+      "records": 12,
+      "repaired": [
+        {
+          "case_id": "compile-nesting-limit",
+          "schema": "boostregexrs.reference-failure.v1",
+          "phase": "compile",
+          "kind": "regex_resource",
+          "code": 18,
+          "position": 400
+        },
+        {
+          "case_id": "search-state-limit",
+          "schema": "boostregexrs.reference-failure.v1",
+          "phase": "search",
+          "kind": "regex_resource",
+          "code": 18,
+          "position": 0
+        },
+        {
+          "case_id": "match-state-limit",
+          "schema": "boostregexrs.reference-failure.v1",
+          "phase": "match",
+          "kind": "regex_resource",
+          "code": 18,
+          "position": 0
+        },
+        {
+          "case_id": "iterate-state-limit",
+          "schema": "boostregexrs.reference-failure.v1",
+          "phase": "iterate",
+          "kind": "regex_resource",
+          "code": 18,
+          "position": 0
+        },
+        {
+          "case_id": "format-state-limit",
+          "schema": "boostregexrs.reference-failure.v1",
+          "phase": "search",
+          "kind": "regex_resource",
+          "code": 18,
+          "position": 0
+        },
+        {
+          "case_id": "replace-state-limit",
+          "schema": "boostregexrs.reference-failure.v1",
+          "phase": "replace",
+          "kind": "regex_resource",
+          "code": 18,
+          "position": 0
+        }
+      ],
+      "unchanged": [
+        "ordinary-compile-error",
+        "ordinary-no-except",
+        "compile-nesting-no-except",
+        "compile-backtracking-pattern",
+        "invalid-match-policies"
+      ],
+      "enriched": [
+        {
+          "case_id": "invalid-no-except-search",
+          "preceding_compile": {
+            "mark_count": 18446744073709551615,
+            "compile_status": 8
+          }
+        }
+      ],
+      "execution_complexity_cases": 5,
+      "compile_complexity_cases": 1,
+      "execution_stack_cases": 0,
+      "not_executed": [
+        "allocator exhaustion",
+        "catalog failure",
+        "stack block exhaustion"
+      ],
+      "scope": "Native reference classification; not Rust resource-threshold equivalence",
+      "files": {
+        "cases": {
+          "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/cases.tsv",
+          "bytes": 4203,
+          "sha256": "6addd3cb25d5565324a343c6ff97063e2aceca8f22cd9b167ffacbb54647376c"
+        },
+        "before": {
+          "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/before/results.tsv",
+          "bytes": 1184,
+          "sha256": "a5835e2074756a0a2e0607e7ea3cbeb269145ba757ebe916aa900b3f6abe17a5"
+        },
+        "after": {
+          "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-no-except-flow-20261018T015213Z/base-after/results.tsv",
+          "bytes": 5043,
+          "sha256": "39e3968d95f283f4e88df5a2c8edd087fe6596217adad1cb20d57cbdb9ad8fa5"
+        }
+      }
+    },
+    "stack": {
+      "schema": "boostregexrs.native-resource-regression.v1",
+      "status": "passed",
+      "records": 1,
+      "repaired": [
+        {
+          "case_id": "match-stack-limit",
+          "schema": "boostregexrs.reference-failure.v1",
+          "phase": "match",
+          "kind": "regex_resource",
+          "code": 19,
+          "position": 0
+        }
+      ],
+      "unchanged": [],
+      "enriched": [],
+      "execution_complexity_cases": 0,
+      "compile_complexity_cases": 0,
+      "execution_stack_cases": 1,
+      "not_executed": [
+        "allocator exhaustion",
+        "catalog failure"
+      ],
+      "scope": "Native reference classification; not Rust resource-threshold equivalence",
+      "files": {
+        "cases": {
+          "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/stack-cases.tsv",
+          "bytes": 120115,
+          "sha256": "5e08e19e02fc97e7c0071b7cb9b436dc0f006bba6918a4755bbe3a6e26911f4f"
+        },
+        "before": {
+          "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/stack-before/results.tsv",
+          "bytes": 85,
+          "sha256": "a83f41e05cf01b218a5a0e0def237f5ed6317fccb5e97d271aaa44808a98407d"
+        },
+        "after": {
+          "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-no-except-flow-20261018T015213Z/stack-after/results.tsv",
+          "bytes": 331,
+          "sha256": "3b637bd915b4e04e8a914b3d30a2c0df1bb458398881f84ad7c7ae1e1ec70219"
+        }
+      }
+    },
+    "normal": {
+      "status": "passed_for_recorded_inputs",
+      "records": 13,
+      "counts": {
+        "compile_error_matched": 1,
+        "passed": 12
+      },
+      "by_operation": {
+        "compile": {
+          "compile_error_matched": 1,
+          "passed": 2
+        },
+        "format": {
+          "passed": 1
+        },
+        "iterate": {
+          "passed": 1
+        },
+        "match": {
+          "passed": 1
+        },
+        "replace": {
+          "passed": 1
+        },
+        "search": {
+          "passed": 6
+        }
+      },
+      "comparison": "Complete result fields including ordered ranges and capture histories",
+      "scope": "Byte traits in the classic C locale; full-library acceptance remains separately tracked"
+    },
+    "after_non_pass": {
+      "status": "differences_or_unverified",
+      "records": 18,
+      "counts": {
+        "operation_error_matched": 6,
+        "passed": 6,
+        "reference_resource_error": 6
+      },
+      "by_operation": {
+        "compile": {
+          "passed": 1,
+          "reference_resource_error": 1
+        },
+        "format": {
+          "operation_error_matched": 1,
+          "passed": 1,
+          "reference_resource_error": 1
+        },
+        "iterate": {
+          "operation_error_matched": 1,
+          "passed": 1,
+          "reference_resource_error": 1
+        },
+        "match": {
+          "operation_error_matched": 1,
+          "passed": 1,
+          "reference_resource_error": 1
+        },
+        "replace": {
+          "operation_error_matched": 1,
+          "passed": 1,
+          "reference_resource_error": 1
+        },
+        "search": {
+          "operation_error_matched": 2,
+          "passed": 1,
+          "reference_resource_error": 1
+        }
+      },
+      "comparison": "Complete result fields including ordered ranges and capture histories",
+      "scope": "Byte traits in the classic C locale; full-library acceptance remains separately tracked"
+    },
+    "before_non_pass": {
+      "status": "differences_or_unverified",
+      "records": 18,
+      "counts": {
+        "operation_error_matched": 1,
+        "passed": 6,
+        "reference_error": 10,
+        "reference_resource_error": 1
+      },
+      "by_operation": {
+        "compile": {
+          "passed": 1,
+          "reference_resource_error": 1
+        },
+        "format": {
+          "passed": 1,
+          "reference_error": 2
+        },
+        "iterate": {
+          "passed": 1,
+          "reference_error": 2
+        },
+        "match": {
+          "passed": 1,
+          "reference_error": 2
+        },
+        "replace": {
+          "passed": 1,
+          "reference_error": 2
+        },
+        "search": {
+          "operation_error_matched": 1,
+          "passed": 1,
+          "reference_error": 2
+        }
+      },
+      "comparison": "Complete result fields including ordered ranges and capture histories",
+      "scope": "Byte traits in the classic C locale; full-library acceptance remains separately tracked"
+    }
+  }
+}

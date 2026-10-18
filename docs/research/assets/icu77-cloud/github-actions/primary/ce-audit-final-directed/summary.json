@@ -1,0 +1,55 @@
+{
+  "schema": "boostregexrs.icu77-primary-ce-audit.v1",
+  "scope": "finite root CE64 diagnostic, including end sentinel; not IDENTICAL acceptance",
+  "input": {
+    "path": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/cases/directed.tsv",
+    "bytes": 1199984,
+    "sha256": "217ba000c41ce28de73d72664f653931c59fa0dc241756b38edbe226a53b8a12"
+  },
+  "reference_executable": {
+    "path": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/build/primary-export/trace-root",
+    "bytes": 33856,
+    "sha256": "c8d1ac2dcbd156a5c196e3062ab583c3e4d5624a0d7beedcb2ed7b8a7e599956"
+  },
+  "candidate_executable": {
+    "path": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/build/primary/release/icu77-root-primary",
+    "bytes": 1320864,
+    "sha256": "023c79f7a5c321370d131985bc1a3cf0eaaea35827b87b99dff70167d7c77c74"
+  },
+  "data": {
+    "path": "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/data/root-icu77.bin",
+    "bytes": 751804,
+    "sha256": "7aefc773d90fc2006c236720cd4e9220720efb33c7b8274ffeb24b494de3034e"
+  },
+  "counts": {
+    "total": 12062,
+    "passed": 12062,
+    "differences": 0,
+    "unsupported": 0,
+    "reference_error": 0
+  },
+  "differences": [],
+  "unsupported": [],
+  "evidence": [
+    {
+      "path": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/ce-audit-final-directed/inputs-u16.tsv",
+      "bytes": 1347151,
+      "sha256": "465baf4cd010b929a2ecdf4ca89eb42d4f5f9b015e7b583768e266769923dde2"
+    },
+    {
+      "path": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/ce-audit-final-directed/reference-ces.tsv",
+      "bytes": 4263389,
+      "sha256": "4be035bf13e86e497c3f885f53c1bbace45edf9ccaf6f0b97a89edaa8a47e8f8"
+    },
+    {
+      "path": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/ce-audit-final-directed/candidate-keys.tsv",
+      "bytes": 2444516,
+      "sha256": "cd3bd6e86988cbea5ad6c5d18c67bf9a13a9ff8921f3ffdb47e8a34c68000b9b"
+    },
+    {
+      "path": "/home/runner/work/BoostRegexRS/BoostRegexRS/target/research/icu77-cloud/primary/ce-audit-final-directed/candidate-traces.jsonl",
+      "bytes": 33938285,
+      "sha256": "8ce74d9db59622803b4b3f67c627ca81732ed2420e7c04a42da2707898d45034"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+test_command_arguments_are_literal_and_never_evaluated_by_a_shell (test_cli_trust_boundaries.CliTrustBoundaries.test_command_arguments_are_literal_and_never_evaluated_by_a_shell) ... [timeout 5s] /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -c 'import sys; print(repr(sys.argv[1]))' '; touch '"'"'/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpsgw3auiw/unexpected-shell-execution'"'"' ; $(touch '"'"'/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpsgw3auiw/unexpected-shell-execution'"'"')'
+  stdout: /workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpsgw3auiw/literal-arguments.log
+  stderr: /workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpsgw3auiw/literal-arguments.stderr.log
+ok
+test_explicit_output_paths_can_be_outside_the_checkout (test_cli_trust_boundaries.CliTrustBoundaries.test_explicit_output_paths_can_be_outside_the_checkout) ... ok
+test_failed_process_keeps_its_log_and_is_not_reported_as_success (test_cli_trust_boundaries.CliTrustBoundaries.test_failed_process_keeps_its_log_and_is_not_reported_as_success) ... [timeout 300s] /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -c 'print('"'"'failure evidence'"'"'); raise SystemExit(7)'
+  stdout: /workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpe39c1tsh/failure.log
+  stderr: /workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tmpe39c1tsh/failure.stderr.log
+ok
+test_a_later_redirect_cannot_restore_stripped_credentials (test_sonar_redirects.SonarRedirectTests.test_a_later_redirect_cannot_restore_stripped_credentials) ... ok
+test_anonymous_redirects_do_not_add_credentials (test_sonar_redirects.SonarRedirectTests.test_anonymous_redirects_do_not_add_credentials) ... ok
+test_cross_host_removes_authentication (test_sonar_redirects.SonarRedirectTests.test_cross_host_removes_authentication) ... ok
+test_cross_port_removes_authentication (test_sonar_redirects.SonarRedirectTests.test_cross_port_removes_authentication) ... ok
+test_fetch_uses_the_scoped_handler_and_finite_http_timeout (test_sonar_redirects.SonarRedirectTests.test_fetch_uses_the_scoped_handler_and_finite_http_timeout) ... ok
+test_https_downgrade_removes_authentication (test_sonar_redirects.SonarRedirectTests.test_https_downgrade_removes_authentication) ... ok
+test_same_origin_preserves_authentication (test_sonar_redirects.SonarRedirectTests.test_same_origin_preserves_authentication) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.085s
+
+OK

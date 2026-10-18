@@ -1,0 +1,99 @@
+{
+  "packages": [
+    {
+      "name": "icu77-root-primary",
+      "version": "0.1.0",
+      "id": "path+file:///home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust#icu77-root-primary@0.1.0",
+      "license": "Unicode-3.0",
+      "license_file": null,
+      "description": "Isolated pure Rust ICU 77.1 root PRIMARY compatibility prototype",
+      "source": null,
+      "dependencies": [],
+      "targets": [
+        {
+          "kind": [
+            "lib"
+          ],
+          "crate_types": [
+            "lib"
+          ],
+          "name": "icu77_root_primary",
+          "src_path": "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust/src/lib.rs",
+          "edition": "2024",
+          "doc": true,
+          "doctest": true,
+          "test": true
+        },
+        {
+          "kind": [
+            "bin"
+          ],
+          "crate_types": [
+            "bin"
+          ],
+          "name": "icu77-root-primary",
+          "src_path": "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust/src/main.rs",
+          "edition": "2024",
+          "doc": true,
+          "doctest": false,
+          "test": true
+        },
+        {
+          "kind": [
+            "test"
+          ],
+          "crate_types": [
+            "bin"
+          ],
+          "name": "cli",
+          "src_path": "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust/tests/cli.rs",
+          "edition": "2024",
+          "doc": false,
+          "doctest": false,
+          "test": true
+        },
+        {
+          "kind": [
+            "test"
+          ],
+          "crate_types": [
+            "bin"
+          ],
+          "name": "root_primary",
+          "src_path": "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust/tests/root_primary.rs",
+          "edition": "2024",
+          "doc": false,
+          "doctest": false,
+          "test": true
+        }
+      ],
+      "features": {},
+      "manifest_path": "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust/Cargo.toml",
+      "metadata": null,
+      "publish": [],
+      "authors": [],
+      "categories": [],
+      "keywords": [],
+      "readme": "README.md",
+      "repository": null,
+      "homepage": null,
+      "documentation": null,
+      "edition": "2024",
+      "links": null,
+      "default_run": null,
+      "rust_version": null
+    }
+  ],
+  "workspace_members": [
+    "path+file:///home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust#icu77-root-primary@0.1.0"
+  ],
+  "workspace_default_members": [
+    "path+file:///home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust#icu77-root-primary@0.1.0"
+  ],
+  "resolve": null,
+  "target_directory": "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust/target",
+  "build_directory": "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust/target",
+  "version": 1,
+  "workspace_root": "/home/runner/work/BoostRegexRS/BoostRegexRS/tools/icu-probe/primary/rust",
+  "metadata": null
+}

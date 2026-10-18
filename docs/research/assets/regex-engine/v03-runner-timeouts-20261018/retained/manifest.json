@@ -1,0 +1,165 @@
+{
+  "schema": "boostregexrs.probe-evidence-archive.v1",
+  "created_utc": "2026-10-18T10:08:38.995802+00:00",
+  "source_directory": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-runner-timeouts-20261018",
+  "source_summary_sha256": "ce0274bad5d221233a29808445c27b0634039d812cc74b95ff103f8f12e1025f",
+  "archive": {
+    "path": "raw.tar.xz",
+    "bytes": 15552,
+    "sha256": "d2b85254d688e68445ff2e187c8ffb7984a6c68f694e2c7ebc1077a5aed23a70",
+    "compression": "xz"
+  },
+  "uncompressed_file_bytes": 165916,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3045,
+      "sha256": "0221704ead571ff8a5fb26e1ef4327d86944b2a3a356b6a497332a633217bc87"
+    },
+    {
+      "path": "after/protocol-suite.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "after/protocol-suite.process.json",
+      "bytes": 869,
+      "sha256": "b16b4eff01402048907b638f98c3770111e7322f2b3642503d07a7e4e97ef28e"
+    },
+    {
+      "path": "after/protocol-suite.stderr.log",
+      "bytes": 18472,
+      "sha256": "b029c850cf20e67a36700ea658491d030abf565f5f09e1d056c71c04e8a51eff"
+    },
+    {
+      "path": "after/source/tools/icu-probe/cloud/prepare.py",
+      "bytes": 17824,
+      "sha256": "88d68d41503f5676651510cd98be7f88ec67f0d6dc3409f4ce65240a256eefe9"
+    },
+    {
+      "path": "after/source/tools/regex-oracle/protocol.py",
+      "bytes": 9698,
+      "sha256": "08bfca6c996e1449df8f099b0a879d0e0dd65284a733185bda11995d80eec675"
+    },
+    {
+      "path": "after/source/tools/regex-oracle/run.py",
+      "bytes": 7733,
+      "sha256": "4855f0f2b21bb65e0cdfc6cdb7c209d68c4cd28db11903ba1deb6afaaf70095b"
+    },
+    {
+      "path": "after/source/tools/regex-oracle/test_runner_timeouts.py",
+      "bytes": 2736,
+      "sha256": "d570281af5ec904c10ba203f2f1c583f83e74968dd8f3b8bdc6fd61102974954"
+    },
+    {
+      "path": "after/source-identity.json",
+      "bytes": 633,
+      "sha256": "2dff70e80fed4c32f3586edd7b1cd51e29152967f3b7b1e48a646c236e7570e8"
+    },
+    {
+      "path": "after/targeted.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "after/targeted.process.json",
+      "bytes": 871,
+      "sha256": "2c35ac37cd133f2138097215417e572efa0e6102bfc3154bf3e8e850996216e3"
+    },
+    {
+      "path": "after/targeted.stderr.log",
+      "bytes": 571,
+      "sha256": "3ac9311a309fd1cae991cb7111db8bdaf7f21eb7e33ad3c5564b6457e8fe27d4"
+    },
+    {
+      "path": "after-import-fix/protocol-suite.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "after-import-fix/protocol-suite.process.json",
+      "bytes": 891,
+      "sha256": "f51a6f9b02683079a7c49c281bbddc68e054ea672edc0dfb6dbd47c45dd76191"
+    },
+    {
+      "path": "after-import-fix/protocol-suite.stderr.log",
+      "bytes": 4977,
+      "sha256": "964f975fe159c53349ed632328b5c8d2258a3d1f6bc76e84fb528d67d5bde77b"
+    },
+    {
+      "path": "after-import-fix/source/tools/icu-probe/cloud/prepare.py",
+      "bytes": 17824,
+      "sha256": "88d68d41503f5676651510cd98be7f88ec67f0d6dc3409f4ce65240a256eefe9"
+    },
+    {
+      "path": "after-import-fix/source/tools/regex-oracle/protocol.py",
+      "bytes": 9698,
+      "sha256": "08bfca6c996e1449df8f099b0a879d0e0dd65284a733185bda11995d80eec675"
+    },
+    {
+      "path": "after-import-fix/source/tools/regex-oracle/run.py",
+      "bytes": 7733,
+      "sha256": "4855f0f2b21bb65e0cdfc6cdb7c209d68c4cd28db11903ba1deb6afaaf70095b"
+    },
+    {
+      "path": "after-import-fix/source/tools/regex-oracle/test_runner_timeouts.py",
+      "bytes": 2924,
+      "sha256": "da01336eaeb33afa446002971ad1d8f011dbcb6d0b13dca5a59c6d044516f173"
+    },
+    {
+      "path": "after-import-fix/source-identity.json",
+      "bytes": 633,
+      "sha256": "9a84b298d8b0fb8ce21e3d034b98a14c83c3abf4003251c7eed1fd99d9e7fd66"
+    },
+    {
+      "path": "before/source/tools/icu-probe/cloud/prepare.py",
+      "bytes": 17824,
+      "sha256": "88d68d41503f5676651510cd98be7f88ec67f0d6dc3409f4ce65240a256eefe9"
+    },
+    {
+      "path": "before/source/tools/regex-oracle/protocol.py",
+      "bytes": 9698,
+      "sha256": "08bfca6c996e1449df8f099b0a879d0e0dd65284a733185bda11995d80eec675"
+    },
+    {
+      "path": "before/source/tools/regex-oracle/run.py",
+      "bytes": 7495,
+      "sha256": "5db4cb22b413b8722067742cbf66f513edebeb21771946e0d3c1f4e861260e85"
+    },
+    {
+      "path": "before/source/tools/regex-oracle/test_runner_timeouts.py",
+      "bytes": 2736,
+      "sha256": "d570281af5ec904c10ba203f2f1c583f83e74968dd8f3b8bdc6fd61102974954"
+    },
+    {
+      "path": "before/source-identity.json",
+      "bytes": 633,
+      "sha256": "6a7c9ad5c26df54486f2204dad74ed340062cd2ab0fbee481fa0cb6b16f07309"
+    },
+    {
+      "path": "before/tests.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "before/tests.process.json",
+      "bytes": 867,
+      "sha256": "b15c52765e5da2020dc6c4a048b69377d9d217b148cff5df203dcdb355a6f649"
+    },
+    {
+      "path": "before/tests.stderr.log",
+      "bytes": 18335,
+      "sha256": "6315234f764d25ccbe0fba5905c1aa4a4fbb89961b6ca1b1249100b00b42d1cb"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 1196,
+      "sha256": "ce0274bad5d221233a29808445c27b0634039d812cc74b95ff103f8f12e1025f"
+    }
+  ],
+  "archiver": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/archive_evidence.py",
+    "sha256": "f97e7d0e4856b1d673f260d1b228fa0e32731b490e0f103216bd80f4c8a0d54c"
+  },
+  "preservation": "All source files retained byte-for-byte; source directory was not changed"
+}
