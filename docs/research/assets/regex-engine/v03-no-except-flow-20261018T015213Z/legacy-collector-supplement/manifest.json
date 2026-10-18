@@ -1,0 +1,16 @@
+{
+  "schema": "boostregexrs.legacy-collector-supplement.v1",
+  "original_archive": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/regex-engine/v03-reference-errors-20261018T005707Z/retained/raw.tar.xz",
+    "sha256": "c5e1317d7f658fd8c6f72c1ad93b02ab441521dd8bcc6ab4be7bb9dcc94671b2"
+  },
+  "collector_member": "validation-source/tools/regex-oracle/run.py",
+  "collector_sha256": "b53891a48e8c7eadaee979f24aac984de9f74bc68d57e93caea077a7bf6c16a1",
+  "dependency": {
+    "path": "generate_cases.py",
+    "bytes": 7922,
+    "sha256": "feef3d0beb6e391386a2bfe7956e4abd3c20744ee384efd45fec3c76bbfc5c14"
+  },
+  "verification_basis": "Current unmodified generator equals original before/summary.json source identity",
+  "original_archive_modified": false
+}
