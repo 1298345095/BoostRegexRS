@@ -96,7 +96,7 @@ def input_error(value, kind):
 
 
 def compare(cases_path, reference_path, candidate_path, input_format="utf8", ordering_path=None,
-            *, strength="primary", approved_empty_exceptions=False):
+            *, strength="primary", approved_empty_exceptions=False, locale="root"):
     if strength not in ("primary", "identical"):
         raise ValueError("Unknown collation strength")
     if approved_empty_exceptions and strength != "identical":
@@ -177,7 +177,7 @@ def compare(cases_path, reference_path, candidate_path, input_format="utf8", ord
     complete &= ordering_counts["mismatched"] == 0 and ordering_counts["unavailable"] == 0
     return {
         "status": "passed_for_recorded_inputs" if complete else "differences_or_incomplete",
-        "scope": f"root {strength.upper()}; complete raw ICU bytes and actual Boost u32 keys"
+        "scope": f"{locale} {strength.upper()}; complete raw ICU bytes and actual Boost u32 keys"
                  + ("; empty IDENTICAL uses separately counted ADR-0005 expectations" if approved_empty_exceptions else ""),
         "input_format": input_format, "case_count": count, "totals": totals,
         "raw_icu_bytes_passed": raw_passed, "boost_u32_keys_passed": boost_passed,
