@@ -25,6 +25,15 @@ class CommandDeadlineTests(unittest.TestCase):
     def record(self):
         return json.loads(self.log.with_suffix(".process.json").read_text())
 
+    def test_deadline_and_grace_must_be_finite_and_positive_before_launch(self):
+        for parameter in ("timeout", "terminate_grace"):
+            for value in (float("nan"), float("inf"), float("-inf"), 0, -0.5):
+                with self.subTest(parameter=parameter, value=value):
+                    with self.assertRaisesRegex(ValueError, "finite and positive"):
+                        run_logged([str(self.directory / "missing-program")], cwd=self.directory,
+                                   log=self.log, **{parameter: value})
+                    self.assertEqual(list(self.directory.iterdir()), [])
+
     def test_success_preserves_both_streams_and_exit_status(self):
         input_path = self.directory / "input.txt"
         input_path.write_text("output\n")

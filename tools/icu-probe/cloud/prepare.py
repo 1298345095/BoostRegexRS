@@ -12,6 +12,7 @@ import concurrent.futures
 import datetime as dt
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import platform
@@ -21,6 +22,7 @@ import signal
 import subprocess
 import sys
 import tarfile
+import tempfile
 import threading
 import time
 
@@ -67,10 +69,16 @@ def digest(path: Path, algorithm: str = "sha256") -> str:
 
 def write_json(path: Path, value: object) -> None:
     """Write to the invoking developer's explicit destination, including outside the checkout."""
+    payload = json.dumps(value, indent=2, ensure_ascii=False) + "\n"
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_name(path.name + ".tmp")
-    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    temporary.replace(path)
+    descriptor, name = tempfile.mkstemp(dir=path.parent, prefix=path.name + ".", suffix=".tmp")
+    temporary = Path(name)
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8") as stream:
+            stream.write(payload)
+        temporary.replace(path)
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def file_identity(path: Path, relative_to: Path = REPO) -> dict:
@@ -203,8 +211,9 @@ def run_logged(command: list[str], *, cwd: Path, log: Path, env: dict | None = N
     registration, a cancellation check, reaping and metadata before unregistering.
     Only that safe point may unwind the controller or its download worker.
     """
-    if timeout <= 0 or terminate_grace <= 0:
-        raise ValueError("Command deadlines and termination grace must be positive")
+    if (not math.isfinite(timeout) or timeout <= 0 or
+            not math.isfinite(terminate_grace) or terminate_grace <= 0):
+        raise ValueError("Command deadlines and termination grace must be finite and positive")
     install_cancellation_handler()
     log.parent.mkdir(parents=True, exist_ok=True)
     errors = log.with_suffix(".stderr.log")
