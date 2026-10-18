@@ -1,0 +1,148 @@
+{
+  "repository": "1298345095/BoostRegexRS",
+  "workflow_run": 39081773775,
+  "workflow_run_url": "https://github.com/1298345095/BoostRegexRS/actions/runs/39081773775",
+  "workflow_source_commit": "70e9ac1a945d5f2c81f31e3f856e0ec268c5a2a0",
+  "artifact": {
+    "id": 12118764103,
+    "name": "sonar-evidence-39081773775-1",
+    "size_in_bytes": 66047,
+    "url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12118764103",
+    "archive_download_url": "https://api.github.com/repos/1298345095/BoostRegexRS/actions/artifacts/12118764103/zip",
+    "expired": false,
+    "created_at": "2026-10-18T00:10:36Z",
+    "expires_at": "2026-11-01T00:10:35Z",
+    "updated_at": "2026-10-18T00:10:36Z",
+    "digest": "sha256:e0907573be9b733049bb61507c076afed3b594745ee148f9fb04e33f96cce739",
+    "workflow_run": {
+      "id": 39081773775,
+      "repository_id": 1420839614,
+      "head_repository_id": 1420839614,
+      "head_branch": "work/root-primary-cloud",
+      "head_sha": "70e9ac1a945d5f2c81f31e3f856e0ec268c5a2a0"
+    }
+  },
+  "downloaded_utc": "2026-10-18T00:23:46.112Z",
+  "download_method": "GitHub connector download_workflow_artifact; original ZIP bytes verified against GitHub artifact digest",
+  "jobs": [
+    {
+      "id": 117540016518,
+      "name": "collect",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 39081773775,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Collect server responses without changing the gate",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Preserve collected server evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        }
+      ]
+    }
+  ],
+  "archive": "raw.zip",
+  "archive_sha256": "e0907573be9b733049bb61507c076afed3b594745ee148f9fb04e33f96cce739",
+  "archive_size_bytes": 66047,
+  "members": [
+    {
+      "path": "github-annotations.json",
+      "size": 33617,
+      "sha256": "a12b82e5a756c345403ac89b1f84b6589ede1881500f463af7260e2d7b6c89e9"
+    },
+    {
+      "path": "github-check-runs.json",
+      "size": 18974,
+      "sha256": "7dcaa71893df680a214face783965dfc97d3b7d88f1376f415ef500657b924c7"
+    },
+    {
+      "path": "sonar-authentication.json",
+      "size": 212,
+      "sha256": "6f4a09125aa2f4596d8afebcff18e1b7305d8271787d052826b6ba537bfcc29e"
+    },
+    {
+      "path": "sonar-issues.json",
+      "size": 458968,
+      "sha256": "e4c09e523de293f75d225aaf2858b99f90ba44b5ba4ed8d7578223b6bcd0db85"
+    },
+    {
+      "path": "sonar-quality-gate.json",
+      "size": 1490,
+      "sha256": "231ff09f078ad8124668711d49cddfdbb2f42c0d1cd0cdaa52d2d09f37440040"
+    },
+    {
+      "path": "sonar-rule-S2083.json",
+      "size": 1677,
+      "sha256": "7530edd7158b547463a9ac06e14a3274d2ac12ff0a185fc7075e9d5efdaa20a9"
+    },
+    {
+      "path": "sonar-rule-S8701.json",
+      "size": 1383,
+      "sha256": "4b842f21beea1f5b4611d79815ea9415f1a4854a56381bb530049f3dde766fb6"
+    },
+    {
+      "path": "sonar-rule-S8705.json",
+      "size": 1381,
+      "sha256": "a55d4561f941d2d34491c2c239dcd43cbf26f85acadce6d5250aa22b94e3f462"
+    },
+    {
+      "path": "sonar-rule-S8707.json",
+      "size": 1377,
+      "sha256": "854ae46da7c8b4c65d1e6448c67869bc97600a2416c0631d9be8ac8764437186"
+    },
+    {
+      "path": "sonar-web-api.json",
+      "size": 340754,
+      "sha256": "2428b8cce644631657a7d7d0f1e2d49f9eee0e98106f0be75df881379bbd7424"
+    },
+    {
+      "path": "summary.json",
+      "size": 1954,
+      "sha256": "af9be88cb1c54c66c76c6c5ef009cb5cc319c4453d09189fbe3c160c0e7126e5"
+    }
+  ],
+  "zip_crc_verified": true,
+  "supplemental_responses": [
+    {
+      "path": "collector-commit-check-runs.json",
+      "url": "https://api.github.com/repos/1298345095/BoostRegexRS/commits/70e9ac1a945d5f2c81f31e3f856e0ec268c5a2a0/check-runs?per_page=100",
+      "method": "GitHub connector github_fetch; original returned JSON body",
+      "retrieved_utc": null,
+      "retrieval_time_note": "The exact client retrieval timestamp was not separately recorded. The response retains the server's check start and completion timestamps.",
+      "size_bytes": 17444,
+      "sha256": "5c3922ccc0b3791425b7667f44e4d5ebbe2b4ea6e2d107cbacdf5f10ec0d35cf",
+      "purpose": "Observe the collector source commit's Sonar check separately from the historical commit targeted by the artifact. This response does not bind the artifact's live PR inventory to an analysis."
+    }
+  ]
+}
