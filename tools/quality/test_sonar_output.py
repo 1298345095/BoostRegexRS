@@ -45,7 +45,11 @@ class SonarOutputTests(unittest.TestCase):
         fetch.assert_called_once()
         response_path = self.output / "github-check-runs.json"
         self.assertEqual(json.loads(response_path.read_text(encoding="utf-8")), failed)
-        self.assertEqual(list(self.output.iterdir()), [response_path])
+        wait_path = self.output / "github-check-wait.json"
+        wait = json.loads(wait_path.read_text(encoding="utf-8"))
+        self.assertEqual(wait["status"], "error")
+        self.assertIn("response was preserved", wait["error"])
+        self.assertEqual(set(self.output.iterdir()), {response_path, wait_path})
 
 
 if __name__ == "__main__":

@@ -27,13 +27,30 @@ return the live PR state without a commit/analysis identifier. Those responses
 are explicitly marked `live_pr_unpinned` and `associated_commit_verified: false`;
 they must not be attributed to the historical commit named by the directory.
 
+The collector waits for the newest `SonarCloud Code Analysis` check whose
+`head_sha` equals `--commit` to complete. `--check-timeout` sets a positive
+wait deadline in seconds (default 150); polls are five seconds apart and each
+HTTP timeout is capped by the remaining wait budget. Check responses are saved
+individually as `github-check-runs.json`, then `github-check-runs-002.json`, etc.
+`github-check-wait.json` records selection, timing and a completed/error/timeout
+outcome. A missing, running or late check cannot be reported as completed.
+
+Immediately before and after the issue request, the collector records the
+supported `project_pull_requests/list` and `ce/component` APIs. Their documented
+parameters and Browse permission come from the archived `webservices/list`
+response. PR lists and project task metadata remain live observations: even
+matching commit fields or timestamps are not an immutable issue-query binding.
+The raw metadata, unavailable responses and request times are retained;
+`sonar_associated_commit_verified` remains false. No unsupported PR parameter is
+sent to the long-lived-branch `project_analyses/search` API.
+
 The `Collect Sonar quality evidence` Actions workflow runs the same read-only
 collector from GitHub's runner network when its workflow or collector changes.
 The collection command has a 240-second deadline within the five-minute job;
 partial responses are uploaded even when collection fails or times out.
 Select an existing analyzed commit with
-its `commit` dispatch input. Its automatic development-branch run uses the
-recorded IDENTICAL source commit. It uses only read permissions, with an optional
+its `commit` dispatch input. Its automatic development-branch run uses the pushed
+commit and waits up to 150 seconds for its Sonar check. It uses only read permissions, with an optional
 repository `SONAR_TOKEN` sent exclusively to SonarCloud. An absent token still
 allows a public API attempt. The workflow uploads the complete responses; retain
 those artifacts in this repository before their stated 14-day expiry. A successful

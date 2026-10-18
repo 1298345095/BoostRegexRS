@@ -32,12 +32,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          TARGET_COMMIT: ${{ inputs.commit || 'ecca4f8d007f7dc0eb71c19316a67542f25a6653' }}
+          TARGET_COMMIT: ${{ inputs.commit || github.sha }}
         run: |
           timeout --signal=TERM --kill-after=10s 240s \
             python3 -B tools/quality/collect_sonar_evidence.py \
             --commit "$TARGET_COMMIT" --pull-request 1 \
-            --inspect-access \
+            --inspect-access --check-timeout 150 \
             --output docs/research/assets/sonarcloud/actions-observation
       - name: Preserve collected server evidence
         if: always()
