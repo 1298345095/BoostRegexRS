@@ -126,16 +126,24 @@ alone is not a sufficient validity test: root `Zzzz-Latn` wraps the unused
 reserved-after-Latin lead `0x60` to zero without any split range. The loader
 retains this actual ICU table, and the regression recomputes it from its codes.
 
-The checked reordering constructor validates the retained representation before
-any primary is processed. Boundaries must increase, the last boundary must agree
-with the aligned minimum, partial boundaries must explain zero table slots on
-used leads, and the remaining table suffix must agree with the signed offsets
-and unchanged tail. Without retained split ranges, used leads cannot map to
-zero. Unused full leads are derived from the two reserved script intervals in
-the fixed `scriptsIndex`/`scriptStarts` data; they are not inferred from a
-particular locale or accepted solely because a supplied table contains zero.
-This preserves legitimate unused slots while rejecting the missing-range state
-that would otherwise index an empty range list during ordinary root collation.
+The checked reordering constructor validates the complete imported representation
+before any primary is processed. It regenerates the 256-byte table, retained
+split ranges and minimum from the requested integer codes and the fixed
+`scriptsIndex`/`scriptStarts` data. Every table byte and range must agree; the
+zero minimum used by `aliasReordering` is also accepted when no split ranges
+remain. This validation does not consult a locale profile or input/key samples.
+
+ICU's `uint8_t` table arithmetic can wrap even a used whole-byte lead to zero
+or `0xff` for a valid longer script order. The reduced native order
+`[120, 180, 177, 135, 82, 159, 78, 20, 28]` maps leads `0xfd` and `0xfe` to
+`0xff` and zero. A wrapped zero does not by itself prove a missing split range,
+and the retained ranges omit the prefix below the first split byte. Consequently,
+checking only byte categories or the retained range suffix rejects real ICU
+representations and cannot validate the entire table. Comparing the complete
+regenerated representation preserves the native wrapped values while rejecting
+both corrupted table bytes and omitted required ranges. The regression retains
+the native settings bytes and every strength's complete key, not an input-specific
+runtime exception.
 
 ## Locale data schemas
 

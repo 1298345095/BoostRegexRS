@@ -1,0 +1,66 @@
+{
+  "schema": "boostregexrs.icu77-reorder-regression.v1",
+  "icu": "77.1",
+  "unicode": "16.0.0",
+  "cldr": "47",
+  "codes": [
+    120,
+    180,
+    177,
+    135,
+    82,
+    159,
+    78,
+    20,
+    28
+  ],
+  "input_u16": "0061",
+  "field_origin": {
+    "path": "docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/native-settings.bin",
+    "bytes": 432,
+    "sha256": "c37c6773793e0b789f3439244f43f44b972c37b7b614700f05f1d8c998fc0ee5"
+  },
+  "key_origin": {
+    "path": "docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/batch-0008/native.tsv",
+    "bytes": 1596,
+    "sha256": "925fb5d8b34e9e13ac15a8a4ac0acccf0e611a857bdacc35bf75045a690d68d2"
+  },
+  "key_origin_row": "trial-0007",
+  "inspection": {
+    "path": "docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018/summary.json",
+    "bytes": 7467,
+    "sha256": "21d09d18e80876aac1822e020e9d148f4c4985c84cd6ab0619afcb817da39a19"
+  },
+  "reduction": {
+    "path": "docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018/summary.json",
+    "bytes": 45043,
+    "sha256": "62f4169fb9016d6e449e51b915905ad63e33cdaddb7ca50faa4745c7566ff932"
+  },
+  "importer": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/import_regression.py",
+    "bytes": 3496,
+    "sha256": "e924a004ac1be5939ae8d7bc85fb17a9fd0f000f3baf664c84b935e6e18d1595"
+  },
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "tools/icu-probe/primary/settings-probe/import_regression.py",
+    "--inspection",
+    "docs/research/assets/icu77-locales/settings-acceptance/reorder-fields-v1-20261018",
+    "--reduction",
+    "docs/research/assets/icu77-locales/settings-acceptance/reorder-reduced-v1-20261018",
+    "--output",
+    "tools/icu-probe/primary/rust/tests/data/reorder77"
+  ],
+  "fixtures": [
+    {
+      "path": "tools/icu-probe/primary/rust/tests/data/reorder77/wrapped-settings.bin",
+      "bytes": 432,
+      "sha256": "c37c6773793e0b789f3439244f43f44b972c37b7b614700f05f1d8c998fc0ee5"
+    },
+    {
+      "path": "tools/icu-probe/primary/rust/tests/data/reorder77/wrapped-a-keys.tsv",
+      "bytes": 130,
+      "sha256": "6b6fbf0a76dcb18baae287b89466a2aa9074297f117facdb1e3146c4d43126b8"
+    }
+  ]
+}

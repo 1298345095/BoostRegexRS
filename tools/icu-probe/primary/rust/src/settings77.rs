@@ -85,49 +85,31 @@ pub struct Reordering77 {
 }
 
 impl Reordering77 {
-    /// Read the actual ICU settings fields, without recomputing their order.
+    /// Read actual ICU fields and verify their complete pinned-data representation.
     pub fn from_icu(
         codes: Vec<i32>,
         table: [u8; 256],
         min_high_no_reorder: u32,
         ranges: Vec<u32>,
     ) -> Result<Self> {
-        if table[..3] != [0, 1, 2]
-            || table[255] != 255
-            || min_high_no_reorder & 0xffff != 0
-            || min_high_no_reorder > 0xff00_0000
-            || (min_high_no_reorder != 0 && min_high_no_reorder < 0x0300_0000)
-            || ranges.windows(2).any(|pair| pair[0] >> 16 >= pair[1] >> 16)
-            || ranges
-                .iter()
-                .any(|pair| !(-255..=255).contains(&((*pair as i16) as i32)))
-            || ranges
-                .first()
-                .is_some_and(|pair| pair >> 24 < 3 || pair & 0xff0000 == 0)
-            || (!ranges.is_empty()
-                && ranges.last().map(|pair| pair & 0xffff0000) != Some(min_high_no_reorder))
-            || ranges.last().is_some_and(|pair| pair & 0xffff == 0)
-            || (ranges.is_empty() && min_high_no_reorder & 0xff0000 != 0)
-        {
-            return Err(Error::Data("invalid primary reordering fields"));
-        }
-        let unused_leads = unused_primary_leads()?;
-        let mut split_leads = [false; 256];
-        for pair in &ranges {
-            if pair & 0xff0000 != 0 {
-                split_leads[(pair >> 24) as usize] = true;
-            }
-        }
-        for lead in 3..255 {
-            let byte = table[lead];
-            if (split_leads[lead] && byte != 0)
-                || (!split_leads[lead] && !unused_leads[lead] && !(3..255).contains(&byte))
-            {
-                return Err(Error::Data("unexplained or missing split primary lead"));
-            }
-        }
-        if !table_matches_ranges(&table, min_high_no_reorder, &ranges, &unused_leads) {
-            return Err(Error::Data("primary reorder table/ranges disagree"));
+        // ICU's uint8_t table arithmetic can wrap even used whole-byte leads
+        // to zero or 0xff. A zero is therefore not proof of a missing split.
+        // Also, retained ranges omit the prefix below the first split byte,
+        // so those ranges alone cannot validate every table slot. Check the
+        // full representation computed by the same pinned script-range rules.
+        let groups = ScriptGroups77::from_bytes(include_bytes!("../../data/locales/scripts.bin"))?;
+        let expected = groups
+            .make_reordering(&codes)
+            .map_err(|_| Error::Data("invalid primary reorder codes"))?
+            .ok_or(Error::Data("reorder fields for an inactive code list"))?;
+        // aliasReordering drops this minimum when no split ranges remain;
+        // setReordering preserves its last whole-byte limit. Both are native.
+        let valid_minimum = min_high_no_reorder == expected.min_high_no_reorder
+            || (expected.ranges.is_empty() && min_high_no_reorder == 0);
+        if table != expected.table || ranges != expected.ranges || !valid_minimum {
+            return Err(Error::Data(
+                "primary reorder fields differ from pinned ICU format",
+            ));
         }
         Ok(Self {
             codes,
@@ -165,72 +147,6 @@ impl Reordering77 {
             primary.wrapping_add(range << 24)
         }
     }
-}
-
-fn unused_primary_leads() -> Result<[bool; 256]> {
-    // makeReorderRanges leaves the two reserved script intervals unallocated.
-    // setReordering may wrap their unused table slots to zero. Derive these
-    // intervals from fixed ICU77 script metadata, not from particular settings.
-    let groups = ScriptGroups77::from_bytes(include_bytes!("../../data/locales/scripts.bin"))?;
-    let mut unused = [false; 256];
-    for slot in RESERVED_SCRIPT_SLOTS {
-        let index = usize::from(groups.scripts_index[groups.num_scripts + slot]);
-        if index != 0 {
-            let first = usize::from(groups.script_starts[index]).div_ceil(256);
-            let limit = usize::from(groups.script_starts[index + 1]) / 256;
-            for lead in unused.iter_mut().take(limit).skip(first) {
-                *lead = true;
-            }
-        }
-    }
-    Ok(unused)
-}
-
-fn table_matches_ranges(
-    table: &[u8; 256],
-    minimum: u32,
-    ranges: &[u32],
-    unused_leads: &[bool; 256],
-) -> bool {
-    // aliasReordering discards the minimum when there are no split ranges;
-    // setReordering retains its final whole-byte limit. Preserve both forms.
-    if ranges.is_empty() && minimum == 0 {
-        return true;
-    }
-    let mut lead = (ranges.first().copied().unwrap_or(minimum) >> 24) as usize;
-    let mut previous_limit = lead << 8;
-    for &pair in ranges {
-        let limit = (pair >> 16) as usize;
-        let offset = i32::from(pair as i16);
-        for (byte, &unused) in unused_leads
-            .iter()
-            .enumerate()
-            .take((limit - 1) / 256 + 1)
-            .skip(previous_limit / 256)
-        {
-            if !unused && !(3..255).contains(&(byte as i32 + offset)) {
-                return false;
-            }
-        }
-        previous_limit = limit;
-        let limit_lead = limit / 256;
-        while lead < limit_lead {
-            if table[lead] != (lead as i32 + offset) as u8 {
-                return false;
-            }
-            lead += 1;
-        }
-        if limit & 0xff != 0 {
-            // The caller already checked that every partial limit has a zero
-            // table slot. Later boundaries can share the same split lead.
-            lead = limit_lead + 1;
-        }
-    }
-    table
-        .iter()
-        .enumerate()
-        .skip(lead)
-        .all(|(lead, &byte)| byte == lead as u8)
 }
 
 /// Effective settings after tailoring defaults and caller overrides.
@@ -534,7 +450,15 @@ impl ScriptGroups77 {
             byte += 1;
         }
         let ranges = first_split.map_or_else(Vec::new, |first| ranges[first..].to_vec());
-        Reordering77::from_icu(codes.to_vec(), table, min_high, ranges).map(Some)
+        // These fields are constructed from validated script boundaries by
+        // ICU's algorithm. Imported fields use from_icu's independent full
+        // representation comparison; do not recursively validate this result.
+        Ok(Some(Reordering77 {
+            codes: codes.to_vec(),
+            table,
+            min_high_no_reorder: min_high,
+            ranges,
+        }))
     }
 
     fn script_index(&self, code: i32) -> usize {
