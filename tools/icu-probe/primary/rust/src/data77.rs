@@ -5,6 +5,7 @@
 //! loading and lookup use only Rust's standard library.
 
 use std::collections::BTreeMap;
+use std::sync::Arc;
 
 use crate::{Error, Result, decode_utf16_units};
 
@@ -61,14 +62,17 @@ impl Context {
 /// Immutable, version-checked full root collation data from ICU4C 77.1.
 #[derive(Debug)]
 pub struct Data77 {
+    base: Option<Arc<Data77>>,
     ranges: Vec<Range<u32>>,
     pub(crate) ce32s: Vec<u32>,
     pub(crate) ces: Vec<u64>,
     pub(crate) jamo: Vec<u32>,
     pub(crate) compressible: [bool; 256],
-    fcd: Vec<Range<u16>>,
+    fcd: Arc<[Range<u16>]>,
+    fcd_leads: Arc<[u8; 1024]>,
     contexts: BTreeMap<u32, Context>,
-    /// Effective root PRIMARY CollationSettings options, checked on loading.
+    /// Root PRIMARY metadata from the root blob, inherited by owner blobs.
+    /// A locale's effective settings are carried separately by `Settings77`.
     pub primary_options: u32,
     /// Exported identity/diagnostic value; root PRIMARY is non-shifted.
     pub variable_top: u32,
@@ -99,56 +103,16 @@ impl Data77 {
             ));
         }
 
-        let count = r.count(8)?;
-        let mut ranges = Vec::with_capacity(count);
-        for _ in 0..count {
-            ranges.push(Range {
-                end: r.u32()?,
-                value: r.u32()?,
-            });
-        }
-        validate_ranges(&ranges)?;
-
-        let count = r.count(4)?;
-        let mut ce32s = Vec::with_capacity(count);
-        for _ in 0..count {
-            ce32s.push(r.u32()?);
-        }
+        let OwnerTables {
+            ranges,
+            ce32s,
+            ces,
+            raw_contexts,
+            jamo,
+            compressible,
+        } = read_owner_tables(&mut r)?;
         if ce32s.is_empty() {
             return Err(Error::Data("missing NUL CE32"));
-        }
-
-        let count = r.count(8)?;
-        let mut ces = Vec::with_capacity(count);
-        for _ in 0..count {
-            ces.push(r.u64()?);
-        }
-
-        let count = r.count(2)?;
-        let mut raw_contexts = Vec::with_capacity(count);
-        for _ in 0..count {
-            raw_contexts.push(r.u16()?);
-        }
-
-        let count = r.count(4)?;
-        if count != 67 {
-            return Err(Error::Data("expected 19+21+27 Jamo CE32s"));
-        }
-        let mut jamo = Vec::with_capacity(count);
-        for _ in 0..count {
-            jamo.push(r.u32()?);
-        }
-
-        if r.count(1)? != 256 {
-            return Err(Error::Data("expected 256 primary compressibility flags"));
-        }
-        let mut compressible = [false; 256];
-        for flag in &mut compressible {
-            *flag = match r.take(1)?[0] {
-                0 => false,
-                1 => true,
-                _ => return Err(Error::Data("invalid primary compressibility flag")),
-            };
         }
 
         let count = r.count(6)?;
@@ -160,51 +124,69 @@ impl Data77 {
             });
         }
         validate_ranges(&fcd)?;
+        let fcd_leads = fcd_lead_flags(&fcd);
 
-        let count = r.count(12)?;
-        let mut contexts = BTreeMap::new();
-        let mut previous_context = None;
-        for _ in 0..count {
-            let index = r.u32()?;
-            let default = r.u32()?;
-            if previous_context.is_some_and(|previous| index <= previous) {
-                return Err(Error::Data("context indices must be strictly increasing"));
-            }
-            previous_context = Some(index);
-            let raw = raw_contexts
-                .get(index as usize..index as usize + 2)
-                .ok_or(Error::Data("context default outside raw contexts"))?;
-            if default != (u32::from(raw[0]) << 16) | u32::from(raw[1]) {
-                return Err(Error::Data("decoded and raw context defaults disagree"));
-            }
-            let mut context = Context {
-                default,
-                nodes: vec![ContextNode::default()],
-            };
-            let entries = r.count(8)?;
-            for _ in 0..entries {
-                let length = r.count(2)?;
-                let mut units = Vec::with_capacity(length);
-                for _ in 0..length {
-                    units.push(r.u16()?);
-                }
-                context.insert(&units, r.u32()?)?;
-            }
-            contexts.insert(index, context);
-        }
+        let contexts = read_contexts(&mut r, &raw_contexts)?;
         if r.pos != bytes.len() {
             return Err(Error::Data("unexpected bytes after final table segment"));
         }
         let data = Self {
+            base: None,
             ranges,
             ce32s,
             ces,
             jamo,
             compressible,
-            fcd,
+            fcd: fcd.into(),
+            fcd_leads: Arc::new(fcd_leads),
             contexts,
             primary_options,
             variable_top,
+            numeric_primary,
+        };
+        data.validate_ce32_references()?;
+        Ok(data)
+    }
+
+    /// Decode one published tailoring owner against its fixed root base.
+    /// CE32 indexes retain this owner's table identity, including aliased Jamo
+    /// values. FCD data is shared with root because all owners use its NFC data.
+    pub fn from_owner_bytes(bytes: &[u8], base: Arc<Self>) -> Result<Self> {
+        let mut r = Reader::new(bytes);
+        if r.take(8)? != b"BRSOWN77" || r.u32()? != 1 {
+            return Err(Error::Data("unsupported owner table magic/schema"));
+        }
+        for expected in [77, 1, 16, 0, 47, 0] {
+            if r.u32()? != expected {
+                return Err(Error::Data("expected ICU 77.1 / Unicode 16.0 / CLDR 47.0"));
+            }
+        }
+        if base.base.is_some() {
+            return Err(Error::Data("published ICU77 owner base must be root"));
+        }
+        let numeric_primary = r.u32()?;
+        let OwnerTables {
+            ranges,
+            ce32s,
+            ces,
+            raw_contexts,
+            jamo,
+            compressible,
+        } = read_owner_tables(&mut r)?;
+        let contexts = read_contexts(&mut r, &raw_contexts)?;
+        r.finish()?;
+        let data = Self {
+            fcd: Arc::clone(&base.fcd),
+            fcd_leads: Arc::clone(&base.fcd_leads),
+            primary_options: base.primary_options,
+            variable_top: base.variable_top,
+            base: Some(base),
+            ranges,
+            ce32s,
+            ces,
+            jamo,
+            compressible,
+            contexts,
             numeric_primary,
         };
         data.validate_ce32_references()?;
@@ -215,8 +197,39 @@ impl Data77 {
         self.ranges[self.ranges.partition_point(|range| range.end < cp)].value
     }
 
+    pub(crate) fn resolve(&self, cp: u32) -> Result<(&Self, u32)> {
+        let ce32 = self.lookup(cp);
+        if ce32 == 0xc0 {
+            let base = self
+                .base
+                .as_deref()
+                .ok_or(Error::Data("fallback without base data"))?;
+            Ok((base, base.lookup(cp)))
+        } else {
+            Ok((self, ce32))
+        }
+    }
+
     pub(crate) fn fcd16(&self, cp: u32) -> u16 {
         self.fcd[self.fcd.partition_point(|range| range.end < cp)].value
+    }
+
+    // CollationFCD tests UTF-16 units. In particular, a trail surrogate always
+    // has Lccc and never has Tccc, independently of its complete code point.
+    pub(crate) fn fcd_has_lccc(&self, unit: u16) -> bool {
+        match unit {
+            0xd800..=0xdbff => self.fcd_leads[usize::from(unit - 0xd800)] & 1 != 0,
+            0xdc00..=0xdfff => true,
+            _ => self.fcd16(u32::from(unit)) > 0xff,
+        }
+    }
+
+    pub(crate) fn fcd_has_tccc(&self, unit: u16) -> bool {
+        match unit {
+            0xd800..=0xdbff => self.fcd_leads[usize::from(unit - 0xd800)] & 2 != 0,
+            0xdc00..=0xdfff => false,
+            _ => self.fcd16(u32::from(unit)) & 0xff != 0,
+        }
     }
 
     pub(crate) fn context(&self, index: u32) -> Result<&Context> {
@@ -261,6 +274,130 @@ impl Data77 {
     }
 }
 
+/// Reconstruct CollationFCD's conservative lead-surrogate flags from the full
+/// fixed FCD table: bit 0 means any associated scalar has Lccc, bit 1 means any
+/// associated scalar has a nonzero FCD value. Each lead covers 1024 scalars.
+fn fcd_lead_flags(ranges: &[Range<u16>]) -> [u8; 1024] {
+    let mut flags = [0; 1024];
+    let mut start = 0;
+    for range in ranges {
+        if range.end >= 0x10000 && range.value != 0 {
+            let first = ((start.max(0x10000) - 0x10000) >> 10) as usize;
+            let last = ((range.end - 0x10000) >> 10) as usize;
+            let value = 2 | u8::from(range.value > 0xff);
+            for flag in &mut flags[first..=last] {
+                *flag |= value;
+            }
+        }
+        start = range.end + 1;
+    }
+    flags
+}
+
+struct OwnerTables {
+    ranges: Vec<Range<u32>>,
+    ce32s: Vec<u32>,
+    ces: Vec<u64>,
+    raw_contexts: Vec<u16>,
+    jamo: Vec<u32>,
+    compressible: [bool; 256],
+}
+
+fn read_owner_tables(r: &mut Reader<'_>) -> Result<OwnerTables> {
+    let count = r.count(8)?;
+    let mut ranges = Vec::with_capacity(count);
+    for _ in 0..count {
+        ranges.push(Range {
+            end: r.u32()?,
+            value: r.u32()?,
+        });
+    }
+    validate_ranges(&ranges)?;
+
+    let count = r.count(4)?;
+    let mut ce32s = Vec::with_capacity(count);
+    for _ in 0..count {
+        ce32s.push(r.u32()?);
+    }
+
+    let count = r.count(8)?;
+    let mut ces = Vec::with_capacity(count);
+    for _ in 0..count {
+        ces.push(r.u64()?);
+    }
+
+    let count = r.count(2)?;
+    let mut raw_contexts = Vec::with_capacity(count);
+    for _ in 0..count {
+        raw_contexts.push(r.u16()?);
+    }
+
+    let count = r.count(4)?;
+    if count != 67 {
+        return Err(Error::Data("expected 19+21+27 Jamo CE32s"));
+    }
+    let mut jamo = Vec::with_capacity(count);
+    for _ in 0..count {
+        jamo.push(r.u32()?);
+    }
+
+    if r.count(1)? != 256 {
+        return Err(Error::Data("expected 256 primary compressibility flags"));
+    }
+    let mut compressible = [false; 256];
+    for flag in &mut compressible {
+        *flag = match r.take(1)?[0] {
+            0 => false,
+            1 => true,
+            _ => return Err(Error::Data("invalid primary compressibility flag")),
+        };
+    }
+
+    Ok(OwnerTables {
+        ranges,
+        ce32s,
+        ces,
+        raw_contexts,
+        jamo,
+        compressible,
+    })
+}
+
+fn read_contexts(r: &mut Reader<'_>, raw_contexts: &[u16]) -> Result<BTreeMap<u32, Context>> {
+    let count = r.count(12)?;
+    let mut contexts = BTreeMap::new();
+    let mut previous_context = None;
+    for _ in 0..count {
+        let index = r.u32()?;
+        let default = r.u32()?;
+        if previous_context.is_some_and(|previous| index <= previous) {
+            return Err(Error::Data("context indices must be strictly increasing"));
+        }
+        previous_context = Some(index);
+        let raw = raw_contexts
+            .get(index as usize..index as usize + 2)
+            .ok_or(Error::Data("context default outside raw contexts"))?;
+        if default != (u32::from(raw[0]) << 16) | u32::from(raw[1]) {
+            return Err(Error::Data("decoded and raw context defaults disagree"));
+        }
+        let mut context = Context {
+            default,
+            nodes: vec![ContextNode::default()],
+        };
+        let entries = r.count(8)?;
+        for _ in 0..entries {
+            let length = r.count(2)?;
+            let mut units = Vec::with_capacity(length);
+            for _ in 0..length {
+                units.push(r.u16()?);
+            }
+            context.insert(&units, r.u32()?)?;
+        }
+        contexts.insert(index, context);
+    }
+    Ok(contexts)
+}
+
 fn validate_ranges<T>(ranges: &[Range<T>]) -> Result<()> {
     if ranges.is_empty()
         || ranges.last().is_none_or(|range| range.end != 0x10ffff)
@@ -302,7 +439,7 @@ impl<'a> Reader<'a> {
         Ok(value)
     }
 
-    fn u16(&mut self) -> Result<u16> {
+    pub(crate) fn u16(&mut self) -> Result<u16> {
         Ok(u16::from_le_bytes(
             self.take(2)?.try_into().expect("checked length"),
         ))
@@ -326,5 +463,23 @@ impl<'a> Reader<'a> {
             return Err(Error::Data("table count exceeds remaining data"));
         }
         Ok(count)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::Data77;
+
+    #[test]
+    fn all_utf16_fcd_fast_flags_match_the_frozen_native_bitmap() {
+        let data = Data77::from_bytes(include_bytes!("../../data/root-icu77.bin")).unwrap();
+        let expected = include_bytes!("../tests/data/fcd77/native-flags.bin");
+        assert_eq!(expected.len(), 65536);
+        for (unit, &flags) in expected.iter().enumerate() {
+            let unit = unit as u16;
+            let actual =
+                u8::from(data.fcd_has_lccc(unit)) | (u8::from(data.fcd_has_tccc(unit)) << 1);
+            assert_eq!(actual, flags, "native FCD flags for UTF-16 unit {unit:04x}");
+        }
     }
 }

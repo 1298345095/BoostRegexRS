@@ -6,9 +6,11 @@
 
 mod bocsu77;
 mod ce77;
+mod cursor77;
 mod data77;
 mod key77;
 mod nfd77;
+mod numeric77;
 
 use std::fmt;
 
