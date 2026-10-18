@@ -29,6 +29,18 @@ template<class Values> std::string hex(const Values& values, int width) {
     return out.str();
 }
 
+std::string json_string(const std::string& value) {
+    std::ostringstream out;
+    out << '"';
+    for (const unsigned char ch : value) {
+        if (ch == '"' || ch == '\\') out << '\\' << ch;
+        else if (ch < 0x20) out << "\\u" << std::hex << std::setfill('0') << std::setw(4) << unsigned(ch);
+        else out << ch;
+    }
+    out << '"';
+    return out.str();
+}
+
 std::uint32_t number(const std::string& value, std::size_t width) {
     if (value.size() != width || value.find_first_not_of("0123456789abcdefABCDEF") != std::string::npos)
         throw std::invalid_argument("Malformed hexadecimal input");
@@ -82,6 +94,7 @@ void check_versions() {
 int main(int argc, char** argv) try {
     std::string format = "utf8";
     std::string strength = "primary";
+    std::string locale_name = "root";
     std::string metadata_path;
     bool order_pairs = false;
     bool approved_empty = false;
@@ -89,27 +102,36 @@ int main(int argc, char** argv) try {
         const std::string arg(argv[i]);
         if (arg == "--input-format" && i + 1 < argc) format = argv[++i];
         else if (arg == "--strength" && i + 1 < argc) strength = argv[++i];
+        else if (arg == "--locale" && i + 1 < argc) locale_name = argv[++i];
         else if (arg == "--metadata" && i + 1 < argc) metadata_path = argv[++i];
         else if (arg == "--approved-empty-exception") approved_empty = true;
         else if (arg == "--order-pairs") order_pairs = true;
-        else throw std::invalid_argument("usage: oracle [--input-format utf8|u32|u16] [--strength primary|identical] [--approved-empty-exception] [--metadata PATH] [--order-pairs]");
+        else throw std::invalid_argument("usage: oracle [--input-format utf8|u32|u16] [--strength primary|identical] [--locale ICU_ID] [--approved-empty-exception] [--metadata PATH] [--order-pairs]");
     }
     if (format != "utf8" && format != "u32" && format != "u16") throw std::invalid_argument("Unknown input format");
     if (strength != "primary" && strength != "identical") throw std::invalid_argument("Unknown strength");
     if (approved_empty && strength != "identical") throw std::invalid_argument("Approved empty exception is IDENTICAL only");
     check_versions();
     UErrorCode status = U_ZERO_ERROR;
-    std::unique_ptr<icu::Collator> collator(icu::Collator::createInstance(icu::Locale::getRoot(), status));
-    if (U_FAILURE(status) || !collator) throw std::runtime_error("Root collator creation failed");
+    const auto locale = icu::Locale::createFromName(locale_name.c_str());
+    std::unique_ptr<icu::Collator> collator(icu::Collator::createInstance(locale, status));
+    if (U_FAILURE(status) || !collator) throw std::runtime_error(std::string("Collator creation failed: ") + u_errorName(status));
+    const auto creation_status = status;
     collator->setStrength(strength == "identical" ? icu::Collator::IDENTICAL : icu::Collator::PRIMARY);
-    if (collator->getAttribute(UCOL_NORMALIZATION_MODE, status) != UCOL_OFF || U_FAILURE(status))
+    if (locale_name == "root" && (collator->getAttribute(UCOL_NORMALIZATION_MODE, status) != UCOL_OFF || U_FAILURE(status)))
         throw std::runtime_error("Unexpected root normalization setting");
     boost::icu_regex_traits traits;
-    traits.imbue(icu::Locale::getRoot());
+    traits.imbue(locale);
     if (!metadata_path.empty()) {
         std::ofstream metadata(metadata_path);
         metadata << "{\n  \"boost\": \"1.89.0\", \"icu\": \"77.1\", \"unicode\": \"16.0.0\", \"cldr\": \"47.0\",\n"
-                 << "  \"locale\": \"root\", \"strength\": \"" << strength << "\",\n"
+                 << "  \"locale\": " << json_string(locale_name) << ", \"strength\": \"" << strength << "\",\n"
+                 << "  \"normalized_locale\": " << json_string(locale.getName()) << ",\n"
+                 << "  \"valid_locale\": " << json_string(collator->getLocale(ULOC_VALID_LOCALE, status).getName()) << ",\n"
+                 << "  \"actual_locale\": " << json_string(collator->getLocale(ULOC_ACTUAL_LOCALE, status).getName()) << ",\n"
+                 << "  \"creation_status\": " << json_string(u_errorName(creation_status)) << ",\n"
+                 << "  \"traits_getloc\": " << json_string(traits.getloc().getName()) << ",\n"
+                 << "  \"process_default_locale\": " << json_string(icu::Locale::getDefault().getName()) << ",\n"
                  << "  \"approved_empty_exception\": " << (approved_empty ? "true" : "false") << ",\n  \"attributes\": {";
         const std::pair<const char*, UColAttribute> attributes[] = {
             {"strength", UCOL_STRENGTH}, {"normalization", UCOL_NORMALIZATION_MODE},
@@ -123,7 +145,16 @@ int main(int argc, char** argv) try {
                      << collator->getAttribute(attribute.second, status);
             first = false;
         }
-        metadata << "\n  }\n}\n";
+        metadata << "\n  },\n  \"variable_top\": " << collator->getVariableTop(status)
+                 << ", \"max_variable\": " << collator->getMaxVariable() << ",\n  \"reorder_codes\": [";
+        int32_t count = collator->getReorderCodes(nullptr, 0, status);
+        if (status == U_BUFFER_OVERFLOW_ERROR) status = U_ZERO_ERROR;
+        if (U_FAILURE(status) || count < 0) throw std::runtime_error("Oracle reorder preflight failed");
+        std::vector<int32_t> codes(static_cast<std::size_t>(count));
+        if (collator->getReorderCodes(codes.data(), count, status) != count || U_FAILURE(status))
+            throw std::runtime_error("Oracle reorder preflight changed");
+        for (int32_t i = 0; i < count; ++i) metadata << (i ? "," : "") << codes[i];
+        metadata << "]\n}\n";
         metadata.flush();
         if (U_FAILURE(status) || !metadata) throw std::runtime_error("Oracle metadata write failed");
     }
