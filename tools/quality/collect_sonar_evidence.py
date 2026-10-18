@@ -25,13 +25,33 @@ GITHUB_API = f"https://api.github.com/repos/{REPO}"
 SONAR_API = "https://sonarcloud.io/api"
 
 
+def origin(url):
+    """Include the effective port when comparing an HTTP request's authority."""
+    parsed = urllib.parse.urlsplit(url)
+    port = parsed.port
+    if port is None:
+        port = {"http": 80, "https": 443}.get(parsed.scheme)
+    return parsed.scheme, parsed.hostname, port
+
+
+class ScopedRedirectHandler(urllib.request.HTTPRedirectHandler):
+    """Keep bearer credentials only when a redirect preserves the origin."""
+
+    def redirect_request(self, request, response, code, message, headers, new_url):
+        redirected = super().redirect_request(request, response, code, message, headers, new_url)
+        if redirected is not None and origin(request.full_url) != origin(new_url):
+            redirected.remove_header("Authorization")
+        return redirected
+
+
 def fetch(url, token=None):
     headers = {"Accept": "application/json", "User-Agent": "BoostRegexRS-quality-evidence"}
     if token:
         headers["Authorization"] = "Bearer " + token
     request = urllib.request.Request(url, headers=headers)
+    opener = urllib.request.build_opener(ScopedRedirectHandler())
     try:
-        with urllib.request.urlopen(request, timeout=30) as response:
+        with opener.open(request, timeout=30) as response:
             body = response.read().decode("utf-8")
             status = response.status
     except urllib.error.HTTPError as error:
