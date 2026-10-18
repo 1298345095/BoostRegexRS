@@ -26,6 +26,7 @@ ORGANIZATION = "1298345095"
 ROOT = Path(__file__).resolve().parents[2]
 GITHUB_API = f"https://api.github.com/repos/{REPO}"
 SONAR_API = "https://sonarcloud.io/api"
+ISSUES_FILE = "sonar-issues.json"
 
 
 def origin(url):
@@ -83,6 +84,26 @@ def annotations(check_id, count, token):
     return pages
 
 
+def observe_check(commit, token, output, trace, remaining):
+    """Preserve one response before selecting the newest check for this SHA."""
+    response = fetch(f"{GITHUB_API}/commits/{commit}/check-runs?per_page=100", token,
+                     timeout=min(30, remaining))
+    index = len(trace["observations"]) + 1
+    filename = "github-check-runs.json" if index == 1 else f"github-check-runs-{index:03d}.json"
+    save(output, filename, response)
+    trace["observations"].append({"file": filename,
+                                  "received_utc": dt.datetime.now(dt.timezone.utc).isoformat()})
+    if response["status"] != 200:
+        raise RuntimeError("GitHub checks could not be read; response was preserved")
+    matching = [check for check in response["payload"]["check_runs"]
+                if check["name"] == "SonarCloud Code Analysis" and check["head_sha"] == commit]
+    check = max(matching, key=lambda item: item["id"], default=None)
+    trace["selected_check"] = ({key: check.get(key) for key in
+                                ("id", "head_sha", "status", "conclusion", "started_at", "completed_at")}
+                               if check is not None else None)
+    return check, filename
+
+
 def completed_check(commit, token, output, timeout):
     """Wait for the newest check for this SHA, preserving every observation."""
     started = time.monotonic()
@@ -95,21 +116,7 @@ def completed_check(commit, token, output, timeout):
             remaining = deadline - time.monotonic()
             if remaining <= 0:
                 raise TimeoutError("Sonar check did not complete within the declared wait deadline")
-            response = fetch(f"{GITHUB_API}/commits/{commit}/check-runs?per_page=100", token,
-                             timeout=min(30, remaining))
-            index = len(trace["observations"]) + 1
-            filename = "github-check-runs.json" if index == 1 else f"github-check-runs-{index:03d}.json"
-            save(output, filename, response)
-            trace["observations"].append({"file": filename,
-                                          "received_utc": dt.datetime.now(dt.timezone.utc).isoformat()})
-            if response["status"] != 200:
-                raise RuntimeError("GitHub checks could not be read; response was preserved")
-            matching = [check for check in response["payload"]["check_runs"]
-                        if check["name"] == "SonarCloud Code Analysis" and check["head_sha"] == commit]
-            check = max(matching, key=lambda item: item["id"], default=None)
-            trace["selected_check"] = ({key: check.get(key) for key in
-                                        ("id", "head_sha", "status", "conclusion", "started_at", "completed_at")}
-                                       if check is not None else None)
+            check, filename = observe_check(commit, token, output, trace, remaining)
             remaining = deadline - time.monotonic()
             if remaining <= 0:
                 raise TimeoutError("Sonar check did not complete within the declared wait deadline")
@@ -164,7 +171,7 @@ def collect(commit, pull_request, output, github_only=False, inspect_access=Fals
     pages = annotations(check["id"], check["output"]["annotations_count"], github_token)
     save(output, "github-annotations.json", pages)
     queries = {
-        "sonar-issues.json": ("issues/search", {"componentKeys": PROJECT, "pullRequest": pull_request,
+        ISSUES_FILE: ("issues/search", {"componentKeys": PROJECT, "pullRequest": pull_request,
                                                 "ps": 500, "resolved": "false"}),
         "sonar-quality-gate.json": ("qualitygates/project_status", {"projectKey": PROJECT,
                                                                      "pullRequest": pull_request}),
@@ -180,13 +187,13 @@ def collect(commit, pull_request, output, github_only=False, inspect_access=Fals
             )
     sonar_statuses = {}
     for filename, (endpoint, parameters) in queries.items():
-        if filename == "sonar-issues.json":
+        if filename == ISSUES_FILE:
             sonar_statuses.update(analysis_metadata(output, sonar_token, pull_request, "before", github_only))
         if github_only:
             sonar_statuses[filename] = "not_requested"
         else:
             sonar_statuses[filename] = sonar_response(output, filename, endpoint, parameters, sonar_token, pull_request)
-        if filename == "sonar-issues.json":
+        if filename == ISSUES_FILE:
             sonar_statuses.update(analysis_metadata(output, sonar_token, pull_request, "after", github_only))
     summary = {
         "collected_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
