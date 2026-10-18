@@ -1,0 +1,437 @@
+{
+  "schema": "boostregexrs.probe-evidence-archive.v1",
+  "archive": {
+    "path": "raw.tar.gz",
+    "bytes": 14276175,
+    "sha256": "43dd9efd39df9cd65c0debbfb74b8d5fd0c1940f5e94c742f5f0072ca25e027d",
+    "compression": "gz"
+  },
+  "files": [
+    {
+      "path": "binaries/failed-settings-probe",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/target/research/icu77-cloud/build/settings-probe/api-build-v1-20261018/release/icu77-settings-probe",
+      "bytes": 644032,
+      "sha256": "875e5cee3c137b2d8bdb0878728a7000baa2e38e67090e9c07e88ac546ffec2c",
+      "mode": 493
+    },
+    {
+      "path": "binaries/frozen-main-cli",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/target/research/icu77-cloud/build/fcd-repair/rust-v2-20261017T234800Z/release/icu77-root-primary",
+      "bytes": 1659856,
+      "sha256": "3fbe753614aba5fbd346fcdc0002f0a278859bfe3dc8e8657e3de89a9fc2afb4",
+      "mode": 493
+    },
+    {
+      "path": "binaries/native-reference",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/target/research/icu77-cloud/build/settings-probe/api-build-v1-20261018/settings-reference",
+      "bytes": 33860192,
+      "sha256": "f7d034c8d40bf8a2d0d0a5681dae0f483176f17d30353b5e1147297e20bf6f8d",
+      "mode": 493
+    },
+    {
+      "path": "build/clippy.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/clippy.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "build/clippy.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/clippy.process.json",
+      "bytes": 1053,
+      "sha256": "0a1d33b5c2f0aedc1fff0e864c0c7663bd879eb93060851aba2c59ff61010760",
+      "mode": 420
+    },
+    {
+      "path": "build/clippy.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/clippy.stderr.log",
+      "bytes": 332,
+      "sha256": "257c0c3cbc4a657bda4266f2647592b2275b2672aa711dd862afc6d333657e36",
+      "mode": 420
+    },
+    {
+      "path": "build/fmt.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "build/fmt.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/fmt.process.json",
+      "bytes": 1004,
+      "sha256": "f6549414ac03b517fec30df5b9d7eb8abf9f311a359e85d507ab32524eadd3f8",
+      "mode": 420
+    },
+    {
+      "path": "build/fmt.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/fmt.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "build/lock.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/lock.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "build/lock.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/lock.process.json",
+      "bytes": 1022,
+      "sha256": "54f030c8ddcc0ada24f0acafc6f5c5b773ece45b78b74d155cd223c1a93d478c",
+      "mode": 420
+    },
+    {
+      "path": "build/lock.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/lock.stderr.log",
+      "bytes": 65,
+      "sha256": "52162686406a37981e5e540642a42ea3d32e42ec9dd934992ac15325835756ee",
+      "mode": 420
+    },
+    {
+      "path": "build/native-build.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/native-build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "build/native-build.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/native-build.process.json",
+      "bytes": 1725,
+      "sha256": "20bcb2539c35e51d94c2de003c727c80b44b7b34d31436b2221d3338a95ec8fe",
+      "mode": 420
+    },
+    {
+      "path": "build/native-build.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/native-build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "build/rust-build.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/rust-build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "build/rust-build.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/rust-build.process.json",
+      "bytes": 1057,
+      "sha256": "ffcf3845021234be03f45c7f23b74c7f7a9dce0af32a0b88c03704b04d2d81cc",
+      "mode": 420
+    },
+    {
+      "path": "build/rust-build.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/rust-build.stderr.log",
+      "bytes": 322,
+      "sha256": "c1e7d57fc6ac78125179ba81422cdde9b14ba2aa4d1c8cb569d65640e14afdcd",
+      "mode": 420
+    },
+    {
+      "path": "build/rust-linkage.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/rust-linkage.log",
+      "bytes": 230,
+      "sha256": "15c85e909f07ef807b4c64ad192ea3894af75283258e0aee699e90a3afdabfb7",
+      "mode": 420
+    },
+    {
+      "path": "build/rust-linkage.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/rust-linkage.process.json",
+      "bytes": 918,
+      "sha256": "44fb455c812bab94e1d2d79797aeaa4b7d462192a6d13eb149426f76a61c1f8e",
+      "mode": 420
+    },
+    {
+      "path": "build/rust-linkage.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/rust-linkage.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "build/rust-toolchain-manifest.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/rust-toolchain-manifest.json",
+      "bytes": 3226,
+      "sha256": "728ed5c86b52176522fd16205f492d61507e9540af330f71c0ffd9eb890ef94f",
+      "mode": 420
+    },
+    {
+      "path": "build/summary.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/api-build-v1-20261018/summary.json",
+      "bytes": 10778,
+      "sha256": "a7a09f4597d83e7be08974c37c6e13b3e63d8f514202fd5e7ff999bd7c8ad680",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/generation.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/generation.json",
+      "bytes": 50472,
+      "sha256": "9a73f6aca1d3ace19303e7a6d1cd64340182acf23fa7e301c92c2922cbf14e87",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/cloud/prepare.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/cloud/prepare.py",
+      "bytes": 17824,
+      "sha256": "88d68d41503f5676651510cd98be7f88ec67f0d6dc3409f4ce65240a256eefe9",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/compare.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/compare.py",
+      "bytes": 10977,
+      "sha256": "b6abd79fb43214270b03c2fad20aab2a88c3e1b3965fa8c88a2e4d784a1df2de",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/export/data_format.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/export/data_format.py",
+      "bytes": 5744,
+      "sha256": "0c858da2bf173517bc4c66b3e3e76ab21905867a55aa8ec6557eb8430408368a",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/export/locale_format.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/export/locale_format.py",
+      "bytes": 3477,
+      "sha256": "c89e08d1865323367a2c0933027f3f60e361e33d9ac831b1109be562d4d870d5",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/generate_cases.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/generate_cases.py",
+      "bytes": 11748,
+      "sha256": "6983c3f924a8d067aa9ac52daef8f81dd51186a153a149f9e9d00f5b0bc2f92e",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/run_locales.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/run_locales.py",
+      "bytes": 27608,
+      "sha256": "eb7cfde55ac995f67202a3572057f7f3ce874b260bdb5805dd2d54a39bb035db",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/settings-probe/Cargo.lock",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.lock",
+      "bytes": 265,
+      "sha256": "cc4fa973d0995ef112bd28716455f230c6fb5a0269f02a4fbd280b0b9f52d2e0",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/settings-probe/Cargo.toml",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/Cargo.toml",
+      "bytes": 325,
+      "sha256": "c5a1091cffa1ba06253bbab513ed0ce0bafbcad8dfd36c62b08abcffef5cb997",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/settings-probe/build.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/build.py",
+      "bytes": 5721,
+      "sha256": "6175a9523ef80609d74ebe0972688278ce80a3ed9f8991da1b58564c3274c876",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/settings-probe/cases.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/cases.py",
+      "bytes": 9062,
+      "sha256": "dda77f70e9e4417475119d1fd0fe128cc4fb8867cd0f2b56f77f93d59faa0488",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/settings-probe/reference.cpp",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/reference.cpp",
+      "bytes": 8095,
+      "sha256": "da7c9629eddaad213e27be82751887c525e1e2cc743578bafc5dc2f8544b8f65",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/settings-probe/run.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/run.py",
+      "bytes": 18044,
+      "sha256": "65caba6751f7ab29ac53f5904fe174040cffa244af2292f293df94b75d8b06d9",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/harness-source/tools/icu-probe/primary/settings-probe/src/main.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/harness-source/tools/icu-probe/primary/settings-probe/src/main.rs",
+      "bytes": 5773,
+      "sha256": "0459dfc6f2ca1ebc39a01b9b4581a593b405c0ff71eac41ae6cb7e5078d755e5",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/inputs.tsv",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/inputs.tsv",
+      "bytes": 213897,
+      "sha256": "b07ff5e1c502bd76b0266124fe22069606aef765d20c9e7635a4c1fd0818d94d",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/owner-0000-settings-0000/candidate.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/owner-0000-settings-0000/candidate.process.json",
+      "bytes": 1669,
+      "sha256": "ccf10aae15dbc8f08de9da689853fbbd00807872e09d8ef48dee1989b7d29558",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/owner-0000-settings-0000/candidate.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/owner-0000-settings-0000/candidate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/owner-0000-settings-0000/candidate.tsv",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/owner-0000-settings-0000/candidate.tsv",
+      "bytes": 992958,
+      "sha256": "42f4d2ae28a88a76f9206a6777fd6f40510cee0a61efc82f5e5ffa524363efc2",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/owner-0000-settings-0000/metadata.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/owner-0000-settings-0000/metadata.json",
+      "bytes": 221,
+      "sha256": "0e084deed1c28a3eef0579bbafc5cc171d46d760c57f9aa60974cad189ca6bda",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/owner-0000-settings-0000/native.process.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/owner-0000-settings-0000/native.process.json",
+      "bytes": 1281,
+      "sha256": "d1d0519d44ae632d10689b76e0408c3cf9219725074fd5c1c6684afd3f025d06",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/owner-0000-settings-0000/native.stderr.log",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/owner-0000-settings-0000/native.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/owner-0000-settings-0000/native.tsv",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/owner-0000-settings-0000/native.tsv",
+      "bytes": 1001890,
+      "sha256": "465d5d0649664ac85f6f841c8ec11eda3d8e986556982c5517abc96e14bd613d",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/owner-0000-settings-0000/summary.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/owner-0000-settings-0000/summary.json",
+      "bytes": 105248,
+      "sha256": "d762d71c81efeb0c9a22e82721514d3375409807ee9f60e29e3a60dd49d26ad2",
+      "mode": 420
+    },
+    {
+      "path": "failed-run/summary.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/settings-acceptance/reorder-smoke-v1-20261018/summary.json",
+      "bytes": 148144,
+      "sha256": "28787e1632f81e579bf469b8844cd0a3c5f344ff78fd919434760526b4831bf5",
+      "mode": 420
+    },
+    {
+      "path": "frozen-main-provenance.json",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/fcd-repair/rust-v2-20261017T234800Z/summary.json",
+      "bytes": 117262,
+      "sha256": "0c4605326444aae90003661a6f9f09c29f181a247138f1ec4047863a818efefb",
+      "mode": 420
+    },
+    {
+      "path": "retention-source/retain_failure.py",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/retain_failure.py",
+      "bytes": 4111,
+      "sha256": "03373784b07b229879accd1f8e510832d645678f69a9651fef70a6d4cc2044f9",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/bocsu77.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/bocsu77.rs",
+      "bytes": 3301,
+      "sha256": "a7d8d4b08a7bde13f7177fa5b816219a3f38051a704719ba2a6ee15ecca1568a",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/ce77.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/ce77.rs",
+      "bytes": 20139,
+      "sha256": "6d0d467fe72a2cfc8092015a96325f964c8d7dabc0b901867097d2674e1c7e9a",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/cursor77.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/cursor77.rs",
+      "bytes": 12334,
+      "sha256": "a3814b4e342b65f5601df1cd75af2792477f7f741f3321b2ace7402060879e16",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/data77.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/data77.rs",
+      "bytes": 15520,
+      "sha256": "e32cd21f38cb393f306b85044e673d01334c7b7852cca8225dfe69db26613e5b",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/key77.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/key77.rs",
+      "bytes": 6043,
+      "sha256": "17b51fac7e1192d7dce277ec366003ba3cf16293de039eb10a4716a31738f6ea",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/levels77.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/levels77.rs",
+      "bytes": 11846,
+      "sha256": "df5abd670321e7436ff42c68d8127febf7ba5e7dc01cbbbd1aedf4e05f1a9f94",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/lib.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/lib.rs",
+      "bytes": 11166,
+      "sha256": "ab04e0a7426a3445be006ebb6cd3a356e76002d3abcea02d4a3c8039d7e3856e",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/main.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/main.rs",
+      "bytes": 12366,
+      "sha256": "86a05d066cd1d3ddb3a4f9cbbe0a724624f746273c16bc252909426dc8f7ebf0",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/nfd77.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/nfd77.rs",
+      "bytes": 4342,
+      "sha256": "76a65d76508117ca5e6add10c09edeb8a14546631aad52ff5d593b107ac302e3",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/numeric77.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/numeric77.rs",
+      "bytes": 3059,
+      "sha256": "83b91ca06e889afbc458fa0dc1c0db11621d4283a9b529f37980c9a5c0c57766",
+      "mode": 420
+    },
+    {
+      "path": "runtime-source/tools/icu-probe/primary/rust/src/settings77.rs",
+      "source_path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/rust/src/settings77.rs",
+      "bytes": 26669,
+      "sha256": "2223f302370611345dbffa39dc8f1a5172e4b380f301aec32dbd1e446df99bfc",
+      "mode": 420
+    }
+  ],
+  "archiver": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/settings-probe/retain_failure.py",
+    "bytes": 4111,
+    "sha256": "03373784b07b229879accd1f8e510832d645678f69a9651fef70a6d4cc2044f9"
+  },
+  "preservation": "Actual failed binary bytes retained before repair; original input/output/build files unchanged"
+}
