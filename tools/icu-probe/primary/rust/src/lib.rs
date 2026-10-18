@@ -9,14 +9,18 @@ mod ce77;
 mod cursor77;
 mod data77;
 mod key77;
+mod levels77;
 mod nfd77;
 mod numeric77;
+mod settings77;
 
 use std::fmt;
+use std::sync::Arc;
 
 pub use data77::Data77;
 pub use key77::boost_key;
 pub use nfd77::NfdData77;
+pub use settings77::{CaseFirst, MaxVariable, Reordering77, ScriptGroups77, Settings77, Strength};
 
 pub type Result<T> = std::result::Result<T, Error>;
 
@@ -25,6 +29,7 @@ pub type Result<T> = std::result::Result<T, Error>;
 pub enum Error {
     InvalidUtf32 { position: usize, value: u32 },
     InvalidUtf16 { position: usize, value: u16 },
+    InvalidSettings(&'static str),
     UnsupportedCe32(u32),
     Data(&'static str),
 }
@@ -34,6 +39,7 @@ impl Error {
         match self {
             Self::InvalidUtf32 { .. } => "INVALID_UTF32",
             Self::InvalidUtf16 { .. } => "INVALID_UTF16",
+            Self::InvalidSettings(_) => "INVALID_SETTINGS",
             Self::UnsupportedCe32(_) => "UNSUPPORTED_CE32",
             Self::Data(_) => "DATA_ERROR",
         }
@@ -50,6 +56,7 @@ impl fmt::Display for Error {
                 write!(f, "INVALID_UTF16 at input unit {position}: {value:04x}")
             }
             Self::UnsupportedCe32(value) => write!(f, "UNSUPPORTED_CE32: {value:08x}"),
+            Self::InvalidSettings(message) => write!(f, "INVALID_SETTINGS: {message}"),
             Self::Data(message) => write!(f, "DATA_ERROR: {message}"),
         }
     }
@@ -204,6 +211,84 @@ impl RootCollator {
             boost,
             ces: trace.then_some(ces),
             identical_nfd: trace.then_some(nfd),
+            trace: events,
+        })
+    }
+}
+
+/// Collation against a fixed data owner and complete effective ICU77 settings.
+/// Shared table ownership is separate from per-collator settings and per-call
+/// cursor state. No native locale or Unicode service is called at runtime.
+#[derive(Debug)]
+pub struct Collator77 {
+    data: Arc<Data77>,
+    nfd: Arc<NfdData77>,
+    settings: Settings77,
+}
+
+impl Collator77 {
+    pub fn new(data: Arc<Data77>, nfd: Arc<NfdData77>, settings: Settings77) -> Self {
+        Self {
+            data,
+            nfd,
+            settings,
+        }
+    }
+
+    pub fn data(&self) -> &Data77 {
+        &self.data
+    }
+
+    pub fn settings(&self) -> &Settings77 {
+        &self.settings
+    }
+
+    pub fn settings_mut(&mut self) -> &mut Settings77 {
+        &mut self.settings
+    }
+
+    pub fn sort_key_utf8(&self, input: &str, trace: bool) -> Result<Key> {
+        self.compute(&input.chars().map(u32::from).collect::<Vec<_>>(), trace)
+    }
+
+    pub fn sort_key_u32(&self, input: &[u32], trace: bool) -> Result<Key> {
+        validate_utf32(input)?;
+        self.compute(input, trace)
+    }
+
+    pub fn sort_key_utf16(&self, input: &[u16], trace: bool) -> Result<Key> {
+        validate_utf16(input)?;
+        self.sort_key_icu_utf16(input, trace)
+    }
+
+    /// Separately named ICU diagnostic domain retaining unpaired UTF-16 units.
+    pub fn sort_key_icu_utf16(&self, input: &[u16], trace: bool) -> Result<Key> {
+        self.compute(&decode_utf16_units(input), trace)
+    }
+
+    fn compute(&self, input: &[u32], trace: bool) -> Result<Key> {
+        let settings = &self.settings;
+        let (ces, events) = ce77::Elements::with_options(
+            &self.data,
+            input,
+            settings.check_fcd().then_some(&self.nfd),
+            settings.numeric(),
+            trace,
+        )
+        .collect()?;
+        let identical = settings.strength() == Strength::Identical;
+        let nfd = if identical {
+            self.nfd.normalize(input)
+        } else {
+            Vec::new()
+        };
+        let raw_icu = levels77::sort_key(&ces, &self.data.compressible, settings, &nfd);
+        let boost = boost_key(&raw_icu);
+        Ok(Key {
+            raw_icu,
+            boost,
+            ces: trace.then_some(ces),
+            identical_nfd: (trace && identical).then_some(nfd),
             trace: events,
         })
     }
