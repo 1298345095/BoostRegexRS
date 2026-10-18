@@ -1,0 +1,100 @@
+{
+  "schema": "boostregexrs.probe-evidence-archive.v1",
+  "created_utc": "2026-10-18T01:14:07.328723+00:00",
+  "source_directory": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/docs/research/assets/icu77-locales/exports/recovery-2026-10-18-02",
+  "source_summary_sha256": "9e62f2f75ca8dff85069d3d1adc704872245f9c688810405f55e6153d5c41d63",
+  "archive": {
+    "path": "raw.tar.xz",
+    "bytes": 248152,
+    "sha256": "e25c05baee0acf6e0b9025f264c2593c9375816db66d798ece9ecc7d14b4ac85",
+    "compression": "xz"
+  },
+  "uncompressed_file_bytes": 17184901,
+  "files": [
+    {
+      "path": "build.log",
+      "bytes": 1170,
+      "sha256": "af92933e919a853d59238eb2d1992285ea57895e9289110be74dc2920d45f6bc"
+    },
+    {
+      "path": "catalog.json",
+      "bytes": 7582825,
+      "sha256": "946426f0192c2cabda121028e11f9cd2dfacbab4e410eb383eea30442e5bb472"
+    },
+    {
+      "path": "driver.log",
+      "bytes": 549,
+      "sha256": "6815cd5a735b882ce3f9b3b95cc8727736f783f65ee2612632b6281b5ef56dc4"
+    },
+    {
+      "path": "driver.process.json",
+      "bytes": 1108,
+      "sha256": "9b5d2d1a5213128902a0dc42fee59b028e721e553ac361836feecaf79f60b253"
+    },
+    {
+      "path": "driver.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "extra-requests.txt",
+      "bytes": 48687,
+      "sha256": "ef7b07c49cf95a7fe2104828d6fbc0e035dd1d05f51fbbb5f83e7ca77f6a0c4c"
+    },
+    {
+      "path": "inventory-1.json",
+      "bytes": 4736993,
+      "sha256": "e6b455d7d18bff9b5577eaa58ab4cc7130b0370fbd8cf4bf922ecf91bb8426df"
+    },
+    {
+      "path": "inventory-2.json",
+      "bytes": 4736993,
+      "sha256": "e6b455d7d18bff9b5577eaa58ab4cc7130b0370fbd8cf4bf922ecf91bb8426df"
+    },
+    {
+      "path": "package-list.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "package-list.txt",
+      "bytes": 58925,
+      "sha256": "ef44045bd6e2b8cf2d7d74cf9e31c8af66c90ceaa6841bd1c164ce1ff9e609b1"
+    },
+    {
+      "path": "resource-locales.txt",
+      "bytes": 787,
+      "sha256": "82b10cb66e3bb50bec5cdbdfe07452dc4097e4f5a33aadcd52e9b28eeb0ddfb8"
+    },
+    {
+      "path": "stderr-1.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stderr-2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "stdout-1.log",
+      "bytes": 137,
+      "sha256": "a3fd845bf90c519a3239d4e03b5b08402dd0d952cb9c0eaf6cfb0997bc2a79ab"
+    },
+    {
+      "path": "stdout-2.log",
+      "bytes": 137,
+      "sha256": "a3fd845bf90c519a3239d4e03b5b08402dd0d952cb9c0eaf6cfb0997bc2a79ab"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 16590,
+      "sha256": "9e62f2f75ca8dff85069d3d1adc704872245f9c688810405f55e6153d5c41d63"
+    }
+  ],
+  "archiver": {
+    "path": "/workspace/scratch/4b14d0e6f3a6/BoostRegexRS-recovery/tools/icu-probe/primary/archive_evidence.py",
+    "sha256": "f97e7d0e4856b1d673f260d1b228fa0e32731b490e0f103216bd80f4c8a0d54c"
+  },
+  "preservation": "All source files retained byte-for-byte; source directory was not changed"
+}
